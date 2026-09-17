@@ -104,10 +104,28 @@ _API_KEY_ENV = "ARTIFACT_SPIRIT_API_KEY"
 
 
 def _bench_home(root: Path, name: str, *, with_llm: bool, with_embedding: bool) -> Path:
-    """造一个干净的 hermes_home。**每题一个库**，题与题之间不互相污染。"""
+    """造一个干净的 hermes_home。**每组一个库**，组与组之间不互相污染。
+
+    ## 路径里为什么要编进**配置指纹**
+
+    一个库的内容由"用什么提取"决定：`--ingest rule` 存的是**整段对话原文**，
+    `--ingest llm` 存的是**改写后的原子事实**——两者**同名不同物**。
+
+    早先库路径只按组名分（`<组>/spirit.db`），于是先用 `rule` 建库、之后换
+    `llm` 重跑时，复用检测会**认领那个 rule 库**：跑出来的分数标着 `llm`，
+    量的却是 `rule`，而报告上**没有任何信号**。
+
+    把指纹编进路径后，两种配置天然落在两个目录里、**永不相撞**。
+    这比"检测到不匹配再报错"更稳——报错还有被上层 `except` 吞掉的可能，
+    而路径不同这件事没有任何"忘检查"的余地。
+
+    **嵌入也一样**：`kw` 库（纯关键词）与 `vec` 库（带向量）不是同一个东西，
+    混用会让 `R@k` 在两次运行间悄悄改变含义。
+    """
     from artifact_spirit.config import save
 
-    home = root / _safe(name)
+    fingerprint = f"{'llm' if with_llm else 'rule'}-{'vec' if with_embedding else 'kw'}"
+    home = root / _safe(name) / fingerprint
     home.mkdir(parents=True, exist_ok=True)
     values: dict[str, object] = {
         "spirit.name": "评测器灵",
@@ -168,6 +186,76 @@ def _db_file(home: Path) -> Path:
     return home / "spirit" / "spirit.db"
 
 
+def _degradation_reasons(services) -> list[str]:
+    """从**审计**里读回提取降级的次数与原因。
+
+    器灵在降级时已经写了一条审计（`facade`：`reason="提取降级：..."`）——
+    也就是说**信息一直都在，是评测器没去读它**。
+
+    读它为什么重要：降级会让库的**内容形态**与配置声称的不符。
+    实测（TokenHub 额度耗尽、HTTP 402）：`--ingest llm` 静默降级成规则提取，
+    19 段会话只产出 19 条"整段原文"，而报告与元数据都写着 `ingest=llm`——
+    这个库和"规则提取的库"是同一个东西，却被当成 LLM 库去评测、还可能被复用。
+
+    **这类"标签与实物不符"比直接报错坏**：报错会让人停下来，
+    而它会让人对着一个标签错误的结果分析半天。
+    """
+    reasons: list[str] = []
+    for event in services.backend.audit_replay():
+        degraded = (getattr(event, "after", None) or {}).get("degraded")
+        if degraded:
+            reasons.append(str(degraded))
+    return reasons
+
+
+_INGEST_MARKER = "_ingest_done.json"
+"""灌入完成标记。**它是"库能用"的唯一凭据**（理由见 `_ingest_state`）。"""
+
+
+def _ingest_state(home: Path, *, turns: int) -> tuple[bool, str]:
+    """这个库能不能复用——**判据是「灌入跑完了」，不是「库里有东西」**。
+
+    只看"库里有没有记忆"会漏掉一种最坏的情况：灌入**跑到一半**崩了
+    （网关抖动、进程被杀、磁盘写满），留下一个**半库**——
+    而它和"灌好了"在检测上完全一样。
+
+    用半库评测的后果不是"少几条记忆"，是**分数系统性偏低**，
+    而报告上读到的只会是"检索不行"：**残缺被伪装成了能力不足**。
+    没有信号的错误比直接报错坏得多——这个判据是那个教训的同一条。
+
+    **为什么还要记段数**：标记只证明"当时灌完了"，不证明"灌的是这批素材"。
+    数据集换了、题数变了（`turns` 不同）时同样不复用。
+    """
+    path = home / _INGEST_MARKER
+    if not path.exists():
+        return False, "没有完成标记（上次灌入没跑完）"
+    try:
+        meta = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        return False, f"完成标记读不出来（{type(exc).__name__}）"
+    recorded = int(meta.get("turns", -1))
+    if recorded != turns:
+        return False, f"段数对不上（标记记的是 {recorded}，本次要灌 {turns}）"
+    return True, f"{meta.get('at', '?')} 灌入 {recorded} 段"
+
+
+def _write_marker(home: Path, *, turns: int) -> None:
+    """**灌入全部完成之后**才写。
+
+    写在循环里（或 `finally` 里）等于把半库标成完整的——那正是这个标记要防的事。
+
+    调用方还要保证另一件事：**`--ingest llm` 时没发生提取降级**
+    （否则库的内容与它声称的不符，见 `_degradation_reasons`）。
+    """
+    (home / _INGEST_MARKER).write_text(
+        json.dumps(
+            {"turns": turns, "at": datetime.now().isoformat(timespec="seconds")},
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+
 def _safe(name: str) -> str:
     """题目 id → 文件名。**非 ASCII 与非字母数字一律替换**——
     Windows 上带 `#`/`:` 的目录名会直接创建失败，而失败信息很难看懂是评测脚本的问题。"""
@@ -212,8 +300,51 @@ def _gen_client():
     return httpx.Client(base_url=_base_url(), timeout=httpx.Timeout(60.0, connect=10.0))
 
 
+def _brief(text: str, limit: int = 200) -> str:
+    """把网关的响应体压成一行——**真正的原因在它里面**。
+
+    `raise_for_status()` 只会说"402 Payment Required"，而网关想说的是
+    "免费体验额度已耗尽，且未开启后付费"——那句在 body 里。
+    摘不出来就得再花一次调用去问，而那时人已经在猜"是不是端点写错了"。
+    """
+    flat = " ".join(str(text or "").split())
+    return flat[:limit]
+
+
+class _GenStats:
+    """生成调用的成功率——**失败必须被计数**。
+
+    `_llm_generate` 失败返回 `None`，而 `None` 在报告里只表现为"未作答"。
+    那会被读成"没召回到相关记忆"——**归因指向检索**。
+
+    实测踩过：TokenHub 免费额度耗尽（HTTP 402）时 152 题**全部**未作答，
+    而报告只说"答题率 0.0%／未作答 152 题（召回没有走到生成）"。
+    那句话把人引向检索，而真实原因与检索毫无关系。
+
+    **指标还在、含义已经换了**是最危险的一类降级——它比报错坏，
+    因为报错会让人停下来查，而它会让人开始改错的东西。
+    """
+
+    def __init__(self) -> None:
+        self.calls = 0
+        self.failed = 0
+        self.last_error = ""
+
+    def record_failure(self, detail: str) -> None:
+        self.failed += 1
+        self.last_error = detail
+
+    @property
+    def failure_rate(self) -> float:
+        return self.failed / self.calls if self.calls else 0.0
+
+
+_GEN = _GenStats()
+
+
 def _llm_generate(system: str, user: str) -> str | None:
-    """评测侧的**生成**调用。失败返回 `None`——评测不该因一次网关抖动整体崩掉。
+    """评测侧的**生成**调用。失败返回 `None`——评测不该因一次网关抖动整体崩掉，
+    但**失败必须被计数**（见 `_GenStats`），否则"网关挂了"会伪装成"检索不行"。
 
     ## 为什么不用器灵的 `core.llm`
 
@@ -229,6 +360,7 @@ def _llm_generate(system: str, user: str) -> str | None:
     这正是这一层评测要消灭的东西。所以两处的模型调用必须**分开配置**。
     """
     client = _gen_client()
+    _GEN.calls += 1
     payload = {
         "model": _model("REALTEST_MODEL_SMALL", "glm-5.3-flash"),
         "messages": [
@@ -242,11 +374,14 @@ def _llm_generate(system: str, user: str) -> str | None:
     for attempt in range(2):
         try:
             resp = client.post("/chat/completions", json=payload, headers=headers)
-            resp.raise_for_status()
+            if resp.status_code >= 400:
+                # **先摘响应体再抛**：`raise_for_status` 拿不到那句话（见 `_brief`）。
+                raise RuntimeError(f"HTTP {resp.status_code} {_brief(resp.text)}")
             content = (resp.json()["choices"][0]["message"].get("content") or "").strip()
             return content or None
-        except Exception:
+        except Exception as exc:
             if attempt == 1:
+                _GEN.record_failure(f"{type(exc).__name__}: {exc}")
                 return None
     return None
 
@@ -350,21 +485,19 @@ def evaluate_group(
             "  ⚠ 本轮指定了 --embedding on，但器灵判定嵌入不可用——"
             "R@k 实际是**纯关键词检索**的水平，不要当成语义召回能力来读"
         )
-    # **判据是「库里有没有东西」，不是「文件在不在」**：
-    # 库文件在 `start()` 建表时就被创建了（空的、几 KB），
-    # 所以 `exists()` 在**第一次跑**就为真——灌入被跳过、库永远是空的，
-    # 而报告只会说「答题率 0%」，把原因指向检索。
-    installed = len(services.backend.query(status=None))
+    # 复用判据是**完成标记**，不是"库里有没有东西"（理由见 `_ingest_state`）。
+    turns = len(questions[0].turns)
+    reusable, why = _ingest_state(home, turns=turns)
     db = _db_file(home)
     rows: list[dict] = []
     try:
-        if installed:
+        if reusable:
             print(
-                f"  [复用] {key}：库里已有 {installed} 条记忆"
-                f"（{db.stat().st_size // 1024} KB），跳过灌入"
-                "——换口径或换作答模型重跑时不必再提取一遍"
+                f"  [复用] {key}：{why}（{db.stat().st_size // 1024} KB）——跳过灌入"
+                "，换口径或换作答模型重跑时不必再提取一遍"
             )
         else:
+            print(f"  [灌入] {key}：{why}")
             for index, turn in enumerate(questions[0].turns):
                 intents = services.core.ingest_turn(
                     TurnEvent(
@@ -375,9 +508,24 @@ def evaluate_group(
                     )
                 )
                 services.write_now(intents)
+            installed = len(services.backend.query(status=None))
+            print(f"  [灌入完成] {key}：{turns} 段素材 → {installed} 条记忆")
+            degraded = _degradation_reasons(services)
+            if with_llm and degraded:
+                # `--ingest llm` 却降级了 → **这个库不是它声称的东西**，
+                # 于是**不写标记**：下次会重新灌（多花几分钟），但绝不会拿一个
+                # 事实上的 rule 库冒充 llm 库去出分数、更不会去复用它。
+                print(
+                    f"  ✗ {key}：LLM 提取降级 {len(degraded)}/{turns} 次"
+                    f"（{sorted(set(degraded))}）——**库的内容不是 LLM 提取的**。"
+                )
+                print("     不写完成标记：这个库不会被复用，也不会以 llm 的名义出分数。")
+            else:
+                # **标记写在全部灌完之后**——写在循环里等于把半库标成完整的。
+                _write_marker(home, turns=turns)
 
         if ingest_only:
-            print(f"  [灌入完成] {key}：{len(questions[0].turns)} 段素材已入库")
+            print(f"  [只灌入] {key}：库已就绪，本次不提问")
             return []
 
         for question in questions:
@@ -410,8 +558,6 @@ def _ask(services, question: Question, *, top_k: int, mode: str) -> dict:
         answer_llm(question.question, context) if mode == "llm" else answer_extract(context)
     )
     retrieved = [hit.record.id for hit in hits]
-    retrieved = [h.record.id for h in hits]
-    gold_ids = _gold_ids(services, question)
     return {
         "id": question.id,
         "category": question.category,
@@ -514,7 +660,198 @@ def _gold_ids(services, question: Question) -> set[str]:
 # --------------------------------------------------------------------------- #
 
 
+def _preflight(args: argparse.Namespace) -> int | None:
+    """**开跑之前先确认网关能用。** 不能就立刻停。返回 `None` 表示通过。
+
+    ## 为什么值得单独做一次探测
+
+    一次 402 花 **1 秒**就能发现；而跑 152 题要花 **12 分钟**才发现——
+    那 12 分钟买到的还是一份**归因错误**的报告（"答题率 0%"看起来像检索问题，
+    而真实原因是账号额度）。**慢一步知道、错一步归因**，这是两笔账。
+
+    ## 只探这一轮真正会用到的能力
+
+    会用 LLM 灌入或作答就探 chat，开了 embedding 就探向量；
+    没用到的不探——探了也只是给网关送一次无效调用。
+
+    探**连通性**而不是"模型好不好"：模型答得烂是分数问题，
+    网关不通是**根本没测到东西**，两者不该混在一个信号里。
+    """
+    needs_llm = args.ingest == "llm" or args.answer_mode == "llm"
+    needs_vec = args.embedding == "on"
+    if not (needs_llm or needs_vec):
+        return None
+
+    import httpx
+
+    key = os.environ.get("REALTEST_API_KEY", "")
+    if not key:
+        print(
+            "[前置检查失败] 没有设置 REALTEST_API_KEY——而这一轮需要模型调用。"
+            "评测器不会退化成「零模型」接着跑：那会得到一份看起来正常、"
+            "实际上什么都没测的报告。",
+            file=sys.stderr,
+        )
+        return 3
+
+    headers = {"Authorization": f"Bearer {key}"}
+    problems: list[str] = []
+    with httpx.Client(base_url=_base_url(), timeout=httpx.Timeout(30.0, connect=10.0)) as client:
+        if needs_llm:
+            try:
+                resp = client.post(
+                    "/chat/completions",
+                    headers=headers,
+                    json={
+                        "model": _model("REALTEST_MODEL_SMALL", "glm-5.3-flash"),
+                        "messages": [{"role": "user", "content": "ping"}],
+                        "max_tokens": 1,
+                    },
+                )
+                if resp.status_code >= 400:
+                    problems.append(f"chat：HTTP {resp.status_code} {_brief(resp.text)}")
+            except Exception as exc:
+                problems.append(f"chat：{type(exc).__name__}: {exc}")
+        if needs_vec:
+            try:
+                resp = client.post(
+                    "/embeddings",
+                    headers=headers,
+                    json={
+                        "model": _model("REALTEST_EMBED_MODEL", "kinfra-text-embedding-4b"),
+                        "input": ["ping"],
+                    },
+                )
+                if resp.status_code >= 400:
+                    problems.append(
+                        f"embeddings：HTTP {resp.status_code} {_brief(resp.text)}"
+                    )
+            except Exception as exc:
+                problems.append(f"embeddings：{type(exc).__name__}: {exc}")
+
+    if problems:
+        print("\n[前置检查失败] 网关不可用，**没有开始跑分**：", file=sys.stderr)
+        for item in problems:
+            print(f"  ✗ {item}", file=sys.stderr)
+        print(
+            "\n  现在停下来，是因为接着跑也只会得到一份**归因错误**的报告："
+            "\n  网关故障会表现为「未作答 / 答题率 0%」，而那看起来像检索问题。",
+            file=sys.stderr,
+        )
+        return 3
+
+    checked = " + ".join(
+        name for name, flag in (("chat", needs_llm), ("embeddings", needs_vec)) if flag
+    )
+    print(f"[前置检查] 通过（{checked}）")
+    return None
+
+
+def _merge(args: argparse.Namespace) -> int:
+    """把多批 `--out` 明细合并成一份全量报告。**不重跑**。
+
+    ## 为什么必须能合并
+
+    全量 LoCoMo 有 1540 题，跑一遍要**两个多小时**——单条命令会超时，所以只能分批。
+    而分批之后如果只得到十份各说各话的报告，**就等于没有全量数字**：
+    每份都是"某一组的表现"，没有一份是"系统的表现"。
+
+    ## 为什么合并不会走样
+
+    `Metrics.add` 是**增量累加**的（分子分母各自相加，类别桶各自累加），
+    所以"分十批累加"与"一次跑完累加"得到的是**同一组数字**——
+    合并这一层不引入任何新口径。
+
+    ## 但有一件事必须先校验
+
+    合并最容易出的错不是算错，是**把不同口径的结果混在一起**：
+    批 A 用 `top_k=10`、批 B 用 `top_k=20`，合并出来的 `R@10`
+    就是一个**没有定义的数**——它既不量 A 也不量 B。
+
+    所以口径不一致时**直接拒绝合并**，而不是挑一个当基准接着算。
+    """
+    keys = ("dataset", "answer_mode", "ingest", "embedding", "top_k")
+    payloads: list[dict] = []
+    for name in args.report_from:
+        path = Path(name)
+        if not path.exists():
+            print(f"[合并失败] 找不到明细文件：{path}", file=sys.stderr)
+            return 2
+        payloads.append(json.loads(path.read_text(encoding="utf-8")))
+
+    base = payloads[0].get("meta") or {}
+    missing = [k for k in keys if k not in base]
+    if missing:
+        print(
+            f"[合并失败] {args.report_from[0]} 没有口径元数据（缺 {missing}）——"
+            "它多半是加元数据之前跑出来的；重跑一次再合并",
+            file=sys.stderr,
+        )
+        return 2
+    for name, payload in zip(args.report_from, payloads, strict=True):
+        meta = payload.get("meta") or {}
+        diff = [f"{k}: {base[k]!r} vs {meta.get(k)!r}" for k in keys if meta.get(k) != base[k]]
+        if diff:
+            print(f"[合并失败] {name} 与 {args.report_from[0]} 口径不一致：", file=sys.stderr)
+            for item in diff:
+                print(f"    {item}", file=sys.stderr)
+            print(
+                "  合并不同口径的分数只会得到一个**没有定义的数**——"
+                "它既不量前者也不量后者。请分开合并。",
+                file=sys.stderr,
+            )
+            return 2
+
+    # **口径从元数据恢复，不用命令行默认值**：报告的措辞依赖模式
+    # （`extract` 与 `llm` 的解读完全不同），若沿用默认值，
+    # 合并一份 LLM 跑的结果会打印一段"extract 模式的分数不可比"——把人吓一跳。
+    args.answer_mode = base["answer_mode"]
+    args.ingest = base["ingest"]
+    args.embedding = base["embedding"]
+    args.top_k = base["top_k"]
+    print("口径：" + " · ".join(f"{k}={base[k]}" for k in keys))
+
+    rows: dict[str, dict] = {}
+    duplicated: list[str] = []
+    for name, payload in zip(args.report_from, payloads, strict=True):
+        batch = payload.get("details") or []
+        print(f"  {name}：{len(batch)} 题")
+        for row in batch:
+            if row["id"] in rows:
+                duplicated.append(row["id"])
+            rows[row["id"]] = row
+    if duplicated:
+        print(
+            f"\n[提示] {len(duplicated)} 题在不止一批里出现，已按最后一次取值"
+            "——**批次切片有重叠**。检查 --skip/--limit："
+            "不提示的话，重叠只会让分母虚高，而分数上看不出来"
+        )
+
+    metrics = Metrics()
+    merged = list(rows.values())
+    for row in merged:
+        metrics.add(
+            pred=row.get("prediction"),
+            gold=row.get("answer") or "",
+            retrieved=_ids_of(row),
+            gold_ids=set(row.get("gold_ids") or ()),
+            k=args.top_k,
+        )
+        _track_category(metrics, row.get("category") or "unknown", row, k=args.top_k)
+
+    report = metrics.to_dict()
+    print(f"\n合并 {len(payloads)} 批 → 合计 {len(merged)} 题")
+    _print_report(report, merged, args)
+    thresholds: list[tuple[str, float]] = []
+    if args.min_f1 is not None:
+        thresholds = [(f"{REFERENCE_METRIC} ≥ {args.min_f1}（来自命令行）", float(args.min_f1))]
+    return _verdict(report, thresholds, args, merged)
+
+
 def run(args: argparse.Namespace) -> int:
+    if args.report_from:
+        return _merge(args)
+
     path = _resolve_path(args.dataset, args.path)
     try:
         questions = load(args.dataset, path)
@@ -528,9 +865,21 @@ def run(args: argparse.Namespace) -> int:
     if args.inspect:
         return _inspect(questions)
 
+    # **开跑前先确认网关能用**（理由见 `_preflight`）——
+    # `--inspect` 不碰模型，所以放在它之后。
+    blocked = _preflight(args)
+    if blocked is not None:
+        return blocked
+
+    if args.skip:
+        questions = questions[args.skip :]
     if args.limit:
         questions = questions[: args.limit]
-        print(f"[--limit] 只跑前 {len(questions)} 题（先验链路，再跑全量）")
+    if args.skip or args.limit:
+        print(
+            f"[切片] 本批 {len(questions)} 题（第 {args.skip}–{args.skip + len(questions)} 题）"
+            "——**全量上千题一条命令会超时，所以分批跑，最后 --report-from 合并**"
+        )
 
     thresholds = _thresholds(questions, args)
     if thresholds is None:
@@ -653,6 +1002,15 @@ def _verdict(report: dict, thresholds: list[tuple[str, float]], args, details: l
             f"{errors[0]['error'][:100]}"
         )
 
+    # **生成失败也算失败**：`_llm_generate` 内部已重试 2 次，到这里仍失败说明
+    # 不是瞬时抖动。不报的话，"网关挂了"会以"答题率 0%、准确率 0"的样子进报告——
+    # 那看起来像**系统不行**，而实际上什么都没测到。
+    if _GEN.failed:
+        failures.append(
+            f"生成调用失败 {_GEN.failed}/{_GEN.calls} 次——**这些题不是答错，是没跑成**。"
+            f"最后一次：{_GEN.last_error[:130]}"
+        )
+
     for label, floor in thresholds:
         if score < floor:
             failures.append(f"{label} —— 实得 {score:.1f}")
@@ -678,7 +1036,24 @@ def _verdict(report: dict, thresholds: list[tuple[str, float]], args, details: l
     if args.out:
         Path(args.out).parent.mkdir(parents=True, exist_ok=True)
         Path(args.out).write_text(
-            json.dumps({"report": report, "details": details}, ensure_ascii=False, indent=2),
+            json.dumps(
+                {
+                    # **口径元数据必须随明细一起存**。
+                    # 合并多批时，"这几批是不是同一个口径"只能靠它判断——
+                    # 而口径不同却合并，得到的数字**没有定义**（见 `_merge`）。
+                    "meta": {
+                        "dataset": args.dataset,
+                        "answer_mode": args.answer_mode,
+                        "ingest": args.ingest,
+                        "embedding": args.embedding,
+                        "top_k": args.top_k,
+                    },
+                    "report": report,
+                    "details": details,
+                },
+                ensure_ascii=False,
+                indent=2,
+            ),
             encoding="utf-8",
         )
         print(f"明细已写入：{args.out}")
@@ -724,6 +1099,12 @@ def _inspect(questions: list[Question]) -> int:
 def _print_report(report: dict, details: list[dict], args) -> None:
     print(f"\n{'=' * 66}\n结果\n{'=' * 66}")
     print(f"  题数 {report['total']} · 答题率 {report['answer_rate']:.1%}")
+    if _GEN.calls:
+        print(f"  生成调用 {_GEN.calls} 次 · 失败 {_GEN.failed} 次（{_GEN.failure_rate:.1%}）")
+        if _GEN.failed:
+            print(f"    ✗ 最后一次失败：{_GEN.last_error[:160]}")
+            print("      **这不是答错，是没跑成**——上面的答题率因此失去意义，")
+            print("      别把它读成检索问题。")
     print(f"  准确率 {report['accuracy'] * 100:.1f} · F1 {report['f1']:.3f} · EM {report['em']:.3f}")
     print(
         f"  召回 R@{args.top_k} {report['recall@k']:.3f}"
@@ -809,13 +1190,29 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="只灌入、不提问。配合 --home 把库准备好，之后反复评测都不用再灌",
     )
+    parser.add_argument(
+        "--report-from",
+        nargs="+",
+        default=None,
+        metavar="JSON",
+        help="把多份 `--out` 明细**合并成全量报告**（不重跑）。"
+        "全量上千题一条命令会超时，所以必须分批——而分批之后要有它才拿得到全量数字。"
+        "口径不一致时拒绝合并",
+    )
     parser.add_argument("--top-k", type=int, default=10)
     parser.add_argument(
         "--limit",
         type=int,
         default=None,
-        help="只跑前 N 题。**先用它验证链路，再跑全量**——"
+        help="只跑 N 题。**先用它验证链路，再跑全量**——"
         "公开数据集上千题，全量跑一次要几十分钟，链路坏了却要跑完才知道",
+    )
+    parser.add_argument(
+        "--skip",
+        type=int,
+        default=0,
+        help="跳过前 N 题，配合 --limit 表达「第 M 批」。"
+        "切片点不影响灌入（灌入按**组**做，每组只灌一次），所以切在任意位置都安全",
     )
     parser.add_argument("--inspect", action="store_true", help="只打印加载器读出的内容，不跑分")
     parser.add_argument(

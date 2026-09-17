@@ -1,0 +1,3807 @@
+{
+  "meta": {
+    "dataset": "locomo",
+    "answer_mode": "extract",
+    "ingest": "rule",
+    "embedding": "off",
+    "top_k": 10
+  },
+  "report": {
+    "total": 158,
+    "answered": 158,
+    "answer_rate": 1.0,
+    "accuracy": 0.0506,
+    "f1": 0.0221,
+    "em": 0.0,
+    "contains": 0.0506,
+    "recall@k": 0.8696,
+    "recall@gold": 0.4945,
+    "mrr": 0.6449,
+    "ndcg@k": 0.6794,
+    "by_category": {
+      "temporal": {
+        "total": 32,
+        "answered": 32,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0091,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.8958,
+        "recall@gold": 0.5208,
+        "mrr": 0.6326,
+        "ndcg@k": 0.6943,
+        "by_category": {}
+      },
+      "multihop": {
+        "total": 32,
+        "answered": 32,
+        "answer_rate": 1.0,
+        "accuracy": 0.0625,
+        "f1": 0.0229,
+        "em": 0.0,
+        "contains": 0.0625,
+        "recall@k": 0.6484,
+        "recall@gold": 0.2917,
+        "mrr": 0.5467,
+        "ndcg@k": 0.4829,
+        "by_category": {}
+      },
+      "open_domain": {
+        "total": 7,
+        "answered": 7,
+        "answer_rate": 1.0,
+        "accuracy": 0.2857,
+        "f1": 0.0204,
+        "em": 0.0,
+        "contains": 0.2857,
+        "recall@k": 0.4253,
+        "recall@gold": 0.1609,
+        "mrr": 0.3929,
+        "ndcg@k": 0.3734,
+        "by_category": {}
+      },
+      "single_hop": {
+        "total": 87,
+        "answered": 87,
+        "answer_rate": 1.0,
+        "accuracy": 0.046,
+        "f1": 0.0268,
+        "em": 0.0,
+        "contains": 0.046,
+        "recall@k": 0.977,
+        "recall@gold": 0.5862,
+        "mrr": 0.7058,
+        "ndcg@k": 0.7708,
+        "by_category": {}
+      }
+    }
+  },
+  "details": [
+    {
+      "id": "conv-50#0",
+      "category": "temporal",
+      "question": "When did Calvin first travel to Tokyo?",
+      "answer": "between 26 March and 20 April 2023",
+      "prediction": "Calvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nCalvin: Hey Dave!\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#1",
+      "category": "multihop",
+      "question": "What items did Calvin buy in March 2023?",
+      "answer": "mansion in Japan, luxury car Ferrari 488 GTB",
+      "prediction": "Calvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#2",
+      "category": "temporal",
+      "question": "When did Dave see Aerosmith perform live?",
+      "answer": "on the weekend before March 26, 2023",
+      "prediction": "Calvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nCalvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.\nDave: Hey Calvin, how's the tour with Frank Ocean?",
+      "retrieved_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#3",
+      "category": "multihop",
+      "question": "Which bands has Dave enjoyed listening to?",
+      "answer": "Aerosmith, The Fireworks",
+      "prediction": "Calvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#4",
+      "category": "open_domain",
+      "question": "Which country do Calvin and Dave want to meet in?",
+      "answer": "United States",
+      "prediction": "Dave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-50#5",
+      "category": "multihop",
+      "question": "What are Dave's dreams?",
+      "answer": "open a car maintenance shop, work on classic cars, build a custom car from scratch",
+      "prediction": "Calvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.\nDave: Hey Calvin!\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nCalvin: Hey Dave!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#6",
+      "category": "multihop",
+      "question": "Which types of cars does Dave like the most?",
+      "answer": "classic vintage cars",
+      "prediction": "Dave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!",
+      "retrieved_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-50#7",
+      "category": "open_domain",
+      "question": "Does Dave's shop employ a lot of people?",
+      "answer": "Yes",
+      "prediction": "Calvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#8",
+      "category": "temporal",
+      "question": "When did Dave start his car maintenance shop?",
+      "answer": "May 1, 2023",
+      "prediction": "Dave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#9",
+      "category": "temporal",
+      "question": "When did a mishap occur with Calvin's musical gear and favorite mic?",
+      "answer": "On a week before 16 May, 2023",
+      "prediction": "Calvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin!",
+      "retrieved_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#10",
+      "category": "temporal",
+      "question": "When did Calvin's place get flooded in Tokyo?",
+      "answer": "On a week before 16 May, 2023",
+      "prediction": "Calvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nDave: Hey Cal, how's it going?\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#11",
+      "category": "multihop",
+      "question": "What mishaps has Calvin run into?",
+      "answer": "flooding of his mansion, car accident",
+      "prediction": "Dave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#12",
+      "category": "temporal",
+      "question": "When was Calvin's concert in Tokyo?",
+      "answer": "last week of May 2023",
+      "prediction": "Calvin: Hey Dave! Been a few days since we talked, but lots happened.\nDave: Hey Calvin!\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#13",
+      "category": "open_domain",
+      "question": "Would Calvin enjoy performing at the Hollywood Bowl?",
+      "answer": "Yes; because he enjoys the rush of performing onstage to large crowds",
+      "prediction": "Calvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#14",
+      "category": "temporal",
+      "question": "When did Calvin meet with the creative team for his new album?",
+      "answer": "8 June, 2023",
+      "prediction": "Calvin: Hey Dave! Met with the creative team for my album yesterday.\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#15",
+      "category": "multihop",
+      "question": "Why does Dave regularly visit parks?",
+      "answer": "because it relaxes and calms him",
+      "prediction": "Calvin: Hey Dave! Met with the creative team for my album yesterday.\nDave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#16",
+      "category": "temporal",
+      "question": "When did Dave take a trip to mountainous regions?",
+      "answer": "July 2023",
+      "prediction": "Calvin: Hey Dave! Met with the creative team for my album yesterday.\nDave: Hey Calvin!\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nDave: Hey Cal, been ages since we spoke!",
+      "retrieved_ids": [
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#17",
+      "category": "temporal",
+      "question": "When did Calvin have a car incident?",
+      "answer": "on the Friday before 21 June, 2023",
+      "prediction": "Calvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nDave: Hey Cal, how's it going?\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#18",
+      "category": "multihop",
+      "question": "How many times has Calvin had to deal with insurance paperwork?",
+      "answer": "two times",
+      "prediction": "Calvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#19",
+      "category": "multihop",
+      "question": "Which places or events has Calvin visited in Tokyo?",
+      "answer": "music festival, car museum, Shibuya crossing, Shinjuku",
+      "prediction": "Calvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#20",
+      "category": "multihop",
+      "question": "Who inspired Dave's passion for car engineering?",
+      "answer": "His Dad",
+      "prediction": "Dave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nDave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#21",
+      "category": "open_domain",
+      "question": "Does Calvin wish to become more popular?",
+      "answer": "Yes; he want's to grow his fanbase",
+      "prediction": "Calvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nDave: Hey Calvin!\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-50#22",
+      "category": "multihop",
+      "question": "Does Calvin want to expand his brand?",
+      "answer": "yes",
+      "prediction": "Calvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#23",
+      "category": "multihop",
+      "question": "What is Dave's main passion?",
+      "answer": "auto engineering",
+      "prediction": "Dave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave!\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#24",
+      "category": "multihop",
+      "question": "Can Dave work with engines?",
+      "answer": "yes",
+      "prediction": "Dave: Hey Calvin! What’s up? Last Friday I went to the car show.\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#25",
+      "category": "temporal",
+      "question": "When did Dave host a card-playing night with his friends?",
+      "answer": "on the Friday before 22 August, 2023",
+      "prediction": "Dave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#26",
+      "category": "temporal",
+      "question": "When did Calvin record a podcast with his friends?",
+      "answer": "21 August, 2023",
+      "prediction": "Dave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?\nDave: Hey Cal, been ages since we spoke!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#27",
+      "category": "temporal",
+      "question": "Which city was Calvin visiting in August 2023?",
+      "answer": "Miami",
+      "prediction": "Calvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#28",
+      "category": "multihop",
+      "question": "What does Calvin do to relax?",
+      "answer": "take long drives in his car, embrace nature, fixing cars",
+      "prediction": "Calvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#29",
+      "category": "multihop",
+      "question": "What are Dave's hobbies other than fixing cars?",
+      "answer": "take a walk, go hiking, listen to favorite albums, live concerts, photography",
+      "prediction": "Calvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?\nCalvin: Hey Dave! Sorry it took me so long to get back to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#30",
+      "category": "multihop",
+      "question": "What kind of music does Dave listen to?",
+      "answer": "classic rock, Japanese music",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#31",
+      "category": "temporal",
+      "question": "Where was Dave in the last two weeks of August 2023?",
+      "answer": "San Francisco",
+      "prediction": "Calvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-50#32",
+      "category": "multihop",
+      "question": "Where did Dave return from with new knowledge of different techniques of car restoration?",
+      "answer": "San Francisco",
+      "prediction": "Dave: Hey Cal, how's it going?\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nDave: Hey Calvin!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#33",
+      "category": "multihop",
+      "question": "What was Dave doing in San Francisco?",
+      "answer": "attending a car modification workshop",
+      "prediction": "Dave: Hey Cal, how's it going?\nDave: Hey Calvin!\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#34",
+      "category": "temporal",
+      "question": "When did Dave return from San Francisco?",
+      "answer": "September 1, 2023",
+      "prediction": "Dave: Hey Cal, how's it going?\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nDave: Hey Calvin!\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#35",
+      "category": "temporal",
+      "question": "When did Calvin book flight tickets to Boston?",
+      "answer": "last week of August 2023",
+      "prediction": "Dave: Hey Calvin!\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#36",
+      "category": "temporal",
+      "question": "When was Calvin's album released?",
+      "answer": "September 11, 2023",
+      "prediction": "Calvin: Hey Dave! Met with the creative team for my album yesterday.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!",
+      "retrieved_ids": [
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#37",
+      "category": "open_domain",
+      "question": "Does Calvin love music tours?",
+      "answer": "yes",
+      "prediction": "Calvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#38",
+      "category": "temporal",
+      "question": "When did Dave have a great jam session with his band?",
+      "answer": "September 14, 2023",
+      "prediction": "Dave: Hey Calvin!\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#39",
+      "category": "open_domain",
+      "question": "Would Dave prefer working on a Dodge Charger or a Subaru Forester?",
+      "answer": "Dodge Charger",
+      "prediction": "Calvin: Hey Dave! Sorry it took me so long to get back to you.\nDave: Hey Calvin!\nDave: Hey Calvin, how's the tour with Frank Ocean?\nDave: Hey Calvin! Long time no talk.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM"
+      ],
+      "gold_ids": [],
+      "hit": false
+    },
+    {
+      "id": "conv-50#40",
+      "category": "multihop",
+      "question": "What was the artists Calvin used to listen to when he was a kid?",
+      "answer": "Tupac and Dr. Dre",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#41",
+      "category": "multihop",
+      "question": "Which of their family member do Calvin and Dave have nostalgic memories about?",
+      "answer": "Dad",
+      "prediction": "Calvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#42",
+      "category": "open_domain",
+      "question": "Based on the conversation, did Calvin and Dave have a meeting in Boston between August and November 2023? Answer in yes or no.",
+      "answer": "No",
+      "prediction": "Dave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#43",
+      "category": "temporal",
+      "question": "Which city was Calvin at on October 3, 2023?",
+      "answer": "Boston",
+      "prediction": "Dave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-50#44",
+      "category": "temporal",
+      "question": "When did Calvin met with local artists in Boston?",
+      "answer": "October 3, 2023",
+      "prediction": "Calvin: Hey Dave! Nice to meet you! How's it going since we talked?\nDave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!",
+      "retrieved_ids": [
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#45",
+      "category": "multihop",
+      "question": "What shared activities do Dave and Calvin have?",
+      "answer": "Working on cars",
+      "prediction": "Dave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nDave: Hey Calvin!\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#46",
+      "category": "multihop",
+      "question": "What is Dave's favorite activity?",
+      "answer": "Restoring cars",
+      "prediction": "Calvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin!\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nDave: Hey Calvin! Long time no talk.\nDave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?",
+      "retrieved_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#47",
+      "category": "multihop",
+      "question": "How many car shows has Dave attended?",
+      "answer": "two",
+      "prediction": "Calvin: Hey Dave! Nice to meet you! How's it going since we talked?\nCalvin: Hey Dave!\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#48",
+      "category": "temporal",
+      "question": "What was Dave doing in the first weekend of October 2023?",
+      "answer": "attending a car show",
+      "prediction": "Calvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nCalvin: Hey Dave!\nDave: Hey Calvin!\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!",
+      "retrieved_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#49",
+      "category": "multihop",
+      "question": "When Dave was a child, what did he and his father do in the garage?",
+      "answer": "tinkering with car engines, restoration and refurbishing cars",
+      "prediction": "Calvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.\nDave: Hey Calvin! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#50",
+      "category": "temporal",
+      "question": "When did Calvin buy his second Ferrari?",
+      "answer": "first week of October 2023",
+      "prediction": "Calvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#51",
+      "category": "temporal",
+      "question": "When did Calvin and Frank Ocean start collaborating?",
+      "answer": "August 2022",
+      "prediction": "Dave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#52",
+      "category": "temporal",
+      "question": "When did Calvin plan on travelling to Tokyo the second time?",
+      "answer": "November 2023",
+      "prediction": "Calvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?\nDave: Hey Cal, been ages since we spoke!",
+      "retrieved_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#53",
+      "category": "multihop",
+      "question": "Who supports Calvin in tough times?",
+      "answer": "friends and team",
+      "prediction": "Dave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nDave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#54",
+      "category": "multihop",
+      "question": "What does help Calvin stay connected to the creative process?",
+      "answer": "Calvin stays connected to the creative process by always staying up-to-date on world events and watching documentaries about artists.",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Cal, been ages since we spoke!\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#55",
+      "category": "temporal",
+      "question": "When did Calvin visit some of the sights in Boston with a former high school friend?",
+      "answer": "October 24, 2023",
+      "prediction": "Calvin: Hey Dave!\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin! Long time no talk.\nDave: Hey Calvin, how's the tour with Frank Ocean?",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#56",
+      "category": "multihop",
+      "question": "Which cities did Dave travel to in 2023?",
+      "answer": "San Francsico, Detroit",
+      "prediction": "Calvin: Hey Dave! Sorry it took me so long to get back to you.\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#57",
+      "category": "temporal",
+      "question": "Which hobby did Dave pick up in October 2023?",
+      "answer": "photography",
+      "prediction": "Calvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin!",
+      "retrieved_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-50#58",
+      "category": "multihop",
+      "question": "Which events in Dave's life inspired him to take up auto engineering?",
+      "answer": "attending a car show with Dad, working on an old car in a neighbor's garage when he was young, spent a summer restoring an old car with Dad",
+      "prediction": "Dave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nDave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#59",
+      "category": "multihop",
+      "question": "How many Ferraris does Calvin own?",
+      "answer": "two",
+      "prediction": "Dave: Hey Calvin, how's the tour with Frank Ocean?\nDave: Hey Cal, been ages since we spoke!\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#60",
+      "category": "multihop",
+      "question": "What gifts has Calvin received from his artist friends?",
+      "answer": "gold chain, custom-made guitar with an octopus on it",
+      "prediction": "Calvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-50#61",
+      "category": "temporal",
+      "question": "How long did Dave's work on the Ford Mustang take?",
+      "answer": "nearly two months",
+      "prediction": "Calvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Cal, been ages since we spoke!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#62",
+      "category": "temporal",
+      "question": "How long was the car modification workshop in San Francisco?",
+      "answer": "two weeks",
+      "prediction": "Dave: Hey Cal, how's it going?\nDave: Hey Calvin!\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hey Dave!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#63",
+      "category": "multihop",
+      "question": "What style of guitars does Calvin own?",
+      "answer": "custom-made yellow guitar with an octopus on it, shiny purple guitar",
+      "prediction": "Dave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#64",
+      "category": "multihop",
+      "question": "What activities has Dave participated in with his friends?",
+      "answer": "weekly visits to local parks, countryside roadtrip, celebration of the opening of his car maintenance shop, card-playing nights",
+      "prediction": "Dave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#65",
+      "category": "temporal",
+      "question": "When did Dave take a photo of a Boston clock tower?",
+      "answer": "September 2023",
+      "prediction": "Calvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#66",
+      "category": "multihop",
+      "question": "Do all of Dave's car restoration projects go smoothly?",
+      "answer": "No",
+      "prediction": "Dave: Hey Cal, how's it going?\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Sorry it took me so long to get back to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#67",
+      "category": "temporal",
+      "question": "Where was Calvin located in the last week of October 2023?",
+      "answer": "Tokyo",
+      "prediction": "Calvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#68",
+      "category": "temporal",
+      "question": "When did Dave find the car he repaired and started sharing in his blog?",
+      "answer": "last week of October 2023",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#69",
+      "category": "temporal",
+      "question": "When did Dave buy a vintage camera?",
+      "answer": "November 2023",
+      "prediction": "Dave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nDave: Hey Calvin!\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#70",
+      "category": "temporal",
+      "question": "When did Calvin attend a gala in Boston?",
+      "answer": "November 16, 2023",
+      "prediction": "Dave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin!\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave!",
+      "retrieved_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#71",
+      "category": "single_hop",
+      "question": "How long did Calvin plan to stay in Japan?",
+      "answer": "A few months",
+      "prediction": "Dave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#72",
+      "category": "single_hop",
+      "question": "Which band was Dave's favorite at the music festival in April 2023?",
+      "answer": "Aerosmith",
+      "prediction": "Calvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin!\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#73",
+      "category": "single_hop",
+      "question": "Where did Calvin attend a music festival in April 2023?",
+      "answer": "Tokyo",
+      "prediction": "Dave: Hey Calvin!\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#74",
+      "category": "single_hop",
+      "question": "What advice did Calvin receive from the producer at the music festival?",
+      "answer": "to stay true to himself and sound unique",
+      "prediction": "Calvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave!\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#75",
+      "category": "single_hop",
+      "question": "What is Dave's new business venture as of 1 May, 2023?",
+      "answer": "Car maintenance shop",
+      "prediction": "Dave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nCalvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#76",
+      "category": "single_hop",
+      "question": "What type of cars does Dave work on at his shop?",
+      "answer": "all kinds of cars, from regular maintenance to full restorations of classic cars",
+      "prediction": "Calvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#77",
+      "category": "single_hop",
+      "question": "What did Calvin receive as a gift from another artist?",
+      "answer": "a gold necklace with a diamond pendant",
+      "prediction": "Dave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Been ages since we chatted.\nDave: Hey Cal, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#78",
+      "category": "single_hop",
+      "question": "What was the necklace Calvin received meant to remind him of?",
+      "answer": "why he keeps hustling as a musician",
+      "prediction": "Dave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#79",
+      "category": "single_hop",
+      "question": "What does Dave do when he feels his creativity is frozen?",
+      "answer": "immerse himself in something he loves",
+      "prediction": "Calvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#80",
+      "category": "single_hop",
+      "question": "How does Calvin plan to jumpstart his inspiration?",
+      "answer": "explore other things and have some fun",
+      "prediction": "Dave: Hey Calvin! Long time no talk.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#81",
+      "category": "single_hop",
+      "question": "What did Calvin manage to save during the flood incident?",
+      "answer": "music gear and favorite microphone",
+      "prediction": "Calvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nDave: Hey Calvin!\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nCalvin: Hey Dave!",
+      "retrieved_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#82",
+      "category": "single_hop",
+      "question": "What did Dave open in May 2023?",
+      "answer": "a car shop",
+      "prediction": "Dave: Hey Calvin! Long time no talk.\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#83",
+      "category": "single_hop",
+      "question": "What gives Dave a sense of achievement and purpose?",
+      "answer": "Fixing up things",
+      "prediction": "Calvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin!\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nCalvin: Hey Dave!\nCalvin: Hey Dave! Met with the creative team for my album yesterday.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#84",
+      "category": "single_hop",
+      "question": "What fuels Calvin's soul?",
+      "answer": "Performing live",
+      "prediction": "Calvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin!\nDave: Hey Cal, been ages since we spoke!\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#85",
+      "category": "single_hop",
+      "question": "What is Dave doing to relax on weekends?",
+      "answer": "exploring parks",
+      "prediction": "Calvin: Hey Dave! Met with the creative team for my album yesterday.\nDave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#86",
+      "category": "single_hop",
+      "question": "What sports activity is Calvin planning to try after the tour with Frank Ocean?",
+      "answer": "Skiing",
+      "prediction": "Calvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#87",
+      "category": "single_hop",
+      "question": "What was Calvin excited to do after getting his car fixed on 7 July, 2023?",
+      "answer": "get back on the road",
+      "prediction": "Calvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#88",
+      "category": "single_hop",
+      "question": "What did Calvin and his friends arrange for in the park?",
+      "answer": "regular walks together",
+      "prediction": "Dave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#89",
+      "category": "single_hop",
+      "question": "What kind of music has Calvin been creating lately?",
+      "answer": "experimenting with different genres",
+      "prediction": "Dave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#90",
+      "category": "single_hop",
+      "question": "How does Calvin describe his process of adding electronic elements to his songs?",
+      "answer": "gives them a fresh vibe",
+      "prediction": "Dave: Hey Cal, been ages since we spoke!\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#91",
+      "category": "single_hop",
+      "question": "What car brand does Calvin own that he is proud of?",
+      "answer": "Ferrari",
+      "prediction": "Calvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#92",
+      "category": "single_hop",
+      "question": "What is Calvin's biggest current goal?",
+      "answer": "expand his brand worldwide and grow his fanbase",
+      "prediction": "Calvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nDave: Hey Cal, been ages since we spoke!\nDave: Hey Calvin, how's the tour with Frank Ocean?",
+      "retrieved_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#93",
+      "category": "single_hop",
+      "question": "What is Dave's advice to Calvin regarding his dreams?",
+      "answer": "to never forget his dreams",
+      "prediction": "Calvin: Hey Dave!\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#94",
+      "category": "single_hop",
+      "question": "What workshop did Dave get picked for on 11 August, 2023?",
+      "answer": "Car mod workshop",
+      "prediction": "Dave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nDave: Hey Cal, how's it going?\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#95",
+      "category": "single_hop",
+      "question": "What kind of modifications has Dave been working on in the car mod workshop?",
+      "answer": "engine swaps, suspension modifications, and body modifications",
+      "prediction": "Dave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Cal, how's it going?\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#96",
+      "category": "single_hop",
+      "question": "What type of car did Dave work on during the workshop?",
+      "answer": "classic muscle car",
+      "prediction": "Dave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nDave: Hey Cal, how's it going?\nDave: Hey Calvin!\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nCalvin: Hey Dave!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#97",
+      "category": "single_hop",
+      "question": "What does Dave say is important for making his custom cars unique?",
+      "answer": "attention to small details",
+      "prediction": "Dave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#98",
+      "category": "single_hop",
+      "question": "How did the audience in Tokyo react when Calvin sang one of his songs?",
+      "answer": "Everyone was so into it and sang along",
+      "prediction": "Dave: Hey Cal, how's it going?\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! Been ages since we chatted.\nCalvin: Hi Dave! Nice to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#99",
+      "category": "single_hop",
+      "question": "How did Calvin meet Frank Ocean?",
+      "answer": "At a music festival in Tokyo",
+      "prediction": "Dave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave! Been ages since we chatted.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin, how's the tour with Frank Ocean?",
+      "retrieved_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#100",
+      "category": "single_hop",
+      "question": "Where did Calvin and Frank Ocean record a song together?",
+      "answer": "In the studio at Calvin's mansion",
+      "prediction": "Dave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hi Dave! Nice to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#101",
+      "category": "single_hop",
+      "question": "What did Calvin and his friends record in August 2023?",
+      "answer": "a podcast discussing the rap industry",
+      "prediction": "Calvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#102",
+      "category": "single_hop",
+      "question": "Where did Calvin start shooting a video for his new album?",
+      "answer": "Miami",
+      "prediction": "Dave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#103",
+      "category": "single_hop",
+      "question": "What design is featured on Calvin's guitar?",
+      "answer": "octopus",
+      "prediction": "Dave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nDave: Hey Calvin, how's the tour with Frank Ocean?",
+      "retrieved_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#104",
+      "category": "single_hop",
+      "question": "Why did Calvin get his guitar customized with a shiny finish?",
+      "answer": "unique look",
+      "prediction": "Dave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#105",
+      "category": "single_hop",
+      "question": "What color glow did Calvin customize his guitar with?",
+      "answer": "purple",
+      "prediction": "Dave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#106",
+      "category": "single_hop",
+      "question": "Where did Dave come back from with insights on car modification on 1st September 2023?",
+      "answer": "San Francisco",
+      "prediction": "Dave: Hey Calvin!\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#107",
+      "category": "single_hop",
+      "question": "What emotion does Dave mention feeling when he sees the relief of someone whose car he fixed?",
+      "answer": "Proud",
+      "prediction": "Dave: Hey Calvin!\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#108",
+      "category": "single_hop",
+      "question": "What did Calvin book a flight ticket for on 1st September 2023?",
+      "answer": "Boston",
+      "prediction": "Dave: Hey Calvin!\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Cal, been ages since we spoke!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#109",
+      "category": "single_hop",
+      "question": "What is Calvin excited about after the tour?",
+      "answer": "exploring and growing his brand",
+      "prediction": "Calvin: Hey Dave! Sorry it took me so long to get back to you.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!",
+      "retrieved_ids": [
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#110",
+      "category": "single_hop",
+      "question": "What plans do Calvin and Dave have for when Calvin visits Boston?",
+      "answer": "Check out Dave's garage and maybe get some ideas for future projects",
+      "prediction": "Calvin: Hey Dave! Nice to meet you! How's it going since we talked?\nDave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#111",
+      "category": "single_hop",
+      "question": "Which Disney movie did Dave mention as one of his favorites?",
+      "answer": "Ratatouille",
+      "prediction": "Dave: Hey Calvin!\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hi Dave! Nice to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#112",
+      "category": "single_hop",
+      "question": "How does Dave feel about the reactions of people when they see the finished restoration project?",
+      "answer": "satisfying and worth the hard work",
+      "prediction": "Dave: Hey Calvin!\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nDave: Hey Cal, how's it going?\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#113",
+      "category": "single_hop",
+      "question": "What activity did Calvin enjoy during his summer drives?",
+      "answer": "feeling the wind blowing through his hair",
+      "prediction": "Dave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nDave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hi Dave! Nice to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#114",
+      "category": "single_hop",
+      "question": "Which song from the childhood of Calvin brings back memories of a road trip with his dad?",
+      "answer": "\"California Love\"",
+      "prediction": "Dave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin, how's the tour with Frank Ocean?",
+      "retrieved_ids": [
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#115",
+      "category": "single_hop",
+      "question": "What project did Calvin work on to chill out?",
+      "answer": "A shiny orange car",
+      "prediction": "Dave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nCalvin: Hey Dave! Met with the creative team for my album yesterday.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#116",
+      "category": "single_hop",
+      "question": "What car did Dave work on in the junkyard?",
+      "answer": "Ford Mustang",
+      "prediction": "Calvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#117",
+      "category": "single_hop",
+      "question": "What does Dave find satisfying about restoring old cars?",
+      "answer": "Transforming something old and beat-up into something beautiful",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nCalvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#118",
+      "category": "single_hop",
+      "question": "What do Calvin and Dave use to reach their goals?",
+      "answer": "Hard work and determination",
+      "prediction": "Calvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#119",
+      "category": "single_hop",
+      "question": "What does working on cars represent for Dave?",
+      "answer": "Therapy and a way to get away from everyday stress",
+      "prediction": "Calvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#120",
+      "category": "single_hop",
+      "question": "What does Dave aim to do with his passion for cars?",
+      "answer": "Take something broken and make it into something awesome",
+      "prediction": "Calvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#121",
+      "category": "single_hop",
+      "question": "What did Calvin recently get that is a \"masterpiece on wheels\"?",
+      "answer": "Ferrari",
+      "prediction": "Dave: Hey Cal, miss ya! Crazy rollercoaster week.\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nDave: Hey Calvin, how's the tour with Frank Ocean?",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#122",
+      "category": "single_hop",
+      "question": "Who headlined the music festival that Dave attended in October?",
+      "answer": "The Fireworks",
+      "prediction": "Dave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nCalvin: Hey Dave!\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#123",
+      "category": "single_hop",
+      "question": "How does Calvin stay motivated when faced with setbacks?",
+      "answer": "Reminds himself of his passion for goals, gets help from others, and takes a break to recharge",
+      "prediction": "Dave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave! Been ages since we chatted.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nDave: Hey Calvin, long time no talk! A lot has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#124",
+      "category": "single_hop",
+      "question": "What activity does Dave find fulfilling, similar to Calvin's passion for music festivals?",
+      "answer": "fixing things",
+      "prediction": "Dave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave!\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#125",
+      "category": "single_hop",
+      "question": "Where did Calvin and Dave meet Frank Ocean to start collaborating?",
+      "answer": "at a festival",
+      "prediction": "Calvin: Hey Dave! Nice to meet you! How's it going since we talked?\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#126",
+      "category": "single_hop",
+      "question": "Which part of Tokyo is described as Tokyo's Times Square by Calvin?",
+      "answer": "Shibuya Crossing",
+      "prediction": "Calvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#127",
+      "category": "single_hop",
+      "question": "What specific location in Tokyo does Calvin mention being excited to explore?",
+      "answer": "Shinjuku",
+      "prediction": "Calvin: Hey Dave! Been a few days since we talked, but lots happened.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nDave: Hey Cal, how's it going?\nCalvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#128",
+      "category": "single_hop",
+      "question": "What dish does Dave recommend Calvin to try in Tokyo?",
+      "answer": "ramen",
+      "prediction": "Calvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#129",
+      "category": "single_hop",
+      "question": "What does Calvin find energizing during the tour?",
+      "answer": "Performing and connecting with the crowd",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave!\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#130",
+      "category": "single_hop",
+      "question": "How does Calvin balance his job and personal life?",
+      "answer": "Takes it one day at a time",
+      "prediction": "Dave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, long time no talk! A lot has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#131",
+      "category": "single_hop",
+      "question": "What inspired Calvin's recent music?",
+      "answer": "Struggles that people go through",
+      "prediction": "Dave: Hey Cal, been ages since we spoke!\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#132",
+      "category": "single_hop",
+      "question": "How does Calvin describe his music in relation to capturing feelings?",
+      "answer": "Express himself and work through his emotions",
+      "prediction": "Calvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin, how's the tour with Frank Ocean?",
+      "retrieved_ids": [
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#133",
+      "category": "single_hop",
+      "question": "Why did Dave start working on cars?",
+      "answer": "Fascinated with how machines work",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, how's the tour with Frank Ocean?",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#134",
+      "category": "single_hop",
+      "question": "What is the toughest part of car restoration according to Dave?",
+      "answer": "Paying extra attention to detail",
+      "prediction": "Dave: Hey Calvin, how's the tour with Frank Ocean?\nDave: Hey Cal, how's it going?\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nDave: Hey Calvin, how's the car doing after the crash? You were stoked to get back on the road, right?\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#135",
+      "category": "single_hop",
+      "question": "What does Calvin believe makes an artist create something extraordinary?",
+      "answer": "Paying attention to small details",
+      "prediction": "Dave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nDave: Hey Calvin, long time no talk! A lot has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#136",
+      "category": "single_hop",
+      "question": "When did Dave sell the car he restored last year?",
+      "answer": "Last year",
+      "prediction": "Dave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#137",
+      "category": "single_hop",
+      "question": "When did Calvin first get interested in cars?",
+      "answer": "at an early age",
+      "prediction": "Calvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nCalvin: Hey Dave!\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nCalvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.",
+      "retrieved_ids": [
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#138",
+      "category": "single_hop",
+      "question": "How did Calvin feel about performing with someone he admires?",
+      "answer": "Unreal, like a dream come true",
+      "prediction": "Calvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave!\nCalvin: Hey Dave! Been ages since we chatted.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#139",
+      "category": "single_hop",
+      "question": "What realization did the nightclub experience bring to Calvin?",
+      "answer": "how much music means to him, it's like his passion and purpose",
+      "prediction": "Calvin: Hey Dave! Yesterday I met with some incredible artists in Boston and we talked about working together.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nDave: Hey Calvin, good to catch up again! Had a tough time with my car project.\nDave: Hey Calvin, long time no talk! A lot has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPVFX1C5T3D0XW9BMVA",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#140",
+      "category": "single_hop",
+      "question": "What do Dave and Calvin agree on regarding their pursuits?",
+      "answer": "It's fulfilling and motivating",
+      "prediction": "Dave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin!\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-50#141",
+      "category": "single_hop",
+      "question": "Which city is featured in the photograph Dave showed Calvin?",
+      "answer": "Boston",
+      "prediction": "Dave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave, been a few days, so I wanted to let you in on some cool news.\nDave: Hey Calvin! Long time no chat! How was the end of your tour? I bet it was amazing!\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#142",
+      "category": "single_hop",
+      "question": "What did Calvin do recently at his Japanese house?",
+      "answer": "Threw a small party for his new album",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! Long time no see. I just went to an awesome music thingy in Tokyo - so cool!\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPM4J0DG0XXE7T39FER"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#143",
+      "category": "single_hop",
+      "question": "What did Dave recently start a blog about?",
+      "answer": "Car mods",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#144",
+      "category": "single_hop",
+      "question": "What is Dave's way to share his passion with others?",
+      "answer": "Through a blog on car mods",
+      "prediction": "Calvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.\nDave: Hey Calvin!",
+      "retrieved_ids": [
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRPPT9DK3XVD05CYB62H",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPHWRPQMSFCY1QGX3Y9",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#145",
+      "category": "single_hop",
+      "question": "What type of videos does Calvin usually watch on his television?",
+      "answer": "Music videos, concerts, documentaries about artists and their creative process",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#146",
+      "category": "single_hop",
+      "question": "What type of music has Dave been getting into lately?",
+      "answer": "Classic rock",
+      "prediction": "Calvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Calvin! Long time no talk.\nCalvin: Hey Dave! Sorry it took me so long to get back to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#147",
+      "category": "single_hop",
+      "question": "What tools does Calvin use to boost his motivation for music?",
+      "answer": "Writing lyrics and notes",
+      "prediction": "Dave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Cal, been ages since we spoke!",
+      "retrieved_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#148",
+      "category": "single_hop",
+      "question": "What type of content does Dave post on his blog that inspired others to start their own DIY projects?",
+      "answer": "How he made his car look like a beast",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#149",
+      "category": "single_hop",
+      "question": "What kind of impact does Dave's blog on car mods have on people?",
+      "answer": "It inspires others to start their DIY projects",
+      "prediction": "Calvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.\nDave: Hey Cal, been ages since we spoke!\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#150",
+      "category": "single_hop",
+      "question": "Who did Calvin invite to see him perform in Boston on 13 November, 2023?",
+      "answer": "his old high school buddy",
+      "prediction": "Calvin: Hi Dave! Nice to hear from you.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#151",
+      "category": "single_hop",
+      "question": "What hobby did Calvin take up recently?",
+      "answer": "Photography",
+      "prediction": "Calvin: Hey Dave! Been ages since we chatted.\nDave: Hey Calvin!\nDave: Hey Calvin! What’s up? Last Friday I went to the car show.\nDave: Hey Calvin, been ages! Guess what? I got picked for a car mod workshop.\nCalvin: Hey Dave, long time no see! I just took my Ferrari for a service and it was so stressful.",
+      "retrieved_ids": [
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRQ0QXKCF9Q3VPJBVFBK",
+        "epi_01M2QAMRPFVG4QCGK6AT5GGT93",
+        "epi_01M2QAMRPD42JQ14FHPM4AFZFP",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-50#152",
+      "category": "single_hop",
+      "question": "What new item did Dave buy recently?",
+      "answer": "A vintage camera",
+      "prediction": "Calvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nCalvin: Hey Dave! Met with the creative team for my album yesterday.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#153",
+      "category": "single_hop",
+      "question": "What type of photos does Dave like to capture with his new camera?",
+      "answer": "Nature - sunsets, beaches, waves",
+      "prediction": "Dave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nCalvin: Hi Dave! Nice to hear from you.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#154",
+      "category": "single_hop",
+      "question": "What event did Calvin attend in Boston?",
+      "answer": "Fancy gala",
+      "prediction": "Dave: Hey Calvin!\nCalvin: Hey Dave! Nice to meet you! How's it going since we talked?\nCalvin: Hey Dave! Since we last talked, I went to a networking event to meet more artists.\nDave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Cal, miss ya! Crazy rollercoaster week.",
+      "retrieved_ids": [
+        "epi_01M2QAMRPTHBQ367WRP91DEF3E",
+        "epi_01M2QAMRNQN5S1N2XHY7DGB9WM",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRNVC20VD7G6XPQFC0N7",
+        "epi_01M2QAMRQ8F968XHWTGA1K90WE",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#155",
+      "category": "single_hop",
+      "question": "What did Calvin discuss with the cool artist he met at the gala?",
+      "answer": "Music and art",
+      "prediction": "Dave: Hey Calvin, long time no talk! A lot has happened.\nDave: Hey Calvin! Haven't talked in a while! Last Friday I had a card-night with my friends, it was so much fun.\nCalvin: Hey Dave! Been a few days since we talked, but lots happened.\nCalvin: Hey Dave, I invited my old high school buddy to see me perform in Boston! It was insane.\nCalvin: Hey Dave! Been ages since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRPJZMYM0C4TZXC5BQ4K",
+        "epi_01M2QAMRQ45QXENBY0GP01FJ51",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP",
+        "epi_01M2QAMRP4GXYS2GV03WNYB41M",
+        "epi_01M2QAMRP6BKN9FSS17XHZTD5Z",
+        "epi_01M2QAMRPYH181K2X5DWBF546Y",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRNS2DA7FESGK0R4SKR6",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#156",
+      "category": "single_hop",
+      "question": "Where did Dave take a stunning photo of a waterfall?",
+      "answer": "Nearby park",
+      "prediction": "Dave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! Long time no chat! Lots has gone down since we last caught up.\nCalvin: Hi Dave! Nice to hear from you.\nDave: Hey Calvin, long time no see! A lot's been happening since we last talked.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRNXYJ62N40GTGDZ8KY9",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP9G30V9N2VGCVP6YDS",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRQGD6D37ARZST7B3CYP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-50#157",
+      "category": "single_hop",
+      "question": "What positive impact does Calvin mention nature has on tough times?",
+      "answer": "Nature helps us appreciate life",
+      "prediction": "Dave: Hey Calvin, long time no talk! A lot has happened.\nCalvin: Hey Dave! It's been a while! Crazy stuff has been happening.\nDave: Hey Calvin, how's the tour with Frank Ocean?\nDave: Hey Cal, been ages since we spoke!\nCalvin: Hey Dave! Sorry it took me so long to get back to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A",
+        "epi_01M2QAMRQDAN9YXR3WRT4YWT98",
+        "epi_01M2QAMRQ79E8TTD5N9P5CW5P5",
+        "epi_01M2QAMRPBQQ89BAS3QZVNEYN6",
+        "epi_01M2QAMRPRNV5BKWN1E1SXJH6E",
+        "epi_01M2QAMRP2M99GWJSEHFP6D6FX",
+        "epi_01M2QAMRP7YAD99KDKV12T3G5H",
+        "epi_01M2QAMRQ1JZ4MNDH771P3WCNT",
+        "epi_01M2QAMRQBNZ1SWM8D8DFMQQ6X",
+        "epi_01M2QAMRP0J32G33M0Y3H3Y2DY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMRQXY5CR41QHTYZ1SS6A"
+      ],
+      "hit": true
+    }
+  ]
+}

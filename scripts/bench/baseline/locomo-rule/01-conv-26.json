@@ -1,0 +1,3663 @@
+{
+  "meta": {
+    "dataset": "locomo",
+    "answer_mode": "extract",
+    "ingest": "rule",
+    "embedding": "off",
+    "top_k": 10
+  },
+  "report": {
+    "total": 152,
+    "answered": 152,
+    "answer_rate": 1.0,
+    "accuracy": 0.0,
+    "f1": 0.0186,
+    "em": 0.0,
+    "contains": 0.0,
+    "recall@k": 0.8877,
+    "recall@gold": 0.5653,
+    "mrr": 0.7126,
+    "ndcg@k": 0.7344,
+    "by_category": {
+      "temporal": {
+        "total": 37,
+        "answered": 37,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0108,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.973,
+        "recall@gold": 0.6486,
+        "mrr": 0.7566,
+        "ndcg@k": 0.8084,
+        "by_category": {}
+      },
+      "open_domain": {
+        "total": 13,
+        "answered": 13,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.031,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.8225,
+        "recall@gold": 0.4728,
+        "mrr": 0.6718,
+        "ndcg@k": 0.6789,
+        "by_category": {}
+      },
+      "multihop": {
+        "total": 32,
+        "answered": 32,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0046,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.601,
+        "recall@gold": 0.2745,
+        "mrr": 0.5365,
+        "ndcg@k": 0.4678,
+        "by_category": {}
+      },
+      "single_hop": {
+        "total": 70,
+        "answered": 70,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0269,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.9857,
+        "recall@gold": 0.6714,
+        "mrr": 0.7774,
+        "ndcg@k": 0.8276,
+        "by_category": {}
+      }
+    }
+  },
+  "details": [
+    {
+      "id": "conv-26#0",
+      "category": "temporal",
+      "question": "When did Caroline go to the LGBTQ support group?",
+      "answer": "7 May 2023",
+      "prediction": "Caroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Since we last spoke, some big things have happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#1",
+      "category": "temporal",
+      "question": "When did Melanie paint a sunrise?",
+      "answer": "2022",
+      "prediction": "Caroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#2",
+      "category": "open_domain",
+      "question": "What fields would Caroline be likely to pursue in her educaton?",
+      "answer": "Psychology, counseling certification",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-26#3",
+      "category": "multihop",
+      "question": "What did Caroline research?",
+      "answer": "Adoption agencies",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-26#4",
+      "category": "multihop",
+      "question": "What is Caroline's identity?",
+      "answer": "Transgender woman",
+      "prediction": "Caroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Mel! Good to see you! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#5",
+      "category": "temporal",
+      "question": "When did Melanie run a charity race?",
+      "answer": "The sunday before 25 May 2023",
+      "prediction": "Melanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#6",
+      "category": "temporal",
+      "question": "When is Melanie planning on going camping?",
+      "answer": "June 2023",
+      "prediction": "Caroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Melanie! Just wanted to say hi!\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#7",
+      "category": "multihop",
+      "question": "What is Caroline's relationship status?",
+      "answer": "Single",
+      "prediction": "Caroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nMelanie: Hey Caroline!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-26#8",
+      "category": "temporal",
+      "question": "When did Caroline give a speech at a school?",
+      "answer": "The week before 9 June 2023",
+      "prediction": "Caroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#9",
+      "category": "temporal",
+      "question": "When did Caroline meet up with her friends, family, and mentors?",
+      "answer": "The week before 9 June 2023",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#10",
+      "category": "temporal",
+      "question": "How long has Caroline had her current group of friends for?",
+      "answer": "4 years",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#11",
+      "category": "multihop",
+      "question": "Where did Caroline move from 4 years ago?",
+      "answer": "Sweden",
+      "prediction": "Caroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, long time no chat!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#12",
+      "category": "temporal",
+      "question": "How long ago was Caroline's 18th birthday?",
+      "answer": "10 years ago",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nMelanie: Hey Caroline!\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#13",
+      "category": "multihop",
+      "question": "What career path has Caroline decided to persue?",
+      "answer": "counseling or mental health for Transgender people",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#14",
+      "category": "open_domain",
+      "question": "Would Caroline still want to pursue counseling as a career if she hadn't received support growing up?",
+      "answer": "Likely no",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! Good to see you! How have you been?\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#15",
+      "category": "multihop",
+      "question": "What activities does Melanie partake in?",
+      "answer": "pottery, camping, painting, swimming",
+      "prediction": "Caroline: Since we last spoke, some big things have happened.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#16",
+      "category": "temporal",
+      "question": "When did Melanie sign up for a pottery class?",
+      "answer": "2 July 2023",
+      "prediction": "Caroline: Hey Mel, long time no chat!\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#17",
+      "category": "temporal",
+      "question": "When is Caroline going to the transgender conference?",
+      "answer": "July 2023",
+      "prediction": "Caroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#18",
+      "category": "multihop",
+      "question": "Where has Melanie camped?",
+      "answer": "beach, mountains, forest",
+      "prediction": "Caroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#19",
+      "category": "multihop",
+      "question": "What do Melanie's kids like?",
+      "answer": "dinosaurs, nature",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! Good to see you! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#20",
+      "category": "temporal",
+      "question": "When did Melanie go to the museum?",
+      "answer": "5 July 2023",
+      "prediction": "Caroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#21",
+      "category": "temporal",
+      "question": "When did Caroline have a picnic?",
+      "answer": "The week before 6 July 2023",
+      "prediction": "Caroline: Hey Mel! Long time no talk. Lots has been going on since then!\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#22",
+      "category": "open_domain",
+      "question": "Would Caroline likely have Dr. Seuss books on her bookshelf?",
+      "answer": "Yes, since she collects classic children's books",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#23",
+      "category": "multihop",
+      "question": "What books has Melanie read?",
+      "answer": "\"Nothing is Impossible\", \"Charlotte's Web\"",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#24",
+      "category": "multihop",
+      "question": "What does Melanie do to destress?",
+      "answer": "Running, pottery",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#25",
+      "category": "temporal",
+      "question": "When did Caroline go to the LGBTQ conference?",
+      "answer": "10 July 2023",
+      "prediction": "Caroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#26",
+      "category": "temporal",
+      "question": "When did Melanie read the book \"nothing is impossible\"?",
+      "answer": "2022",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#27",
+      "category": "open_domain",
+      "question": "Would Caroline pursue writing as a career option?",
+      "answer": "LIkely no; though she likes reading, she wants to be a counselor",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, great to chat with you again!\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#28",
+      "category": "temporal",
+      "question": "When did Caroline go to the adoption meeting?",
+      "answer": "The friday before 15 July 2023",
+      "prediction": "Caroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#29",
+      "category": "temporal",
+      "question": "When did Melanie go to the pottery workshop?",
+      "answer": "The Friday before 15 July 2023",
+      "prediction": "Caroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel! Good to see you! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#30",
+      "category": "open_domain",
+      "question": "Would Melanie be considered a member of the LGBTQ community?",
+      "answer": "Likely no, she does not refer to herself as part of it",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nMelanie: Hey Caroline!\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Since we last spoke, some big things have happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#31",
+      "category": "temporal",
+      "question": "When did Melanie go camping in June?",
+      "answer": "The week before 27 June 2023",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#32",
+      "category": "multihop",
+      "question": "What LGBTQ+ events has Caroline participated in?",
+      "answer": "Pride parade, school speech, support group",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, long time no chat!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#33",
+      "category": "temporal",
+      "question": "When did Caroline go to a pride parade during the summer?",
+      "answer": "The week before 3 July 2023",
+      "prediction": "Caroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nMelanie: Hey Caroline!\nCaroline: Since we last spoke, some big things have happened.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#34",
+      "category": "multihop",
+      "question": "What events has Caroline participated in to help children?",
+      "answer": "Mentoring program, school speech",
+      "prediction": "Caroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Since we last spoke, some big things have happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-26#35",
+      "category": "temporal",
+      "question": "When did Melanie go camping in July?",
+      "answer": "two weekends before 17 July 2023",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#36",
+      "category": "temporal",
+      "question": "When did Caroline join a mentorship program?",
+      "answer": "The weekend before 17 July 2023",
+      "prediction": "Melanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#37",
+      "category": "multihop",
+      "question": "What did Melanie paint recently?",
+      "answer": "sunset",
+      "prediction": "Caroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#38",
+      "category": "multihop",
+      "question": "What activities has Melanie done with her family?",
+      "answer": "Pottery, painting, camping, museum, swimming, hiking",
+      "prediction": "Caroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#39",
+      "category": "multihop",
+      "question": "In what ways is Caroline participating in the LGBTQ community?",
+      "answer": "Joining activist group, going to pride parades, participating in an art show, mentoring program",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nMelanie: Hey Caroline!\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Since we last spoke, some big things have happened.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#40",
+      "category": "multihop",
+      "question": "How many times has Melanie gone to the beach in 2023?",
+      "answer": "2",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "gold_ids": [],
+      "hit": false
+    },
+    {
+      "id": "conv-26#41",
+      "category": "temporal",
+      "question": "When did Caroline join a new activist group?",
+      "answer": "The Tuesday before 20 July 2023",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel! Good to see you! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#42",
+      "category": "open_domain",
+      "question": "Would Melanie be more interested in going to a national park or a theme park?",
+      "answer": "National park; she likes the outdoors",
+      "prediction": "Caroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Mel, long time no chat!\nMelanie: Hey Caroline!\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#43",
+      "category": "multihop",
+      "question": "What kind of art does Caroline make?",
+      "answer": "abstract art",
+      "prediction": "Caroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#44",
+      "category": "temporal",
+      "question": "When is Melanie's daughter's birthday?",
+      "answer": "13 August",
+      "prediction": "Melanie: Hey Caroline!\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#45",
+      "category": "temporal",
+      "question": "When did Caroline attend a pride parade in August?",
+      "answer": "The Friday before 14 August 2023",
+      "prediction": "Caroline: Since we last spoke, some big things have happened.\nMelanie: Hey Caroline!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#46",
+      "category": "open_domain",
+      "question": "Would Melanie be considered an ally to the transgender community?",
+      "answer": "Yes, she is supportive",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#47",
+      "category": "multihop",
+      "question": "Who supports Caroline when she has a negative experience?",
+      "answer": "Her mentors, family, and friends",
+      "prediction": "Caroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, great to chat with you again!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#48",
+      "category": "multihop",
+      "question": "What types of pottery have Melanie and her kids made?",
+      "answer": "bowls, cup",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#49",
+      "category": "temporal",
+      "question": "When did Caroline and Melanie go to a pride fesetival together?",
+      "answer": "2022",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel! Good to see you! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-26#50",
+      "category": "open_domain",
+      "question": "What would Caroline's political leaning likely be?",
+      "answer": "Liberal",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#51",
+      "category": "multihop",
+      "question": "What has Melanie painted?",
+      "answer": "Horse, sunset, sunrise",
+      "prediction": "Caroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#52",
+      "category": "multihop",
+      "question": "What are Melanie's pets' names?",
+      "answer": "Oliver, Luna, Bailey",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#53",
+      "category": "temporal",
+      "question": "When did Caroline apply to adoption agencies?",
+      "answer": "The week of 23 August 2023",
+      "prediction": "Melanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#54",
+      "category": "temporal",
+      "question": "When did Caroline draw a self-portrait?",
+      "answer": "The week before 23 August 2023",
+      "prediction": "Caroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#55",
+      "category": "multihop",
+      "question": "What subject have Caroline and Melanie both painted?",
+      "answer": "Sunsets",
+      "prediction": "Melanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#56",
+      "category": "multihop",
+      "question": "What symbols are important to Caroline?",
+      "answer": "Rainbow flag, transgender symbol",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nMelanie: Hey Caroline!\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#57",
+      "category": "temporal",
+      "question": "When did Caroline encounter people on a hike and have a negative experience?",
+      "answer": "The week before 25 August 2023",
+      "prediction": "Caroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Mel, what's up? Been a busy week since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#58",
+      "category": "temporal",
+      "question": "When did Melanie make a plate in pottery class?",
+      "answer": "24 August 2023",
+      "prediction": "Caroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#59",
+      "category": "open_domain",
+      "question": "Would Caroline be considered religious?",
+      "answer": "Somewhat, but not extremely religious",
+      "prediction": "Caroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#60",
+      "category": "multihop",
+      "question": "What instruments does Melanie play?",
+      "answer": "clarinet and violin",
+      "prediction": "Caroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! Good to see you! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#61",
+      "category": "multihop",
+      "question": "What musical artists/bands has Melanie seen?",
+      "answer": "Summer Sounds, Matt Patterson",
+      "prediction": "Caroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#62",
+      "category": "temporal",
+      "question": "When did Melanie go to the park?",
+      "answer": "27 August 2023",
+      "prediction": "Caroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Since we last spoke, some big things have happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#63",
+      "category": "temporal",
+      "question": "When is Caroline's youth center putting on a talent show?",
+      "answer": "September 2023",
+      "prediction": "Caroline: Hey Melanie, great to hear from you. What's been up since we talked?\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#64",
+      "category": "open_domain",
+      "question": "Would Melanie likely enjoy the song \"The Four Seasons\" by Vivaldi?",
+      "answer": "Yes; it's classical music",
+      "prediction": "Caroline: Hey Melanie, great to hear from you. What's been up since we talked?\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#65",
+      "category": "multihop",
+      "question": "What are some changes Caroline has faced during her transition journey?",
+      "answer": "Changes to her body, losing unsupportive friends",
+      "prediction": "Caroline: Hey Mel, long time no chat!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#66",
+      "category": "multihop",
+      "question": "What does Melanie do with her family on hikes?",
+      "answer": "Roast marshmallows, tell stories",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#67",
+      "category": "temporal",
+      "question": "When did Caroline go biking with friends?",
+      "answer": "The weekend before 13 September 2023",
+      "prediction": "Caroline: Hey Mel, long time no chat!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Since we last spoke, some big things have happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#68",
+      "category": "temporal",
+      "question": "How long has Melanie been practicing art?",
+      "answer": "Since 2016",
+      "prediction": "Caroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#69",
+      "category": "open_domain",
+      "question": "What personality traits might Melanie say Caroline has?",
+      "answer": "Thoughtful, authentic, driven",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, great to chat with you again!",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#70",
+      "category": "multihop",
+      "question": "What transgender-specific events has Caroline attended?",
+      "answer": "Poetry reading, conference",
+      "prediction": "Caroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Since we last spoke, some big things have happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#71",
+      "category": "multihop",
+      "question": "What book did Melanie read from Caroline's suggestion?",
+      "answer": "\"Becoming Nicole\"",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#72",
+      "category": "temporal",
+      "question": "When did Melanie's friend adopt a child?",
+      "answer": "2022",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#73",
+      "category": "temporal",
+      "question": "When did Melanie get hurt?",
+      "answer": "September 2023",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#74",
+      "category": "temporal",
+      "question": "When did Melanie's family go on a roadtrip?",
+      "answer": "The weekend before 20 October 2023",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#75",
+      "category": "multihop",
+      "question": "How many children does Melanie have?",
+      "answer": "3",
+      "prediction": "Caroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nMelanie: Hey Caroline!",
+      "retrieved_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "gold_ids": [],
+      "hit": false
+    },
+    {
+      "id": "conv-26#76",
+      "category": "multihop",
+      "question": "When did Melanie go on a hike after the roadtrip?",
+      "answer": "19 October 2023",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#77",
+      "category": "open_domain",
+      "question": "Would Melanie go on another roadtrip soon?",
+      "answer": "Likely no; since this one went badly",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#78",
+      "category": "multihop",
+      "question": "What items has Melanie bought?",
+      "answer": "Figurines, shoes",
+      "prediction": "Caroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Since we last spoke, some big things have happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#79",
+      "category": "temporal",
+      "question": "When did Caroline pass the adoption interview?",
+      "answer": "The Friday before 22 October 2023",
+      "prediction": "Caroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#80",
+      "category": "temporal",
+      "question": "When did Melanie buy the figurines?",
+      "answer": "21 October 2023",
+      "prediction": "Caroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#81",
+      "category": "open_domain",
+      "question": "Would Caroline want to move back to her home country soon?",
+      "answer": "No; she's in the process of adopting children.",
+      "prediction": "Caroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#82",
+      "category": "single_hop",
+      "question": "What did the charity race raise awareness for?",
+      "answer": "mental health",
+      "prediction": "Melanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#83",
+      "category": "single_hop",
+      "question": "What did Melanie realize after the charity race?",
+      "answer": "self-care is important",
+      "prediction": "Melanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Mel, great to chat with you again!\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel! Good to see you! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#84",
+      "category": "single_hop",
+      "question": "How does Melanie prioritize self-care?",
+      "answer": "by carving out some me-time each day for activities like running, reading, or playing the violin",
+      "prediction": "Melanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#85",
+      "category": "single_hop",
+      "question": "What are Caroline's plans for the summer?",
+      "answer": "researching adoption agencies",
+      "prediction": "Melanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hey Melanie! Just wanted to say hi!\nMelanie: Hey Caroline!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#86",
+      "category": "single_hop",
+      "question": "What type of individuals does the adoption agency Caroline is considering support?",
+      "answer": "LGBTQ+ individuals",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#87",
+      "category": "single_hop",
+      "question": "Why did Caroline choose the adoption agency?",
+      "answer": "because of their inclusivity and support for LGBTQ+ individuals",
+      "prediction": "Caroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#88",
+      "category": "single_hop",
+      "question": "What is Caroline excited about in the adoption process?",
+      "answer": "creating a family for kids who need one",
+      "prediction": "Melanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#89",
+      "category": "single_hop",
+      "question": "What does Melanie think about Caroline's decision to adopt?",
+      "answer": "she thinks Caroline is doing something amazing and will be an awesome mom",
+      "prediction": "Caroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nMelanie: Hey Caroline!\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#90",
+      "category": "single_hop",
+      "question": "How long have Mel and her husband been married?",
+      "answer": "Mel and her husband have been married for 5 years.",
+      "prediction": "Caroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#91",
+      "category": "single_hop",
+      "question": "What does Caroline's necklace symbolize?",
+      "answer": "love, faith, and strength",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! Good to see you! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#92",
+      "category": "single_hop",
+      "question": "What country is Caroline's grandma from?",
+      "answer": "Sweden",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#93",
+      "category": "single_hop",
+      "question": "What was grandma's gift to Caroline?",
+      "answer": "necklace",
+      "prediction": "Caroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#94",
+      "category": "single_hop",
+      "question": "What is Melanie's hand-painted bowl a reminder of?",
+      "answer": "art and self-expression",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#95",
+      "category": "single_hop",
+      "question": "What did Melanie and her family do while camping?",
+      "answer": "explored nature, roasted marshmallows, and went on a hike",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-26#96",
+      "category": "single_hop",
+      "question": "What kind of counseling and mental health services is Caroline interested in pursuing?",
+      "answer": "working with trans people, helping them accept themselves and supporting their mental health",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel! Good to see you! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#97",
+      "category": "single_hop",
+      "question": "What workshop did Caroline attend recently?",
+      "answer": "LGBTQ+ counseling workshop",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#98",
+      "category": "single_hop",
+      "question": "What was discussed in the LGBTQ+ counseling workshop?",
+      "answer": "therapeutic methods and how to best work with trans people",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Since we last spoke, some big things have happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#99",
+      "category": "single_hop",
+      "question": "What motivated Caroline to pursue counseling?",
+      "answer": "her own journey and the support she received, and how counseling improved her life",
+      "prediction": "Caroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Mel! Good to see you! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#100",
+      "category": "single_hop",
+      "question": "What kind of place does Caroline want to create for people?",
+      "answer": "a safe and inviting place for people to grow",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nMelanie: Hey Caroline!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#101",
+      "category": "single_hop",
+      "question": "Did Melanie make the black and white bowl in the photo?",
+      "answer": "Yes",
+      "prediction": "Caroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#102",
+      "category": "single_hop",
+      "question": "What kind of books does Caroline have in her library?",
+      "answer": "kids' books - classics, stories from different cultures, educational books",
+      "prediction": "Caroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#103",
+      "category": "single_hop",
+      "question": "What was Melanie's favorite book from her childhood?",
+      "answer": "\"Charlotte's Web\"",
+      "prediction": "Caroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#104",
+      "category": "single_hop",
+      "question": "What book did Caroline recommend to Melanie?",
+      "answer": "\"Becoming Nicole\"",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#105",
+      "category": "single_hop",
+      "question": "What did Caroline take away from the book \"Becoming Nicole\"?",
+      "answer": "Lessons on self-acceptance and finding support",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#106",
+      "category": "single_hop",
+      "question": "What are the new shoes that Melanie got used for?",
+      "answer": "Running",
+      "prediction": "Caroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#107",
+      "category": "single_hop",
+      "question": "What is Melanie's reason for getting into running?",
+      "answer": "To de-stress and clear her mind",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#108",
+      "category": "single_hop",
+      "question": "What does Melanie say running has been great for?",
+      "answer": "Her mental health",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#109",
+      "category": "single_hop",
+      "question": "What did Mel and her kids make during the pottery workshop?",
+      "answer": "pots",
+      "prediction": "Caroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, great to chat with you again!",
+      "retrieved_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#110",
+      "category": "single_hop",
+      "question": "What kind of pot did Mel and her kids make with clay?",
+      "answer": "a cup with a dog face on it",
+      "prediction": "Caroline: Since we last spoke, some big things have happened.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#111",
+      "category": "single_hop",
+      "question": "What creative project do Mel and her kids do together besides pottery?",
+      "answer": "painting",
+      "prediction": "Caroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#112",
+      "category": "single_hop",
+      "question": "What did Mel and her kids paint in their latest project in July 2023?",
+      "answer": "a sunset with a palm tree",
+      "prediction": "Caroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#113",
+      "category": "single_hop",
+      "question": "What did Caroline see at the council meeting for adoption?",
+      "answer": "many people wanting to create loving homes for children in need",
+      "prediction": "Caroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#114",
+      "category": "single_hop",
+      "question": "What do sunflowers represent according to Caroline?",
+      "answer": "warmth and happiness",
+      "prediction": "Caroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#115",
+      "category": "single_hop",
+      "question": "Why are flowers important to Melanie?",
+      "answer": "They remind her to appreciate the small moments and were a part of her wedding decor",
+      "prediction": "Caroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nCaroline: Hey Mel, great to chat with you again!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#116",
+      "category": "single_hop",
+      "question": "What inspired Caroline's painting for the art show?",
+      "answer": "visiting an LGBTQ center and wanting to capture unity and strength",
+      "prediction": "Caroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nCaroline: Hey Mel, long time no chat!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY38MQCVTXGB7536HFR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#117",
+      "category": "single_hop",
+      "question": "How often does Melanie go to the beach with her kids?",
+      "answer": "once or twice a year",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#118",
+      "category": "single_hop",
+      "question": "What did Melanie and her family see during their camping trip last year?",
+      "answer": "Perseid meteor shower",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#119",
+      "category": "single_hop",
+      "question": "How did Melanie feel while watching the meteor shower?",
+      "answer": "in awe of the universe",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#120",
+      "category": "single_hop",
+      "question": "Whose birthday did Melanie celebrate recently?",
+      "answer": "Melanie's daughter",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nMelanie: Hey Caroline!\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#121",
+      "category": "single_hop",
+      "question": "Who performed at the concert at Melanie's daughter's birthday?",
+      "answer": "Matt Patterson",
+      "prediction": "Melanie: Hey Caroline!\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#122",
+      "category": "single_hop",
+      "question": "Why did Melanie choose to use colors and patterns in her pottery project?",
+      "answer": "She wanted to catch the eye and make people smile.",
+      "prediction": "Caroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#123",
+      "category": "single_hop",
+      "question": "What pet does Caroline have?",
+      "answer": "guinea pig",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hi Melanie! Hope you're doing good.\nMelanie: Hey Caroline!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#124",
+      "category": "single_hop",
+      "question": "What pets does Melanie have?",
+      "answer": "Two cats and a dog",
+      "prediction": "Caroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, great to chat with you again!\nMelanie: Hey Caroline!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#125",
+      "category": "single_hop",
+      "question": "Where did Oliver hide his bone once?",
+      "answer": "In Melanie's slipper",
+      "prediction": "Caroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nMelanie: Hey Caroline!\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#126",
+      "category": "single_hop",
+      "question": "What activity did Caroline used to do with her dad?",
+      "answer": "Horseback riding",
+      "prediction": "Caroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#127",
+      "category": "single_hop",
+      "question": "What did Caroline make for a local church?",
+      "answer": "a stained glass window",
+      "prediction": "Caroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, long time no chat!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#128",
+      "category": "single_hop",
+      "question": "What did Caroline find in her neighborhood during her walk?",
+      "answer": "a rainbow sidewalk",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel, long time no chat!\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#129",
+      "category": "single_hop",
+      "question": "Which song motivates Caroline to be courageous?",
+      "answer": "Brave by Sara Bareilles",
+      "prediction": "Caroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel! Good to see you! How have you been?\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#130",
+      "category": "single_hop",
+      "question": "Which  classical musicians does Melanie enjoy listening to?",
+      "answer": "Bach and Mozart",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#131",
+      "category": "single_hop",
+      "question": "Who is Melanie a fan of in terms of modern music?",
+      "answer": "Ed Sheeran",
+      "prediction": "Caroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Since we last spoke, some big things have happened.\nMelanie: Hey Caroline!\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#132",
+      "category": "single_hop",
+      "question": "How long has Melanie been creating art?",
+      "answer": "7 years",
+      "prediction": "Caroline: Hey Mel, long time no chat!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#133",
+      "category": "single_hop",
+      "question": "What precautionary sign did Melanie see at the café?",
+      "answer": "A sign stating that someone is not being able to leave",
+      "prediction": "Caroline: Hey Mel, long time no chat!\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Since we last spoke, some big things have happened.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#134",
+      "category": "single_hop",
+      "question": "What advice does Caroline give for getting started with adoption?",
+      "answer": "Do research, find an adoption agency or lawyer, gather necessary documents, and prepare emotionally.",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Mel, great to chat with you again!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYSCTNWGMW5GP7J3JCX",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#135",
+      "category": "single_hop",
+      "question": "What setback did Melanie face in October 2023?",
+      "answer": "She got hurt and had to take a break from pottery.",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#136",
+      "category": "single_hop",
+      "question": "What does Melanie do to keep herself busy during her pottery break?",
+      "answer": "Read a book and paint.",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Melanie! Just wanted to say hi!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#137",
+      "category": "single_hop",
+      "question": "What painting did Melanie show to Caroline on October 13, 2023?",
+      "answer": "A painting inspired by sunsets with a pink sky.",
+      "prediction": "Caroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel, long time no chat!\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nMelanie: Hey Caroline!",
+      "retrieved_ids": [
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#138",
+      "category": "single_hop",
+      "question": "What kind of painting did Caroline share with Melanie on October 13, 2023?",
+      "answer": "An abstract painting with blue streaks on a wall.",
+      "prediction": "Caroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#139",
+      "category": "single_hop",
+      "question": "What was the poetry reading that Caroline attended about?",
+      "answer": "It was a transgender poetry reading where transgender people shared their stories.",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Mel, great to chat with you again!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#140",
+      "category": "single_hop",
+      "question": "What did the posters at the poetry reading say?",
+      "answer": "\"Trans Lives Matter\"",
+      "prediction": "Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nCaroline: Hey Mel, great to chat with you again!",
+      "retrieved_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXVPWCQ953FMFMXJVP6",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#141",
+      "category": "single_hop",
+      "question": "What does Caroline's drawing symbolize for her?",
+      "answer": "Freedom and being true to herself.",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hi Melanie! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#142",
+      "category": "single_hop",
+      "question": "How do Melanie and Caroline describe their journey through life together?",
+      "answer": "An ongoing adventure of learning and growing.",
+      "prediction": "Caroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#143",
+      "category": "single_hop",
+      "question": "What happened to Melanie's son on their road trip?",
+      "answer": "He got into an accident",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#144",
+      "category": "single_hop",
+      "question": "How did Melanie's son handle the accident?",
+      "answer": "He was scared but reassured by his family",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#145",
+      "category": "single_hop",
+      "question": "How did Melanie feel about her family after the accident?",
+      "answer": "They are important and mean the world to her",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#146",
+      "category": "single_hop",
+      "question": "How did Melanie's children handle the accident?",
+      "answer": "They were scared but resilient",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, long time no chat!\nCaroline: Hi Melanie! Hope you're doing good.\nCaroline: Hey, Mel! How's it going? There's something I want to tell you.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY7H4SZNN0GYBTABSZG",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#147",
+      "category": "single_hop",
+      "question": "How did Melanie feel after the accident?",
+      "answer": "Grateful and thankful for her family",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#148",
+      "category": "single_hop",
+      "question": "What was Melanie's reaction to her children enjoying the Grand Canyon?",
+      "answer": "She was happy and thankful",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#149",
+      "category": "single_hop",
+      "question": "What do Melanie's family give her?",
+      "answer": "Strength and motivation",
+      "prediction": "Caroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week.\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me.\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.",
+      "retrieved_ids": [
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFXSYQYW20AJ2P8XZCPT",
+        "epi_01M2QAMFYBBQYPJD0D640QGP1N",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#150",
+      "category": "single_hop",
+      "question": "How did Melanie feel about her family supporting her?",
+      "answer": "She appreciated them a lot",
+      "prediction": "Caroline: Hey Melanie! Just wanted to say hi!\nCaroline: Hey Mel, great to chat with you again!\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nCaroline: Hey Mel, long time no chat!",
+      "retrieved_ids": [
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFXXJ0ETJD7MK92THB8V",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N",
+        "epi_01M2QAMFYJXEN7GF62XVRAYS03",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXNX238SMWSF1SFY8QZ",
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFYDCH96ERMA1PVH53WY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-26#151",
+      "category": "single_hop",
+      "question": "What did Melanie do after the road trip to relax?",
+      "answer": "Went on a nature walk or hike",
+      "prediction": "Melanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident.\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice.\nCaroline: Hey Mel! Good to see you! How have you been?\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC",
+        "epi_01M2QAMFY0ATE88YH3ECMJBHJ8",
+        "epi_01M2QAMFYP7JBR0ZPCCM5SJEGY",
+        "epi_01M2QAMFXHJVCCVT3JE61P50NN",
+        "epi_01M2QAMFYF4X8321X75HPDQBC6",
+        "epi_01M2QAMFY5FCS9CBA6V0PXSBMZ",
+        "epi_01M2QAMFY9C4HQ39A6KH1YS7N0",
+        "epi_01M2QAMFXK98QHPDN0ERBK11H0",
+        "epi_01M2QAMFY38MQCVTXGB7536HFR",
+        "epi_01M2QAMFXQVNZH7S2K1M0K7X9N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMFYR7W905JRDKBZK19XC"
+      ],
+      "hit": true
+    }
+  ]
+}

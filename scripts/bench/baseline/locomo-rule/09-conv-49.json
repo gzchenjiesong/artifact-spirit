@@ -1,0 +1,3780 @@
+{
+  "meta": {
+    "dataset": "locomo",
+    "answer_mode": "extract",
+    "ingest": "rule",
+    "embedding": "off",
+    "top_k": 10
+  },
+  "report": {
+    "total": 156,
+    "answered": 156,
+    "answer_rate": 1.0,
+    "accuracy": 0.0,
+    "f1": 0.0179,
+    "em": 0.0,
+    "contains": 0.0,
+    "recall@k": 0.8431,
+    "recall@gold": 0.4676,
+    "mrr": 0.6208,
+    "ndcg@k": 0.6544,
+    "by_category": {
+      "multihop": {
+        "total": 37,
+        "answered": 37,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0278,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.7314,
+        "recall@gold": 0.3354,
+        "mrr": 0.5983,
+        "ndcg@k": 0.56,
+        "by_category": {}
+      },
+      "temporal": {
+        "total": 33,
+        "answered": 33,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0052,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.803,
+        "recall@gold": 0.5152,
+        "mrr": 0.6127,
+        "ndcg@k": 0.6439,
+        "by_category": {}
+      },
+      "open_domain": {
+        "total": 13,
+        "answered": 13,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0348,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.5353,
+        "recall@gold": 0.1186,
+        "mrr": 0.1976,
+        "ndcg@k": 0.2748,
+        "by_category": {}
+      },
+      "single_hop": {
+        "total": 73,
+        "answered": 73,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0157,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.9726,
+        "recall@gold": 0.5753,
+        "mrr": 0.7112,
+        "ndcg@k": 0.7746,
+        "by_category": {}
+      }
+    }
+  },
+  "details": [
+    {
+      "id": "conv-49#0",
+      "category": "multihop",
+      "question": "What kind of car does Evan drive?",
+      "answer": "Prius",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nSam: Hey Evan!\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#1",
+      "category": "multihop",
+      "question": "What kinds of things did Evan have broken?",
+      "answer": "His old Prius and his new Prius.",
+      "prediction": "Evan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#2",
+      "category": "multihop",
+      "question": "Where has Evan been on roadtrips with his family?",
+      "answer": "Rockies, Jasper",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, hope you're doing good.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#3",
+      "category": "multihop",
+      "question": "How many Prius has Evan owned?",
+      "answer": "two",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, good to hear from you.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan!",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#4",
+      "category": "temporal",
+      "question": "Which hobby did Sam take up in May 2023?",
+      "answer": "painting",
+      "prediction": "Evan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nEvan: Hey Sam, good to hear from you!\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Long time no see, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#5",
+      "category": "open_domain",
+      "question": "Which country was Evan visiting in May 2023?",
+      "answer": "Canada",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Hope you're doing good.\nSam: Hey Evan!\nSam: Hey Evan! I've been missing our chats.",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#6",
+      "category": "multihop",
+      "question": "How many roadtrips did Evan take in May 2023?",
+      "answer": "two",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Morning, Evan.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#7",
+      "category": "multihop",
+      "question": "What new hobbies did Sam consider trying?",
+      "answer": "Painting, kayaking, hiking, cooking, running",
+      "prediction": "Sam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#8",
+      "category": "multihop",
+      "question": "What hobby did Evan start practicing a few years ago that he enjoys?",
+      "answer": "Watercolor painting",
+      "prediction": "Evan: Hey Sam, good to hear from you!\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, I need to talk to you.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#9",
+      "category": "temporal",
+      "question": "When did Evan go to Jasper with his family?",
+      "answer": "weekend before May 24, 2023",
+      "prediction": "Evan: Hey Sam, good to hear from you!\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nSam: Morning, Evan.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#10",
+      "category": "open_domain",
+      "question": "Which type of vacation would Evan prefer with his family, walking tours in metropolitan cities or camping trip in the outdoors?",
+      "answer": "camping trip in the outdoors",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Morning, Evan.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#11",
+      "category": "multihop",
+      "question": "What health issue did Sam face that motivated him to change his lifestyle?",
+      "answer": "Weight problem",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, I need to talk to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#12",
+      "category": "temporal",
+      "question": "When did Sam first go to the doctor and find out he had a weight problem?",
+      "answer": "A few days before May 24, 2023.",
+      "prediction": "Evan: Hey Sam, good to hear from you!\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, hope you're doing okay.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, what's up? It's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#13",
+      "category": "temporal",
+      "question": "When did Evan have his sudden heart palpitation incident that really shocked him up?",
+      "answer": "first week of June 2023",
+      "prediction": "Evan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#14",
+      "category": "multihop",
+      "question": "What is Evan's favorite food?",
+      "answer": "Ginger snaps",
+      "prediction": "Evan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan! Hope you're doing good.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan! Long time no see, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#15",
+      "category": "multihop",
+      "question": "What kind of unhealthy snacks does Sam enjoy eating?",
+      "answer": "soda, candy",
+      "prediction": "Evan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#16",
+      "category": "multihop",
+      "question": "What recurring issue frustrates Sam at the grocery store?",
+      "answer": "Malfunctioning self-checkout machines.",
+      "prediction": "Sam: Hey Evan!\nEvan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan! I've been missing our chats.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Long time no see, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#17",
+      "category": "temporal",
+      "question": "When did Sam's friends mock him for being overweight?",
+      "answer": "Friday before 27 July 2023",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nSam: Hey Evan!\nSam: Hey Evan, I need to talk to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#18",
+      "category": "multihop",
+      "question": "What kind of healthy food suggestions has Evan given to Sam?",
+      "answer": "flavored seltzer water, dark chocolate with high cocoa content, air-popped popcorn and fruit, veggies, healthy sandwich snacks, energy balls, grilled chicken salad with avocado",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#19",
+      "category": "open_domain",
+      "question": "Considering their conversations and personal growth, what advice might Evan and Sam give to someone facing a major life transition or challenge?",
+      "answer": "Evan and Sam would likely advise embracing small, consistent changes​​, finding stress-relieving activities like hiking​​, painting, and road trips​​, and the importance of friendship and support in navigating challenges​​.",
+      "prediction": "Sam: Hey Evan! Hope you're doing good.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan! I've been missing our chats.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#20",
+      "category": "open_domain",
+      "question": "In light of the health and dietary changes discussed, what would be an appropriate gift for both Evan and Sam to encourage their healthy lifestyles?",
+      "answer": "a cookbook with healthy recipes or a subscription to a healthy meal delivery service.",
+      "prediction": "Evan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nSam: Morning, Evan.\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, what's up? It's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#21",
+      "category": "multihop",
+      "question": "How does Evan describe the woman and his feelings for her that he met in Canada?",
+      "answer": "He says she's cool, incredible, like something out of a movie, and that he feels alive around her. Every moment with her is fun and energetic, also Evan feels really lucky to have someone who gets him.",
+      "prediction": "Evan: Hey Sam, how's it going?\nSam: Hey Evan! Long time no see, how's it going?\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, what's up? It's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#22",
+      "category": "temporal",
+      "question": "When Evan did meet his future wife?",
+      "answer": "week before August 7, 2023.",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#23",
+      "category": "temporal",
+      "question": "When did Sam start working out at the gym?",
+      "answer": "July 28, 2023",
+      "prediction": "Sam: Hey Evan, I need to talk to you.\nSam: Hey Evan! I've been missing our chats.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nEvan: Hey Sam, how's it going?\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#24",
+      "category": "temporal",
+      "question": "What significant event happened in Sam's life towards the end of summer 2023?",
+      "answer": "He fell in love with a Canadian woman",
+      "prediction": "Evan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, hope you're doing good.\nSam: Hey Evan, been a few days since we last chatted.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan! Long time no see, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#25",
+      "category": "temporal",
+      "question": "Which year did Evan start taking care of his health seriously?",
+      "answer": "2021",
+      "prediction": "Sam: Hey Evan, hope you're doing okay.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan! I've been missing our chats.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#26",
+      "category": "multihop",
+      "question": "What motivates Evan to take care of his health?",
+      "answer": "family, fitness tracker, thirst for adventure on interesting hikes",
+      "prediction": "Evan: Hey Sam, how's it going?\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nSam: Hey Evan, I need to talk to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#27",
+      "category": "open_domain",
+      "question": "What electronic device could Evan gift Sam to help him keep up with his fitness goals?",
+      "answer": "fitness tracker",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan! Hope you're doing good.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nSam: Hey Evan! I've been missing our chats.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#28",
+      "category": "multihop",
+      "question": "What kind of writing does Sam do to relax and cope with his health issues?",
+      "answer": "journalling, creative writing",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, what's up? It's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#29",
+      "category": "multihop",
+      "question": "Who did Evan meet on his trip to Canada, and who did he come back from Canada with?",
+      "answer": "Evan met the woman he fell in love with and returned with her.",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, how's it going?\nSam: Hey Evan! Long time no see, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#30",
+      "category": "temporal",
+      "question": "When Evan get back from a vacation with his SO?",
+      "answer": "August 13, 2023",
+      "prediction": "Sam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#31",
+      "category": "open_domain",
+      "question": "How might Evan and Sam's experiences with health and lifestyle changes influence their approach to stress and challenges?",
+      "answer": "Their experiences likely lead them to view challenges as opportunities for growth and change. They both have embraced healthier lifestyles, indicating a proactive approach to managing stress and challenges.",
+      "prediction": "Evan: Hey Sam, good to hear from you!\nEvan: Hey Sam, how's it going?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!",
+      "retrieved_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#32",
+      "category": "multihop",
+      "question": "What recurring frustration does Evan experience?",
+      "answer": "Evan consistently misplaces his keys every week.",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nSam: Hey Evan! I've been missing our chats.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan!",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#33",
+      "category": "multihop",
+      "question": "What is the recurring dream that Sam keeps having?",
+      "answer": "he's flying over a cityscape.",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! I've been missing our chats.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#34",
+      "category": "multihop",
+      "question": "What accidents has Evan's son faced lately?",
+      "answer": "injured at a soccer game, fell off his bike",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nSam: Hey Evan! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#35",
+      "category": "temporal",
+      "question": "When was Evan's son injured at soccer?",
+      "answer": "Saturday before August 15, 2023.",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan! Long time no see, how's it going?\nSam: Morning, Evan.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#36",
+      "category": "multihop",
+      "question": "What kind of foods or recipes has Sam recommended to Evan?",
+      "answer": "grilled vegetables, grilled chicken and veggie stir-fry, poutine",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan!\nSam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam, hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#37",
+      "category": "multihop",
+      "question": "What kind of healthy meals did Sam start eating after getting a health scare?",
+      "answer": "salad, grilled salmon and vegetables, grilled chicken and veggie stir-fry, Beef Merlot, fruit bowl, smoothie bowl",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan! I've been missing our chats.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#38",
+      "category": "open_domain",
+      "question": "What role does nature and the outdoors play in Evan and Sam's mental well-being?",
+      "answer": "Nature and outdoor activities seem to be significant stress relievers and sources of joy for both Evan and Sam. These activities likely contribute positively to their mental well-being.",
+      "prediction": "Sam: Hey Evan, I need to talk to you.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan! I've been missing our chats.\nSam: Morning, Evan.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#39",
+      "category": "temporal",
+      "question": "How many months lapsed between Sam's first and second doctor's appointment?",
+      "answer": "three months",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Evan! Long time no see, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#40",
+      "category": "temporal",
+      "question": "When did Evan start taking painting classes?",
+      "answer": "Few days before 19 August, 2023.",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Morning, Evan.\nSam: Hey Evan, hope you're doing okay.\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan! I've been missing our chats.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#41",
+      "category": "temporal",
+      "question": "Which classes did Evan join in mid-August 2023?",
+      "answer": "painting classes",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Long time no see, how's it going?\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#42",
+      "category": "multihop",
+      "question": "How did Evan get into painting?",
+      "answer": "His friend got him into it by gifting him a painting and giving him some advice. The painting inspired Evan.",
+      "prediction": "Sam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan! Long time no see, how's it going?\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#43",
+      "category": "open_domain",
+      "question": "How often does Sam get health checkups?",
+      "answer": "every three months",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan! Hope you're doing good.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#44",
+      "category": "multihop",
+      "question": "What kind of subjects does Evan enjoy painting?",
+      "answer": "nature landscapes, portraits, abstract minimalism",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan! Long time no see, how's it going?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#45",
+      "category": "temporal",
+      "question": "Which places in Canada was Evan visiting in July 2023?",
+      "answer": "Banff, Rocky Mountains",
+      "prediction": "Sam: Hey Evan! Long time no see, how's it going?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#46",
+      "category": "open_domain",
+      "question": "How do Evan and Sam use creative outlets to cope with life's challenges?",
+      "answer": "Evan and Sam use creative activities, like painting and writing, as therapeutic tools to express themselves and cope with stress.",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nEvan: Hey Sam, good to hear from you!\nSam: Hey Evan! Long time no see, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#47",
+      "category": "temporal",
+      "question": "When did Evan go skiing in Banff?",
+      "answer": "July 2023",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, hope you're doing good.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#48",
+      "category": "multihop",
+      "question": "What new diet and lifestyle change did Sam adopt over time?",
+      "answer": "Healthy eating, exercise routine, running, hiking",
+      "prediction": "Evan: Hey Sam, how's it going?\nSam: Hey Evan, I need to talk to you.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Morning, Evan.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#49",
+      "category": "multihop",
+      "question": "Who was injured in Evan's family?",
+      "answer": "Evan's son and Evan himself",
+      "prediction": "Evan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, how's it going?\nSam: Morning, Evan.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, hope you're doing okay.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#50",
+      "category": "multihop",
+      "question": "What kind of hobbies does Evan pursue?",
+      "answer": "painting, hiking, reading books, biking, skiing, snowboarding, ice skating, swimming, camping, kayaking",
+      "prediction": "Sam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#51",
+      "category": "open_domain",
+      "question": "What challenges does Sam face in his quest for a healthier lifestyle, and how does he address them?",
+      "answer": "Sam faces challenges like maintaining motivation and making dietary changes. He addresses them by enrolling in cooking classes and seeking support from friends like Evan.",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#52",
+      "category": "temporal",
+      "question": "Which activity do Evan and Sam plan on doing together during September 2023?",
+      "answer": "painting",
+      "prediction": "Sam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nSam: Hey Evan, I need to talk to you.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#53",
+      "category": "temporal",
+      "question": "When did Evan and Sam decide to paint together?",
+      "answer": "Saturday after 11 September, 2023.",
+      "prediction": "Sam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#54",
+      "category": "multihop",
+      "question": "What personal health incidents does Evan face in 2023?",
+      "answer": "heart palpitations, twisted ankle, twisted ankle",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nSam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, how's it going?\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#55",
+      "category": "multihop",
+      "question": "What recurring adventure does Evan have with strangers?",
+      "answer": "Helping lost tourists and experiencing unexpected adventures in the city.",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, been a few days since we last chatted.\nSam: Hey Evan! I've been missing our chats.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#56",
+      "category": "multihop",
+      "question": "What is Sam's persistent problem with his phone?",
+      "answer": "His new phone malfunctioning, particularly with the navigation app.",
+      "prediction": "Sam: Hey Evan! I've been missing our chats.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, hope you're doing okay.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#57",
+      "category": "open_domain",
+      "question": "Which US state was Sam travelling in during October 2023?",
+      "answer": "California",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Hope you're doing good.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nSam: Hey Evan, been a few days since we last chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#58",
+      "category": "temporal",
+      "question": "When did Evan start lifting weights?",
+      "answer": "October 2022",
+      "prediction": "Sam: Hey Evan, hope you're doing okay.\nSam: Morning, Evan.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, I need to talk to you.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#59",
+      "category": "temporal",
+      "question": "When did Sam and his friend decide to try kayaking?",
+      "answer": "October 14, 2023",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, been a few days since we last chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#60",
+      "category": "temporal",
+      "question": "Which new activity does Sam take up in October 2023?",
+      "answer": "kayaking",
+      "prediction": "Sam: Hey Evan, I need to talk to you.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#61",
+      "category": "temporal",
+      "question": "What kind of stress was Sam dealing with in October 2023?",
+      "answer": "work-related stress",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nEvan: Hey Sam, good to hear from you.\nEvan: Hey Sam, how's it going?\nSam: Hey Evan! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#62",
+      "category": "multihop",
+      "question": "What health scares did Sam and Evan experience?",
+      "answer": "Sam faced a health scare with stomach pains that turned out to be gastritis, prompting him to rethink his health habits. Evan, on the other hand, experienced two separate incidents: a sudden heart palpitation incident and a different event involving a misunderstanding during a medical check-up. These experiences have significantly influenced their perspectives on health and well-being.",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, good to hear from you!\nSam: Hey Evan!\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nEvan: Hey Sam, what's up? It's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#63",
+      "category": "temporal",
+      "question": "When was Sam in the ER?",
+      "answer": "weekend before 17 October, 2023.",
+      "prediction": "Sam: Hey Evan! I've been missing our chats.\nSam: Hey Evan, been a few days since we last chatted.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Evan! Long time no see, how's it going?\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#64",
+      "category": "multihop",
+      "question": "Which ailment does Sam have to face due to his weight?",
+      "answer": "gastritis",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#65",
+      "category": "open_domain",
+      "question": "Does Evan live close to a beach or mountains?",
+      "answer": "beach",
+      "prediction": "Sam: Hey Evan! Hope you're doing good.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#66",
+      "category": "temporal",
+      "question": "When did Evan lose his job?",
+      "answer": "end of October 2023",
+      "prediction": "Sam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#67",
+      "category": "temporal",
+      "question": "When did Evan and Sam planned a trip to the beach together?",
+      "answer": "December, 2023",
+      "prediction": "Sam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#68",
+      "category": "temporal",
+      "question": "What was Sam doing on December 4, 2023?",
+      "answer": "Attending a Weight Watchers meeting",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, long time no talk! Hope you're doing great.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#69",
+      "category": "multihop",
+      "question": "Which two significant life events occur in Evan's life in December 2023 with his partner?",
+      "answer": "his partner gets pregnant and they get married",
+      "prediction": "Evan: Hey Sam, hope you're doing good.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nSam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#70",
+      "category": "temporal",
+      "question": "How long did Evan and his partner date before getting married?",
+      "answer": "four months",
+      "prediction": "Sam: Hey Evan! Long time no see, how's it going?\nSam: Hey Evan!\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!",
+      "retrieved_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#71",
+      "category": "open_domain",
+      "question": "Which major holiday season conincides with Evan's wedding?",
+      "answer": "Christmas",
+      "prediction": "Evan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Hope you're doing good.\nSam: Hey Evan!\nSam: Hey Evan! I've been missing our chats.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#72",
+      "category": "multihop",
+      "question": "Which activity did Sam resume in December 2023 after a long time?",
+      "answer": "hiking",
+      "prediction": "Evan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan!\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Long time no see, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#73",
+      "category": "temporal",
+      "question": "When is Evan planning a big family reunion?",
+      "answer": "Summer 2024",
+      "prediction": "Evan: Hey Sam, hope you're doing good.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#74",
+      "category": "temporal",
+      "question": "When did Evan's son fall off his bike?",
+      "answer": "Thursday before December 17, 2023.",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan! Long time no see, how's it going?\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#75",
+      "category": "temporal",
+      "question": "When did Evan announce his marriage to his extended family?",
+      "answer": "January 5, 2024",
+      "prediction": "Evan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan!\nSam: Morning, Evan.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#76",
+      "category": "temporal",
+      "question": "When did Evan finish the painting that's hanging in the exhibit?",
+      "answer": "few days before 17 December, 2023.",
+      "prediction": "Sam: Hey Evan! Long time no see, how's it going?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#77",
+      "category": "multihop",
+      "question": "How does Evan spend his time with his bride after the wedding?",
+      "answer": "family get-together, honeymoon in Canada to see snowy landscapes, ski, taste local cuisine and do some snowshoeing",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#78",
+      "category": "multihop",
+      "question": "Who did Evan tell about his marriage?",
+      "answer": "To Sam, to his friends from work, and to his and his wife's families.",
+      "prediction": "Evan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan!\nEvan: Hey Sam, good to hear from you!",
+      "retrieved_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#79",
+      "category": "temporal",
+      "question": "When will Evan and his partner have their honeymoon in Canada?",
+      "answer": "February 2024",
+      "prediction": "Evan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#80",
+      "category": "temporal",
+      "question": "When did Evan have a drunken night with his friends?",
+      "answer": "January 9, 2023",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan!",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#81",
+      "category": "multihop",
+      "question": "What is a stress reliever for Evan?",
+      "answer": "Drawing, traveling, places with a beautiful view, yoga, sunsets or something comfortable for Evan",
+      "prediction": "Sam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nEvan: Hey Sam, good to hear from you!\nEvan: Hey Sam, good to hear from you.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#82",
+      "category": "multihop",
+      "question": "What is a stress reliever for Sam?",
+      "answer": "Unhealthy snacks, sweets, yoga, places with beautiful views",
+      "prediction": "Sam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nEvan: Hey Sam, good to hear from you!\nEvan: Hey Sam, good to hear from you.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#83",
+      "category": "single_hop",
+      "question": "What type of car did Evan get after his old Prius broke down?",
+      "answer": "new Prius",
+      "prediction": "Sam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nEvan: Hey Sam, good to hear from you.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, been a few days since we last chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#84",
+      "category": "single_hop",
+      "question": "How did Evan get into watercolor painting?",
+      "answer": "friend's advice",
+      "prediction": "Sam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan! Long time no see, how's it going?\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#85",
+      "category": "single_hop",
+      "question": "What did Evan start doing a few years back as a stress-buster?",
+      "answer": "watercolor painting",
+      "prediction": "Sam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Morning, Evan.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#86",
+      "category": "single_hop",
+      "question": "What advice did Evan give Sam about finding a passion?",
+      "answer": "keep trying new things until something sparks excitement",
+      "prediction": "Sam: Hey Evan! Long time no see, how's it going?\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, hope you're doing okay.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#87",
+      "category": "single_hop",
+      "question": "Where did Evan take his family for a road trip on 24 May, 2023?",
+      "answer": "Jasper",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, good to hear from you!\nEvan: Hey Sam, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#88",
+      "category": "single_hop",
+      "question": "What did Evan find relaxing about his road trip to Jasper?",
+      "answer": "fresh air, peacefulness, cozy cabin surrounded by mountains and forests",
+      "prediction": "Evan: Hey Sam, good to hear from you!\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#89",
+      "category": "single_hop",
+      "question": "What habit is Sam trying to change in terms of diet?",
+      "answer": "consuming soda and candy",
+      "prediction": "Evan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nSam: Morning, Evan.\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#90",
+      "category": "single_hop",
+      "question": "What new suggestion did Evan give to Sam regarding his soda and candy consumption?",
+      "answer": "try flavored seltzer water and dark chocolate with high cocoa content",
+      "prediction": "Evan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan, I need to talk to you.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, good to hear from you.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#91",
+      "category": "single_hop",
+      "question": "What did Sam agree to try instead of soda and candy?",
+      "answer": "flavored seltzer water and dark chocolate with high cocoa content",
+      "prediction": "Evan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan, I need to talk to you.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#92",
+      "category": "single_hop",
+      "question": "What frustrating issue did Sam face at the supermarket?",
+      "answer": "broken self-checkout machines",
+      "prediction": "Evan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan, been a few days since we last chatted.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nEvan: Hey Sam, good to hear from you.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?",
+      "retrieved_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#93",
+      "category": "single_hop",
+      "question": "What novel is Evan reading that he finds gripping?",
+      "answer": "The Great Gatsby",
+      "prediction": "Sam: Hey Evan, I need to talk to you.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Long time no see, how's it going?\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#94",
+      "category": "single_hop",
+      "question": "What kind of water does Evan suggest Sam try as an alternative to soda?",
+      "answer": "Flavored seltzer water",
+      "prediction": "Sam: Hey Evan, I need to talk to you.\nEvan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, long time no talk! Hope you're doing great.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#95",
+      "category": "single_hop",
+      "question": "What does the smartwatch help Evan with?",
+      "answer": "tracks progress and serves as a constant reminder to keep going",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nEvan: Hey Sam, how's it going?\nSam: Hey Evan!",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#96",
+      "category": "single_hop",
+      "question": "What does the bonsai tree symbolize for Evan?",
+      "answer": "strength and resilience",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#97",
+      "category": "single_hop",
+      "question": "Why did Evan decide to get the bonsai tree?",
+      "answer": "motivates him to keep going through tough times",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan! Long time no see, how's it going?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, how's it going?\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#98",
+      "category": "single_hop",
+      "question": "According to Sam, what is more important than perfection?",
+      "answer": "progress",
+      "prediction": "Evan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Morning, Evan.\nSam: Hey Evan, I need to talk to you.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#99",
+      "category": "single_hop",
+      "question": "What did Evan suggest Sam to check out for insights into his dream?",
+      "answer": "dream interpretation book",
+      "prediction": "Evan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#100",
+      "category": "single_hop",
+      "question": "What did Evan mention he had been searching for fruitlessly for half an hour?",
+      "answer": "his keys",
+      "prediction": "Evan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#101",
+      "category": "single_hop",
+      "question": "What class is Sam taking to learn how to make healthier meals?",
+      "answer": "cooking class",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, long time no talk! Hope you're doing great.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#102",
+      "category": "single_hop",
+      "question": "What dish did Sam make on 18 August, 2023 that turned out flavorful?",
+      "answer": "grilled dish with salmon and vegetables",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#103",
+      "category": "single_hop",
+      "question": "What kind of recipe did Evan request from Sam on 19 August, 2023?",
+      "answer": "recipes with more vegetables",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan!\nSam: Hey Evan! Long time no see, how's it going?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#104",
+      "category": "single_hop",
+      "question": "What food did Sam share a photo of on 19 August, 2023?",
+      "answer": "bowl of spinach, avocado, and strawberries",
+      "prediction": "Evan: Hey Sam, hope you're doing good.\nSam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#105",
+      "category": "single_hop",
+      "question": "What type of painting classes did Evan start taking in 2023?",
+      "answer": "watercolor painting classes",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Morning, Evan.\nSam: Hey Evan, hope you're doing okay.\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan! I've been missing our chats.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#106",
+      "category": "single_hop",
+      "question": "What did Evan start painting years ago due to being inspired by a friend's gift?",
+      "answer": "forest scene",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan! Long time no see, how's it going?\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#107",
+      "category": "single_hop",
+      "question": "What nature concept do watercolor painting classes emphasize according to Evan?",
+      "answer": "observing nature and painting what is seen",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#108",
+      "category": "single_hop",
+      "question": "What type of landscapes does Evan love painting the most?",
+      "answer": "sunsets over the ocean",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan! Long time no see, how's it going?\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#109",
+      "category": "single_hop",
+      "question": "What fun activity did Evan mention doing in July 2023?",
+      "answer": "skiing",
+      "prediction": "Evan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan, I need to talk to you.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#110",
+      "category": "single_hop",
+      "question": "What injury did Evan suffer from in August 2023?",
+      "answer": "Twisted knee",
+      "prediction": "Sam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Morning, Evan.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#111",
+      "category": "single_hop",
+      "question": "What sports activity has Evan been doing to stay active while dealing with the knee injury?",
+      "answer": "Swimming",
+      "prediction": "Sam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Evan, I need to talk to you.\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#112",
+      "category": "single_hop",
+      "question": "What suggestion did Sam give to Evan to help with his knee issue?",
+      "answer": "Consider low-impact exercises or physical therapy",
+      "prediction": "Evan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, good to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#113",
+      "category": "single_hop",
+      "question": "What did Evan suggest Sam try as a calming hobby?",
+      "answer": "Painting",
+      "prediction": "Evan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, good to hear from you!",
+      "retrieved_ids": [
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#114",
+      "category": "single_hop",
+      "question": "What did Evan recommend Sam acquire to get started with painting?",
+      "answer": "Acrylic paints, brushes, canvas/paper, palette",
+      "prediction": "Sam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nEvan: Hey Sam, good to hear from you!\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#115",
+      "category": "single_hop",
+      "question": "What activity does Evan do to keep himself busy while healing his knee?",
+      "answer": "Watercolor painting",
+      "prediction": "Sam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan, been a few days since we last chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#116",
+      "category": "single_hop",
+      "question": "What painting did Evan share with Sam in October?",
+      "answer": "a cactus in the desert",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam, hope you're doing good.\nSam: Hey Evan!",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#117",
+      "category": "single_hop",
+      "question": "What kind of writing does Sam enjoy as a form of expression?",
+      "answer": "creative writing",
+      "prediction": "Sam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan, been a few days since we last chatted.\nSam: Hey Evan, hope you're doing okay.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#118",
+      "category": "single_hop",
+      "question": "What electronics issue has been frustrating Sam lately?",
+      "answer": "malfunctioning navigation app on the new phone",
+      "prediction": "Evan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nEvan: Hey Sam, good to hear from you.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#119",
+      "category": "single_hop",
+      "question": "What activity did Evan start one year ago?",
+      "answer": "lifting weights",
+      "prediction": "Sam: Hey Evan, I need to talk to you.\nSam: Hey Evan, hope you're doing okay.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#120",
+      "category": "single_hop",
+      "question": "What advice did Evan give to Sam to avoid injuries while starting weightlifting?",
+      "answer": "Find a trainer",
+      "prediction": "Sam: Hey Evan, hope you're doing okay.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, I need to talk to you.\nEvan: Hey Sam, good to hear from you!",
+      "retrieved_ids": [
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#121",
+      "category": "single_hop",
+      "question": "Where did Sam and his mate plan to try kayaking?",
+      "answer": "Lake Tahoe",
+      "prediction": "Evan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#122",
+      "category": "single_hop",
+      "question": "What digestive issue did Sam experience lately?",
+      "answer": "Gastritis",
+      "prediction": "Evan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan, been a few days since we last chatted.\nSam: Hey Evan!\nEvan: Hey Sam, good to hear from you!\nEvan: Hey Sam, what's up? It's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-49#123",
+      "category": "single_hop",
+      "question": "What adventurous theme is emerging in Evan's life as mentioned by Sam?",
+      "answer": "helping lost tourists",
+      "prediction": "Sam: Hey Evan! I've been missing our chats.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nEvan: Hey Sam, how's it going?\nSam: Hey Evan! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#124",
+      "category": "single_hop",
+      "question": "What does Evan mention about his progress at the gym to Sam?",
+      "answer": "gaining strength",
+      "prediction": "Evan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan! I've been missing our chats.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#125",
+      "category": "single_hop",
+      "question": "How did Evan start his transformation journey two years ago?",
+      "answer": "Changed his diet and started walking regularly",
+      "prediction": "Sam: Hey Evan, I need to talk to you.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nSam: Hey Evan, hope you're doing okay.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#126",
+      "category": "single_hop",
+      "question": "What gift did Evan receive from a close friend?",
+      "answer": "1968 Kustom K-200A vintage guitar",
+      "prediction": "Sam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#127",
+      "category": "single_hop",
+      "question": "Why had Evan been going through a tough time lately?",
+      "answer": "Lost their job due to downsizing",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan! Long time no see, how's it going?\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#128",
+      "category": "single_hop",
+      "question": "How does Evan describe the island he grew up on?",
+      "answer": "A happy place",
+      "prediction": "Sam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQV12F5MVN0WBMT214D"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#129",
+      "category": "single_hop",
+      "question": "What was the main reason for Evan's frustration with his new Prius breaking down?",
+      "answer": "He relied on it for his active lifestyle and road trips",
+      "prediction": "Evan: Hey Sam, good to hear from you.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#130",
+      "category": "single_hop",
+      "question": "How did Sam suggest Evan view the setback with his broken Prius?",
+      "answer": "As a chance to explore other ways of staying active and traveling",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#131",
+      "category": "single_hop",
+      "question": "What did Sam suggest Evan try for stress relief and flexibility?",
+      "answer": "Yoga",
+      "prediction": "Evan: Hey Sam, good to hear from you.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#132",
+      "category": "single_hop",
+      "question": "What did Sam offer Evan regarding yoga?",
+      "answer": "Support and tips",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam, good to hear from you.\nEvan: Hey Sam, good to hear from you!\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#133",
+      "category": "single_hop",
+      "question": "What news did Evan share with Sam on 9th December 2023?",
+      "answer": "partner is pregnant",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, hope you're doing good.\nSam: Hey Evan! Hope you're doing good.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan!",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#134",
+      "category": "single_hop",
+      "question": "What family event is Evan planning for next summer?",
+      "answer": "big family reunion",
+      "prediction": "Evan: Hey Sam, hope you're doing good.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#135",
+      "category": "single_hop",
+      "question": "What is the motto of Evan's family?",
+      "answer": "'Bring it on Home'",
+      "prediction": "Evan: Hey Sam, hope you're doing good.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nSam: Morning, Evan.\nSam: Hey Evan, good to see you! What's new since we last met? Anything cool happening?\nEvan: Hey Sam, good to hear from you!",
+      "retrieved_ids": [
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#136",
+      "category": "single_hop",
+      "question": "According to Evan, what is important for Sam to believe in concerning his weight?",
+      "answer": "Your worth is not defined by your weight",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, hope you're doing okay.\nSam: Hey Evan! Long time no see, how's it going?\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#137",
+      "category": "single_hop",
+      "question": "Who helped Evan get the painting published in the exhibition?",
+      "answer": "a close friend",
+      "prediction": "Evan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan, hope you're doing okay.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR034CVCQMSANB4BZCM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#138",
+      "category": "single_hop",
+      "question": "What did Sam recently start enjoying to clear his head?",
+      "answer": "running in the mornings",
+      "prediction": "Sam: Hey Evan! Long time no see, how's it going?\nEvan: Hey Sam! Long time no talk! How're you doing? Life's been quite the rollercoaster lately.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan! I've been missing our chats.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#139",
+      "category": "single_hop",
+      "question": "What did Sam suggest Evan should do with his keys?",
+      "answer": "put a GPS sensor on them",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Evan! Long time no see, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#140",
+      "category": "single_hop",
+      "question": "How did Evan feel when he painted the piece with the bird flying over it?",
+      "answer": "a sense of joy and freedom",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Long time no see, how's it going?\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nEvan: Hey Sam, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#141",
+      "category": "single_hop",
+      "question": "What did Evan suggest Sam should keep doing to find his own version of love?",
+      "answer": "Keep trying new things",
+      "prediction": "Sam: Hey Evan! Long time no see, how's it going?\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#142",
+      "category": "single_hop",
+      "question": "How did Evan describe the process of creating the painting with the bird flying over it?",
+      "answer": "embracing the creative process without restraint",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Long time no see, how's it going?\nEvan: Hey Sam, good to hear from you!\nEvan: Hey Sam, hope you're doing good.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#143",
+      "category": "single_hop",
+      "question": "What did Evan want to share with his work friends?",
+      "answer": "getting married",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan!\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Hope you're doing good.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#144",
+      "category": "single_hop",
+      "question": "What did Evan share with Sam after their hiking trip?",
+      "answer": "a photo of a man standing on a rock looking out over a valley",
+      "prediction": "Sam: Hey Evan!\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#145",
+      "category": "single_hop",
+      "question": "What did Evan offer to share with Sam after talking about healthy snacks?",
+      "answer": "the recipes for cookies",
+      "prediction": "Sam: Hey Evan!\nEvan: Hey Sam, hope you're doing good.\nEvan: Hey Sam, good to hear from you!\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam, what's up? It's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#146",
+      "category": "single_hop",
+      "question": "What did Evan and his partner share with their extended family on January 5, 2024?",
+      "answer": "their marriage",
+      "prediction": "Evan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, hope you're doing good.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#147",
+      "category": "single_hop",
+      "question": "What was Evan limiting himself to on his new diet?",
+      "answer": "just two ginger snaps a day",
+      "prediction": "Sam: Hey Ev! Long time no chat. How's it going? Hope all is well.\nEvan: Hey Sam, guess what? My partner and I told our extended fam about our marriage yesterday – it was so special!\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#148",
+      "category": "single_hop",
+      "question": "What sports activity did Evan and his partner try in a recent weekend?",
+      "answer": "Snowshoeing",
+      "prediction": "Sam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan, I need to talk to you.\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQM2220WGPT0XGF6BHP",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#149",
+      "category": "single_hop",
+      "question": "What advice did Evan suggest Sam seek from a doctor?",
+      "answer": "diet plan and low-impact exercises",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nEvan: Hey Sam, good to hear from you!",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#150",
+      "category": "single_hop",
+      "question": "What suggestions did Evan give for low-impact exercises?",
+      "answer": "swimming, yoga, walking",
+      "prediction": "Evan: Hey Sam, hope you're doing good. Something funny happened last night.\nSam: Hey Evan! Exciting news: I started a new diet and exercise routine last Monday and it's made a huge difference.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?",
+      "retrieved_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#151",
+      "category": "single_hop",
+      "question": "What movie did Sam watch that motivated him to keep up with his routine?",
+      "answer": "The Godfather",
+      "prediction": "Evan: Hey Sam, what's up? It's been a few days since we talked.\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.\nEvan: Hey Sam, how's it going?\nSam: Hey Evan! Hope you're doing good.\nSam: Hey Ev! Long time no chat. How's it going? Hope all is well.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQ20YBWP8RC0EMGZ5PE",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQV12F5MVN0WBMT214D",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#152",
+      "category": "single_hop",
+      "question": "What activity helped Evan with stress and flexibility?",
+      "answer": "Yoga",
+      "prediction": "Evan: Hey Sam, good to hear from you.\nEvan: Hey Sam! Long time no talk! Hope all is good. What have I been doing these past few weeks?\nSam: Hey Evan, I need to talk to you.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, hope you're doing good. Something funny happened last night.",
+      "retrieved_ids": [
+        "epi_01M2QAMQQXPYNQFK080V4AAAVS",
+        "epi_01M2QAMQQDAXTBCRSYHWS4M2M7",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQPX6TSXDV4ZFN37Y0RZ",
+        "epi_01M2QAMQQPR9FH5VSBBV2FCG5X",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#153",
+      "category": "single_hop",
+      "question": "What did Evan share a photo of that was taken on a camping trip?",
+      "answer": "a kayak",
+      "prediction": "Sam: Hey Evan! Hope you're doing good.\nSam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, hope you're doing good.\nEvan: Hey Sam, long time no talk! Hope you're doing great.\nSam: Hey Evan!",
+      "retrieved_ids": [
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQR39GH1FZTZ0YSAT104",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQQBTYAFJ19JJE00N1VR",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#154",
+      "category": "single_hop",
+      "question": "Why did Evan apologize to his partner?",
+      "answer": "for a drunken night",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, what's up? It's been a few days since we talked.\nSam: Hey Evan, some big news: I'm on a diet and living healthier! Been tough, but I'm determined.\nSam: Hey Evan! Long time no see, how's it going?\nEvan: Hey Sam, what's up? Long time no see, huh? Lots has happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQ6NS5ZTXPX44HNDWN1",
+        "epi_01M2QAMQQ83GSWJ28K77QAF3XR",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQR034CVCQMSANB4BZCM",
+        "epi_01M2QAMQR644MWQAD6RKRQFG1T",
+        "epi_01M2QAMQR9H8T05ZV25TC4NGTK",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQPVDCVFRFMTNX1JN6BP",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-49#155",
+      "category": "single_hop",
+      "question": "How does Evan describe being out on the water while kayaking and watching the sunset?",
+      "answer": "peaceful",
+      "prediction": "Sam: Hey Evan, been a few days since we last chatted.\nEvan: Hey Sam, how's it going? Been a while since we talked. Hope all is good.\nSam: Hey Evan! Hope you're doing good.\nSam: Hey Evan, long time no see! I've started eating healthier - what's new with you? Picked up any new hobbies?\nEvan: Hey Sam, long time no talk! Hope you're doing great.",
+      "retrieved_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y",
+        "epi_01M2QAMQQKFKVYD2WQVMD4J61C",
+        "epi_01M2QAMQQRVARBBTMNZ6A5T79G",
+        "epi_01M2QAMQQF7XY9RVSPTFFPDYV6",
+        "epi_01M2QAMQQ44AFQAQCJ4XC4X4NA",
+        "epi_01M2QAMQPYY22EHJPK65QNEHFT",
+        "epi_01M2QAMQQ0WSH86596R2AB9DXT",
+        "epi_01M2QAMQR16HC37RCXRPHH36HS",
+        "epi_01M2QAMQQYZ79YG9PPT4RRFBGF",
+        "epi_01M2QAMQQHM0JBNAGS8FVF3NHZ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMQRA7H33MSYVKDWB4M5Y"
+      ],
+      "hit": true
+    }
+  ]
+}

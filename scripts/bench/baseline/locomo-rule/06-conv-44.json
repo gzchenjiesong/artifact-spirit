@@ -1,0 +1,2980 @@
+{
+  "meta": {
+    "dataset": "locomo",
+    "answer_mode": "extract",
+    "ingest": "rule",
+    "embedding": "off",
+    "top_k": 10
+  },
+  "report": {
+    "total": 123,
+    "answered": 123,
+    "answer_rate": 1.0,
+    "accuracy": 0.0325,
+    "f1": 0.0178,
+    "em": 0.0,
+    "contains": 0.0325,
+    "recall@k": 0.8158,
+    "recall@gold": 0.4928,
+    "mrr": 0.6612,
+    "ndcg@k": 0.6743,
+    "by_category": {
+      "temporal": {
+        "total": 24,
+        "answered": 24,
+        "answer_rate": 1.0,
+        "accuracy": 0.0417,
+        "f1": 0.0093,
+        "em": 0.0,
+        "contains": 0.0417,
+        "recall@k": 0.7986,
+        "recall@gold": 0.4306,
+        "mrr": 0.5823,
+        "ndcg@k": 0.6148,
+        "by_category": {}
+      },
+      "multihop": {
+        "total": 30,
+        "answered": 30,
+        "answer_rate": 1.0,
+        "accuracy": 0.1,
+        "f1": 0.0126,
+        "em": 0.0,
+        "contains": 0.1,
+        "recall@k": 0.5726,
+        "recall@gold": 0.2317,
+        "mrr": 0.4704,
+        "ndcg@k": 0.4205,
+        "by_category": {}
+      },
+      "open_domain": {
+        "total": 7,
+        "answered": 7,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0282,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.4286,
+        "recall@gold": 0.0476,
+        "mrr": 0.2726,
+        "ndcg@k": 0.2499,
+        "by_category": {}
+      },
+      "single_hop": {
+        "total": 62,
+        "answered": 62,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0224,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.9839,
+        "recall@gold": 0.6935,
+        "mrr": 0.828,
+        "ndcg@k": 0.8681,
+        "by_category": {}
+      }
+    }
+  },
+  "details": [
+    {
+      "id": "conv-44#0",
+      "category": "temporal",
+      "question": "Which year did Audrey adopt the first three of her dogs?",
+      "answer": "2020",
+      "prediction": "Audrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey!\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-44#1",
+      "category": "temporal",
+      "question": "When did Andrew start his new job as a financial analyst?",
+      "answer": "The week before March 27, 2023",
+      "prediction": "Audrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAudrey: Hey Andrew!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew!\nAndrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.",
+      "retrieved_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#2",
+      "category": "multihop",
+      "question": "What kind of indoor activities has Andrew pursued with his girlfriend?",
+      "answer": "boardgames, volunteering at pet shelter, wine tasting, growing flowers",
+      "prediction": "Audrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey, had a great weekend!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#3",
+      "category": "multihop",
+      "question": "What kind of places have Andrew and his girlfriend checked out around the city?",
+      "answer": "cafes, new places to eat, open space for hikes, pet shelter, wine tasting event, park",
+      "prediction": "Audrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey!\nAndrew: Hey Audrey, it's been a busy week for me.\nAudrey: Hey Andrew, hope you're doing ok.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#4",
+      "category": "temporal",
+      "question": "When did Audrey make muffins for herself?",
+      "answer": "The week of April 3rd to 9th",
+      "prediction": "Andrew: Hey Audrey!\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAndrew: Hey Audrey, hope you're doing good!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#5",
+      "category": "temporal",
+      "question": "When did Audrey see a hummingbird?",
+      "answer": "first week of May 2023",
+      "prediction": "Audrey: Hey Andrew!\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAndrew: Hey Audrey, hope you're doing good!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#6",
+      "category": "temporal",
+      "question": "When did Audrey adopt Pixie?",
+      "answer": "around April 2, 2023",
+      "prediction": "Andrew: Hey!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#7",
+      "category": "temporal",
+      "question": "How many years passed between Audrey adopting Pixie and her other three dogs?",
+      "answer": "three years",
+      "prediction": "Audrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#8",
+      "category": "temporal",
+      "question": "Did Andrew have a pet dog during March 2023?",
+      "answer": "No",
+      "prediction": "Audrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAndrew: Hey! Long time no chat.\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAndrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-44#9",
+      "category": "multihop",
+      "question": "What kind of classes or groups has Audrey joined to take better care of her dogs?",
+      "answer": "positive reinforcement training workshop to bond with pets, dog training course, agility training course, grooming course, dog-owners group",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey Audrey, had a great weekend!\nAndrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#10",
+      "category": "temporal",
+      "question": "When did Audrey's positive reinforcement training course for dogs take place?",
+      "answer": "June, 2023",
+      "prediction": "Andrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey! It's been a while.\nAndrew: Hey Audrey, hope you're doing good!\nAudrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#11",
+      "category": "temporal",
+      "question": "When did Andrew go rock climbing?",
+      "answer": "June 11, 2023",
+      "prediction": "Andrew: Hey! Long time no chat.\nAndrew: Hey Audrey! What's up? Last weekend my girlfriend and I went fishing in one of the nearby lakes.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAudrey: Hey Andrew!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#12",
+      "category": "multihop",
+      "question": "What outdoor activities has Andrew done other than hiking in nature?",
+      "answer": "rock climbing, fishing, camping",
+      "prediction": "Andrew: Hey Audrey!\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAndrew: Hey! Long time no chat.\nAndrew: Hey Audrey! Long time no talk! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#13",
+      "category": "temporal",
+      "question": "When did Audrey move to a new place?",
+      "answer": "June 2023",
+      "prediction": "Audrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAudrey: Hey Andrew!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#14",
+      "category": "multihop",
+      "question": "What is something that Andrew really misses while working in the city?",
+      "answer": "being in nature",
+      "prediction": "Andrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hey Audrey, had a great weekend!\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#15",
+      "category": "multihop",
+      "question": "What is a shared frustration regarding dog ownership for Audrey and Andrew?",
+      "answer": "Not being able to find pet friendly spots.",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey!\nAndrew: Hey Audrey, it's been a busy week for me.\nAudrey: Hey! It's been a while.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#16",
+      "category": "temporal",
+      "question": "When is Andrew going to go hiking with Audrey?",
+      "answer": "August",
+      "prediction": "Audrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAndrew: Hey Audrey, it's been a busy week for me.",
+      "retrieved_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#17",
+      "category": "multihop",
+      "question": "How many times did Audrey and Andew plan to hike together?",
+      "answer": "three times",
+      "prediction": "Andrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAndrew: Hey Audrey, it's been a busy week for me.\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#18",
+      "category": "multihop",
+      "question": "Where did Audrey get Pixie from?",
+      "answer": "breeder",
+      "prediction": "Audrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAudrey: Hey Andrew!",
+      "retrieved_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#19",
+      "category": "open_domain",
+      "question": "What is an indoor activity that Andrew would enjoy doing while make his dog happy?",
+      "answer": "cook dog treats",
+      "prediction": "Andrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#20",
+      "category": "open_domain",
+      "question": "Which meat does Audrey prefer eating more than others?",
+      "answer": "chicken",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAudrey: Hey! It's been a while.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey Audrey, it's been a busy week for me.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#21",
+      "category": "multihop",
+      "question": "What are the classes that Audrey took for her dogs to?",
+      "answer": "Positive reinforcement training class for bonding, dog training course, agility class",
+      "prediction": "Andrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey! Long time no talk! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#22",
+      "category": "temporal",
+      "question": "Where did Andrew go during the first weekend of August 2023?",
+      "answer": "camping with girlfriend",
+      "prediction": "Andrew: Hey Audrey, hope you're doing good!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAndrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPW7E68AW2XQ8G01218"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#23",
+      "category": "multihop",
+      "question": "What are some problems that Andrew faces before he adopted Toby?",
+      "answer": "Finding the right dog and pet-friendly apartments close to open spaces",
+      "prediction": "Audrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey Audrey!\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#24",
+      "category": "multihop",
+      "question": "Did Audrey and Andrew grow up with a pet dog?",
+      "answer": "Yes",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAndrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAudrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#25",
+      "category": "temporal",
+      "question": "When did Andrew and his girlfriend go fishing?",
+      "answer": "weekend before August 24, 2023",
+      "prediction": "Andrew: Hey Audrey! What's up? Last weekend my girlfriend and I went fishing in one of the nearby lakes.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew, hope you're doing ok.\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#26",
+      "category": "multihop",
+      "question": "What is the biggest stressor in Andrew's life besides not being able to hike frequently?",
+      "answer": "work",
+      "prediction": "Audrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAndrew: Hey Audrey, had a great weekend!\nAudrey: Hey Andrew!\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAudrey: Hey! It's been a while.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#27",
+      "category": "multihop",
+      "question": "How does Andrew feel about his current work?",
+      "answer": "Stressful",
+      "prediction": "Audrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#28",
+      "category": "multihop",
+      "question": "What is something that Audrey often dresses up her dogs with?",
+      "answer": "Hats",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#29",
+      "category": "multihop",
+      "question": "What are the names of Audrey's dogs?",
+      "answer": "Pepper, Precious, Panda, and Pixie",
+      "prediction": "Audrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hey Audrey, had a great weekend!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew!\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!",
+      "retrieved_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#30",
+      "category": "temporal",
+      "question": "When is Andrew planning to go to the beach with his girlfriend?",
+      "answer": "November 2023",
+      "prediction": "Andrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#31",
+      "category": "multihop",
+      "question": "What has Andrew done with his dogs?",
+      "answer": "Taking walks and hiking",
+      "prediction": "Andrew: Hey Audrey!\nAndrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#32",
+      "category": "multihop",
+      "question": "What kind of tattoo does Audrey have on her arm?",
+      "answer": "Tattoos of her four dogs.",
+      "prediction": "Andrew: Hey Audrey!\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey Audrey, it's been a busy week for me.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#33",
+      "category": "open_domain",
+      "question": "What can Andrew potentially do to improve his stress and accomodate his living situation with his dogs?",
+      "answer": "Change to a hybrid or remote job so he can move away from the city to the suburbs to have a larger living space and be closer to nature.",
+      "prediction": "Audrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#34",
+      "category": "temporal",
+      "question": "How many months passed between Andrew adopting Toby and Buddy?",
+      "answer": "three months",
+      "prediction": "Andrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Hey Andrew!\nAndrew: Hey!\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey! Long time no talk! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#35",
+      "category": "multihop",
+      "question": "What are the names of Andrew's dogs?",
+      "answer": "Toby, Scout, Buddy",
+      "prediction": "Audrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hey Audrey, had a great weekend!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew!\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!",
+      "retrieved_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#36",
+      "category": "multihop",
+      "question": "What are some foods that Audrey likes eating?",
+      "answer": "chicken pot pie, chicken roast, blueberry muffins, sushi",
+      "prediction": "Audrey: Hey! It's been a while.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAndrew: Hey Audrey, had a great weekend!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#37",
+      "category": "temporal",
+      "question": "When did Audrey get into an accident in the park?",
+      "answer": "between October 19 and 24, 2023",
+      "prediction": "Andrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#38",
+      "category": "temporal",
+      "question": "When did Andrew and his girlfriend go on a wine tasting trip?",
+      "answer": "the weekend before October 24, 2023",
+      "prediction": "Andrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey! It's been a while.\nAudrey: Hey Andrew, hope you're doing ok.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#39",
+      "category": "multihop",
+      "question": "What did Audrey get wtih having so many dogs?",
+      "answer": "Companionship",
+      "prediction": "Andrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Hey Andrew!\nAndrew: Hey Audrey, it's been a busy week for me.\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#40",
+      "category": "multihop",
+      "question": "What is a good place for dogs to run around freely and meet new friends?",
+      "answer": "The dog park",
+      "prediction": "Andrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAndrew: Hey!\nAudrey: Hey Andrew!\nAndrew: Hey Audrey, had a great weekend!\nAndrew: Hey Audrey, it's been a busy week for me.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#41",
+      "category": "multihop",
+      "question": "What are the breeds of Audrey's dogs?",
+      "answer": "Mongrel mixed with Lab for Pepper and Panda. Mongrel mixed with Chihuahua for Precious and Pixie.",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey Audrey, had a great weekend!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew!\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#42",
+      "category": "multihop",
+      "question": "What technique is Audrey using to discipline her dogs?",
+      "answer": "Positive reinforcement",
+      "prediction": "Andrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#43",
+      "category": "open_domain",
+      "question": "Which US state do Audrey and Andrew potentially live in?",
+      "answer": "Minnesota",
+      "prediction": "Andrew: Hey!\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAudrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.",
+      "retrieved_ids": [
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-44#44",
+      "category": "open_domain",
+      "question": "Which national park could Audrey and Andrew be referring to in their conversations?",
+      "answer": "Voyageurs National Park",
+      "prediction": "Audrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey! It's been a while.\nAndrew: Hey!\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#45",
+      "category": "temporal",
+      "question": "How many pets will Andrew have, as of December 2023?",
+      "answer": "three",
+      "prediction": "Audrey: Hey Andrew!\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAndrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.\nAndrew: Hey Audrey, it's been a busy week for me.\nAudrey: Hey Andrew, hope you're doing ok.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#46",
+      "category": "temporal",
+      "question": "How many pets did Andrew have, as of September 2023?",
+      "answer": "one",
+      "prediction": "Andrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Hey Andrew!\nAndrew: Hey Audrey, it's been a busy week for me.\nAndrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#47",
+      "category": "temporal",
+      "question": "How many months passed between Andrew adopting Buddy and Scout",
+      "answer": "one month",
+      "prediction": "Audrey: Hey Andrew!\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAndrew: Hey!\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey! Long time no talk! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#48",
+      "category": "multihop",
+      "question": "What does Andrew view his pets as?",
+      "answer": "Family",
+      "prediction": "Andrew: Hey! Long time no chat.\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#49",
+      "category": "multihop",
+      "question": "What does Audrey view her pets as?",
+      "answer": "Family",
+      "prediction": "Andrew: Hey! Long time no chat.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#50",
+      "category": "multihop",
+      "question": "What is a skill that Audrey learned to take care of her dogs?",
+      "answer": "Grooming",
+      "prediction": "Andrew: Hey Audrey, hope you're doing good!\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#51",
+      "category": "multihop",
+      "question": "What items has Audrey bought or made for her dogs?",
+      "answer": "dog tags, toys, dog beds, collars",
+      "prediction": "Audrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#52",
+      "category": "open_domain",
+      "question": "What is something that Andrew could do to make birdwatching hobby to fit in his city schedule?",
+      "answer": "Install a bird feeder outside where he can see the birds without going outdoors.",
+      "prediction": "Andrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#53",
+      "category": "open_domain",
+      "question": "What is a career that Andrew could potentially pursue with his love for animals and nature?",
+      "answer": "Park ranger or a similar position working for the National Park Services.",
+      "prediction": "Andrew: Hey Audrey!\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-44#54",
+      "category": "multihop",
+      "question": "What activity do Audrey's dogs like to do in the dog park?",
+      "answer": "Play fetch with ball and frisbee, run around and meet other dogs",
+      "prediction": "Andrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAndrew: Hey Audrey, it's been a busy week for me.\nAudrey: Hey Andrew!\nAudrey: Hey Andrew!\nAndrew: Hey Audrey! Long time no talk! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#55",
+      "category": "temporal",
+      "question": "When did Andrew make his dogs a fun indoor area?",
+      "answer": "few days before November 22, 2023",
+      "prediction": "Audrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-44#56",
+      "category": "multihop",
+      "question": "Has Andrew moved into a new apartment for his dogs?",
+      "answer": "No",
+      "prediction": "Audrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey!\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#57",
+      "category": "temporal",
+      "question": "When did Andrew adopt Scout?",
+      "answer": "few days before November 2023",
+      "prediction": "Audrey: Hey Andrew!\nAndrew: Hey!\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAndrew: Hey Audrey, hope you're doing good!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#58",
+      "category": "temporal",
+      "question": "What did Audrey eat for dinner on October 24, 2023?",
+      "answer": "sushi",
+      "prediction": "Andrew: Hey Audrey!\nAndrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.",
+      "retrieved_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#59",
+      "category": "temporal",
+      "question": "How long has it been since Andrew adopted his first pet, as of November 2023?",
+      "answer": "4 months",
+      "prediction": "Audrey: Hey Andrew, hope you're doing ok.\nAndrew: Hey Audrey!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-44#60",
+      "category": "multihop",
+      "question": "How many dogs does Andrew have?",
+      "answer": "3",
+      "prediction": "Andrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.\nAudrey: Hey Andrew!\nAndrew: Hey Audrey, it's been a busy week for me.\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "gold_ids": [],
+      "hit": false
+    },
+    {
+      "id": "conv-44#61",
+      "category": "single_hop",
+      "question": "Which specific type of bird mesmerizes Andrew?",
+      "answer": "Eagles",
+      "prediction": "Audrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAudrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!",
+      "retrieved_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#62",
+      "category": "single_hop",
+      "question": "What did Andrew express missing about exploring nature trails with his family's dog?",
+      "answer": "The peaceful moments",
+      "prediction": "Audrey: Hey! It's been a while.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, hope you're doing ok.\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMP44H69YP72G015WZPK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#63",
+      "category": "single_hop",
+      "question": "What kind of pastries did Andrew and his girlfriend have at the cafe?",
+      "answer": "croissants, muffins, and tarts",
+      "prediction": "Andrew: Hey Audrey!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey Audrey, it's been a busy week for me.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey, hope you're doing good!",
+      "retrieved_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#64",
+      "category": "single_hop",
+      "question": "What kind of flowers does Audrey have a tattoo of?",
+      "answer": "sunflowers",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey Audrey!\nAndrew: Hey Audrey, it's been a busy week for me.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#65",
+      "category": "single_hop",
+      "question": "What does Audrey do during dog playdates in the park?",
+      "answer": "chat with people while dogs make new friends",
+      "prediction": "Andrew: Hey! Long time no chat.\nAudrey: Hey Andrew!\nAudrey: Hey! It's been a while.\nAudrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#66",
+      "category": "single_hop",
+      "question": "What type of dog was Andrew looking to adopt based on his living space?",
+      "answer": "smaller dog",
+      "prediction": "Andrew: Hey!\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAudrey: Hey! It's been a while.\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAudrey: Hey Andrew!",
+      "retrieved_ids": [
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#67",
+      "category": "single_hop",
+      "question": "Where does Andrew want to live to give their dog a large, open space to run around?",
+      "answer": "near a park or woods",
+      "prediction": "Andrew: Hey!\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAudrey: Hey Andrew!\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAndrew: Hey Audrey! Long time no talk! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMP44H69YP72G015WZPK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#68",
+      "category": "single_hop",
+      "question": "Why did Audrey sign up for a workshop about bonding with pets?",
+      "answer": "Strengthen the bond with her pets",
+      "prediction": "Andrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAndrew: Hey Audrey!\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#69",
+      "category": "single_hop",
+      "question": "How did Audrey hear about the workshop on bonding with pets?",
+      "answer": "Saw a workshop flyer at the local pet store",
+      "prediction": "Andrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAudrey: Hey Andrew!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#70",
+      "category": "single_hop",
+      "question": "What type of training was the workshop Audrey signed up for in May 2023?",
+      "answer": "Positive reinforcement training",
+      "prediction": "Andrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey! It's been a while.\nAndrew: Hey Audrey, had a great weekend!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#71",
+      "category": "single_hop",
+      "question": "How did Audrey describe she dog he met at the pet store?",
+      "answer": "Friendly and playful",
+      "prediction": "Andrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#72",
+      "category": "single_hop",
+      "question": "Why did Audrey think positive reinforcement training is important for pets?",
+      "answer": "To have pets learn how to behave in a positive way",
+      "prediction": "Andrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey Audrey!\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey! It's been a while.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#73",
+      "category": "single_hop",
+      "question": "What challenge is Andrew facing in their search for a pet?",
+      "answer": "Finding a pet-friendly spot in the city",
+      "prediction": "Andrew: Hey! Long time no chat.\nAndrew: Hey!\nAudrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!\nAudrey: Hey! It's been a while.\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#74",
+      "category": "single_hop",
+      "question": "How does Andrew feel about their search for a pet-friendly place?",
+      "answer": "Discouraged but determined",
+      "prediction": "Andrew: Hey!\nAudrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!\nAudrey: Hey! It's been a while.\nAndrew: Hey! Long time no chat.\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!",
+      "retrieved_ids": [
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#75",
+      "category": "single_hop",
+      "question": "What outdoor activities does Andrew plan on trying after the rock climbing class?",
+      "answer": "kayaking and bungee jumping",
+      "prediction": "Andrew: Hey! Long time no chat.\nAndrew: Hey Audrey!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#76",
+      "category": "single_hop",
+      "question": "How long does Audrey typically walk her dogs for?",
+      "answer": "about an hour",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey! Long time no chat.\nAndrew: Hey Audrey!\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#77",
+      "category": "single_hop",
+      "question": "What did Audrey set up in the backyard for their dogs on June 26, 2023?",
+      "answer": "a doggy play area with agility stuff and toys",
+      "prediction": "Audrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAndrew: Hey Audrey, hope you're doing good!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#78",
+      "category": "single_hop",
+      "question": "What did Audrey and her friends stumble across during a hike a few years back, as mentioned on June 26, 2023?",
+      "answer": "a stunning lake in the mountains",
+      "prediction": "Audrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAudrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!\nAndrew: Hey Audrey! What's up? Last weekend my girlfriend and I went fishing in one of the nearby lakes.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#79",
+      "category": "single_hop",
+      "question": "What is Audrey's favorite recipe that she shares with Andrew on 3 July, 2023?",
+      "answer": "Chicken Pot Pie",
+      "prediction": "Audrey: Hey! It's been a while.\nAndrew: Hey! Long time no chat.\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey Audrey! Long time no talk! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#80",
+      "category": "single_hop",
+      "question": "What dish is one of Audrey's favorite dishes that includes garlic and is shared with Andrew on 3 July, 2023?",
+      "answer": "Roasted Chicken",
+      "prediction": "Audrey: Hey! It's been a while.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey!\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#81",
+      "category": "single_hop",
+      "question": "What did Andrew and his GF do on the Monday before July 24, 2023?",
+      "answer": "volunteered at a pet shelter",
+      "prediction": "Andrew: Hey Audrey!\nAudrey: Hey Andrew, hope you're doing ok.\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAndrew: Hey Audrey, it's been a busy week for me.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#82",
+      "category": "single_hop",
+      "question": "What is the name of Audrey's childhood dog?",
+      "answer": "Max",
+      "prediction": "Andrew: Hey Audrey!\nAudrey: Hey Andrew!\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey! It's been a while.\nAndrew: Hey Audrey, had a great weekend!",
+      "retrieved_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#83",
+      "category": "single_hop",
+      "question": "What special memories does Audrey have with her childhood dog, Max?",
+      "answer": "Long walks in the neighborhood, exploring new paths, sharing worries and hopes",
+      "prediction": "Andrew: Hey Audrey!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#84",
+      "category": "single_hop",
+      "question": "What are some of the personalities of Audrey's four fur babies?",
+      "answer": "oldest is relaxed, second is playful, third can be naughty but loves cuddles, youngest is full of life",
+      "prediction": "Andrew: Hey Audrey!\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAndrew: Hey Audrey! Long time no talk! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#85",
+      "category": "single_hop",
+      "question": "What type of classes did Audrey start with her pups recently on 4 August, 2023?",
+      "answer": "Agility classes",
+      "prediction": "Andrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAndrew: Hey Audrey, hope you're doing good!\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPW7E68AW2XQ8G01218"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#86",
+      "category": "single_hop",
+      "question": "How often does Audrey take her pups to the park for practice?",
+      "answer": "Twice a week",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPW7E68AW2XQ8G01218"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#87",
+      "category": "single_hop",
+      "question": "How long did the trail hike that Audrey went on with her pups take?",
+      "answer": "Two hours",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPW7E68AW2XQ8G01218"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#88",
+      "category": "single_hop",
+      "question": "What advice did Audrey give to Andrew regarding grooming Toby?",
+      "answer": "Grooming slowly and gently, paying attention to sensitive areas like ears and paws. And remember to stay patient and positive throughout the grooming process.",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey Audrey, hope you're doing good!\nAndrew: Hey Audrey! What's up? Last weekend my girlfriend and I went fishing in one of the nearby lakes.\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAndrew: Hey, Audrey! I can't wait for the weekend.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#89",
+      "category": "single_hop",
+      "question": "What is essential to keep the dogs looking good according to Audrey?",
+      "answer": "Daily brushing, regular baths, nail trims, and lots of love",
+      "prediction": "Andrew: Hey Audrey! What's up? Last weekend my girlfriend and I went fishing in one of the nearby lakes.\nAndrew: Hey!\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#90",
+      "category": "single_hop",
+      "question": "What did Audrey organize with the neighbors' dogs?",
+      "answer": "a doggy playdate",
+      "prediction": "Andrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAndrew: Hey Audrey, it's been a busy week for me.\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAndrew: Hey Audrey, hope you're doing good!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#91",
+      "category": "single_hop",
+      "question": "What did Audrey do to give her dogs extra comfort as the weather cooled down?",
+      "answer": "Got new beds for them",
+      "prediction": "Andrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#92",
+      "category": "single_hop",
+      "question": "How does Audrey describe the new beds for her dogs?",
+      "answer": "Super cozy and comfy",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#93",
+      "category": "single_hop",
+      "question": "How did Audrey calm down her dog after the leash incident?",
+      "answer": "Petted, hugged, spoke calmly and slowly walked the dog",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew!\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAudrey: Hey Andrew!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#94",
+      "category": "single_hop",
+      "question": "How often does Audrey take her dogs for walks?",
+      "answer": "Multiple times a day",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey!\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#95",
+      "category": "single_hop",
+      "question": "What kind of flowers does Audrey take care of?",
+      "answer": "Peruvian Lilies",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey Audrey!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAudrey: Hey Andrew, I was thinking about what you said about missing nature the other day.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#96",
+      "category": "single_hop",
+      "question": "What did Andrew learn from reading books about ecological systems?",
+      "answer": "about animals, plants, and ecosystems and how they work together",
+      "prediction": "Andrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAndrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.\nAndrew: Hey Audrey, hope you're doing good!\nAndrew: Hey Audrey, had a great weekend!\nAndrew: Hey, Audrey! I can't wait for the weekend.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#97",
+      "category": "single_hop",
+      "question": "What did Andrew suggest as a way to reduce carbon footprint?",
+      "answer": "biking or using public transport",
+      "prediction": "Andrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAndrew: Hey Audrey, hope you're doing good!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#98",
+      "category": "single_hop",
+      "question": "How does Andrew suggest helping the planet while also training the body?",
+      "answer": "by biking",
+      "prediction": "Andrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Hey! It's been a while.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAndrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#99",
+      "category": "single_hop",
+      "question": "What did Audrey do with her pups over the weekend before 4th October, 2023?",
+      "answer": "Took them to the beach",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey, it's been a busy week for me.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#100",
+      "category": "single_hop",
+      "question": "What was the reason Audrey couldn't walk her dogs for a period of time?",
+      "answer": "Knee injury",
+      "prediction": "Audrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAudrey: Hey Andrew!\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQDVHRRX75XC2768W2V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#101",
+      "category": "single_hop",
+      "question": "What type of jewelry does Audrey make?",
+      "answer": "Jewelry made from recycled objects",
+      "prediction": "Audrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hey Audrey!\nAndrew: Hey! Long time no chat.\nAndrew: Hey Audrey! Long time no talk! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQDVHRRX75XC2768W2V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#102",
+      "category": "single_hop",
+      "question": "Why does Audrey make jewelry out of recycled objects?",
+      "answer": "To show love for creativity and sustainability",
+      "prediction": "Audrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAndrew: Hey Audrey!\nAndrew: Hey Audrey!\nAndrew: Hey! Long time no chat.\nAndrew: Hey Audrey! Long time no talk! How have you been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQDVHRRX75XC2768W2V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#103",
+      "category": "single_hop",
+      "question": "What organization does Audrey donate a portion of his profits to?",
+      "answer": "Animal shelter",
+      "prediction": "Audrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQDVHRRX75XC2768W2V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#104",
+      "category": "single_hop",
+      "question": "How does Audrey help out the animal shelter?",
+      "answer": "By donating a portion of his profits frmo selling jwelery",
+      "prediction": "Andrew: Hey Audrey!\nAudrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAudrey: Hey Andrew, hope you're doing ok.",
+      "retrieved_ids": [
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQDVHRRX75XC2768W2V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#105",
+      "category": "single_hop",
+      "question": "What type of games do Audrey's dogs like to play at the park?",
+      "answer": "Fetch and Frisbee",
+      "prediction": "Andrew: Hey Audrey, it's been a busy week for me.\nAndrew: Hey Audrey, had a great weekend!\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAudrey: Woohoo! I got a new place with a bigger backyard for the pooches! Take a look!\nAudrey: Hey Andrew!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#106",
+      "category": "single_hop",
+      "question": "What did Audrey make to thank her neighbors?",
+      "answer": "Goodies",
+      "prediction": "Andrew: Hey Audrey, it's been a busy week for me.\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hi Audrey! Been a while since I hear from you. How's it been?",
+      "retrieved_ids": [
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#107",
+      "category": "single_hop",
+      "question": "How do Audrey's dogs react to snow?",
+      "answer": "Confused",
+      "prediction": "Andrew: Hey Audrey, it's been a busy week for me.\nAndrew: Hey Audrey, had a great weekend!\nAudrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAudrey: Hey Andrew!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#108",
+      "category": "single_hop",
+      "question": "How does Audrey describe her dogs' response to snow?",
+      "answer": "They definitely prefer nice, sunny days in the grass.",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey Audrey, it's been a busy week for me.\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAndrew: Hey Audrey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#109",
+      "category": "single_hop",
+      "question": "What kind of experiences are Audrey's dogs the best companions for?",
+      "answer": "Exploring the great outdoors",
+      "prediction": "Andrew: Hey Audrey, it's been a busy week for me.\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAndrew: Hey Audrey!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew, I was thinking about what you said about missing nature the other day.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#110",
+      "category": "single_hop",
+      "question": "What activity do Andrew and Buddy enjoy doing together?",
+      "answer": "Walking",
+      "prediction": "Andrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAudrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey Audrey, had a great weekend!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#111",
+      "category": "single_hop",
+      "question": "What do Andrew and Buddy like doing on walks?",
+      "answer": "Checking out new hiking trails",
+      "prediction": "Audrey: Hey Andrew, hope you're doing ok.\nAudrey: Hey Andrew!\nAndrew: Hey Audrey, had a great weekend!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#112",
+      "category": "single_hop",
+      "question": "What cuisine did Andrew recently try at a new spot in town?",
+      "answer": "sushi",
+      "prediction": "Andrew: Hey Audrey!\nAndrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.\nAndrew: Hey Audrey, had a great weekend!\nAndrew: Hey!\nAndrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.",
+      "retrieved_ids": [
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#113",
+      "category": "single_hop",
+      "question": "Which type of sushi did Audrey suggest trying first to someone new to sushi?",
+      "answer": "California or salmon roll",
+      "prediction": "Andrew: Hi Audrey! How have you been lately? My girlfriend and I went to this awesome wine tasting last weekend.\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hey Audrey! What's up? Last weekend my girlfriend and I went fishing in one of the nearby lakes.\nAudrey: Hey how's it going? Yesterday took my pups to the park, it was awesome!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQJF1A08EHY9PWGW653"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#114",
+      "category": "single_hop",
+      "question": "What type of date is Andrew going on Sunday?",
+      "answer": "picnic date",
+      "prediction": "Audrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAndrew: Hey! Long time no chat.\nAudrey: Hey! It's been a while.\nAndrew: Hey Audrey, it's been a busy week for me.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#115",
+      "category": "single_hop",
+      "question": "What did Andrew and Audrey plan to do on the Saturday after October 28, 2023?",
+      "answer": "Go hiking",
+      "prediction": "Andrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey! So much has changed since last time we talked - meet Toby, my puppy.\nAndrew: Hey!\nAndrew: Hey Audrey, hope you're doing good!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#116",
+      "category": "single_hop",
+      "question": "What aspect of autumn does Andrew find beautiful?",
+      "answer": "The autumn colors",
+      "prediction": "Audrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!\nAndrew: Hey Audrey!\nAndrew: Hey! Long time no chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMPCP2A6DER5DB6BKFGS",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#117",
+      "category": "single_hop",
+      "question": "What did Audrey do in November 2023 to better take care of her dogs?",
+      "answer": "Joined a dog owners group",
+      "prediction": "Andrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAudrey: Hey Andrew, since we last spoke I got another tattoo of my four dogs on my arm!\nAudrey: Hey Andrew, I wanted to let you know about something going on with my dogs.\nAndrew: Hi Audrey! I had a great hike last weekend with some friends and my girlfriend at the spot we found recently.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPYTPRM9M6P9TN7F6JB",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQJF1A08EHY9PWGW653",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-44#118",
+      "category": "single_hop",
+      "question": "How often does Audrey meet up with other dog owners for tips and playdates?",
+      "answer": "Once a week",
+      "prediction": "Audrey: Hey Andrew!\nAndrew: Hey Audrey, had a great weekend!\nAndrew: Hey Audrey! Long time no talk! How have you been?\nAudrey: Hey! It's been a while.\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!",
+      "retrieved_ids": [
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPKDNNVA9MPQ4YND5Z0",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3",
+        "epi_01M2QAMMPAPY2DH10NMDD7Y38G",
+        "epi_01M2QAMMP44H69YP72G015WZPK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#119",
+      "category": "single_hop",
+      "question": "What did Audrey share to show ways to keep dogs active in the city?",
+      "answer": "photography of a basket full of stuffed animals",
+      "prediction": "Andrew: Hey Audrey, had a great weekend!\nAndrew: Hey wassup? Got some great news - the gf and I are hitting the beach next month with Toby!\nAudrey: Hey Andrew, I was thinking about what you said about missing nature the other day.\nAndrew: Hey Audrey, it's been a busy week for me.\nAndrew: Hey!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMQ9KD61YCG9VXAJK0Q4",
+        "epi_01M2QAMMQDVHRRX75XC2768W2V",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#120",
+      "category": "single_hop",
+      "question": "What type of activities does Audrey suggest for mental stimulation of the dogs?",
+      "answer": "puzzles, training, hide-and-seek",
+      "prediction": "Andrew: Hey Audrey, had a great weekend!\nAndrew: Hey, Audrey! I can't wait for the weekend.\nAndrew: Hey! Long time no chat.\nAudrey: Hey Andrew! Good to see ya! What's been up since we last talked?\nAudrey: Hey Andrew, hope you're doing ok.",
+      "retrieved_ids": [
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPEJDEVBR8A1SW63VP0",
+        "epi_01M2QAMMP0KCV4TC9AAH2EV5B3",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMP44H69YP72G015WZPK",
+        "epi_01M2QAMMQ7V0HAP1QHS34C88HX",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMQN97H2EPPCYRWDAGV3"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#121",
+      "category": "single_hop",
+      "question": "What is Andrew planning to do with Scout, Toby, and Buddy?",
+      "answer": "Take them to a nearby park",
+      "prediction": "Audrey: Hey Andrew!\nAndrew: Hey Audrey, how's it going? Since we last talked, a few new things have come up in my life.\nAndrew: Hey Audrey, it's been a busy week for me.\nAudrey: Hey Andrew, hope you're doing ok.\nAndrew: Hey Audrey, had a great weekend!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMQ4J0080ZBS14VBJXNF",
+        "epi_01M2QAMMQFSWVTK6JV6TC178FE",
+        "epi_01M2QAMMQHW00DSB29MFV4J9CV",
+        "epi_01M2QAMMQQ4JBVS14ZA2CGYGGB",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMQ2YAQRFTSWZ7CBE3J8",
+        "epi_01M2QAMMPW7E68AW2XQ8G01218",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-44#122",
+      "category": "single_hop",
+      "question": "What did Andrew get for Scout to create a safe and fun space for them?",
+      "answer": "essentials like a bed, toys, and puppy pads",
+      "prediction": "Audrey: Hey Andrew!\nAudrey: Hey Andrew!\nAudrey: Hey Andrew, I got a surprise for you! We adopted another puppy called Pixie.\nAndrew: Hey Audrey!\nAndrew: Hey how's it going? Last Friday was amazing - I had a picnic with my girlfriend and it was so much fun!",
+      "retrieved_ids": [
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13",
+        "epi_01M2QAMMP7H98FZ2XKQE01CNYH",
+        "epi_01M2QAMMP2KGS6BGS5PE0X6QDT",
+        "epi_01M2QAMMPSQ6SVZB1EY5ECMYGY",
+        "epi_01M2QAMMPPVHWZVEY19D1HV1SN",
+        "epi_01M2QAMMP96ZPZ0TWKNJA2QEXJ",
+        "epi_01M2QAMMPGTHH96XPA49PY7JGT",
+        "epi_01M2QAMMQBXSDEJ8T4N36EERDM",
+        "epi_01M2QAMMPRTX3P6G237QSEP5V4",
+        "epi_01M2QAMMPZ0CHA64WEMW7DHKT4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMMQSNAQZXS14T11BNJ13"
+      ],
+      "hit": true
+    }
+  ]
+}

@@ -1,0 +1,3562 @@
+{
+  "meta": {
+    "dataset": "locomo",
+    "answer_mode": "extract",
+    "ingest": "rule",
+    "embedding": "off",
+    "top_k": 10
+  },
+  "report": {
+    "total": 150,
+    "answered": 150,
+    "answer_rate": 1.0,
+    "accuracy": 0.0133,
+    "f1": 0.0144,
+    "em": 0.0,
+    "contains": 0.0133,
+    "recall@k": 0.8733,
+    "recall@gold": 0.5989,
+    "mrr": 0.7229,
+    "ndcg@k": 0.7437,
+    "by_category": {
+      "open_domain": {
+        "total": 13,
+        "answered": 13,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0231,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.8462,
+        "recall@gold": 0.3846,
+        "mrr": 0.5342,
+        "ndcg@k": 0.6092,
+        "by_category": {}
+      },
+      "temporal": {
+        "total": 34,
+        "answered": 34,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0047,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.8529,
+        "recall@gold": 0.5588,
+        "mrr": 0.6574,
+        "ndcg@k": 0.7046,
+        "by_category": {}
+      },
+      "multihop": {
+        "total": 20,
+        "answered": 20,
+        "answer_rate": 1.0,
+        "accuracy": 0.05,
+        "f1": 0.0166,
+        "em": 0.0,
+        "contains": 0.05,
+        "recall@k": 0.5,
+        "recall@gold": 0.2917,
+        "mrr": 0.5675,
+        "ndcg@k": 0.4321,
+        "by_category": {}
+      },
+      "single_hop": {
+        "total": 83,
+        "answered": 83,
+        "answer_rate": 1.0,
+        "accuracy": 0.012,
+        "f1": 0.0165,
+        "em": 0.0,
+        "contains": 0.012,
+        "recall@k": 0.9759,
+        "recall@gold": 0.7229,
+        "mrr": 0.8168,
+        "ndcg@k": 0.8559,
+        "by_category": {}
+      }
+    }
+  },
+  "details": [
+    {
+      "id": "conv-47#0",
+      "category": "open_domain",
+      "question": "What are John's suspected health problems?",
+      "answer": "Obesity",
+      "prediction": "John: Hey James, been a few days.\nJames: Hey John!\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hey James! How've you been? Had an eventful week since our last chat.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#1",
+      "category": "temporal",
+      "question": "Which recreational activity was James pursuing on March 16, 2022?",
+      "answer": "bowling",
+      "prediction": "James: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James, it's been a bit since we last talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#2",
+      "category": "multihop",
+      "question": "Which places or events have John and James planned to meet at?",
+      "answer": "VR Club, McGee's, baseball game",
+      "prediction": "James: Hey John! Been a while since we chatted.\nJohn: Hey, James! Good to hear from you.\nJohn: Hey James! How's it going?\nJohn: Hey James, it's been a bit since we last talked.\nJames: Hey John, something awesome happened since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#3",
+      "category": "multihop",
+      "question": "Do both James and John have pets?",
+      "answer": "No",
+      "prediction": "John: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey James! How've you been? Had an eventful week since our last chat.\nJohn: Hey James! Hope you're doing great.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKHD148TM53557CFEY7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#4",
+      "category": "temporal",
+      "question": "When did John resume playing drums in his adulthood?",
+      "answer": "February 2022",
+      "prediction": "John: Hey James! Long time no see! A lot's changed since we talked.\nJohn: Hey James, long time no see!\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#5",
+      "category": "multihop",
+      "question": "What are John and James' favorite games?",
+      "answer": "John's favorite game is CS:GO, and James's is Apex Legends.",
+      "prediction": "John: Hey James, been a few days.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.\nJohn: Hey James, long time no see!\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#6",
+      "category": "open_domain",
+      "question": "Does James live in Connecticut?",
+      "answer": "Likely yes",
+      "prediction": "James: Hey John! Been a while since we chatted.\nJohn: Hey James! Hope you're doing great.\nJohn: Hey, James! Good to hear from you.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! What's up? Anything fun going on?",
+      "retrieved_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#7",
+      "category": "open_domain",
+      "question": "In which state is the shelter from which James adopted the puppy?",
+      "answer": "Connecticut.",
+      "prediction": "John: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJames: Hey John! Been a while since we chatted.\nJames: Hey John!\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James! How've you been? Had an eventful week since our last chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#8",
+      "category": "multihop",
+      "question": "How many pets does James have?",
+      "answer": "Three dogs.",
+      "prediction": "James: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John!\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#9",
+      "category": "multihop",
+      "question": "What are the names of James's dogs?",
+      "answer": "Ned, Daisy, Max",
+      "prediction": "John: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJames: Hey John!\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey James, been a few days.\nJames: Hey John, hope you're doing well.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#10",
+      "category": "temporal",
+      "question": "When did James adopt Ned?",
+      "answer": "first week of April 2022",
+      "prediction": "James: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John!\nJames: Hey John, since our last chat, something awesome happened.\nJames: Hey John, long time no talk! So much has happened!\nJames: Hey John!",
+      "retrieved_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#11",
+      "category": "temporal",
+      "question": "How was John feeling on April 10, 2022?",
+      "answer": "seeking solitude",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJames: Hey John, something awesome happened since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#12",
+      "category": "open_domain",
+      "question": "Did James have a girlfriend during April 2022?",
+      "answer": "Presumably not",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJames: Hey John, something awesome happened since we talked.\nJames: Hey John! Been a while, but hope you're doing well.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#13",
+      "category": "temporal",
+      "question": "When did James visit Italy?",
+      "answer": "In 2021",
+      "prediction": "John: Hey James!\nJames: Hey John! Long time no talk - hope you're doing well.\nJames: Hey John, long time no talk! So much has happened!\nJames: Hey John!\nJames: Hey John, hope you're doing well.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#14",
+      "category": "temporal",
+      "question": "When did James buy himself a new adventure book?",
+      "answer": "April 26, 2022",
+      "prediction": "John: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John! Been a while since we chatted.\nJames: Hey John, it's been a few days since we talked.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#15",
+      "category": "temporal",
+      "question": "When did James start playing Civilization VI?",
+      "answer": "March 2022",
+      "prediction": "James: Hey John! What's up? Anything fun going on?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John! Been a while, but hope you're doing well.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJohn: Hey James! Busy few weeks for sure, but I'm pushing through.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#16",
+      "category": "open_domain",
+      "question": "What is the game with different colored cards that was John talking about with James?",
+      "answer": "UNO",
+      "prediction": "James: Hey John! What's up? Anything fun going on?\nJohn: Hey James, long time no see!\nJohn: Hey James, been a few days.\nJohn: Hey, James! Good to hear from you.\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#17",
+      "category": "open_domain",
+      "question": "What is the board game where you have to find the imposter that John mentions to James?",
+      "answer": "Mafia",
+      "prediction": "John: Hey James! Long time no see! A lot's changed since we talked.\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hey James, it's been a bit since we last talked.\nJames: Hey John!\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#18",
+      "category": "multihop",
+      "question": "Which books has John recommended to James?",
+      "answer": "The Name of the Wind, Stormlight Archive, Kingkiller Chronicles, Expanse",
+      "prediction": "James: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJohn: Hey James! Long time no see! A lot's changed since we talked.\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James, it's been a bit since we last talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#19",
+      "category": "open_domain",
+      "question": "Was James feeling lonely before meeting Samantha?",
+      "answer": "Most likely yes, because he mentioned that the only creatures that gave him joy are dogs and he was actively trying to date.",
+      "prediction": "John: Hey James!\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James, been a few days.\nJohn: Hey James! Hope you're doing great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#20",
+      "category": "multihop",
+      "question": "How many charity tournaments has John organized till date?",
+      "answer": "two",
+      "prediction": "John: Hey James, been a few days.\nJames: Hey John, long time no talk! So much has happened!\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!",
+      "retrieved_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#21",
+      "category": "temporal",
+      "question": "When did John first organize a charity tournament with his friends?",
+      "answer": "May 7, 2022",
+      "prediction": "James: Hey John! Been a while since we chatted.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, it's been a few days since we talked.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#22",
+      "category": "multihop",
+      "question": "Who or which organizations have been the beneficiaries of John's charity tournaments?",
+      "answer": "animal shelter, homeless, children's hospital",
+      "prediction": "James: Hey John! Been a while since we chatted.\nJohn: Hey James, it's been a bit since we last talked.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJohn: Hey James, long time no see!\nJohn: Hey James! How've you been? Had an eventful week since our last chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#23",
+      "category": "temporal",
+      "question": "When will John start his new job?",
+      "answer": "In July, 2022",
+      "prediction": "John: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#24",
+      "category": "multihop",
+      "question": "What kind of games has James tried to develop?",
+      "answer": "football simulator, virtual world inspired by Witcher 3",
+      "prediction": "John: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, long time no talk! So much has happened!\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Long time no talk - hope you're doing well.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#25",
+      "category": "open_domain",
+      "question": "Are John and James fans of the same football team?",
+      "answer": "No, James is a Liverpool fan and John is a Manchester City fan.",
+      "prediction": "John: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.\nJames: Hey John, hope you're doing well.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#26",
+      "category": "multihop",
+      "question": "Which countries has James visited?",
+      "answer": "Italy, Mexico, Turkey, Canada, Greenland",
+      "prediction": "John: Hey James!\nJames: Hey John!\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James, it's been a bit since we last talked.\nJohn: Hey James, long time no see!",
+      "retrieved_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#27",
+      "category": "multihop",
+      "question": "What kind of classes has James joined?",
+      "answer": "game design course, cooking classes",
+      "prediction": "John: Hey, James! Good to hear from you.\nJames: Hey John, something awesome happened since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#28",
+      "category": "temporal",
+      "question": "When did James volunteer at an organization?",
+      "answer": "May 2022",
+      "prediction": "John: Hey James, it's been a bit since we last talked.\nJames: Hey John, since our last chat, something awesome happened.\nJohn: Hey James! Busy few weeks for sure, but I'm pushing through.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJames: Hey John!",
+      "retrieved_ids": [
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#29",
+      "category": "temporal",
+      "question": "When did James depart for his trip to Canada?",
+      "answer": "July 11, 2022",
+      "prediction": "James: Hey John!\nJames: Hey John, hope you're doing well.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, it's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#30",
+      "category": "open_domain",
+      "question": "Which country did James book tickets for in July 2022?",
+      "answer": "Canada",
+      "prediction": "James: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hey James!\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#31",
+      "category": "temporal",
+      "question": "How many days did James plan to spend on his trip in Canada?",
+      "answer": "19 days",
+      "prediction": "James: Hey John!\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJohn: Hey James! How's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#32",
+      "category": "temporal",
+      "question": "Where was James at on July 12, 2022?",
+      "answer": "Toronto, Canada",
+      "prediction": "James: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James, it's been a bit since we last talked.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#33",
+      "category": "open_domain",
+      "question": "Did John and James study together?",
+      "answer": "Yes",
+      "prediction": "John: Hey James! Hope you're doing great.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey, James! Good to hear from you.\nJames: Hey John, since our last chat, something awesome happened.\nJohn: Hey James!",
+      "retrieved_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#34",
+      "category": "multihop",
+      "question": "Which countries did James visit in July 2022?",
+      "answer": "Canada, Greenland",
+      "prediction": "James: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James!\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.\nJames: Hey John, it's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#35",
+      "category": "open_domain",
+      "question": "What additional country did James visit during his trip to Canada?",
+      "answer": "Greenland",
+      "prediction": "James: Hey John! Long time no talk - hope you're doing well.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJohn: Hey James!\nJames: Hey John!",
+      "retrieved_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#36",
+      "category": "open_domain",
+      "question": "Who is Jill?",
+      "answer": "Most likely John's partner.",
+      "prediction": "John: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey James! Busy few weeks for sure, but I'm pushing through.\nJohn: Hey James! Hope you're doing great.\nJames: Hey John, since our last chat, something awesome happened.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#37",
+      "category": "temporal",
+      "question": "When did John spend time with his sister and dogs?",
+      "answer": "July 21, 2022",
+      "prediction": "John: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James! How's it going?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#38",
+      "category": "multihop",
+      "question": "What happened to John's job situation in 2022?",
+      "answer": "quit his IT Job, secured his dream job, aspires to become an eSports competition organizer",
+      "prediction": "John: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James! Hope you're doing great.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#39",
+      "category": "temporal",
+      "question": "When did John start his job in IT?",
+      "answer": "2019",
+      "prediction": "John: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#40",
+      "category": "multihop",
+      "question": "What kind of tricks do James's pets know?",
+      "answer": "swimming, catching frisbees, balancing on a skateboard, sit, stay, paw, and rollover",
+      "prediction": "James: Hey John, something awesome happened since we talked.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hey James! How've you been? Had an eventful week since our last chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#41",
+      "category": "temporal",
+      "question": "When did James meet Samantha?",
+      "answer": "August 9, 2022",
+      "prediction": "James: Hey John, something awesome happened since we talked.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James, been a few days.\nJohn: Hey James! Hope you're doing great.\nJames: Hey John, long time no talk! So much has happened!",
+      "retrieved_ids": [
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#42",
+      "category": "temporal",
+      "question": "When did James take his 3 dogs to the beach?",
+      "answer": "August 9, 2022",
+      "prediction": "John: Hey James, been a few days.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James!\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#43",
+      "category": "temporal",
+      "question": "When did John plan his next meeting with his siblings?",
+      "answer": "In September, 2022",
+      "prediction": "James: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJohn: Hey, James! Good to hear from you.\nJames: Hey John, it's been a few days since we talked.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#44",
+      "category": "open_domain",
+      "question": "Why didn't John want to go to Starbucks?",
+      "answer": "Possibly because he likes to drink beer on his days off.",
+      "prediction": "James: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hey James! How's it going?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#45",
+      "category": "multihop",
+      "question": "What kind of beer does McGee's bar serve?",
+      "answer": "Stout, lager",
+      "prediction": "James: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Hope you're doing great.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! What's up? Anything fun going on?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#46",
+      "category": "temporal",
+      "question": "When did John and James meet at McGee's bar?",
+      "answer": "August 27, 2022",
+      "prediction": "John: Hey James! Hope you're doing great.\nJames: Hey John, it's been a few days since we talked.\nJames: Hey John, something awesome happened since we talked.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.",
+      "retrieved_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#47",
+      "category": "temporal",
+      "question": "When did James ask Samantha to be his girlfriend?",
+      "answer": "September 3, 2022",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hey James, been a few days.\nJohn: Hey James! Hope you're doing great.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#48",
+      "category": "temporal",
+      "question": "When did James, Samantha and John go to the baseball game together?",
+      "answer": "September 11, 2022",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJohn: Hey James! Hope you're doing great.\nJohn: Hey James, been a few days.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey, James! Good to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#49",
+      "category": "multihop",
+      "question": "What gaming equipments did John buy or refurbish?",
+      "answer": "Sennheiser headphones, Logitech mouse, gaming desk",
+      "prediction": "James: Hey John! Been a while since we chatted.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no see! A lot's changed since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?",
+      "retrieved_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#50",
+      "category": "temporal",
+      "question": "When did James start taking cooking classes?",
+      "answer": "September 2, 2022",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John, hope you're doing well.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJames: Hey John! What's up? Anything fun going on?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#51",
+      "category": "multihop",
+      "question": "Which new games did John start play during the course of the conversation with James?",
+      "answer": "AC Valhalla, Witcher 3, FIFA 23, Dungeons of the Dragons, futuristic dystopian game",
+      "prediction": "John: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJohn: Hey, James! Good to hear from you.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hey James! How've you been? Had an eventful week since our last chat.\nJohn: Hey James!",
+      "retrieved_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#52",
+      "category": "temporal",
+      "question": "When did John start working on his 2D Adventure mobile game?",
+      "answer": "approximately summer of 2022",
+      "prediction": "John: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJohn: Hey, James! Good to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#53",
+      "category": "temporal",
+      "question": "How long did it take for James to complete his Witcher-inspired game?",
+      "answer": "six months",
+      "prediction": "John: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James, long time no see!",
+      "retrieved_ids": [
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#54",
+      "category": "multihop",
+      "question": "What kind of programming-related events has John hosted?",
+      "answer": "online programming competition, programming seminar",
+      "prediction": "John: Hey, James! Good to hear from you.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJames: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James! Busy few weeks for sure, but I'm pushing through.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#55",
+      "category": "temporal",
+      "question": "When did John and his programming friends host an online programming competition?",
+      "answer": "Last week before 13 October 2022.",
+      "prediction": "James: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey, James! Good to hear from you.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John! Been a while since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#56",
+      "category": "multihop",
+      "question": "Which of James's family members have visited him in the last year?",
+      "answer": "mother, sister",
+      "prediction": "John: Hey James!\nJames: Hey John!\nJohn: Hey, James! Good to hear from you.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKHD148TM53557CFEY7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#57",
+      "category": "temporal",
+      "question": "When did James' mother and her friend visit him?",
+      "answer": "October 19, 2022",
+      "prediction": "James: Hey John, long time no talk! So much has happened!\nJames: Hey John! Long time no talk - hope you're doing well.\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?",
+      "retrieved_ids": [
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#58",
+      "category": "temporal",
+      "question": "When did James try Cyberpunk 2077 game?",
+      "answer": "October 20, 2022",
+      "prediction": "James: Hey John, long time no talk! So much has happened!\nJohn: Hey James! Busy few weeks for sure, but I'm pushing through.\nJames: Hey John!\nJames: Hey John!\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#59",
+      "category": "temporal",
+      "question": "When did John and his gaming friends organize the charity tournament?",
+      "answer": "On the night of October 30 to 31, 2022",
+      "prediction": "James: Hey John! Been a while since we chatted.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJames: Hey John, it's been a few days since we talked.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?",
+      "retrieved_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#60",
+      "category": "multihop",
+      "question": "What games has John played with his friends at charity tournaments?",
+      "answer": "CS:GO, Fortnite, Overwatch and Apex Legends",
+      "prediction": "James: Hey John! Been a while since we chatted.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#61",
+      "category": "temporal",
+      "question": "What was James' big moment with Samantha in October 2023?",
+      "answer": "They decided to live together and rented an apartment not far from McGee's bar.",
+      "prediction": "John: Hey James! Hope you're doing great.\nJohn: Hey James! Long time no see! A lot's changed since we talked.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey James, been a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#62",
+      "category": "temporal",
+      "question": "How long did James and Samantha date for before deciding to move in together?",
+      "answer": "nearly three months",
+      "prediction": "John: Hey James! Hope you're doing great.\nJohn: Hey James, been a few days.\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hey James!",
+      "retrieved_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#63",
+      "category": "temporal",
+      "question": "When did James, his family and his dogs start on a road trip together?",
+      "answer": "November 4, 2022",
+      "prediction": "James: Hey John, hope you're doing well.\nJames: Hey John!\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John, it's been a few days since we talked.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?",
+      "retrieved_ids": [
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#64",
+      "category": "temporal",
+      "question": "How long did John practice chess for before winning the chess tournament?",
+      "answer": "nearly four months",
+      "prediction": "James: Hey John, hope you're doing well.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James! Long time no see! A lot's changed since we talked.\nJohn: Hey James!",
+      "retrieved_ids": [
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#65",
+      "category": "temporal",
+      "question": "When did James and his family visit Mark and Josh?",
+      "answer": "November 7, 2022",
+      "prediction": "James: Hey John!\nJames: Hey John! Long time no talk - hope you're doing well.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKHD148TM53557CFEY7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#66",
+      "category": "temporal",
+      "question": "When did John work with a game developer on a project?",
+      "answer": "November 5-6, 2022",
+      "prediction": "James: Hey John!\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hey James! How's it going?\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#67",
+      "category": "single_hop",
+      "question": "What programming languages has James worked with?",
+      "answer": "Python and C++",
+      "prediction": "John: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hey, James! Good to hear from you.\nJames: Hey John!\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJames: Hey John, long time no talk! So much has happened!",
+      "retrieved_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#68",
+      "category": "single_hop",
+      "question": "What type of mobile application does James plan to build with John?",
+      "answer": "An app for dog walking and pet care",
+      "prediction": "John: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJohn: Hey James! How've you been? Had an eventful week since our last chat.\nJohn: Hey James, it's been a bit since we last talked.\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!",
+      "retrieved_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#69",
+      "category": "single_hop",
+      "question": "How does James plan to make his dog-sitting app unique?",
+      "answer": "By allowing users to customize their pup's preferences/needs",
+      "prediction": "John: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John!\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#70",
+      "category": "single_hop",
+      "question": "What has John mostly found with the metal detector so far?",
+      "answer": "bottle caps",
+      "prediction": "James: Hey John, something awesome happened since we talked.\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey, James! Good to hear from you.\nJohn: Hey James, it's been a bit since we last talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKHD148TM53557CFEY7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#71",
+      "category": "single_hop",
+      "question": "What did James offer to do for John regarding pets?",
+      "answer": "help find the perfect pet",
+      "prediction": "James: Hey John, something awesome happened since we talked.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, since our last chat, something awesome happened.\nJohn: Hey James! Busy few weeks for sure, but I'm pushing through.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKHD148TM53557CFEY7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#72",
+      "category": "single_hop",
+      "question": "What instrument is John learning to play as of 27 March, 2022?",
+      "answer": "Drums",
+      "prediction": "John: Hey James, long time no see!\nJames: Hey John, long time no talk! So much has happened!\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJames: Hey John, it's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#73",
+      "category": "single_hop",
+      "question": "How long has John been playing the drums as of 27 March, 2022?",
+      "answer": "One month",
+      "prediction": "John: Hey James, long time no see!\nJohn: Hey James! Long time no see! A lot's changed since we talked.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJames: Hey John, long time no talk! So much has happened!\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?",
+      "retrieved_ids": [
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#74",
+      "category": "single_hop",
+      "question": "What game did John play in an intense tournament at the gaming convention in March 2022?",
+      "answer": "CS:GO",
+      "prediction": "John: Hey James, long time no see!\nJames: Hey John, hope you're doing well.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey, James! Good to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#75",
+      "category": "single_hop",
+      "question": "What game was James playing in the online gaming tournament in April 2022?",
+      "answer": "Apex Legends",
+      "prediction": "James: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, hope you're doing well.\nJohn: Hey James! Hope you're doing great.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#76",
+      "category": "single_hop",
+      "question": "How does James communicate with his gaming team?",
+      "answer": "voice chat",
+      "prediction": "John: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John!",
+      "retrieved_ids": [
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#77",
+      "category": "single_hop",
+      "question": "What advice did James receive from the famous players he met at the tournament?",
+      "answer": "never put your ego above team success",
+      "prediction": "John: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJohn: Hey James, long time no see!\nJames: Hey John, hope you're doing well.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#78",
+      "category": "single_hop",
+      "question": "What did James adopt in April 2022?",
+      "answer": "a pup",
+      "prediction": "James: Hey John, long time no talk! So much has happened!\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJames: Hey John, hope you're doing well.",
+      "retrieved_ids": [
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#79",
+      "category": "single_hop",
+      "question": "What is the name of the pup that was adopted by James?",
+      "answer": "Ned",
+      "prediction": "James: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John!\nJames: Hey John!\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hey James, been a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#80",
+      "category": "single_hop",
+      "question": "Why did James embody the appearance of the game character from the woman he saw during a walk?",
+      "answer": "He found her appearance and eyes amazing.",
+      "prediction": "John: Hey James!\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John, something awesome happened since we talked.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, it's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#81",
+      "category": "single_hop",
+      "question": "What inspired James to create the game character in the virtual world?",
+      "answer": "Appearance of a woman he saw during a walk",
+      "prediction": "John: Hey James!\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.\nJohn: Hey James, it's been a bit since we last talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#82",
+      "category": "single_hop",
+      "question": "Which country did James visit in 2021?",
+      "answer": "Italy",
+      "prediction": "James: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James!\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#83",
+      "category": "single_hop",
+      "question": "What impresses John about Japan?",
+      "answer": "Technologically advanced megacities and tasty street food",
+      "prediction": "John: Hey James!\nJohn: Hey James! Busy few weeks for sure, but I'm pushing through.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#84",
+      "category": "single_hop",
+      "question": "What kind of assignment was giving John a hard time at work?",
+      "answer": "Coding assignment",
+      "prediction": "John: Hey James! How's it going?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! Long time no talk - hope you're doing well.\nJames: Hey John!\nJames: Hey John, since our last chat, something awesome happened.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#85",
+      "category": "single_hop",
+      "question": "What breed is Daisy, one of James' dogs?",
+      "answer": "Labrador",
+      "prediction": "James: Hey John, something awesome happened since we talked.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John, since our last chat, something awesome happened.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#86",
+      "category": "single_hop",
+      "question": "What type of pizza is James' favorite?",
+      "answer": "Pepperoni",
+      "prediction": "John: Hey James! How've you been? Had an eventful week since our last chat.\nJohn: Hey James, been a few days.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James, long time no see!\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#87",
+      "category": "single_hop",
+      "question": "What type of pizza is John's favorite?",
+      "answer": "Hawaiian",
+      "prediction": "John: Hey James! How've you been? Had an eventful week since our last chat.\nJohn: Hey James, been a few days.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James, long time no see!\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#88",
+      "category": "single_hop",
+      "question": "What did John organize with his friends on May 8, 2022?",
+      "answer": "A tournament for CS:GO",
+      "prediction": "John: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJames: Hey John, it's been a few days since we talked.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-47#89",
+      "category": "single_hop",
+      "question": "What did John and his friends do with the remaining money after helping the dog shelter?",
+      "answer": "Bought groceries and cooked food for the homeless",
+      "prediction": "James: Hey John! Been a while since we chatted.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John!\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#90",
+      "category": "single_hop",
+      "question": "What was the main goal of the money raised from the charity tournament organized by John and his friends in May 2022?",
+      "answer": "Raise money for a dog shelter",
+      "prediction": "James: Hey John! Been a while since we chatted.\nJohn: Hey James! Hope you're doing great.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#91",
+      "category": "single_hop",
+      "question": "What did the system John created help the charitable foundation with?",
+      "answer": "tracking inventory, resources, and donations",
+      "prediction": "John: Hey James, it's been a bit since we last talked.\nJames: Hey John, hope you're doing well.\nJohn: Hey James, long time no see!\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John, long time no talk! So much has happened!",
+      "retrieved_ids": [
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#92",
+      "category": "single_hop",
+      "question": "What did John create for the charitable foundation that helped generate reports for analysis?",
+      "answer": "computer application on smartphones",
+      "prediction": "John: Hey James, it's been a bit since we last talked.\nJames: Hey John, hope you're doing well.\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hey, James! Good to hear from you.\nJohn: Hey James! Hope you're doing great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKHD148TM53557CFEY7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#93",
+      "category": "single_hop",
+      "question": "What did John receive for achieving second place in the tournament?",
+      "answer": "money and a trophy",
+      "prediction": "James: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hey James! How's it going?\nJames: Hey John, since our last chat, something awesome happened.\nJohn: Hey James, it's been a bit since we last talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#94",
+      "category": "single_hop",
+      "question": "What project is James working on in his game design course?",
+      "answer": "a new part of the football simulator, collecting player databases",
+      "prediction": "John: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James! How've you been? Had an eventful week since our last chat.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#95",
+      "category": "single_hop",
+      "question": "Who does James support in football matches?",
+      "answer": "Liverpool",
+      "prediction": "James: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John, hope you're doing well.\nJames: Hey John!",
+      "retrieved_ids": [
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#96",
+      "category": "single_hop",
+      "question": "Which football club does John support?",
+      "answer": "Manchester City",
+      "prediction": "John: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John, hope you're doing well.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! What's up? Anything fun going on?",
+      "retrieved_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#97",
+      "category": "single_hop",
+      "question": "What disagreement do James and John have about their football teams?",
+      "answer": "debating on which team will perform better in the championship",
+      "prediction": "John: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJames: Hey John, hope you're doing well.\nJames: Hey John!\nJames: Hey John! Been a while, but hope you're doing well.\nJohn: Hey James, it's been a bit since we last talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#98",
+      "category": "single_hop",
+      "question": "What is Max good at doing according to James?",
+      "answer": "catching frisbees in mid-air",
+      "prediction": "James: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John, since our last chat, something awesome happened.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJames: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James, long time no see!",
+      "retrieved_ids": [
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#99",
+      "category": "single_hop",
+      "question": "What is the main focus of the organization that James volunteered with?",
+      "answer": "providing necessary items to those who are less fortunate",
+      "prediction": "James: Hey John, since our last chat, something awesome happened.\nJohn: Hey James, it's been a bit since we last talked.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#100",
+      "category": "single_hop",
+      "question": "Will there be an interview required to volunteer with the organization James volunteered for?",
+      "answer": "No",
+      "prediction": "James: Hey John, since our last chat, something awesome happened.\nJohn: Hey James, it's been a bit since we last talked.\nJohn: Hey James! Busy few weeks for sure, but I'm pushing through.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#101",
+      "category": "single_hop",
+      "question": "How did John relax in his free time on 9 July, 2022?",
+      "answer": "Reading",
+      "prediction": "James: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John! Long time no talk - hope you're doing well.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#102",
+      "category": "single_hop",
+      "question": "What did James enjoy doing on cold winter days?",
+      "answer": "Reading while snuggled under the covers",
+      "prediction": "James: Hey John! Long time no talk - hope you're doing well.\nJames: Hey John, hope you're doing well.\nJohn: Hey James! Busy few weeks for sure, but I'm pushing through.\nJames: Hey John!\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#103",
+      "category": "single_hop",
+      "question": "What new hobby did James become interested in on 9 July, 2022?",
+      "answer": "Extreme sports",
+      "prediction": "James: Hey John! Long time no talk - hope you're doing well.\nJames: Hey John, something awesome happened since we talked.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James, been a few days.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#104",
+      "category": "single_hop",
+      "question": "Where did James plan to visit after Toronto?",
+      "answer": "Vancouver",
+      "prediction": "James: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJohn: Hey, James! Good to hear from you.\nJames: Hey John! Been a while since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#105",
+      "category": "single_hop",
+      "question": "When did James plan to return from his trip to Toronto and Vancouver?",
+      "answer": "July 20",
+      "prediction": "James: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John!\nJames: Hey John, hope you're doing well.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#106",
+      "category": "single_hop",
+      "question": "What online game did John start playing recently for improving strategy?",
+      "answer": "Chess",
+      "prediction": "James: Hey John, hope you're doing well.\nJohn: Hey, James! Good to hear from you.\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJames: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.",
+      "retrieved_ids": [
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#107",
+      "category": "single_hop",
+      "question": "What made John leave his IT job?",
+      "answer": "to focus on things that align with his values and passions",
+      "prediction": "James: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#108",
+      "category": "single_hop",
+      "question": "Which game tournaments does John plan to organize besides CS:GO?",
+      "answer": "Fortnite competitions",
+      "prediction": "John: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John, it's been a few days since we talked.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James, long time no see!",
+      "retrieved_ids": [
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#109",
+      "category": "single_hop",
+      "question": "What happened to James's puppy during the recent visit to the clinic?",
+      "answer": "routine examination and vaccination",
+      "prediction": "John: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! Long time no talk - hope you're doing well.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJames: Hey John, something awesome happened since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#110",
+      "category": "single_hop",
+      "question": "What game genre did John start exploring instead of shooters?",
+      "answer": "strategy and RPG games",
+      "prediction": "John: Hey James, been a few days.\nJames: Hey John, hope you're doing well.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#111",
+      "category": "single_hop",
+      "question": "Which RPG game is John playing and enjoying on 10 August, 2022?",
+      "answer": "The Witcher 3",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey James, been a few days.\nJames: Hey John!\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#112",
+      "category": "single_hop",
+      "question": "What aspect of \"The Witcher 3\" does John find immersive?",
+      "answer": "shaping the world with choices",
+      "prediction": "John: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hey James, been a few days.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.\nJohn: Hey James!",
+      "retrieved_ids": [
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#113",
+      "category": "single_hop",
+      "question": "Whose phone number did James receive during the beach outing?",
+      "answer": "Samantha",
+      "prediction": "John: Hey James, been a few days.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#114",
+      "category": "single_hop",
+      "question": "What is James planning to do after receiving Samantha's phone number?",
+      "answer": "call her",
+      "prediction": "John: Hey James, been a few days.\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John! Been a while since we chatted.\nJohn: Hey, James! Good to hear from you.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#115",
+      "category": "single_hop",
+      "question": "What is John organizing with his siblings?",
+      "answer": "a gaming night",
+      "prediction": "John: Hey, James! Good to hear from you.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James! Hope you're doing great.\nJames: Hey John, it's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#116",
+      "category": "single_hop",
+      "question": "What type of beer does John not like?",
+      "answer": "dark beer",
+      "prediction": "John: Hey James! How've you been? Had an eventful week since our last chat.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John, it's been a few days since we talked.\nJames: Hey John! What's up? Anything fun going on?",
+      "retrieved_ids": [
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#117",
+      "category": "single_hop",
+      "question": "What were some difficulties James faced during the development of his game?",
+      "answer": "balancing mechanics and ensuring fairness",
+      "prediction": "James: Hey John! Been a while, but hope you're doing well.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#118",
+      "category": "single_hop",
+      "question": "What has John been teaching his siblings?",
+      "answer": "coding",
+      "prediction": "James: Hey John! Been a while, but hope you're doing well.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James! Busy few weeks for sure, but I'm pushing through.\nJohn: Hey, James! Good to hear from you.\nJames: Hey John, it's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#119",
+      "category": "single_hop",
+      "question": "What kind of programs are John's siblings making?",
+      "answer": "basic games and stories",
+      "prediction": "James: Hey John! Been a while, but hope you're doing well.\nJohn: Hey, James! Good to hear from you.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#120",
+      "category": "single_hop",
+      "question": "Which company's headphones did John choose for gaming?",
+      "answer": "Sennheiser",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJames: Hey John! Been a while since we chatted.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.\nJohn: Hey James, it's been a bit since we last talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#121",
+      "category": "single_hop",
+      "question": "What did James and Samantha discover they both enjoy at McGee's bar?",
+      "answer": "Lager beer",
+      "prediction": "John: Hey James! Hope you're doing great.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! How's it going?\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?",
+      "retrieved_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#122",
+      "category": "single_hop",
+      "question": "How much does James pay per cooking class?",
+      "answer": "$10",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John! Long time no talk - hope you're doing well.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#123",
+      "category": "single_hop",
+      "question": "What did James learn to make in the cooking class besides omelette and meringue?",
+      "answer": "Dough",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey James!",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#124",
+      "category": "single_hop",
+      "question": "Why did James sign up for a cooking class?",
+      "answer": "He wanted to learn something new",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John, hope you're doing well.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#125",
+      "category": "single_hop",
+      "question": "What did James prepare for the first time in the cooking class?",
+      "answer": "Omelette",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#126",
+      "category": "single_hop",
+      "question": "What is the name of the board game John tried in September 2022?",
+      "answer": "Dungeons of the Dragon",
+      "prediction": "James: Hey John!\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hey James! Long time no see! A lot's changed since we talked.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?",
+      "retrieved_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#127",
+      "category": "single_hop",
+      "question": "Where does James get his ideas from?",
+      "answer": "books, movies, dreams",
+      "prediction": "James: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John, it's been a few days since we talked.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?",
+      "retrieved_ids": [
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#128",
+      "category": "single_hop",
+      "question": "What kind of dream did James have recently?",
+      "answer": "a dream with a medieval castle full of puzzles and traps",
+      "prediction": "John: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJohn: Hey James! Long time no see! A lot's changed since we talked.\nJohn: Hey, James! Good to hear from you.\nJohn: Hey James, long time no see!\nJames: Hey John! Long time no talk - hope you're doing well.",
+      "retrieved_ids": [
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#129",
+      "category": "single_hop",
+      "question": "What kind of music does John like?",
+      "answer": "electronic and rock music",
+      "prediction": "John: Hey James! Long time no see! A lot's changed since we talked.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John!\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#130",
+      "category": "single_hop",
+      "question": "What instrument did James used to play when he was younger?",
+      "answer": "guitar",
+      "prediction": "John: Hey James! Long time no see! A lot's changed since we talked.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James, long time no see!\nJohn: Hey, James! Good to hear from you.\nJames: Hey John, it's been a few days since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#131",
+      "category": "single_hop",
+      "question": "What did John use to play when he was younger to let off steam?",
+      "answer": "drums",
+      "prediction": "John: Hey James! Long time no see! A lot's changed since we talked.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey, James! Good to hear from you.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#132",
+      "category": "single_hop",
+      "question": "What career milestone did John achieve recently in September 2022?",
+      "answer": "making his first mobile game",
+      "prediction": "John: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJames: Hey John, since our last chat, something awesome happened.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJohn: Hey James, it's been a bit since we last talked.\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNKHD148TM53557CFEY7",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#133",
+      "category": "single_hop",
+      "question": "What type of game is John's upcoming mobile game?",
+      "answer": "2D adventure",
+      "prediction": "John: Hey James! How've you been? Had an eventful week since our last chat.\nJohn: Hey James, long time no see!\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJames: Hey John! What's up? Anything fun going on?",
+      "retrieved_ids": [
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#134",
+      "category": "single_hop",
+      "question": "What does John do to stay informed and constantly learn about game design?",
+      "answer": "watch tutorials and keep up with developer forums",
+      "prediction": "John: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hey James! Hope you're doing great.\nJames: Hey John! What's up? Anything fun going on?\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?\nJohn: Hey, James! Good to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#135",
+      "category": "single_hop",
+      "question": "What kind of gig was John offered at the game dev non-profit organization?",
+      "answer": "programming mentor for game developers",
+      "prediction": "John: Hey James! Busy few weeks for sure, but I'm pushing through.\nJames: Hey John, since our last chat, something awesome happened.\nJohn: Hey James, it's been a bit since we last talked.\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJames: Hey John! Long time no talk - hope you're doing well.",
+      "retrieved_ids": [
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#136",
+      "category": "single_hop",
+      "question": "What does John feel about starting the journey as a programming mentor for game developers?",
+      "answer": "excited and inspired",
+      "prediction": "John: Hey James! Busy few weeks for sure, but I'm pushing through.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John, long time no talk! So much has happened!",
+      "retrieved_ids": [
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#137",
+      "category": "single_hop",
+      "question": "What kind of games is James excited to play with his new video card?",
+      "answer": "RPGs",
+      "prediction": "John: Hey James! Busy few weeks for sure, but I'm pushing through.\nJohn: Hey, James! Good to hear from you.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJames: Hey John! Been a while, but hope you're doing well.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?",
+      "retrieved_ids": [
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#138",
+      "category": "single_hop",
+      "question": "What inspired James to create his game?",
+      "answer": "Witcher 3",
+      "prediction": "James: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNN1GXQSP5PT01SXQNAQ"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#139",
+      "category": "single_hop",
+      "question": "What sparked James' passion for gaming when he was a kid?",
+      "answer": "Super Mario and The Legend of Zelda games",
+      "prediction": "James: Hey John, long time no talk! So much has happened!\nJohn: Hey James!\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.",
+      "retrieved_ids": [
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#140",
+      "category": "single_hop",
+      "question": "What did James lose progress on due to a power outage?",
+      "answer": "a game",
+      "prediction": "James: Hey John, long time no talk! So much has happened!\nJohn: Hey James, it's been a bit since we last talked.\nJohn: Hey James, long time no see!\nJames: Hey John!\nJames: Hey John! What's up? Anything fun going on?",
+      "retrieved_ids": [
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#141",
+      "category": "single_hop",
+      "question": "What games were played at the gaming tournament organized by John on 31 October, 2022?",
+      "answer": "Fortnite, Overwatch, Apex Legends",
+      "prediction": "John: Hey James! Hope you're doing great.\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.\nJames: Hey John, long time no talk! So much has happened!\nJohn: Hey James, been a few days.\nJohn: Hey James, long time no see!",
+      "retrieved_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#142",
+      "category": "single_hop",
+      "question": "What was the purpose of the gaming tournament organized by John on 31 October, 2022?",
+      "answer": "To raise money for a children's hospital",
+      "prediction": "John: Hey James, it's been a bit since we last talked.\nJohn: Hey James! How's it going? I had a blast last week when my programmer friends and I organized an online comp.\nJohn: Hey James, been a few days.\nJames: Hey John, long time no talk! So much has happened!\nJohn: Hey James! Long time no chat. What's up? Been playing any new games lately?",
+      "retrieved_ids": [
+        "epi_01M2QAMNM3NK4WV8MYFG5DSCC1",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMCGKJHN1TRHG8Z1X1W",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#143",
+      "category": "single_hop",
+      "question": "What decision did James and Samantha make on 31 October, 2022?",
+      "answer": "To move in together",
+      "prediction": "John: Hey James! Hope you're doing great.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey James, been a few days.\nJohn: Hey James, good catching up! Been a while huh? I made a huge call - recently left my IT job after 3 years.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?",
+      "retrieved_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNMH99M9X8SDQ9EFJC0A",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNMR9SVKEZ7P6ZY8AAW9",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#144",
+      "category": "single_hop",
+      "question": "Where did James and Samantha decide to live together on 31 October, 2022?",
+      "answer": "In an apartment not far from McGee's bar",
+      "prediction": "John: Hey James! Hope you're doing great.\nJohn: Hey! Glad to finally talk to you. I want to ask you, what motivates you?\nJames: Hey John! Been a while since we chatted.\nJames: Hey John, it's been a few days since we talked.\nJohn: Hey, James! Good to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#145",
+      "category": "single_hop",
+      "question": "Why did James and Samantha choose an apartment near McGee's bar?",
+      "answer": "They love spending time together at the bar",
+      "prediction": "James: Hey John, it's been a few days since we talked.\nJohn: Hey James! Hope you're doing great.\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James, long time no talk! A lot has happened during this time. Let me fill you in.\nJohn: Hey, James! Good to hear from you.",
+      "retrieved_ids": [
+        "epi_01M2QAMNMTP93442EJBKGX943A",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNM63P7R9WJYPSN38PVS",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#146",
+      "category": "single_hop",
+      "question": "What game is John hooked on playing on 5 November, 2022?",
+      "answer": "FIFA 23",
+      "prediction": "John: Hey James, been a few days.\nJames: Hey John, hope you're doing well.\nJames: Hey John, long time no talk! So much has happened!\nJames: Hey John! What's up? Anything fun going on?\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?",
+      "retrieved_ids": [
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNKKT9NG7ANDPEQQEQKM",
+        "epi_01M2QAMNKNBR3FN71B86ZRGAWX",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNKPY11Q7KKSRF73TKXC",
+        "epi_01M2QAMNN2H2FBAXFX1VBSQJA7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#147",
+      "category": "single_hop",
+      "question": "What did John suggest James practice before playing FIFA 23 together?",
+      "answer": "Control with a gamepad and timing",
+      "prediction": "James: Hey John, hope you're doing well.\nJohn: Hi James! I just started playing chess to get better at strategy. I'm loving it! Have you ever tried it out?\nJohn: Hey James!\nJohn: Hey James! Long time no see! A lot's changed since we talked.\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!",
+      "retrieved_ids": [
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR",
+        "epi_01M2QAMNMF8MVVM6KQDZ2M7XFG",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A",
+        "epi_01M2QAMNN6Z3QSETAB9MX3C08K",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNMAPGRP0FDBSZRPPXY8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNN79G0HWATV4VRZT6YR"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#148",
+      "category": "single_hop",
+      "question": "What project did John work on with a game developer by 7 November, 2022?",
+      "answer": "An online board game",
+      "prediction": "James: Hey John!\nJohn: Hey James, been a few days since we chatted. Lots of stuff goin' on in my life!\nJohn: Hey James! How's it going?\nJames: Hey John, last weekend I had an awesome time at the amusement park with my friends.\nJohn: Hey James! How've you been? Had an eventful week since our last chat.",
+      "retrieved_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMZA3AHJPPGFAEK9RAE",
+        "epi_01M2QAMNKV7X2KYRKPT02VD6FN",
+        "epi_01M2QAMNM4NSZPJ8Y508YH3WC4",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNKRZESNW4D3S7895Q9G",
+        "epi_01M2QAMNMM0MB46KD0TYR2JV7V",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-47#149",
+      "category": "single_hop",
+      "question": "What is the name of John's cousin's dog?",
+      "answer": "Luna",
+      "prediction": "James: Hey John!\nJames: Hey John! Look how cute it is. My dog came to me today while I was playing on the console. What is new?\nJohn: Hey James, been a few days.\nJames: Hey John, how's it going? A lot has happened for me lately, some good and some not so great.\nJames: Hey John! What's up? Anything fun going on?",
+      "retrieved_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1",
+        "epi_01M2QAMNMPDTF8Y5MQZC3AP44X",
+        "epi_01M2QAMNMJYN3416N1K2KBVPX9",
+        "epi_01M2QAMNM89RBJS1SAGYZR3KPA",
+        "epi_01M2QAMNKX3K3AMFJ8Q6PSRJB4",
+        "epi_01M2QAMNKE6M3FWQCX7YBST0WP",
+        "epi_01M2QAMNM1D9VGDTNFFPM45WMH",
+        "epi_01M2QAMNM0SDWV79DN8PHR5YPG",
+        "epi_01M2QAMNMXDG9D2B8Q46VEY0DK",
+        "epi_01M2QAMNN3TTQKE39P7TYBDG2A"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMNNQDFVC88JZQ5TZA7F1"
+      ],
+      "hit": true
+    }
+  ]
+}

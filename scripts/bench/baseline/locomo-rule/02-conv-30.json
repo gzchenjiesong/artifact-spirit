@@ -1,0 +1,1946 @@
+{
+  "meta": {
+    "dataset": "locomo",
+    "answer_mode": "extract",
+    "ingest": "rule",
+    "embedding": "off",
+    "top_k": 10
+  },
+  "report": {
+    "total": 81,
+    "answered": 81,
+    "answer_rate": 1.0,
+    "accuracy": 0.0247,
+    "f1": 0.018,
+    "em": 0.0,
+    "contains": 0.0247,
+    "recall@k": 0.928,
+    "recall@gold": 0.6193,
+    "mrr": 0.7385,
+    "ndcg@k": 0.7724,
+    "by_category": {
+      "temporal": {
+        "total": 26,
+        "answered": 26,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 1.0,
+        "recall@gold": 0.8077,
+        "mrr": 0.8821,
+        "ndcg@k": 0.9108,
+        "by_category": {}
+      },
+      "single_hop": {
+        "total": 44,
+        "answered": 44,
+        "answer_rate": 1.0,
+        "accuracy": 0.0455,
+        "f1": 0.0271,
+        "em": 0.0,
+        "contains": 0.0455,
+        "recall@k": 0.9091,
+        "recall@gold": 0.5909,
+        "mrr": 0.6769,
+        "ndcg@k": 0.7314,
+        "by_category": {}
+      },
+      "multihop": {
+        "total": 11,
+        "answered": 11,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0245,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.8333,
+        "recall@gold": 0.2879,
+        "mrr": 0.6455,
+        "ndcg@k": 0.6096,
+        "by_category": {}
+      }
+    }
+  },
+  "details": [
+    {
+      "id": "conv-30#0",
+      "category": "temporal",
+      "question": "When Jon has lost his job as a banker?",
+      "answer": "19 January, 2023",
+      "prediction": "Gina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Great hearing from you again.\nGina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!\nJon: Hi Gina! Been hectic for me lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!",
+      "retrieved_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#1",
+      "category": "temporal",
+      "question": "When Gina has lost her job at Door Dash?",
+      "answer": "January, 2023",
+      "prediction": "Jon: Hi Gina! Been hectic for me lately.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#2",
+      "category": "single_hop",
+      "question": "How do Jon and Gina both like to destress?",
+      "answer": "by dancing",
+      "prediction": "Gina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi Gina! Been hectic for me lately.\nGina: Hey Jon! Great hearing from you again.\nJon: Hey Gina! I'm turning my loves of dance into a business.\nJon: Hi Gina! I just wanted to fill you in on my business.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-30#3",
+      "category": "multihop",
+      "question": "What do Jon and Gina both have in common?",
+      "answer": "They lost their jobs and decided to start their own businesses.",
+      "prediction": "Jon: Hi Gina! Been hectic for me lately.\nGina: Hey Jon! Great hearing from you again.\nJon: Hey Gina! I'm turning my loves of dance into a business.\nJon: Hi Gina! I just wanted to fill you in on my business.\nGina: Hey Jon! Long time no see! Things have been hectic lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#4",
+      "category": "single_hop",
+      "question": "Why did Jon decide to start his dance studio?",
+      "answer": "He lost his job and decided to start his own business to share his passion.",
+      "prediction": "Gina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Great hearing from you again.\nJon: Hi Gina! Been hectic for me lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#5",
+      "category": "multihop",
+      "question": "What Jon thinks the ideal dance studio should look like?",
+      "answer": "By the water, with natural light and Marley flooring",
+      "prediction": "Gina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hey Gina! We haven't talked in a few days.\nJon: Hey Gina! I'm turning my loves of dance into a business.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.",
+      "retrieved_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#6",
+      "category": "temporal",
+      "question": "When is Jon's group performing at a festival?",
+      "answer": "February, 2023",
+      "prediction": "Gina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Hey Gina! We haven't talked in a few days.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Great hearing from you again.\nJon: Hey Gina! I'm turning my loves of dance into a business.",
+      "retrieved_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#7",
+      "category": "temporal",
+      "question": "When did Gina launch an ad campaign for her store?",
+      "answer": "29 January, 2023",
+      "prediction": "Gina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hey Gina, hope you're doing great! Still working on my biz.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#8",
+      "category": "temporal",
+      "question": "When was Jon in Paris?",
+      "answer": "28 January 2023",
+      "prediction": "Gina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi Gina! I just wanted to fill you in on my business.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#9",
+      "category": "multihop",
+      "question": "Which city have both Jean and John visited?",
+      "answer": "Rome",
+      "prediction": "Gina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nJon: Hi Gina! Been hectic for me lately.\nGina: Hey Jon! Great hearing from you again.\nJon: Hey Gina! I'm turning my loves of dance into a business.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#10",
+      "category": "temporal",
+      "question": "When did Gina team up with a local artist for some cool designs?",
+      "answer": "February, 2023",
+      "prediction": "Gina: Hey Jon! Great hearing from you again.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#11",
+      "category": "temporal",
+      "question": "When did Gina get her tattoo?",
+      "answer": "A few years ago",
+      "prediction": "Gina: Hey Jon! Great hearing from you again.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#12",
+      "category": "temporal",
+      "question": "When did Jon start to go to the gym?",
+      "answer": "March, 2023",
+      "prediction": "Jon: Hi Gina! Been hectic for me lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#13",
+      "category": "temporal",
+      "question": "When did Gina open her online clothing store?",
+      "answer": "16 March, 2023",
+      "prediction": "Jon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hi Gina! Been hectic for me lately.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nGina: Hey Jon! Great hearing from you again.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRPHJX4ZE428S246P06"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#14",
+      "category": "temporal",
+      "question": "When did Jon start expanding his studio's social media presence?",
+      "answer": "April, 2023",
+      "prediction": "Jon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Good to see you. What's up? Anything new?",
+      "retrieved_ids": [
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRPHJX4ZE428S246P06"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#15",
+      "category": "temporal",
+      "question": "When did Jon host a dance competition?",
+      "answer": "May, 2023",
+      "prediction": "Jon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRPHJX4ZE428S246P06"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#16",
+      "category": "temporal",
+      "question": "When did Jon go to a fair to get more exposure for his dance studio?",
+      "answer": "24 April, 2023",
+      "prediction": "Jon: Hi Gina! I just wanted to fill you in on my business.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Good to see you. What's up? Anything new?",
+      "retrieved_ids": [
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#17",
+      "category": "multihop",
+      "question": "Why did Gina decide to start her own clothing store?",
+      "answer": "She always loved fashion trends and finding unique pieces and she lost her job so decided it was time to start her own business.",
+      "prediction": "Gina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Great hearing from you again.\nJon: Hi Gina! I just wanted to fill you in on my business.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#18",
+      "category": "multihop",
+      "question": "Do Jon and Gina start businesses out of what they love?",
+      "answer": "Yes",
+      "prediction": "Gina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nJon: Hi Gina! Been hectic for me lately.\nJon: Hey Gina! I'm turning my loves of dance into a business.\nGina: Hey Jon! Great hearing from you again.",
+      "retrieved_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#19",
+      "category": "temporal",
+      "question": "When did Gina interview for a design internship?",
+      "answer": "10 May, 2023",
+      "prediction": "Jon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nGina: Hey Jon! Good to see you. What's up? Anything new?",
+      "retrieved_ids": [
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#20",
+      "category": "temporal",
+      "question": "When did Gina get accepted for the design internship?",
+      "answer": "27 May, 2023",
+      "prediction": "Gina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nGina: Hey Jon! Good to see you. What's up? Anything new?",
+      "retrieved_ids": [
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#21",
+      "category": "temporal",
+      "question": "When did Jon start reading \"The Lean Startup\"?",
+      "answer": "May, 2023",
+      "prediction": "Gina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Hi Gina! Been hectic for me lately.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#22",
+      "category": "temporal",
+      "question": "When did Gina develop a video presentation to teach how to style her fashion pieces? ",
+      "answer": "June, 2023",
+      "prediction": "Jon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#23",
+      "category": "multihop",
+      "question": "How did Gina promote her clothes store?",
+      "answer": "worked with an artist to make unique fashion pieces, made limited-edition sweatshirts, got some new offers and promotions for online store, developed a video presentation showing how to style her pieces",
+      "prediction": "Jon: Hi Gina! Been hectic for me lately.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#24",
+      "category": "multihop",
+      "question": "Which events has Jon participated in to promote his business venture?",
+      "answer": "fair, networking events, dance competition",
+      "prediction": "Gina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hi Gina! Been hectic for me lately.\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nGina: Hey Jon!",
+      "retrieved_ids": [
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#25",
+      "category": "multihop",
+      "question": "What does Jon's dance studio offer?",
+      "answer": "one-on-one metoring and training to dancers,  workshops and classes to local schools and centers",
+      "prediction": "Jon: Hey Gina, how's it going?\nJon: Hi Gina! Been hectic for me lately.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#26",
+      "category": "temporal",
+      "question": "When did Jon receive mentorship to promote his venture?",
+      "answer": "15 June, 2023",
+      "prediction": "Jon: Hi Gina! Been hectic for me lately.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#27",
+      "category": "multihop",
+      "question": "Did Jon and Gina both participate in dance competitions?",
+      "answer": "Yes",
+      "prediction": "Gina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nGina: Hey Jon! Great hearing from you again.\nJon: Hi Gina! Been hectic for me lately.\nJon: Hey Gina! I'm turning my loves of dance into a business.",
+      "retrieved_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#28",
+      "category": "temporal",
+      "question": "When was Jon in Rome?",
+      "answer": "June 2023",
+      "prediction": "Jon: Hey Gina, hope you're doing great! Still working on my biz.\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nJon: Hi Gina! I just wanted to fill you in on my business.\nGina: Hey Jon! Good to see you. What's up? Anything new?",
+      "retrieved_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#29",
+      "category": "multihop",
+      "question": "Which cities has Jon visited?",
+      "answer": "Paris, Rome",
+      "prediction": "Gina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nJon: Hi Gina! Been hectic for me lately.\nGina: Hey Jon!\nJon: Hey Gina! We haven't talked in a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#30",
+      "category": "temporal",
+      "question": "When Jon is planning to open his dance studio?",
+      "answer": "20 June, 2023",
+      "prediction": "Jon: Hi Gina! Been hectic for me lately.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hey Gina! I'm turning my loves of dance into a business.\nGina: Hey Jon! Good to see you. What's up? Anything new?",
+      "retrieved_ids": [
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#31",
+      "category": "multihop",
+      "question": "How long did it take for Jon to open his studio?",
+      "answer": "six months",
+      "prediction": "Jon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi Gina! Been hectic for me lately.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nGina: Hey Jon! Good to see you. What's up? Anything new?",
+      "retrieved_ids": [
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#32",
+      "category": "temporal",
+      "question": "When did Gina design a limited collection of hoodies?",
+      "answer": "June 2023",
+      "prediction": "Gina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!",
+      "retrieved_ids": [
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#33",
+      "category": "temporal",
+      "question": "When did Jon visit networking events for his store?",
+      "answer": "20 June, 2023",
+      "prediction": "Gina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!",
+      "retrieved_ids": [
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#34",
+      "category": "temporal",
+      "question": "When did Gina start being recognized by fashion editors?",
+      "answer": "July 2023",
+      "prediction": "Gina: Hey Jon!\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Great hearing from you again.\nJon: Hi Gina! Been hectic for me lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#35",
+      "category": "temporal",
+      "question": "When did Jon start learning marketing and analytics tools?",
+      "answer": "July, 2023",
+      "prediction": "Gina: Hey Jon!\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#36",
+      "category": "temporal",
+      "question": "When did Jon and Gina decide to collaborate to create dance content?",
+      "answer": "21 July 2023",
+      "prediction": "Gina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Great hearing from you again.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#37",
+      "category": "temporal",
+      "question": "When did Gina mention Shia Labeouf?",
+      "answer": " 23 July, 2023",
+      "prediction": "Jon: Hey Gina! We haven't talked in a few days.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!",
+      "retrieved_ids": [
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#38",
+      "category": "temporal",
+      "question": "When did Gina go to a dance class with a group of friends?",
+      "answer": "21 July 2023",
+      "prediction": "Jon: Hey Gina! We haven't talked in a few days.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Hey Gina, hope you're doing great! Still working on my biz.\nJon: Hey Gina! I'm turning my loves of dance into a business.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!",
+      "retrieved_ids": [
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#39",
+      "category": "single_hop",
+      "question": "What is Gina's favorite style of dance?",
+      "answer": "Contemporary",
+      "prediction": "Gina: Hey Jon! Great hearing from you again.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nGina: Hey Jon! Good to see you. What's up? Anything new?",
+      "retrieved_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#40",
+      "category": "single_hop",
+      "question": "What is Jon's favorite style of dance?",
+      "answer": "Contemporary",
+      "prediction": "Gina: Hey Jon! Great hearing from you again.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nGina: Hey Jon! Good to see you. What's up? Anything new?",
+      "retrieved_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#41",
+      "category": "single_hop",
+      "question": "What was Gina's favorite dancing memory?",
+      "answer": "Winning first place at a regionals dance competition",
+      "prediction": "Gina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Great hearing from you again.\nJon: Hey Gina! I'm turning my loves of dance into a business.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!",
+      "retrieved_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#42",
+      "category": "single_hop",
+      "question": "What kind of dance piece did Gina's team perform to win first place?",
+      "answer": "\"Finding Freedom\"",
+      "prediction": "Gina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Great hearing from you again.\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nGina: Hey Jon! Long time no see! Things have been hectic lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#43",
+      "category": "single_hop",
+      "question": "What do the dancers in the photo represent?",
+      "answer": "They are performing at the festival",
+      "prediction": "Jon: Hey Gina, how's it going?\nJon: Hey Gina! I'm turning my loves of dance into a business.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hey Gina! We haven't talked in a few days.\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#44",
+      "category": "single_hop",
+      "question": "What does Gina say about the dancers in the photo?",
+      "answer": "They look graceful",
+      "prediction": "Jon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nJon: Hey Gina, how's it going?\nJon: Hey Gina! I'm turning my loves of dance into a business.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hey Gina! We haven't talked in a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#45",
+      "category": "single_hop",
+      "question": "What is Jon's attitude towards being part of the dance festival?",
+      "answer": "Glad",
+      "prediction": "Gina: Hey Jon! Great hearing from you again.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!\nJon: Hey Gina, how's it going?\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRPHJX4ZE428S246P06"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#46",
+      "category": "single_hop",
+      "question": "What kind of flooring is Jon looking for in his dance studio?",
+      "answer": "Marley flooring",
+      "prediction": "Gina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nJon: Hey Gina, how's it going?\nJon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#47",
+      "category": "single_hop",
+      "question": "What did Gina find for her clothing store on 1 February, 2023?",
+      "answer": "The perfect spot for her store",
+      "prediction": "Gina: Hey Jon! Long time no see! Things have been hectic lately.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nJon: Hey Gina! I'm turning my loves of dance into a business.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#48",
+      "category": "single_hop",
+      "question": "What did Gina design for her store?",
+      "answer": "the space, furniture, and decor",
+      "prediction": "Jon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#49",
+      "category": "single_hop",
+      "question": "What did Gina want her customers to feel in her store?",
+      "answer": "cozy and comfortable",
+      "prediction": "Gina: Hey Jon! Great hearing from you again.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#50",
+      "category": "single_hop",
+      "question": "What did Jon say about Gina's progress with her store?",
+      "answer": "hard work's paying off",
+      "prediction": "Jon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Great hearing from you again.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-30#51",
+      "category": "single_hop",
+      "question": "What made Gina choose the furniture and decor for her store?",
+      "answer": "personal style and customer comfort",
+      "prediction": "Jon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nGina: Hey Jon! Great hearing from you again.\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hey Gina, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#52",
+      "category": "single_hop",
+      "question": "What did Jon say about creating a special experience for customers?",
+      "answer": "It's the key to making them feel welcome and coming back",
+      "prediction": "Jon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nJon: Hey Gina, how's it going?\nJon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRPHJX4ZE428S246P06"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#53",
+      "category": "single_hop",
+      "question": "What did Gina say about creating an experience for her customers?",
+      "answer": "making them want to come back",
+      "prediction": "Jon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nJon: Hey Gina, how's it going?\nJon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#54",
+      "category": "single_hop",
+      "question": "How is Gina's store doing?",
+      "answer": "The store is doing great.",
+      "prediction": "Jon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hey Gina! We haven't talked in a few days.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hey Gina, hope you're doing great! Still working on my biz.\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#55",
+      "category": "single_hop",
+      "question": "What does Gina's tattoo symbolize?",
+      "answer": "Freedom and expressing herself through dance",
+      "prediction": "Gina: Hey Jon! Great hearing from you again.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#56",
+      "category": "single_hop",
+      "question": "What did Jon and Gina compare their entrepreneurial journeys to?",
+      "answer": "dancing together and supporting each other",
+      "prediction": "Gina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Great hearing from you again.",
+      "retrieved_ids": [
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRPHJX4ZE428S246P06"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-30#57",
+      "category": "single_hop",
+      "question": "What advice does Gina give to Jon about running a successful business?",
+      "answer": "build relationships with customers, create a strong brand image, stay positive",
+      "prediction": "Jon: Hey Gina, how's it going?\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nJon: Hi Gina! I just wanted to fill you in on my business.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Great hearing from you again.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#58",
+      "category": "single_hop",
+      "question": "Why did Jon shut down his bank account?",
+      "answer": "for his business",
+      "prediction": "Jon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nGina: Hey Jon! Great hearing from you again.\nGina: Hey Jon!\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hi Gina! I just wanted to fill you in on my business.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRPHJX4ZE428S246P06"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#59",
+      "category": "single_hop",
+      "question": "Why did Gina combine her clothing business with dance?",
+      "answer": "she is passionate about dance and fashion",
+      "prediction": "Jon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nGina: Hey Jon! Great hearing from you again.\nJon: Hi Gina! I just wanted to fill you in on my business.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRPHJX4ZE428S246P06"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#60",
+      "category": "single_hop",
+      "question": "What does Jon's dance make him?",
+      "answer": "happy",
+      "prediction": "Jon: Hey Gina! We haven't talked in a few days.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nJon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nJon: Hey Gina! I'm turning my loves of dance into a business.\nGina: Hey Jon! Great hearing from you again.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#61",
+      "category": "single_hop",
+      "question": "What did Gina receive from a dance contest?",
+      "answer": "a trophy",
+      "prediction": "Jon: Hey Gina! I'm turning my loves of dance into a business.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#62",
+      "category": "single_hop",
+      "question": "How does Gina stay confident in her business?",
+      "answer": "By reminding herself of her successes and progress, having a support system, and focusing on why she started",
+      "prediction": "Gina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hi Gina! I just wanted to fill you in on my business.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hey Gina, how's it going?\nGina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!",
+      "retrieved_ids": [
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#63",
+      "category": "single_hop",
+      "question": "What kind of professional experience did Gina get accepted for on May 23, 2023?",
+      "answer": "fashion internship",
+      "prediction": "Gina: Hey Jon! Long time no see! Things have been hectic lately.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nGina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#64",
+      "category": "single_hop",
+      "question": "Where is Gina's fashion internship?",
+      "answer": "fashion department of an international company",
+      "prediction": "Gina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hey Gina! We haven't talked in a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#65",
+      "category": "single_hop",
+      "question": "What book is Jon currently reading?",
+      "answer": "The Lean Startup",
+      "prediction": "Gina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Hi Gina! Been hectic for me lately.\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!",
+      "retrieved_ids": [
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#66",
+      "category": "single_hop",
+      "question": "What is Jon offering to the dancers at his dance studio?",
+      "answer": "One-on-one mentoring and training",
+      "prediction": "Jon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nJon: Hey Gina! We haven't talked in a few days.\nGina: Hey Jon!\nGina: Hey Jon! Good to see you. What's up? Anything new?",
+      "retrieved_ids": [
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#67",
+      "category": "single_hop",
+      "question": "How does Jon use the clipboard with a notepad attached to it?",
+      "answer": "To set goals, track achievements, and find areas for improvement",
+      "prediction": "Jon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nJon: Hey Gina, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#68",
+      "category": "single_hop",
+      "question": "What does Jon tell Gina he won't do?",
+      "answer": "quit",
+      "prediction": "Jon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hey Gina! We haven't talked in a few days.\nJon: Hey Gina! I'm turning my loves of dance into a business.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.",
+      "retrieved_ids": [
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#69",
+      "category": "single_hop",
+      "question": "What did Jon take a trip to Rome for?",
+      "answer": "To clear his mind",
+      "prediction": "Jon: Hey Gina, hope you're doing great! Still working on my biz.\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Great hearing from you again.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#70",
+      "category": "single_hop",
+      "question": "What is Jon working on opening?",
+      "answer": "a dance studio",
+      "prediction": "Jon: Hey Gina, hope you're doing great! Still working on my biz.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nGina: Hey Jon! Great hearing from you again.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#71",
+      "category": "single_hop",
+      "question": "How does Gina describe the studio that Jon has opened?",
+      "answer": "amazing",
+      "prediction": "Gina: Hey Jon!\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nJon: Hi Gina! Been hectic for me lately.\nJon: Hey Gina! We haven't talked in a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-30#72",
+      "category": "single_hop",
+      "question": "How does Jon feel about the opening night of his dance studio?",
+      "answer": "excited",
+      "prediction": "Jon: Hey Gina, hope you're doing great! Still working on my biz.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#73",
+      "category": "single_hop",
+      "question": "How does Gina describe the feeling that dance brings?",
+      "answer": "magical",
+      "prediction": "Jon: Hey Gina, hope you're doing great! Still working on my biz.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nGina: Hey Jon! Great hearing from you again.\nJon: Hey Gina! I'm turning my loves of dance into a business.\nJon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#74",
+      "category": "single_hop",
+      "question": "What does Jon plan to do at the grand opening of his dance studio?",
+      "answer": "savor all the good vibes",
+      "prediction": "Jon: Hey Gina, hope you're doing great! Still working on my biz.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!\nGina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#75",
+      "category": "single_hop",
+      "question": "What does Gina say to Jon about the grand opening?",
+      "answer": "Let's live it up and make some great memories",
+      "prediction": "Jon: Hey Gina, hope you're doing great! Still working on my biz.\nJon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!",
+      "retrieved_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#76",
+      "category": "single_hop",
+      "question": "What is the general sentiment about the upcoming grand opening?",
+      "answer": "excitement",
+      "prediction": "Jon: Hey Gina, hope you're doing great! Still working on my biz.\nJon: Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nGina: Hey Jon! Long time no talk! A lot's happened - I just got accepted for a fashion internship!",
+      "retrieved_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRXNTEH47XGBX0YGC8N",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS2GY5KDGAWS5DXRTZV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#77",
+      "category": "single_hop",
+      "question": "What did Gina make a limited edition line of?",
+      "answer": "Hoodies",
+      "prediction": "Gina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nGina: Hey Jon! Good to see you. What's up? Anything new?\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nGina: Hey Jon! Long time no see! Things have been hectic lately.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!",
+      "retrieved_ids": [
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#78",
+      "category": "single_hop",
+      "question": "According to Gina, what makes Jon a perfect mentor and guide?",
+      "answer": "His positivity and determination",
+      "prediction": "Gina: Hey Jon!\nJon: Hey Gina, thanks for being there for me and believing in me. It means a lot.\nJon: Hey Gina! I'm turning my loves of dance into a business.\nJon: Hi! Since we last spoke I am still working on the dance studio and things are looking up!\nJon: Hey Gina, hope you're doing ok! Still following my passion for dance.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB",
+        "epi_01M2QAMGRY7SHBB0DXR4TPCV98",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGRVPTDB3GDGSZXQPJXA",
+        "epi_01M2QAMGRC9RG4ZGECY9Z7YYS6",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#80",
+      "category": "single_hop",
+      "question": "What plans does Jon have after receiving advice at the networking event?",
+      "answer": "Sprucing up his business plan, tweaking his pitch to investors, and working on an online platform.",
+      "prediction": "Gina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nGina: Hey Jon, what's been up? Some pretty cool stuff happened since we talked.\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hey Gina, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRSFRXXY2C5BR0M4RG5",
+        "epi_01M2QAMGS9YA09RKT6H3D3E9JY",
+        "epi_01M2QAMGRAS4WDNA4J2E20Y5FX",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGR8SRTS8RQ0JJZ57J6X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-30#81",
+      "category": "single_hop",
+      "question": "What offer does Gina make to Jon regarding social media?",
+      "answer": "Helping with making content and managing his social media accounts.",
+      "prediction": "Gina: Hey Jon! Long time no talk! Last week, I built a new website for customers to make orders.\nJon: Gina, you won't believe it - I got mentored by this amazing business dude yesterday!\nJon: Hey Gina, I had to shut down my bank account. It was tough, but I needed to do it for my biz.\nJon: Hey Gina, how's it going?\nJon: Hi Gina! Been hectic for me lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN",
+        "epi_01M2QAMGS0VG25HYTJE39T6KKS",
+        "epi_01M2QAMGRPHJX4ZE428S246P06",
+        "epi_01M2QAMGRMTS7B4D9BEQXKTK1H",
+        "epi_01M2QAMGRJZZ9S0301SR0RCQ50",
+        "epi_01M2QAMGRE44DH1EMQ4EN0C001",
+        "epi_01M2QAMGRGRK5KXJQ842G4WMMA",
+        "epi_01M2QAMGRRTTYGKV066BHXSWRF",
+        "epi_01M2QAMGS4Z2P274JGPWXDPBXN",
+        "epi_01M2QAMGS6PE4FWYBM2YFCBDHB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMGS8EGMWJ7118WJDSXBN"
+      ],
+      "hit": true
+    }
+  ]
+}

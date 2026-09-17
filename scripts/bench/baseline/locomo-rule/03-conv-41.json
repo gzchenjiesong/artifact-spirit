@@ -1,0 +1,3630 @@
+{
+  "meta": {
+    "dataset": "locomo",
+    "answer_mode": "extract",
+    "ingest": "rule",
+    "embedding": "off",
+    "top_k": 10
+  },
+  "report": {
+    "total": 152,
+    "answered": 152,
+    "answer_rate": 1.0,
+    "accuracy": 0.0329,
+    "f1": 0.0186,
+    "em": 0.0,
+    "contains": 0.0329,
+    "recall@k": 0.8547,
+    "recall@gold": 0.5378,
+    "mrr": 0.683,
+    "ndcg@k": 0.7049,
+    "by_category": {
+      "temporal": {
+        "total": 27,
+        "answered": 27,
+        "answer_rate": 1.0,
+        "accuracy": 0.037,
+        "f1": 0.0141,
+        "em": 0.0,
+        "contains": 0.037,
+        "recall@k": 1.0,
+        "recall@gold": 0.6111,
+        "mrr": 0.7586,
+        "ndcg@k": 0.815,
+        "by_category": {}
+      },
+      "multihop": {
+        "total": 31,
+        "answered": 31,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0058,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.6344,
+        "recall@gold": 0.2984,
+        "mrr": 0.5678,
+        "ndcg@k": 0.488,
+        "by_category": {}
+      },
+      "open_domain": {
+        "total": 8,
+        "answered": 8,
+        "answer_rate": 1.0,
+        "accuracy": 0.0,
+        "f1": 0.0103,
+        "em": 0.0,
+        "contains": 0.0,
+        "recall@k": 0.2812,
+        "recall@gold": 0.25,
+        "mrr": 0.2625,
+        "ndcg@k": 0.2641,
+        "by_category": {}
+      },
+      "single_hop": {
+        "total": 86,
+        "answered": 86,
+        "answer_rate": 1.0,
+        "accuracy": 0.0465,
+        "f1": 0.0254,
+        "em": 0.0,
+        "contains": 0.0465,
+        "recall@k": 0.9419,
+        "recall@gold": 0.6279,
+        "mrr": 0.74,
+        "ndcg@k": 0.7894,
+        "by_category": {}
+      }
+    }
+  },
+  "details": [
+    {
+      "id": "conv-41#0",
+      "category": "temporal",
+      "question": "Who did Maria have dinner with on May 3, 2023?",
+      "answer": "her mother",
+      "prediction": "John: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nMaria: Hey John, been a few days since we chatted.\nJohn: Maria, since we talked, it's been tough.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nJohn: Hey Maria, hope you're doing OK.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#1",
+      "category": "temporal",
+      "question": "When did Maria donate her car?",
+      "answer": "21 December 2022",
+      "prediction": "Maria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, haven't talked for a few days.\nMaria: Hey John, been a few days since we chatted.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nJohn: Hey Maria, since we last spoke I went to that community mtg.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#2",
+      "category": "multihop",
+      "question": "What martial arts has John done?",
+      "answer": "Kickboxing, Taekwondo",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, I'm doing ok - hope you are too.\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#3",
+      "category": "multihop",
+      "question": "What type of volunteering have John and Maria both done?",
+      "answer": "Volunteering at a homeless shelter",
+      "prediction": "John: Hey Maria, hope you're doing OK.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hi Maria! It's so good to talk again.\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#4",
+      "category": "temporal",
+      "question": "When did John join the online support group?",
+      "answer": "The week before 1 January 2023",
+      "prediction": "John: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nJohn: Hey Maria, hope you're doing OK.\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria! Guess what? I'm now part of the fire-fighting brigade.\nJohn: Hey Maria, hope you're doing okay.",
+      "retrieved_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#5",
+      "category": "temporal",
+      "question": "When did Maria go to the beach?",
+      "answer": "December 2022",
+      "prediction": "Maria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria, I've been busy doing the petition I started\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nJohn: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, haven't talked for a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#6",
+      "category": "multihop",
+      "question": "Where has Maria made friends?",
+      "answer": "homeless shelter, gym, church",
+      "prediction": "John: Hey Maria, last week was really eye-opening.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, haven't talked for a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#7",
+      "category": "multihop",
+      "question": "What items des John mention having as a child?",
+      "answer": "A doll, a film camera",
+      "prediction": "John: Hey Maria, hope you're doing okay.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nJohn: Hey Maria, since we last spoke I went to that community mtg.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#8",
+      "category": "open_domain",
+      "question": "What might John's financial status be?",
+      "answer": "Middle-class or wealthy",
+      "prediction": "John: Hey Maria, I've been busy doing the petition I started\nJohn: Hi Maria! It's so good to talk again.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#9",
+      "category": "multihop",
+      "question": "Who gave Maria's family money when she was younger and her family was going through tough times?",
+      "answer": "Her aunt",
+      "prediction": "John: Hey Maria, since we last spoke I went to that community mtg.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nMaria: Hey John, how's it going?\nMaria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, haven't talked for a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#10",
+      "category": "temporal",
+      "question": "When did Maria meet Jean?",
+      "answer": "February 24, 2023",
+      "prediction": "Maria: Hey John, how's it going?\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#11",
+      "category": "multihop",
+      "question": "What people has Maria met and helped while volunteering?",
+      "answer": "David, Jean, Cindy, Laura",
+      "prediction": "Maria: Hey John, how's it going?\nJohn: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nMaria: Hey John, long time no talk! A lot has happened since then.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, last week was really eye-opening.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#12",
+      "category": "multihop",
+      "question": "What test has John taken multiple times?",
+      "answer": "The military aptitude test",
+      "prediction": "Maria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nJohn: Hey Maria, haven't talked for a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#13",
+      "category": "temporal",
+      "question": "When did Maria's grandmother pass away?",
+      "answer": "The week before 6 March 2023",
+      "prediction": "John: Hey Maria, long time no talk! Life's been pretty wild lately.\nJohn: Hey Maria, haven't talked for a few days.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, I haven't talked to you in a while.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#14",
+      "category": "open_domain",
+      "question": "Would John be considered a patriotic person?",
+      "answer": "Yes",
+      "prediction": "John: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John! Long time no talk.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...",
+      "retrieved_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#15",
+      "category": "multihop",
+      "question": "What writing classes has Maria taken?",
+      "answer": "Poetry, creative writing",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nMaria: Hey John! Long time no see! What's up?\nMaria: Hey John, how's it going?\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nJohn: Hey Maria, hope you're doing okay.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#16",
+      "category": "temporal",
+      "question": "When did John get his degree?",
+      "answer": "The week before 2 April 2023",
+      "prediction": "Maria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nMaria: Hey John! Long time no talk.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, how's it going?\nMaria: Hey John, how're you doing? I'm sorry about Max.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#17",
+      "category": "open_domain",
+      "question": "What might John's degree be in?",
+      "answer": "Political science, Public administration, Public affairs",
+      "prediction": "Maria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nJohn: Hey Maria, I've been busy doing the petition I started\nJohn: Hi Maria! It's so good to talk again.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria! Long time no see! Tons has gone down since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#18",
+      "category": "multihop",
+      "question": "Who did John go to yoga with?",
+      "answer": "Rob",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nMaria: Hey John, how's it going?\nMaria: Hey John! Long time no see! What's up?\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#19",
+      "category": "multihop",
+      "question": "What damages have happened to John's car?",
+      "answer": "Broken windshield, Car broke down",
+      "prediction": "Maria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, haven't talked for a few days.\nMaria: Hey John, been a few days since we chatted.\nJohn: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nMaria: Hey John, long time no talk! A lot has happened since then.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#20",
+      "category": "temporal",
+      "question": "When did John take a road trip to the Pacific Northwest?",
+      "answer": "2022",
+      "prediction": "John: Hey Maria, haven't talked for a few days.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John! Long time no see! What's up?\nJohn: Since the last chat, I've been thinking about how education and infrastructure shape communities.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#21",
+      "category": "multihop",
+      "question": "What areas of the U.S. has John been to or is planning to go to?",
+      "answer": "Pacific northwest, east coast",
+      "prediction": "Maria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nMaria: Hey John! Long time no see! What's up?\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nJohn: Hey Maria, hope you're doing okay.\nJohn: Hi Maria! It's so good to talk again.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#22",
+      "category": "temporal",
+      "question": "When did John go to a convention with colleagues?",
+      "answer": "March 2023",
+      "prediction": "John: Hey Maria, hope you're doing okay.\nJohn: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, haven't talked for a few days.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John! Long time no see! What's up?",
+      "retrieved_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#23",
+      "category": "multihop",
+      "question": "What desserts has Maria made?",
+      "answer": "Banana split sundae, Peach cobbler",
+      "prediction": "John: Hey Maria! Long time no see! Tons has gone down since then!\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hi Maria! It's so good to talk again.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#24",
+      "category": "temporal",
+      "question": "When did John start boot camp with his family?",
+      "answer": "April.2023",
+      "prediction": "John: Hey Maria! Long time no see! Tons has gone down since then!\nMaria: Hey John! Long time no talk.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria, hope you're doing okay.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#25",
+      "category": "multihop",
+      "question": "What European countries has Maria been to?",
+      "answer": "Spain, England",
+      "prediction": "Maria: Hey John! Long time no talk.\nMaria: Hey John, long time no talk! A lot has happened since then.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...",
+      "retrieved_ids": [
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#26",
+      "category": "multihop",
+      "question": "What has Maria done to feel closer to her faith?",
+      "answer": "Join a local church, buy a cross necklace",
+      "prediction": "John: Hey Maria, haven't talked for a few days.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John, been a few days since we chatted.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nJohn: Hey Maria, since we last spoke I went to that community mtg.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#27",
+      "category": "temporal",
+      "question": "When did John have a party with veterans?",
+      "answer": "The Friday before 20 May 2023",
+      "prediction": "John: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, last week was really eye-opening.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...",
+      "retrieved_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#28",
+      "category": "multihop",
+      "question": "What causes does John feel passionate about supporting?",
+      "answer": "Veterans, schools, infrastructure",
+      "prediction": "Maria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, haven't talked for a few days.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, last week was really eye-opening.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#29",
+      "category": "multihop",
+      "question": "What events is Maria planning for the homeless shelter funraiser?",
+      "answer": "Chili cook-off, ring-toss tournament",
+      "prediction": "John: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nJohn: Hey Maria, hope you're doing okay.\nMaria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#30",
+      "category": "multihop",
+      "question": "What shelters does Maria volunteer at?",
+      "answer": "The homeless shelter, the dog shelter",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, haven't talked for a few days.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nJohn: Hey Maria, hope you're doing OK.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#31",
+      "category": "temporal",
+      "question": "When did John get his dog Max?",
+      "answer": "In 2013",
+      "prediction": "John: Hey Maria, long time no talk! Life's been pretty wild lately.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John! Long time no talk.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#32",
+      "category": "multihop",
+      "question": "What outdoor activities has John done with his colleagues?",
+      "answer": "Hiking, mountaineering",
+      "prediction": "Maria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria, hope you're doing okay.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#33",
+      "category": "multihop",
+      "question": "What types of yoga has Maria practiced?",
+      "answer": "Aerial, kundalini",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nMaria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John! Long time no see! What's up?\nMaria: Hey John, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#34",
+      "category": "temporal",
+      "question": "When did Maria join a gym?",
+      "answer": "The week before 16 June 2023",
+      "prediction": "John: Maria, since we talked, it's been tough.\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria, hope you're doing OK.\nJohn: Hey Maria, last week was really eye-opening.\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#35",
+      "category": "multihop",
+      "question": "What states has Maria vacationed at?",
+      "answer": "Oregon, Florida",
+      "prediction": "Maria: Hey John! Long time no talk.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, long time no talk! A lot has happened since then.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hi Maria! It's so good to talk again.",
+      "retrieved_ids": [
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#36",
+      "category": "multihop",
+      "question": "What music events has John attended?",
+      "answer": "Live music event, violin concert",
+      "prediction": "Maria: Hey John, long time no talk! A lot has happened since then.\nJohn: Since the last chat, I've been thinking about how education and infrastructure shape communities.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nMaria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#37",
+      "category": "multihop",
+      "question": "What events for veterans has John participated in?",
+      "answer": "Petition, march, party, visiting veterans hospital, 5K charity run",
+      "prediction": "Maria: Hey John, what's been going on? I just wanted to check in.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nJohn: Hey Maria, hope you're doing OK.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#38",
+      "category": "temporal",
+      "question": "When did Maria get in a car accident?",
+      "answer": "July 2, 2023",
+      "prediction": "John: Hey Maria, haven't talked for a few days.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nMaria: Hey John, been a few days since we chatted.\nMaria: Hey John, how's it going?\nMaria: Hey John! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#39",
+      "category": "open_domain",
+      "question": "Around which US holiday did Maria get into a car accident?",
+      "answer": "Independence Day",
+      "prediction": "Maria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, haven't talked for a few days.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.\nMaria: Hey John, been a few days since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#40",
+      "category": "multihop",
+      "question": "What are the names of John's children?",
+      "answer": "Kyle, Sara",
+      "prediction": "Maria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Since the last chat, I've been thinking about how education and infrastructure shape communities.\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nJohn: Hey Maria, since we last spoke I went to that community mtg.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#41",
+      "category": "open_domain",
+      "question": "Does John live close to a beach or the mountains?",
+      "answer": "beach",
+      "prediction": "Maria: Hey John, been a few days since we chatted.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John, long time no talk! A lot has happened since then.\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria, I've been busy doing the petition I started",
+      "retrieved_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#42",
+      "category": "multihop",
+      "question": "What area was hit by a flood?",
+      "answer": "West County",
+      "prediction": "John: Maria, since we talked, it's been tough.\nMaria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, since we last spoke I went to that community mtg.\nJohn: Hey Maria, haven't talked for a few days.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#43",
+      "category": "temporal",
+      "question": "When was John's old area hit with a flood?",
+      "answer": "The week before 7 July 2023",
+      "prediction": "John: Maria, since we talked, it's been tough.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John, been a few days since we chatted.\nMaria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, since we last spoke I went to that community mtg.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#44",
+      "category": "multihop",
+      "question": "What activities has Maria done with her church friends?",
+      "answer": "Hiking, picnic, volunteer work",
+      "prediction": "John: Hey Maria, last week was really eye-opening.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nJohn: Hi Maria! It's so good to talk again.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!",
+      "retrieved_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#45",
+      "category": "open_domain",
+      "question": "Would John be open to moving to another country?",
+      "answer": "No, he has goals specifically in the U.S. like joining the military and running for office.",
+      "prediction": "John: Hey Maria, hope you're doing OK.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nMaria: Hey John, I'm doing ok - hope you are too.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#46",
+      "category": "temporal",
+      "question": "When did Maria go hiking with her church friends?",
+      "answer": "The weekend before 22 July 2023",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hey Maria, I've been busy doing the petition I started\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#47",
+      "category": "multihop",
+      "question": "What exercises has John done?",
+      "answer": "Weight training, Circuit training, Kickboxing, yoga",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, I'm doing ok - hope you are too.\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nMaria: Hey John, what's been going on? I just wanted to check in.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#48",
+      "category": "temporal",
+      "question": "When did John have his first firefighter call-out?",
+      "answer": "The sunday before 3` July 2023",
+      "prediction": "Maria: Hey John, I'm doing ok - hope you are too.\nMaria: Hey John! Long time no talk.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#49",
+      "category": "multihop",
+      "question": "What food item did Maria drop off at the homeless shelter?",
+      "answer": "Cakes",
+      "prediction": "Maria: Hey John, been a few days since we chatted.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nJohn: Hey Maria! Guess what? I'm now part of the fire-fighting brigade.\nJohn: Hey Maria, last week was really eye-opening.",
+      "retrieved_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#50",
+      "category": "open_domain",
+      "question": "What attributes describe John?",
+      "answer": "Selfless, family-oriented, passionate, rational",
+      "prediction": "John: Hey Maria, hope you're doing OK.\nMaria: Hey John! Long time no see! What's up?\nMaria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Since the last chat, I've been thinking about how education and infrastructure shape communities.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#51",
+      "category": "temporal",
+      "question": "When did Maria start volunteering at the homeless shelter?",
+      "answer": "Around August 2022",
+      "prediction": "John: Hey Maria, hope you're doing okay.\nMaria: Hey John! Long time no talk.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, how's it going?\nJohn: Hey Maria, hope you're doing OK.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#52",
+      "category": "multihop",
+      "question": "Who have written notes of gratitude to Maria?",
+      "answer": "Cindy, Laura",
+      "prediction": "Maria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, how's it going?\nMaria: Hey John! Long time no talk.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...",
+      "retrieved_ids": [
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#53",
+      "category": "temporal",
+      "question": "When did John help renovate his hometown community center?",
+      "answer": "2022",
+      "prediction": "John: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nMaria: Hey John! Long time no talk.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nJohn: Hey Maria! Guess what? I'm now part of the fire-fighting brigade.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#54",
+      "category": "temporal",
+      "question": "When did Maria take up community work with her church friends?",
+      "answer": "August 4, 2023",
+      "prediction": "Maria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hi Maria! It's so good to talk again.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nJohn: Hey Maria, last week was really eye-opening.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#55",
+      "category": "temporal",
+      "question": "When did Maria receive a medal from the homeless shelter?",
+      "answer": "The week before 9 August 2023",
+      "prediction": "John: Hey Maria, hope you're doing OK.\nMaria: Hey John, what's been going on? I just wanted to check in.\nMaria: Hey John, how's it going?\nMaria: Hey John, I'm doing ok - hope you are too.\nMaria: Hey John, I haven't talked to you in a while.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#56",
+      "category": "temporal",
+      "question": "When did John participate in a 5K charity run?",
+      "answer": "first weekend of August 2023",
+      "prediction": "Maria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John, how's it going?\nMaria: Hey John! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#57",
+      "category": "multihop",
+      "question": "What causes has John done events for?",
+      "answer": "Toy drive, Community food drive, veterans, domestic violence",
+      "prediction": "Maria: Hey John, what's been going on? I just wanted to check in.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, I'm doing ok - hope you are too.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#58",
+      "category": "temporal",
+      "question": "When did Maria get Coco?",
+      "answer": "Two weeks before 11 August 2023",
+      "prediction": "Maria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, how's it going?\nMaria: Hey John! Long time no talk.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hey Maria, hope you're doing OK.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#59",
+      "category": "temporal",
+      "question": "When did John go on a camping trip with Max?",
+      "answer": "The summer of 2022",
+      "prediction": "Maria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nJohn: Hey Maria, haven't talked for a few days.\nJohn: Since the last chat, I've been thinking about how education and infrastructure shape communities.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#60",
+      "category": "multihop",
+      "question": "What are Maria's dogs' names?",
+      "answer": "Coco, Shadow",
+      "prediction": "John: Since the last chat, I've been thinking about how education and infrastructure shape communities.\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John, long time no talk! A lot has happened since then.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#61",
+      "category": "temporal",
+      "question": "When did Maria adopt Shadow?",
+      "answer": "The week before 13 August 2023",
+      "prediction": "John: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John, how's it going?\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria! Guess what? I'm now part of the fire-fighting brigade.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#62",
+      "category": "multihop",
+      "question": "How many dogs has Maria adopted from the dog shelter she volunteers at?",
+      "answer": "two",
+      "prediction": "John: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#63",
+      "category": "temporal",
+      "question": "How many weeks passed between Maria adopting Coco and Shadow?",
+      "answer": "two weeks",
+      "prediction": "Maria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, what's been going on? I just wanted to check in.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#64",
+      "category": "open_domain",
+      "question": "What job might Maria pursue in the future?",
+      "answer": "Shelter coordinator, Counselor",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nMaria: Hey John, how's it going?\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, I've been busy doing the petition I started",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#65",
+      "category": "single_hop",
+      "question": "What is John's main focus in local politics?",
+      "answer": "Improving education and infrastructure",
+      "prediction": "Maria: Hey John! Long time no see! What's up?\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#66",
+      "category": "single_hop",
+      "question": "What sparked John's interest in improving education and infrastructure in the community?",
+      "answer": "Seeing how lack of education and crumbling infrastructure affected his neighborhood while growing up.",
+      "prediction": "Maria: Hey John! Long time no see! What's up?\nMaria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nMaria: Hey John! Long time no talk.\nJohn: Maria, since we talked, it's been tough.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.",
+      "retrieved_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#67",
+      "category": "single_hop",
+      "question": "How did the extra funding help the school shown in the photo shared by John?",
+      "answer": "Enabled needed repairs and renovations, making the learning environment safer and more modern for students.",
+      "prediction": "Maria: Hey John! Long time no see! What's up?\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nMaria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nMaria: Hey John, what's been going on? I just wanted to check in.\nMaria: Hey John! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#68",
+      "category": "single_hop",
+      "question": "What type of workout class did Maria start doing in December 2023?",
+      "answer": "aerial yoga",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, hope you're doing okay.\nMaria: Hey John! Long time no talk.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#69",
+      "category": "single_hop",
+      "question": "What did Maria donate to a homeless shelter in December 2023?",
+      "answer": "old car",
+      "prediction": "Maria: Hey John, how's it going?\nMaria: Hey John, I'm doing ok - hope you are too.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John! Long time no see! What's up?\nJohn: Hey Maria, hope you're doing OK.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#70",
+      "category": "single_hop",
+      "question": "What kind of meal did John and his family make together in the photo shared by John?",
+      "answer": "pizza",
+      "prediction": "Maria: Hey John! Long time no talk.\nMaria: Hey John, been a few days since we chatted.\nJohn: Hey Maria, haven't talked for a few days.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nMaria: Hey John, I haven't talked to you in a while.",
+      "retrieved_ids": [
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#71",
+      "category": "single_hop",
+      "question": "What kind of online group did John join?",
+      "answer": "service-focused online group",
+      "prediction": "John: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nJohn: Hey Maria, hope you're doing OK.\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria, hope you're doing okay.\nJohn: Hey Maria! Guess what? I'm now part of the fire-fighting brigade.",
+      "retrieved_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#72",
+      "category": "single_hop",
+      "question": "What kind of activities did John and his mates from the online group do as part of their service efforts?",
+      "answer": "gave out food and supplies at a homeless shelter, organized a toy drive for kids in need",
+      "prediction": "John: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nJohn: Hey Maria, last week was really eye-opening.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria, hope you're doing okay.\nMaria: Hey John! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#73",
+      "category": "single_hop",
+      "question": "Who inspired Maria to start volunteering?",
+      "answer": "Her aunt",
+      "prediction": "John: Hey Maria, hope you're doing okay.\nMaria: Hey John! Long time no talk.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Since the last chat, I've been thinking about how education and infrastructure shape communities.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...",
+      "retrieved_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#74",
+      "category": "single_hop",
+      "question": "Why did Maria sit with the little girl at the shelter event in February 2023?",
+      "answer": "The girl seemed sad and had no other family",
+      "prediction": "Maria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, since we last spoke I went to that community mtg.\nJohn: Hey Maria, last week was really eye-opening.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!",
+      "retrieved_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#75",
+      "category": "single_hop",
+      "question": "What did Jean go through before meeting Maria?",
+      "answer": "divorce, job loss, homelessness",
+      "prediction": "Maria: Hey John, how's it going?\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#76",
+      "category": "single_hop",
+      "question": "Why did John decide to run for office again?",
+      "answer": "saw the impact he could make in the community through politics",
+      "prediction": "Maria: Hey John, how's it going?\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nMaria: Hey John, what's been going on? I just wanted to check in.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#77",
+      "category": "single_hop",
+      "question": "What activity did John's colleague, Rob, invite him to?",
+      "answer": "beginner's yoga class",
+      "prediction": "Maria: Hey John, how's it going?\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nMaria: Hey John! Long time no talk.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#78",
+      "category": "single_hop",
+      "question": "What is the name of John's one-year-old child?",
+      "answer": "Kyle",
+      "prediction": "Maria: Hey John, I haven't talked to you in a while.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!",
+      "retrieved_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#79",
+      "category": "single_hop",
+      "question": "How often does John take his kids to the park?",
+      "answer": "A few times a week",
+      "prediction": "Maria: Hey John, I haven't talked to you in a while.\nJohn: Since the last chat, I've been thinking about how education and infrastructure shape communities.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nJohn: Hi Maria! It's so good to talk again.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#80",
+      "category": "single_hop",
+      "question": "What did Maria make for her home to remind her of a trip to England?",
+      "answer": "painting of a castle on a hill",
+      "prediction": "Maria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#81",
+      "category": "single_hop",
+      "question": "Where did Maria get the idea for the castle shadow box in her home?",
+      "answer": "England",
+      "prediction": "John: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#82",
+      "category": "single_hop",
+      "question": "What did John receive a certificate for?",
+      "answer": "completion of a university degree",
+      "prediction": "John: Hey Maria, hope you're doing OK.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nMaria: Hey John, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#83",
+      "category": "single_hop",
+      "question": "What areas is John particularly interested in for policymaking?",
+      "answer": "education and infrastructure",
+      "prediction": "Maria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nMaria: Hey John! Long time no see! What's up?\nJohn: Hey Maria, I've been busy doing the petition I started\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#84",
+      "category": "single_hop",
+      "question": "What did Maria participate in last weekend before April 10, 2023?",
+      "answer": "a 5K charity run",
+      "prediction": "Maria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, last week was really eye-opening.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#85",
+      "category": "single_hop",
+      "question": "What event did John volunteer at last weekend?",
+      "answer": "career fair at a local school",
+      "prediction": "John: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hi Maria! It's so good to talk again.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, last week was really eye-opening.",
+      "retrieved_ids": [
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#86",
+      "category": "single_hop",
+      "question": "What did John do that put a strain on his wallet?",
+      "answer": "His car broke down",
+      "prediction": "John: Hey Maria, haven't talked for a few days.\nMaria: Hey John! Long time no talk.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!",
+      "retrieved_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#87",
+      "category": "single_hop",
+      "question": "Where did John explore on a road trip last year?",
+      "answer": "Pacific Northwest",
+      "prediction": "John: Hey Maria, haven't talked for a few days.\nMaria: Hey John! Long time no see! What's up?\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, how're you doing? I'm sorry about Max.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#88",
+      "category": "single_hop",
+      "question": "What topic has John been blogging about recently?",
+      "answer": "politics and the government",
+      "prediction": "John: Hey Maria, hope you're doing okay.\nMaria: Hey John, how's it going?\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nJohn: Hey Maria, haven't talked for a few days.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...",
+      "retrieved_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#89",
+      "category": "single_hop",
+      "question": "Why did John start blogging about politics and policies?",
+      "answer": "raise awareness and start conversations to create positive change",
+      "prediction": "John: Hey Maria, hope you're doing okay.\nMaria: Hey John! Long time no talk.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John! Long time no see! What's up?\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#90",
+      "category": "single_hop",
+      "question": "What was the focus of John's recent research and writing on his blog?",
+      "answer": "education reform and infrastructure development",
+      "prediction": "Maria: Hey John! Long time no talk.\nJohn: Hey Maria, hope you're doing okay.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, how's it going?\nMaria: Hey John, how're you doing? I'm sorry about Max.",
+      "retrieved_ids": [
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#91",
+      "category": "temporal",
+      "question": "What did John attend with his colleagues in March 2023?",
+      "answer": "a tech-for-good convention",
+      "prediction": "John: Hey Maria, hope you're doing okay.\nMaria: Hey John! Long time no talk.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nJohn: Hey Maria, last week was really eye-opening.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#92",
+      "category": "single_hop",
+      "question": "How often does John work out with his family?",
+      "answer": "Three times a week",
+      "prediction": "Maria: Hey John, I haven't talked to you in a while.\nMaria: Hey John! Long time no talk.\nJohn: Hi Maria! It's so good to talk again.\nJohn: Since the last chat, I've been thinking about how education and infrastructure shape communities.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#93",
+      "category": "single_hop",
+      "question": "How has John's fitness improved since starting boot camps with his family?",
+      "answer": "More energy, gains in strength and endurance",
+      "prediction": "John: Hey Maria! Long time no see! Tons has gone down since then!\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John! Long time no talk.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!",
+      "retrieved_ids": [
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#94",
+      "category": "single_hop",
+      "question": "What kind of food did Maria have on her dinner spread iwth her mother?",
+      "answer": "Salads, sandwiches, homemade desserts",
+      "prediction": "Maria: Hey John, been a few days since we chatted.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nJohn: Maria, since we talked, it's been tough.\nJohn: Hey Maria, since we last spoke I went to that community mtg.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.",
+      "retrieved_ids": [
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#95",
+      "category": "single_hop",
+      "question": "What activity did Maria and her mom do together in May 2023?",
+      "answer": "Made dinner together",
+      "prediction": "John: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nJohn: Hey Maria, since we last spoke I went to that community mtg.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...",
+      "retrieved_ids": [
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#96",
+      "category": "single_hop",
+      "question": "What did Maria do to feel closer to a community and her faith?",
+      "answer": "joined a nearby church",
+      "prediction": "John: Hey Maria, haven't talked for a few days.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John, been a few days since we chatted.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nJohn: Hey Maria, since we last spoke I went to that community mtg.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#97",
+      "category": "single_hop",
+      "question": "Why did Maria join a nearby church recently?",
+      "answer": "to feel closer to a community and her faith",
+      "prediction": "John: Hey Maria, great to chat again! A lot has happened since we last spoke.\nJohn: Hey Maria, last week was really eye-opening.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Since the last chat, I've been thinking about how education and infrastructure shape communities.\nMaria: Hey John, been a few days since we chatted.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#98",
+      "category": "single_hop",
+      "question": "What did John host for the veterans in May 2023 as part of the project?",
+      "answer": "a small party to share their stories",
+      "prediction": "John: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nJohn: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nJohn: Hey Maria, hope you're doing OK.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nJohn: Hey Maria, last week was really eye-opening.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#99",
+      "category": "single_hop",
+      "question": "What did John and the veterans do during the small party?",
+      "answer": "share stories and make connections",
+      "prediction": "John: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, what's been going on? I just wanted to check in.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#100",
+      "category": "single_hop",
+      "question": "What emotions did John feel during the small party with the veterans?",
+      "answer": "heartwarming",
+      "prediction": "John: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, what's been going on? I just wanted to check in.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#101",
+      "category": "single_hop",
+      "question": "What event is Maria getting ready for at the shelter on May 25, 2023?",
+      "answer": "fundraiser",
+      "prediction": "John: Hey Maria, I've been busy doing the petition I started\nJohn: Hey Maria, haven't talked for a few days.\nJohn: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nMaria: Hey John, what's been going on? I just wanted to check in.\nMaria: Hey John! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#102",
+      "category": "single_hop",
+      "question": "What does Maria need to spread the word about for the fundraiser for the volunteer shelter?",
+      "answer": "chili cook-off",
+      "prediction": "John: Hey Maria, I've been busy doing the petition I started\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nJohn: Hey Maria, haven't talked for a few days.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#103",
+      "category": "single_hop",
+      "question": "What was the name of the pet that John had to say goodbye to on 3 June, 2023?",
+      "answer": "Max",
+      "prediction": "John: Hey Maria, long time no talk! Life's been pretty wild lately.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#104",
+      "category": "single_hop",
+      "question": "How long was Max a part of John's family?",
+      "answer": "10 years",
+      "prediction": "John: Hey Maria, long time no talk! Life's been pretty wild lately.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John! Long time no talk.\nMaria: Hey John! Long time no see! What's up?",
+      "retrieved_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#105",
+      "category": "single_hop",
+      "question": "How does John plan to honor the memories of his beloved pet?",
+      "answer": "By considering adopting a rescue dog",
+      "prediction": "John: Hey Maria, long time no talk! Life's been pretty wild lately.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, what's been going on? I just wanted to check in.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#106",
+      "category": "single_hop",
+      "question": "What important values does John want to teach his kids through adopting a rescue dog?",
+      "answer": "Responsibility and compassion",
+      "prediction": "John: Hey Maria, long time no talk! Life's been pretty wild lately.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, I'm doing ok - hope you are too.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...",
+      "retrieved_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#107",
+      "category": "single_hop",
+      "question": "What new activity did Maria start recently, as mentioned on 3 June, 2023?",
+      "answer": "volunteering at a local dog shelter once a month",
+      "prediction": "John: Hey Maria, hope you're doing okay.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John, I'm doing ok - hope you are too.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#108",
+      "category": "single_hop",
+      "question": "What did Maria say it was like being at the waterfall in Oregon?",
+      "answer": "Like being in a fairy tale",
+      "prediction": "Maria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, hope you're doing OK.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nMaria: Hey John, I'm doing ok - hope you are too.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#109",
+      "category": "single_hop",
+      "question": "What does Maria say she feels when doing upside-down yoga poses?",
+      "answer": "Free and light",
+      "prediction": "John: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nMaria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, how's it going?\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...",
+      "retrieved_ids": [
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#110",
+      "category": "single_hop",
+      "question": "What exciting news did Maria share on 16 June, 2023?",
+      "answer": "joined a gym",
+      "prediction": "John: Hey Maria! Long time no see! Tons has gone down since then!\nJohn: Hey Maria, hope you're doing okay.\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John! Long time no see! What's up?",
+      "retrieved_ids": [
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#111",
+      "category": "single_hop",
+      "question": "What yoga activity has Maria been trying to improve her strength and endurance?",
+      "answer": "kundalini yoga",
+      "prediction": "Maria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nMaria: Hey John, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#112",
+      "category": "single_hop",
+      "question": "What did John recently get promoted to?",
+      "answer": "assistant manager",
+      "prediction": "Maria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria, hope you're doing okay.\nMaria: Hey John, how's it going?\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nJohn: Hey Maria, haven't talked for a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#113",
+      "category": "single_hop",
+      "question": "What was one of the biggest challenges John faced in his journey to becoming assistant manager?",
+      "answer": "self-doubt",
+      "prediction": "Maria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nMaria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nMaria: Hey John! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#114",
+      "category": "single_hop",
+      "question": "How does John describe the support he received during his journey to becoming assistant manager?",
+      "answer": "having support at home and his own grit",
+      "prediction": "Maria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!\nJohn: Hey Maria, haven't talked for a few days.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#115",
+      "category": "single_hop",
+      "question": "What kind of event did John and his family attend in June 2023?",
+      "answer": "live music event",
+      "prediction": "Maria: Hey John! Long time no talk.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, since we last spoke I went to that community mtg.\nMaria: Hey John, what's been going on? I just wanted to check in.",
+      "retrieved_ids": [
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#116",
+      "category": "single_hop",
+      "question": "Why did Maria need to help her cousin find a new place to live?",
+      "answer": "Her cousin had to leave and find a new place in a hurry.",
+      "prediction": "Maria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nMaria: Hey John, how's it going?\nMaria: Hey John, long time no talk! A lot has happened since then.\nMaria: Hey John, been a few days since we chatted.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#117",
+      "category": "single_hop",
+      "question": "What event did John participate in to show support for veterans' rights?",
+      "answer": "marching event",
+      "prediction": "Maria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nMaria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#118",
+      "category": "single_hop",
+      "question": "What inspired John to join the marching event for veterans' rights?",
+      "answer": "Respect for the military and the desire to show support",
+      "prediction": "Maria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, what's been going on? I just wanted to check in.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#119",
+      "category": "single_hop",
+      "question": "How often does John get to see sunsets like the one he shared with Maria?",
+      "answer": "At least once a week",
+      "prediction": "Maria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.\nJohn: Since the last chat, I've been thinking about how education and infrastructure shape communities.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.",
+      "retrieved_ids": [
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#120",
+      "category": "single_hop",
+      "question": "What natural disaster affected John's old area on 7 July, 2023?",
+      "answer": "Flood",
+      "prediction": "John: Maria, since we talked, it's been tough.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John, been a few days since we chatted.\nMaria: Hey John! Long time no see! What's up?\nMaria: Hey John, how're you doing? I'm sorry about Max.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#121",
+      "category": "single_hop",
+      "question": "How did the flood impact the homes in John's old area?",
+      "answer": "Lots of homes were ruined.",
+      "prediction": "John: Maria, since we talked, it's been tough.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John, been a few days since we chatted.\nJohn: Hey Maria, since we last spoke I went to that community mtg.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#122",
+      "category": "single_hop",
+      "question": "What motivated Maria and John to discuss potential solutions for their community on 7 July, 2023?",
+      "answer": "Flood in John's old area",
+      "prediction": "John: Maria, since we talked, it's been tough.\nMaria: Hey John, long time no see! I've been taking a poetry class lately to help me put my feelings into words.\nJohn: Hey Maria, hope you're doing okay.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nJohn: Hey Maria, hope you're doing OK.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#123",
+      "category": "single_hop",
+      "question": "What did Maria plan to do later on the evening of 7 July, 2023?",
+      "answer": "have dinner with friends from the gym",
+      "prediction": "Maria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nJohn: Maria, since we talked, it's been tough.\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nMaria: Hey John, what's been going on? I just wanted to check in.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG59EHAJP84KY0P0B21"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#124",
+      "category": "single_hop",
+      "question": "What kind of activities did Maria do at the picnic with her church friends?",
+      "answer": "played games like charades and a scavenger hunt",
+      "prediction": "John: Hey Maria, last week was really eye-opening.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hey Maria, since we last spoke I went to that community mtg.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#125",
+      "category": "single_hop",
+      "question": "What does John appreciate about the veteran's hospital visit?",
+      "answer": "the resilience of the veterans and their inspiring stories",
+      "prediction": "John: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, I'm doing ok - hope you are too.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#126",
+      "category": "single_hop",
+      "question": "What did John take away from visiting the veteran's hospital?",
+      "answer": "appreciation for giving back",
+      "prediction": "John: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, I haven't talked to you in a while.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#127",
+      "category": "single_hop",
+      "question": "Why did John feel inspired to join the military after the visit to the hospital?",
+      "answer": "seeing the resilience of the veterans",
+      "prediction": "John: Hey Maria, last week was really eye-opening.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, hope you're doing OK.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John, I'm doing ok - hope you are too.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#128",
+      "category": "single_hop",
+      "question": "In what activity did Maria and her church friends participate in July 2023?",
+      "answer": "hiking",
+      "prediction": "John: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nJohn: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, since we last spoke I went to that community mtg.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#129",
+      "category": "single_hop",
+      "question": "What does John think about trying new classes at the yoga studio?",
+      "answer": "Trying new classes is a fun way to switch up the exercise routine.",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nMaria: Hey John! Long time no see! What's up?\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, haven't talked for a few days.\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#130",
+      "category": "single_hop",
+      "question": "Which activity has John done apart from yoga at the studio?",
+      "answer": "weight training",
+      "prediction": "John: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, I'm doing ok - hope you are too.\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nMaria: Hey John, what's been going on? I just wanted to check in.",
+      "retrieved_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#131",
+      "category": "single_hop",
+      "question": "What community service did Maria mention that she was involved in on 31 July, 2023?",
+      "answer": "volunteered at a homeless shelter",
+      "prediction": "John: Hey Maria, since we last spoke I went to that community mtg.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John, how's it going?",
+      "retrieved_ids": [
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#132",
+      "category": "single_hop",
+      "question": "How did Maria start volunteering at the homeless shelter?",
+      "answer": "Witnessed a family struggling on the streets and reached out to the shelter",
+      "prediction": "John: Hey Maria, hope you're doing okay.\nMaria: Hey John! Long time no talk.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, how's it going?\nJohn: Hey Maria, hope you're doing OK.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#133",
+      "category": "single_hop",
+      "question": "What did John do the week before August 3, 2023 involving his kids?",
+      "answer": "Had a meaningful experience at a military memorial",
+      "prediction": "Maria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nJohn: Hey Maria, since we last spoke I went to that community mtg.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#134",
+      "category": "single_hop",
+      "question": "How did John describe his kids' reaction at the military memorial?",
+      "answer": "awestruck and humbled",
+      "prediction": "John: Hey Maria, hope you're doing OK.\nMaria: Hey John, I haven't talked to you in a while.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, last week was really eye-opening.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHFRND6637TSA457CGBH"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#135",
+      "category": "single_hop",
+      "question": "Why does Maria think it's important for younger generations to visit military memorials?",
+      "answer": "To remember and appreciate those who served",
+      "prediction": "John: Hey Maria, hope you're doing OK.\nJohn: Hey Maria, last week was really eye-opening.\nMaria: Hey John, I'm doing ok - hope you are too.\nMaria: Hey John, been a few days since we chatted.\nJohn: Hey Maria, haven't talked for a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#136",
+      "category": "single_hop",
+      "question": "What does John believe is important for children regarding veterans?",
+      "answer": "Teaching them to respect and appreciate those who served",
+      "prediction": "John: Hey Maria, great to chat again! A lot has happened since we last spoke.\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.\nJohn: Hey Maria, hope you're doing OK.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#137",
+      "category": "single_hop",
+      "question": "What happened to John's job in August 2023?",
+      "answer": "John lost his job at the mechanical engineering company.",
+      "prediction": "John: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nMaria: Hey John, how's it going?\nJohn: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John! Long time no talk.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFYS68BJM4RXNAZ2JZP",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#138",
+      "category": "single_hop",
+      "question": "What activity did Maria take up with her friends from church in August 2023?",
+      "answer": "community work",
+      "prediction": "Maria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hi Maria! It's so good to talk again.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nJohn: Hey Maria, last week was really eye-opening.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#139",
+      "category": "single_hop",
+      "question": "What did John do to help his community last year in his hometown?",
+      "answer": "Helped renovate a rundown community center.",
+      "prediction": "Maria: Hey John, I haven't talked to you in a while.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nMaria: Hey John! Long time no see! What's up?\nJohn: Hey Maria! Long time no see! Tons has gone down since then!",
+      "retrieved_ids": [
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#140",
+      "category": "single_hop",
+      "question": "What cause did the 5K charity run organized by John support?",
+      "answer": "veterans and their families",
+      "prediction": "Maria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, I've been busy doing the petition I started\nJohn: Hey Maria, great to chat again! A lot has happened since we last spoke.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#141",
+      "category": "single_hop",
+      "question": "Who did John work with to raise awareness and funds for victims of domestic abuse?",
+      "answer": "a local organization",
+      "prediction": "Maria: Hey John, what's been going on? I just wanted to check in.\nJohn: Hey Maria, hope you're doing okay.\nJohn: Hey Maria, since we last spoke I went to that community mtg.\nJohn: Hey Maria, I've been busy doing the petition I started\nJohn: Hey Maria! Guess what? I'm now part of the fire-fighting brigade.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHG59EHAJP84KY0P0B21",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#142",
+      "category": "single_hop",
+      "question": "What recognition did Maria receive at the homeless shelter in August 2023?",
+      "answer": "a medal for volunteering",
+      "prediction": "John: Hey Maria, hope you're doing OK.\nMaria: Hey John, what's been going on? I just wanted to check in.\nMaria: Hey John, how's it going?\nMaria: Hey John, I'm doing ok - hope you are too.\nMaria: Hey John, I haven't talked to you in a while.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#143",
+      "category": "single_hop",
+      "question": "What is the name of Maria's puppy she got two weeks before August 11, 2023?",
+      "answer": "Coco",
+      "prediction": "Maria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hey Maria! Guess what? I'm now part of the fire-fighting brigade.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHFJTPD1PG1QJZ36WBRA",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHEX282HP6KZQJJYZTC8"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#144",
+      "category": "single_hop",
+      "question": "What activity did John and Max enjoy together last summer?",
+      "answer": "Camping",
+      "prediction": "Maria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John, how're you doing? I'm sorry about Max.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nJohn: Hi Maria! It's so good to talk again.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#145",
+      "category": "single_hop",
+      "question": "How does John describe the camping trip with Max?",
+      "answer": "Peaceful and awesome",
+      "prediction": "Maria: Hey John, how're you doing? I'm sorry about Max.\nMaria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hey Maria, haven't talked for a few days.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nJohn: Hey Maria, hope you're doing OK.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#146",
+      "category": "single_hop",
+      "question": "Why does John say he feels stuck and questioning his decisions and goals?",
+      "answer": "Not feeling like making much of an impact",
+      "prediction": "Maria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, long time no talk! Life's been pretty wild lately.\nJohn: Hey Maria, I'm so excited to tell you I started a weekend yoga class with a colleague - it's awesome!\nJohn: Hey Maria, hope you're doing OK.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFRND6637TSA457CGBH",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#147",
+      "category": "single_hop",
+      "question": "What is the name of Maria's second puppy?",
+      "answer": "Shadow",
+      "prediction": "Maria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria! Long time no see! Tons has gone down since then!\nMaria: Hey John, been good since we talked? I got some great news to share - I joined a gym last week!",
+      "retrieved_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHFSKW2RGF4CB7K24Y9M",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#148",
+      "category": "single_hop",
+      "question": "How is Maria's new puppy adjusting to its new home?",
+      "answer": "doing great - learning commands and house training",
+      "prediction": "Maria: Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.\nJohn: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John, long time no see! Sorry I didn't get back to you sooner...\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.\nJohn: Hi Maria! It's so good to talk again.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGXK4Y1V1N42J9AHAHF",
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHG0TAYR4F574VRFFE1V",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFFDFWJ7WF7CGYARAX2",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFP8GBRVZ3E6WWN4CS7",
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#149",
+      "category": "single_hop",
+      "question": "What is John currently doing as a volunteer in August 2023?",
+      "answer": "mentoring students at a local school",
+      "prediction": "John: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nMaria: Hey John, how's it going?\nJohn: Hey Maria, great chatting with you again! Crazy thing happened since we last talked.\nJohn: Hi Maria! It's so good to talk again.\nJohn: Hey Maria, haven't talked for a few days.",
+      "retrieved_ids": [
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHF275YB1E8DH0J2WN69",
+        "epi_01M2QAMHGDTWRY37V9PQ9YKRXC",
+        "epi_01M2QAMHG86SWYXPDSPEF1J38Y",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHEQP0P6WV9DDJ5YPB5X",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHG3C8XRGHNRPVZFN4CP"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "hit": false
+    },
+    {
+      "id": "conv-41#150",
+      "category": "single_hop",
+      "question": "What activities does John's family enjoy doing together?",
+      "answer": "going for hikes, hanging out at the park, having picnics, playing board games, having movie nights",
+      "prediction": "John: Hi Maria, since we last chatted, I'm volunteering as a mentor for a local school.\nMaria: Hey John, I haven't talked to you in a while.\nJohn: Hey Maria, great to chat again! I joined a service-focused online group last week and it's been an emotional ride.\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.\nJohn: Hey Maria, last week was really eye-opening.",
+      "retrieved_ids": [
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P",
+        "epi_01M2QAMHF46TF0HD0M3GYTK2F1",
+        "epi_01M2QAMHES13F10VXBJGVBHB9C",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHG66BYHNT3M71PMZ9YP",
+        "epi_01M2QAMHFWCEY3AY6Z6D8KKWHA",
+        "epi_01M2QAMHGC6GER5A4EB15ZMZ6F",
+        "epi_01M2QAMHGAP3F4KSSJ7YH4BZSB",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHGZXNG08EGXEMBYCG7P"
+      ],
+      "hit": true
+    },
+    {
+      "id": "conv-41#151",
+      "category": "single_hop",
+      "question": "What did the donations help John's community acquire on 16 August, 2023?",
+      "answer": "a brand new fire truck",
+      "prediction": "John: Hey Maria! Guess what? I'm now part of the fire-fighting brigade.\nMaria: Hey John! Long time no talk.\nJohn: Hey Maria, how's it going? Been real busy tackling a project to support military veterans.\nMaria: Hey John, what's been going on? I just wanted to check in.\nMaria: Hey John, great news - I'm now friends with one of my fellow volunteers! We both love helping others.",
+      "retrieved_ids": [
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P",
+        "epi_01M2QAMHEZ0080K6K6346WNCJ8",
+        "epi_01M2QAMHFMQAYD9B49A30N3J5H",
+        "epi_01M2QAMHGSTJW1TFRXSXBAJV19",
+        "epi_01M2QAMHEVSQ6PP5EY4979ZM45",
+        "epi_01M2QAMHFCBB8GZG7ACEPWQE0S",
+        "epi_01M2QAMHF6H3MFVMYXW6HKKMDX",
+        "epi_01M2QAMHEN0FMMP0YY1JQG5490",
+        "epi_01M2QAMHF8GCRQ96MKHJ3WSVGC",
+        "epi_01M2QAMHFA23JMDQ6ARSJC9H19"
+      ],
+      "gold_ids": [
+        "epi_01M2QAMHH11HNGF7DK4MH5BV4P"
+      ],
+      "hit": true
+    }
+  ]
+}
