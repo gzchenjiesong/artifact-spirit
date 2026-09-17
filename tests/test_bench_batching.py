@@ -101,6 +101,56 @@ def test_ingest_marker_is_the_only_proof_a_library_is_complete(tmp_path):
     assert not _ingest_state(home, turns=20)[0]
 
 
+def test_degrade_level_separates_incidental_from_total():
+    """三档成色：`ok` / `partial` / `spoiled`。
+
+    要区分的是「个别段退化成保底原文」（瞬时故障）与「整个库退化成规则库」
+    （压根没配 LLM）——**两端隔得很远**，中间那片空档不需要精调阈值。
+
+    零容忍的代价具体是：任何一次抖动都让 25 分钟的灌入白费，
+    于是全量几乎永远跑不完，而**换不来更准的数字**。
+    """
+    from bench.run import _degrade_level
+
+    assert _degrade_level(True, 0, 19) == "ok"
+    assert _degrade_level(True, 1, 19) == "partial", "偶发一次不该让整库作废"
+    assert _degrade_level(True, 4, 19) == "spoiled", "降级过半 → 库不是 llm 库"
+    assert _degrade_level(False, 19, 19) == "ok", "规则灌入本来就没有「降级」这回事"
+    assert _degrade_level(True, 5, 0) == "ok", "没有素材就无从谈成色"
+
+
+def test_marker_carries_the_degradation_so_reuse_is_honest(tmp_path):
+    """标记要把**降级数**带出来——复用时得知道"这个库是什么成色"。
+
+    只记"灌完了"不记"灌成什么样"，复用就会把一个含大量保底原文的库
+    当成干净的 llm 库——那正是这个标记存在的意义被削掉一半。
+    """
+    home = tmp_path / "g"
+    home.mkdir()
+    _write_marker(home, turns=19, degraded=2)
+
+    ok, why = _ingest_state(home, turns=19)
+    assert ok
+    assert "2" in why, f"复用提示应当写明含几条保底原文，实得 {why!r}"
+
+
+def test_stale_library_is_wiped_before_reingest(tmp_path):
+    """**不可复用 + 库目录还在** → 必须先清空再灌。
+
+    这个场景很常见（工具超时、进程被杀），而不清的后果很隐蔽：
+    新记忆**追加**到半库上，同一个会话在库里存两份，而"重复"在检索里的表现是
+    **一条事实占掉两个 top_k 名额**——分数被悄悄稀释，从结果上看不出源头。
+    """
+    from bench.run import _needs_wipe
+
+    spirit = tmp_path / "spirit"
+    assert not _needs_wipe(False, spirit), "库目录都不存在，没什么可清的"
+
+    spirit.mkdir()
+    assert _needs_wipe(False, spirit), "有残留库却不能复用 → 必须清"
+    assert not _needs_wipe(True, spirit), "能复用时绝不能清——那是上一轮的成果"
+
+
 def test_ingest_state_survives_a_corrupt_marker(tmp_path):
     """标记坏掉时**判为不可复用**——坏掉的凭据不是凭据。"""
     home = tmp_path / "g"

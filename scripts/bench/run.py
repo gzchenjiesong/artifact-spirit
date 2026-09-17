@@ -28,6 +28,7 @@ import argparse
 import contextlib
 import json
 import os
+import shutil
 import sys
 import tempfile
 from datetime import datetime
@@ -182,6 +183,41 @@ def _workdir(fixed: str | None):
         yield Path(tmp)
 
 
+def _needs_wipe(reusable: bool, spirit_dir: Path) -> bool:
+    """灌入前要不要**清掉残留的库**？
+
+    判据是「**不可复用，但库目录还在**」——它意味着上次灌入没跑完
+    （进程被杀、工具超时），或者数据集换了。
+
+    不清的话，新记忆会**追加**到那个半库上：同一个会话在库里存两份，
+    而"重复"在检索里的表现是**一条事实占掉两个 top_k 名额**——
+    分数被悄悄稀释，而且**从结果上看不出源头**。
+
+    **能复用时绝不能清**：那是上一轮花了几十分钟提取出来的东西。
+    """
+    return not reusable and spirit_dir.exists()
+
+
+def _degrade_level(with_llm: bool, degraded: int, turns: int) -> str:
+    """这次灌入的**成色**：`ok` / `partial` / `spoiled`。
+
+    三档而不是连续量表，因为要区分的只有三种情况：
+
+    - `ok`：没有降级；
+    - `partial`：个别段退化成**保底原文**（瞬时故障）——库整体仍是 LLM 提取的，
+      该出分数，只是记一笔；
+    - `spoiled`：降级过半，库的主要内容**不是** LLM 提取的——这时出分数比不出更坏，
+      因为它看起来像个结果。
+
+    `--ingest rule` 永远返回 `ok`：那本来就是规则提取，**没有"降级"这回事**。
+    """
+    if not with_llm or not turns:
+        return "ok"
+    if degraded / turns >= _DEGRADE_LIMIT:
+        return "spoiled"
+    return "partial" if degraded else "ok"
+
+
 def _db_file(home: Path) -> Path:
     return home / "spirit" / "spirit.db"
 
@@ -211,6 +247,17 @@ def _degradation_reasons(services) -> list[str]:
 _INGEST_MARKER = "_ingest_done.json"
 """灌入完成标记。**它是"库能用"的唯一凭据**（理由见 `_ingest_state`）。"""
 
+_DEGRADE_LIMIT = 0.2
+"""降级率超过它，就判定"库不是它声称的那个库"，**本轮不出分数**。
+
+定在 20% 是因为实测的两端隔得很远：`provider_unavailable`（网关瞬时故障）
+是**偶发**的（实测 1/19 ≈ 5%），而 `llm_unconfigured`（压根没配 LLM）
+是 **100%** 的。20% 落在中间那片空档里，**不需要精调**——
+
+要区分的是「个别段退化成保底原文」与「整个库退化成规则库」，
+**不是一个连续量表**。
+"""
+
 
 def _ingest_state(home: Path, *, turns: int) -> tuple[bool, str]:
     """这个库能不能复用——**判据是「灌入跑完了」，不是「库里有东西」**。
@@ -236,20 +283,26 @@ def _ingest_state(home: Path, *, turns: int) -> tuple[bool, str]:
     recorded = int(meta.get("turns", -1))
     if recorded != turns:
         return False, f"段数对不上（标记记的是 {recorded}，本次要灌 {turns}）"
-    return True, f"{meta.get('at', '?')} 灌入 {recorded} 段"
+    degraded = int(meta.get("degraded", 0))
+    tone = f"（含 {degraded} 段保底原文）" if degraded else ""
+    return True, f"{meta.get('at', '?')} 灌入 {recorded} 段{tone}"
 
 
-def _write_marker(home: Path, *, turns: int) -> None:
+def _write_marker(home: Path, *, turns: int, degraded: int = 0) -> None:
     """**灌入全部完成之后**才写。
 
     写在循环里（或 `finally` 里）等于把半库标成完整的——那正是这个标记要防的事。
 
-    调用方还要保证另一件事：**`--ingest llm` 时没发生提取降级**
-    （否则库的内容与它声称的不符，见 `_degradation_reasons`）。
+    `degraded` 记下**灌入时有多少段退化成保底原文**：标记不只证明"灌完了"，
+    还证明"灌出来的是什么成色的库"。调用方负责在降级过多时**不写**标记。
     """
     (home / _INGEST_MARKER).write_text(
         json.dumps(
-            {"turns": turns, "at": datetime.now().isoformat(timespec="seconds")},
+            {
+                "turns": turns,
+                "degraded": degraded,
+                "at": datetime.now().isoformat(timespec="seconds"),
+            },
             ensure_ascii=False,
         ),
         encoding="utf-8",
@@ -474,6 +527,15 @@ def evaluate_group(
     with_llm = ingest == "llm"
     wants_embedding = embedding == "on"
     home = _bench_home(root, key, with_llm=with_llm, with_embedding=wants_embedding)
+
+    # 复用判据与残留清理**必须在 `start()` 之前**——库文件一旦被打开就删不掉了。
+    turns = len(questions[0].turns)
+    reusable, why = _ingest_state(home, turns=turns)
+    if _needs_wipe(reusable, _db_file(home).parent):
+        # 有库却不能复用 → **上次灌入没跑完**。先删掉再重灌（理由见 `_needs_wipe`）。
+        print(f"  [清理] {key}：{why} → 删掉残留的库重灌（否则新记忆会追加到半库上）")
+        shutil.rmtree(_db_file(home).parent, ignore_errors=True)
+
     services = start(
         str(home), env=_env(need_key=with_llm or wants_embedding), start_threads=False
     )
@@ -485,9 +547,6 @@ def evaluate_group(
             "  ⚠ 本轮指定了 --embedding on，但器灵判定嵌入不可用——"
             "R@k 实际是**纯关键词检索**的水平，不要当成语义召回能力来读"
         )
-    # 复用判据是**完成标记**，不是"库里有没有东西"（理由见 `_ingest_state`）。
-    turns = len(questions[0].turns)
-    reusable, why = _ingest_state(home, turns=turns)
     db = _db_file(home)
     rows: list[dict] = []
     try:
@@ -508,21 +567,46 @@ def evaluate_group(
                     )
                 )
                 services.write_now(intents)
+                # **进度必须可见且即时**：一段一次模型调用（约 30 秒），
+                # 19 段就是 10 分钟静默——而静默在命令行里等同于"卡死了"，
+                # 外面的人区分不了它在干活还是已经死了。
+                # （这条是踩了"空闲超时取消"之后补的：跑分跑到一半被判定为无响应。）
+                print(f"      [{index + 1}/{turns}] {turn.session_id}", flush=True)
             installed = len(services.backend.query(status=None))
             print(f"  [灌入完成] {key}：{turns} 段素材 → {installed} 条记忆")
             degraded = _degradation_reasons(services)
-            if with_llm and degraded:
-                # `--ingest llm` 却降级了 → **这个库不是它声称的东西**，
-                # 于是**不写标记**：下次会重新灌（多花几分钟），但绝不会拿一个
-                # 事实上的 rule 库冒充 llm 库去出分数、更不会去复用它。
+            rate = len(degraded) / turns if turns else 0.0
+            level = _degrade_level(with_llm, len(degraded), turns)
+            if level == "spoiled":
+                # 库的主要内容不是 LLM 提取的 → **不出分数**：
+                # 拿一个事实上的 rule 库冒充 llm 库，得到的数字比没有数字更坏——
+                # 它看起来像个结果。
+                kinds = sorted(set(degraded))
                 print(
-                    f"  ✗ {key}：LLM 提取降级 {len(degraded)}/{turns} 次"
-                    f"（{sorted(set(degraded))}）——**库的内容不是 LLM 提取的**。"
+                    f"  ✗ {key}：LLM 提取降级 {len(degraded)}/{turns} 次（{rate:.0%}，{kinds}）"
+                    "——**库的主要内容不是 LLM 提取的**，本轮不出分数。"
                 )
-                print("     不写完成标记：这个库不会被复用，也不会以 llm 的名义出分数。")
-            else:
-                # **标记写在全部灌完之后**——写在循环里等于把半库标成完整的。
-                _write_marker(home, turns=turns)
+                return [
+                    _error_row(
+                        question,
+                        RuntimeError(
+                            f"LLM 提取降级率 {rate:.0%}（{kinds}），库不可作为 llm 库评测"
+                        ),
+                    )
+                    for question in questions
+                ]
+            if level == "partial":
+                # **少量降级不该让整库作废**：`provider_unavailable` 是瞬时网络故障，
+                # 退化的那几段是"保底原文"（没丢数据，只是没结构化），
+                # 库整体仍是 LLM 提取的。零容忍的代价是"任何一次抖动都让 25 分钟的
+                # 灌入白费"——那会让全量几乎永远跑不完，而且**换不来更准的数字**。
+                print(
+                    f"  ⚠ {key}：LLM 提取降级 {len(degraded)}/{turns} 次（{rate:.0%}，"
+                    f"{sorted(set(degraded))}）——这几段是**保底原文**，库整体仍是 LLM 提取的"
+                )
+            # **标记写在全部灌完之后**——写在循环里等于把半库标成完整的。
+            # 同时把降级数记进去：标记不只证明"灌完了"，还证明"灌出来是什么成色"。
+            _write_marker(home, turns=turns, degraded=len(degraded))
 
         if ingest_only:
             print(f"  [只灌入] {key}：库已就绪，本次不提问")
@@ -698,44 +782,55 @@ def _preflight(args: argparse.Namespace) -> int | None:
     problems: list[str] = []
     with httpx.Client(base_url=_base_url(), timeout=httpx.Timeout(30.0, connect=10.0)) as client:
         if needs_llm:
+            chat_model = _model("REALTEST_MODEL_SMALL", "glm-5.3-flash")
             try:
                 resp = client.post(
                     "/chat/completions",
                     headers=headers,
                     json={
-                        "model": _model("REALTEST_MODEL_SMALL", "glm-5.3-flash"),
+                        "model": chat_model,
                         "messages": [{"role": "user", "content": "ping"}],
                         "max_tokens": 1,
                     },
                 )
                 if resp.status_code >= 400:
-                    problems.append(f"chat：HTTP {resp.status_code} {_brief(resp.text)}")
+                    # **必须报出是哪个模型**：只说"chat 失败"时，
+                    # "这个模型没额度"与"网关不通"在报告上长得一模一样。
+                    problems.append(
+                        f"chat（模型 {chat_model}）：HTTP {resp.status_code} {_brief(resp.text)}"
+                    )
+                    if resp.status_code == 402:
+                        problems.append(
+                            "     ↑ 402 是**权限 / 计费**错误，通常只影响**这一个模型**"
+                            f"（`{chat_model}` 若是免费体验档，额度用尽只需换一个档位）。\n"
+                            "     **先换默认档位（glm-5.3-flash / glm-5.3）再判断网关是否可用**——\n"
+                            "     把「某个模型没额度」读成「网关不可用」，会白白停掉整条流水线。"
+                        )
             except Exception as exc:
-                problems.append(f"chat：{type(exc).__name__}: {exc}")
+                problems.append(f"chat（模型 {chat_model}）：{type(exc).__name__}: {exc}")
         if needs_vec:
+            embed_model = _model("REALTEST_EMBED_MODEL", "kinfra-text-embedding-4b")
             try:
                 resp = client.post(
                     "/embeddings",
                     headers=headers,
-                    json={
-                        "model": _model("REALTEST_EMBED_MODEL", "kinfra-text-embedding-4b"),
-                        "input": ["ping"],
-                    },
+                    json={"model": embed_model, "input": ["ping"]},
                 )
                 if resp.status_code >= 400:
                     problems.append(
-                        f"embeddings：HTTP {resp.status_code} {_brief(resp.text)}"
+                        f"embeddings（模型 {embed_model}）："
+                        f"HTTP {resp.status_code} {_brief(resp.text)}"
                     )
             except Exception as exc:
-                problems.append(f"embeddings：{type(exc).__name__}: {exc}")
+                problems.append(f"embeddings（模型 {embed_model}）：{type(exc).__name__}: {exc}")
 
     if problems:
-        print("\n[前置检查失败] 网关不可用，**没有开始跑分**：", file=sys.stderr)
+        print("\n[前置检查失败] 有依赖不可用，**没有开始跑分**：", file=sys.stderr)
         for item in problems:
             print(f"  ✗ {item}", file=sys.stderr)
         print(
             "\n  现在停下来，是因为接着跑也只会得到一份**归因错误**的报告："
-            "\n  网关故障会表现为「未作答 / 答题率 0%」，而那看起来像检索问题。",
+            "\n  依赖故障会表现为「未作答 / 答题率 0%」，而那看起来像检索问题。",
             file=sys.stderr,
         )
         return 3
