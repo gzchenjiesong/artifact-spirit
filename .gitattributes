@@ -1,0 +1,15 @@
+# 统一按 LF 入库。
+#
+# 没有这一条时，行尾会随"谁在什么系统上提交"而漂移：
+# Windows 检出 CRLF、Linux 检出 LF，同一个文件在不同机器上 diff 不停。
+# 本仓库的源码与文档是纯文本，统一 LF 才能让 diff 只反映真实改动。
+* text=auto eol=lf
+
+# 二进制与运行产物不参与行尾转换（它们本来就没有"行"的概念）
+*.db binary
+*.db-wal binary
+*.db-shm binary
+*.sqlite3 binary
+*.png binary
+*.jpg binary
+*.svg text

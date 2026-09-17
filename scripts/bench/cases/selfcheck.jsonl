@@ -1,0 +1,25 @@
+// 自建评测集（G6 的核心）：**证明机制有效**，且能离线回归（--answer-mode extract）。
+//
+// 与 LoCoMo / LongMemEval 的分工：
+//   - 那两个是**对外标尺**（不追排名，只用来确认"没跑偏"）；
+//   - 这一份是**对内自证**——每题都针对一个具体机制设计，答不出来就知道是哪个机制坏了。
+//
+// 字段：
+//   id            唯一标识（前缀表示它盯的机制）
+//   category      用于**分类报告**（总分 72 可能是"样样 72"或"时间类 95 / 多跳 40"，两者下一步完全不同）
+//   question      提问
+//   answer        标准答案（extract 模式下它必须能在召回内容里**逐字**找到）
+//   gold_keywords 判定"哪条记忆算相关"用的关键词（长度 ≥ 2，避免单字到处命中）
+//   turns         该题所需的全部素材（评测时按题重建库）
+//
+// **ts 全部写死**：评测必须可复现，用"现在"会让同一份代码在不同日子得到不同分数。
+{"id": "sc-01-preference", "category": "preference", "question": "用户偏好什么颜色的主题？", "answer": "深色主题", "gold_keywords": ["深色"], "turns": [{"session_id": "s1", "ts": "2026-01-05T10:00:00+08:00", "text": "请记住：我偏好深色主题，夜里写代码刺眼"}]}
+{"id": "sc-02-fact-across-sessions", "category": "single_hop", "question": "用户住在哪个城市？", "answer": "杭州", "gold_keywords": ["杭州"], "turns": [{"session_id": "s1", "ts": "2026-01-05T10:00:00+08:00", "text": "先聊点别的吧，今天天气不错"}, {"session_id": "s2", "ts": "2026-01-06T10:00:00+08:00", "text": "请记住：我住在杭州，西湖边上"}]}
+{"id": "sc-03-multihop", "category": "multihop", "question": "用户的项目是用什么语言写的？", "answer": "Rust", "gold_keywords": ["Rust", "晨曦"], "turns": [{"session_id": "s1", "ts": "2026-01-05T10:00:00+08:00", "text": "请记住：我的项目叫晨曦"}, {"session_id": "s2", "ts": "2026-01-07T10:00:00+08:00", "text": "请记住：晨曦是用 Rust 写的"}]}
+{"id": "sc-04-fact-change", "category": "temporal", "question": "用户现在住在哪？", "answer": "北京", "gold_keywords": ["北京"], "turns": [{"session_id": "s1", "ts": "2026-01-01T10:00:00+08:00", "text": "请记住：我住在上海"}, {"session_id": "s2", "ts": "2026-03-01T10:00:00+08:00", "text": "请记住：我搬到北京了，住在朝阳区"}]}
+{"id": "sc-05-identity", "category": "core_memory", "question": "用户是个什么样的人？", "answer": "注重隐私", "gold_keywords": ["隐私"], "turns": [{"session_id": "s1", "ts": "2026-01-05T10:00:00+08:00", "text": "请记住：我是一个非常注重隐私的人"}]}
+{"id": "sc-06-procedure", "category": "procedural", "question": "用户的发布流程是什么？", "answer": "先跑测试再发布", "gold_keywords": ["测试"], "turns": [{"session_id": "s1", "ts": "2026-01-05T10:00:00+08:00", "text": "请记住：我的发布流程是先跑测试再发布"}]}
+{"id": "sc-07-entity", "category": "entity", "question": "用户常用什么工具？", "answer": "RAGFlow", "gold_keywords": ["RAGFlow"], "turns": [{"session_id": "s1", "ts": "2026-01-05T10:00:00+08:00", "text": "请记住：RAGFlow 是我常用的检索工具"}]}
+{"id": "sc-08-number", "category": "single_hop", "question": "用户的预算是多少？", "answer": "3000", "gold_keywords": ["3000"], "turns": [{"session_id": "s1", "ts": "2026-01-05T10:00:00+08:00", "text": "请记住：我的预算是每月 3000 元"}]}
+{"id": "sc-09-constraint", "category": "preference", "question": "用户不吃什么？", "answer": "香菜", "gold_keywords": ["香菜"], "turns": [{"session_id": "s1", "ts": "2026-01-05T10:00:00+08:00", "text": "请记住：我不吃香菜，闻到就难受"}]}
+{"id": "sc-10-routine", "category": "preference", "question": "用户几点起床？", "answer": "六点", "gold_keywords": ["六点"], "turns": [{"session_id": "s1", "ts": "2026-01-05T10:00:00+08:00", "text": "请记住：我的作息是早上六点起床"}]}

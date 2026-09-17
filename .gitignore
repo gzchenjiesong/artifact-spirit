@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# 虚拟环境
+.venv/
+venv/
+
+# 测试与工具
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 器灵运行时数据（真相源不含在上游仓库中）
+*.db
+*.db-wal
+*.db-shm
+spirit/
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 评测数据集：几十 MB、各有许可证，不进仓库
+scripts/bench/data/
+# 评测时用 `--home` 留下的记忆库（可复用，但属于运行产物，不该进版本控制）
+scripts/bench/state/
+
+# 评测**跑出来的**结果（不是源码）。
+# `baseline.json` 例外：它是自建集的分数基线，`--baseline` 靠它判"有没有退化"——
+# 那是一条**契约**，不是一次运行的产物。
+scripts/bench/*.json
+!scripts/bench/baseline.json
+
+# 真机验证的运行产物（结果目录 + 每次运行的落盘记录）
+scripts/realtest/.home/
+scripts/realtest/last-run.json
+
+# AI 助手的记忆与运行日志——对复现没有任何帮助，不进版本控制
+.codebuddy/

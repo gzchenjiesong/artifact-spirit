@@ -1,0 +1,135 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "artifact-spirit"
+version = "1.0.0"
+description = "器灵 —— 为 AI Agent 设计的借鉴脑科学研究的记忆系统：按需回忆、逐级展开，记忆可见、可审、可修、可带走"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+# 声明了协议还不够——**必须把正文打进发布件**。只写 `license` 时，
+# 装出来的包不带任何许可正文，而"MIT"这个声明就没有可依的文本。
+license-files = ["LICENSE"]
+dependencies = [
+    "httpx>=0.27",
+    "sqlite-vec>=0.1.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+# 禁止引入传染性许可 / 许可不明的依赖（INV-10 / R7）——由 CI 依赖扫描强制
+[project.entry-points."hermes_agent.memory_providers"]
+artifact-spirit = "artifact_spirit:register"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/artifact_spirit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[project.scripts]
+aspirit = "artifact_spirit.cli:main"
+artifact-spirit = "artifact_spirit.cli:main"
+
+# --------------------------------------------------------------------------- #
+# ruff：把"当前全绿"这件事**钉住**
+# --------------------------------------------------------------------------- #
+# 不写这一段时，规则集是 ruff 的**默认集**，而默认集会随 ruff 版本变化。
+# 那意味着"今天全绿"在升级之后可能变成一堆新报错；更糟的是反过来——
+# **新规则本来能抓到的东西，因为没人升级而永远没人看**。
+# 显式列出来，规则集就成了本仓库的一部分，涨落都看得见。
+[tool.ruff]
+line-length = 100
+# `tests/vendor/` 是**第三方代码的副本**（宿主契约的对照实现）。
+# 不按本项目的风格要求它——改了它就失去"对照"的意义。
+extend-exclude = ["tests/vendor", "scripts/realtest/vendor"]
+
+[tool.ruff.lint]
+# 只列**在本仓库真正抓到过问题**的类别，而不是"能开的都开"：
+# 一个每天都报 7000 条误报的检查器，等价于没有检查器——
+# 人会学会忽略它，于是它连该报的那几次也一起被忽略。
+select = [
+    "B",     # flake8-bugbear
+    "C4",    # flake8-comprehensions
+    "E",     # pycodestyle errors
+    "F",     # pyflakes（**抓到过 `summarize` 被重复定义**）
+    "FURB",  # refurb
+    "I",     # isort
+    "ISC",   # 隐式字符串拼接（**本仓库有过实际事故**：元组里相邻字符串粘成一个名字）
+    "PLW",   # pylint warnings（不含 PLR/PLC：那两类噪音大于收益）
+    "PYI",   # 类型存根风格
+    "RUF",   # ruff 自有规则
+    "S",     # bandit（安全）
+    "SIM",   # flake8-simplify
+    "UP",    # pyupgrade
+    "W",     # pycodestyle warnings
+]
+
+ignore = [
+    # `RUF001/002/003`：把**中文标点**（全角括号、引号、破折号）判为"歧义 Unicode"。
+    # 在一个全中文文档的仓库里，这是**纯误报**——实测占全部报错的 80%（7400+/9177）。
+    "RUF001",
+    "RUF002",
+    "RUF003",
+    # 中文注释里的表格与引用必然超过 100 列，而换行会破坏表格。
+    "E501",
+    # `B007`：未用的循环变量。这几处分别是"按次数循环"（`for i in range(n)` 且不用 i）
+    # 与一次性真机脚本里的 `for i, note in ...`——改成 `_` 的收益只是消除提示，
+    # 而会丢掉"这里在数第几次"的意图。
+    "B007",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# 测试与脚本的主要表达方式就是 `assert`——禁它等于要求用 `if: raise` 写测试。
+"tests/**" = ["S101"]
+# `E402`：脚本必须在 `sys.path.insert(...)` **之后**才能 import 器灵，
+# 否则那些 import 会失败。这不是"import 忘了放顶部"，而是**顺序本身有意义**。
+"scripts/**" = ["S101", "E402", "PLR2004"]
+# 下面这些文件里的 `assert` 是**内部不变量断言**（"理论上不可能发生"），不是输入校验
+# ——S101 针对的是后者。**逐文件列出而不是全局关掉**：
+# 全局关掉之后，新写的"用 assert 校验入参"就再也不会被拦住了。
+"src/artifact_spirit/runtime/writer.py" = ["S101"]
+"src/artifact_spirit/runtime/maintenance.py" = ["S101"]
+"src/artifact_spirit/runtime/lifecycle.py" = ["S101", "E731", "PLW0108"]
+"src/artifact_spirit/model/resolver.py" = ["S101"]
+"src/artifact_spirit/core/layers/sensory.py" = ["S101"]
+# ULID 生成器**必须**有全局状态：单调时间戳 + 随机计数就是它的定义。
+# 那不是"共享可变状态"，而是**一个有意共享的单调时钟**。
+"src/artifact_spirit/store/ids.py" = ["PLW0603"]
+# 测试钩子的全局变量：它本来就是"整个测试进程共享"的那一个槽位。
+"tests/conftest.py" = ["PLW0603"]
+# `SIM110`：`any(...)` 会丢掉"哪个区间/哪条规则命中"的信息，
+# 而这两处恰恰是**排查时要看命中细节**的地方。
+"src/artifact_spirit/common.py" = ["SIM110"]
+"src/artifact_spirit/compliance/arch_rules.py" = ["SIM110"]
+# `PLW2901`：这里的"覆盖循环变量"就是**归一化入参**（dict → messages 列表），
+# 换个名字反而要走两遍读。
+"src/artifact_spirit/store/archive.py" = ["PLW2901"]
+# `E402`：这几个评测测试必须先 `sys.path.insert(scripts/)` 才能 `import bench.*`，
+# **顺序本身是必要的**，不是"import 忘了放顶部"。
+"tests/test_bench_datasets.py" = ["E402"]
+"tests/test_bench_metrics.py" = ["E402"]
+"tests/test_bench_selfcheck.py" = ["E402"]
+# `SIM105`：这几处的 `try/except/pass` **每一处都带行内注释说明为什么可以吞**，
+# 而 `contextlib.suppress(...)` 会把那条注释挤到括号外面——
+# **注释的位置正是它们的价值所在**（"为什么这里可以吞"是要紧的知识）。
+"src/artifact_spirit/provider.py" = ["SIM105"]
+# `S608`：本文件里所有拼接插的都是**列名 / 占位符**（`_MEMORY_COLUMNS` 这类模块级常量），
+# **值一律走 `?` 参数化**——这是 SQL 的正确做法（列名无法参数化，是语言本身的限制）。
+# 逐文件豁免而非全局关掉：别的文件里若真出现"把用户输入拼进 SQL"，这条仍然拦得住。
+# `S105`：`_EMBEDDING_DIM_TOKEN` 是取列用的 SQL token，不是密码。
+"src/artifact_spirit/store/sqlite_backend.py" = ["S608", "S105", "SIM105"]
+# `S603`：`subprocess` 执行的是**本仓库自己的模块名**与**固定的 python 解释器**，
+# 不含任何外部输入。
+"tests/test_arch.py" = ["S101", "S603"]
+"scripts/realtest/t3_plugin.py" = ["S603", "PLW1510"]
+# 下面这几处是"可以更简洁"的纯风格项，改动它们要动到已稳定的控制流，
+# 而收益只是少一层 lambda —— 登记在实现记录 §18，不在收口阶段动。
+"src/artifact_spirit/cli.py" = ["PLW0108"]
+"src/artifact_spirit/config/loader.py" = ["FURB171"]
+"tests/test_acceptance_matrix.py" = ["RUF005"]
+

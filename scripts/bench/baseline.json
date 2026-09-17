@@ -1,0 +1,252 @@
+{
+  "report": {
+    "total": 10,
+    "answered": 10,
+    "answer_rate": 1.0,
+    "accuracy": 1.0,
+    "f1": 0.242,
+    "em": 0.0,
+    "contains": 1.0,
+    "recall@k": 1.0,
+    "mrr": 0.95,
+    "ndcg@k": 0.9631,
+    "by_category": {
+      "preference": {
+        "total": 3,
+        "answered": 3,
+        "answer_rate": 1.0,
+        "accuracy": 1.0,
+        "f1": 0.2295,
+        "em": 0.0,
+        "contains": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "by_category": {}
+      },
+      "single_hop": {
+        "total": 2,
+        "answered": 2,
+        "answer_rate": 1.0,
+        "accuracy": 1.0,
+        "f1": 0.1909,
+        "em": 0.0,
+        "contains": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "by_category": {}
+      },
+      "multihop": {
+        "total": 1,
+        "answered": 1,
+        "answer_rate": 1.0,
+        "accuracy": 1.0,
+        "f1": 0.125,
+        "em": 0.0,
+        "contains": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "by_category": {}
+      },
+      "temporal": {
+        "total": 1,
+        "answered": 1,
+        "answer_rate": 1.0,
+        "accuracy": 1.0,
+        "f1": 0.1111,
+        "em": 0.0,
+        "contains": 1.0,
+        "recall@k": 1.0,
+        "mrr": 0.5,
+        "ndcg@k": 0.6309,
+        "by_category": {}
+      },
+      "core_memory": {
+        "total": 1,
+        "answered": 1,
+        "answer_rate": 1.0,
+        "accuracy": 1.0,
+        "f1": 0.375,
+        "em": 0.0,
+        "contains": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "by_category": {}
+      },
+      "procedural": {
+        "total": 1,
+        "answered": 1,
+        "answer_rate": 1.0,
+        "accuracy": 1.0,
+        "f1": 0.5714,
+        "em": 0.0,
+        "contains": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "by_category": {}
+      },
+      "entity": {
+        "total": 1,
+        "answered": 1,
+        "answer_rate": 1.0,
+        "accuracy": 1.0,
+        "f1": 0.1667,
+        "em": 0.0,
+        "contains": 1.0,
+        "recall@k": 1.0,
+        "mrr": 1.0,
+        "ndcg@k": 1.0,
+        "by_category": {}
+      }
+    }
+  },
+  "details": [
+    {
+      "id": "sc-01-preference",
+      "category": "preference",
+      "question": "用户偏好什么颜色的主题？",
+      "answer": "深色主题",
+      "prediction": "请记住：我偏好深色主题，夜里写代码刺眼",
+      "retrieved_ids": [
+        "epi_01M2PKBCYN6A3KH6KCVGV2D7DY"
+      ],
+      "gold_ids": [
+        "epi_01M2PKBCYN6A3KH6KCVGV2D7DY"
+      ],
+      "hit": true
+    },
+    {
+      "id": "sc-02-fact-across-sessions",
+      "category": "single_hop",
+      "question": "用户住在哪个城市？",
+      "answer": "杭州",
+      "prediction": "请记住：我住在杭州，西湖边上",
+      "retrieved_ids": [
+        "epi_01M2PKBCZDS2V1J8KBNX1X0ZXV"
+      ],
+      "gold_ids": [
+        "epi_01M2PKBCZDS2V1J8KBNX1X0ZXV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "sc-03-multihop",
+      "category": "multihop",
+      "question": "用户的项目是用什么语言写的？",
+      "answer": "Rust",
+      "prediction": "请记住：晨曦是用 Rust 写的\n请记住：我的项目叫晨曦",
+      "retrieved_ids": [
+        "epi_01M2PKBD03V072VQAT5GW80TCJ",
+        "epi_01M2PKBD02YH9GVX194ZNV4ZM4"
+      ],
+      "gold_ids": [
+        "epi_01M2PKBD02YH9GVX194ZNV4ZM4",
+        "epi_01M2PKBD03V072VQAT5GW80TCJ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "sc-04-fact-change",
+      "category": "temporal",
+      "question": "用户现在住在哪？",
+      "answer": "北京",
+      "prediction": "请记住：我住在上海\n请记住：我搬到北京了，住在朝阳区",
+      "retrieved_ids": [
+        "epi_01M2PKBD0VAG8ZSMMANPS4SGCX",
+        "epi_01M2PKBD0VAG8ZSMMANPS4SGCZ"
+      ],
+      "gold_ids": [
+        "epi_01M2PKBD0VAG8ZSMMANPS4SGCZ"
+      ],
+      "hit": true
+    },
+    {
+      "id": "sc-05-identity",
+      "category": "core_memory",
+      "question": "用户是个什么样的人？",
+      "answer": "注重隐私",
+      "prediction": "请记住：我是一个非常注重隐私的人",
+      "retrieved_ids": [
+        "epi_01M2PKBD1JN2JFPZC250BXTYGG"
+      ],
+      "gold_ids": [
+        "epi_01M2PKBD1JN2JFPZC250BXTYGG"
+      ],
+      "hit": true
+    },
+    {
+      "id": "sc-06-procedure",
+      "category": "procedural",
+      "question": "用户的发布流程是什么？",
+      "answer": "先跑测试再发布",
+      "prediction": "请记住：我的发布流程是先跑测试再发布",
+      "retrieved_ids": [
+        "epi_01M2PKBD2BQY3KJBK7Q4T926AC"
+      ],
+      "gold_ids": [
+        "epi_01M2PKBD2BQY3KJBK7Q4T926AC"
+      ],
+      "hit": true
+    },
+    {
+      "id": "sc-07-entity",
+      "category": "entity",
+      "question": "用户常用什么工具？",
+      "answer": "RAGFlow",
+      "prediction": "请记住：RAGFlow 是我常用的检索工具",
+      "retrieved_ids": [
+        "epi_01M2PKBD33NQBN9QF06XB5MMWV"
+      ],
+      "gold_ids": [
+        "epi_01M2PKBD33NQBN9QF06XB5MMWV"
+      ],
+      "hit": true
+    },
+    {
+      "id": "sc-08-number",
+      "category": "single_hop",
+      "question": "用户的预算是多少？",
+      "answer": "3000",
+      "prediction": "请记住：我的预算是每月 3000 元",
+      "retrieved_ids": [
+        "epi_01M2PKBD3SXQN1N142ETBDYSBF"
+      ],
+      "gold_ids": [
+        "epi_01M2PKBD3SXQN1N142ETBDYSBF"
+      ],
+      "hit": true
+    },
+    {
+      "id": "sc-09-constraint",
+      "category": "preference",
+      "question": "用户不吃什么？",
+      "answer": "香菜",
+      "prediction": "请记住：我不吃香菜，闻到就难受",
+      "retrieved_ids": [
+        "epi_01M2PKBD4GPNRHT012WD8ZNNBA"
+      ],
+      "gold_ids": [
+        "epi_01M2PKBD4GPNRHT012WD8ZNNBA"
+      ],
+      "hit": true
+    },
+    {
+      "id": "sc-10-routine",
+      "category": "preference",
+      "question": "用户几点起床？",
+      "answer": "六点",
+      "prediction": "请记住：我的作息是早上六点起床",
+      "retrieved_ids": [
+        "epi_01M2PKBD580M0V3TKFGQSJ6ZMH"
+      ],
+      "gold_ids": [
+        "epi_01M2PKBD580M0V3TKFGQSJ6ZMH"
+      ],
+      "hit": true
+    }
+  ]
+}

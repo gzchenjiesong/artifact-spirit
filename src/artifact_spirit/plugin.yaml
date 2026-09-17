@@ -1,0 +1,74 @@
+name: artifact-spirit
+version: 0.1.0.dev0
+kind: memory_provider
+entry_point: artifact_spirit:register
+display_name: 器灵
+description: >-
+  为 AI Agent 设计的记忆系统：按需回忆、逐级展开（L0/L1/L2 分级加载），
+  记忆可见、可审、可干预，且永远属于使用者自己（可导出为人类可读档案）。
+license: MIT
+homepage: https://github.com/gzchenjiesong/artifact-spirit
+requires_python: ">=3.11"
+
+# 零部署：默认栈只用标准库 + sqlite-vec，不需要任何外部服务
+dependencies:
+  runtime:
+    - httpx>=0.27
+    - sqlite-vec>=0.1.9
+
+# 明确声明**不引入**的东西（INV-10 / R7，由 CI 依赖扫描强制）
+#
+# 判据是**许可类别**，不是具体产品：凡传染性许可（AGPL / SSPL）或许可不明的第三方包
+# 一律禁止（见 ADR-001 的许可准入）。**清单不在本文件重复列举**——唯一真相源是
+# `artifact_spirit/compliance/dep_scan.py` 的 `FORBIDDEN_MODULES`（CI 现场扫源码与
+# `pyproject.toml`）；两处各留一份必然漂移（E5：真相唯一）。
+excluded_policy:
+  deny_license_categories: [AGPL, SSPL, unknown]
+  enforced_by: artifact_spirit/compliance/dep_scan.py
+
+capabilities:
+  - external_memory_provider
+  - tools
+  - cli
+  - config_panel
+
+storage:
+  isolation: hermes_home   # 所有路径基于宿主传入的 hermes_home（INV-9）
+  default_path: "{hermes_home}/spirit/spirit.db"
+  format: sqlite
+
+# 单激活约束：与宿主内置记忆并存，但同一时刻只能有一个 external provider 生效
+activation:
+  exclusive_external: true
+  coexists_with_builtin_memory: true
+
+entry_points:
+  hermes_agent.memory_providers:
+    artifact-spirit: artifact_spirit:register
+  console_scripts:
+    aspirit: artifact_spirit.cli:main
+    artifact-spirit: artifact_spirit.cli:main
+
+# --------------------------------------------------------------------------- #
+# 宿主实际读取的字段（`hermes_cli.memory_setup` / `plugins.memory` 的约定）
+#
+# 这几个键名是**宿主的接口**，不是我们的命名偏好：宿主用
+# `manifest.get("pip_dependencies")` / `manifest.get("requires_env")` 读取，
+# 写错了不会报错——只是"一键安装依赖"与"缺环境变量提示"静默失效。
+# --------------------------------------------------------------------------- #
+
+# 宿主 `setup` 流程会 pip install 这些（把包装到宿主环境里）
+pip_dependencies:
+  - httpx>=0.27
+  - sqlite-vec>=0.1.9
+
+# 需要用户自备的环境变量。**只列变量名，永不列值**（C1 / C7）。
+# 缺失时宿主会在面板上提示；器灵本身在缺 key 时降级为"只存原文 + BM25 召回"。
+requires_env:
+  - name: ARTIFACT_SPIRIT_API_KEY
+    description: 模型网关的 API Key（TokenHub 或任意 OpenAI 兼容网关）。未设置时器灵仍可运行，只是不做结构化提取与向量召回。
+  - name: ARTIFACT_SPIRIT_LLM_BASE_URL
+    description: 可选的 LLM 网关地址覆盖（默认取配置文件里的值）。
+
+# 外部依赖（非 pip 的、需要在系统层面准备好的东西）。器灵为零——这是它的承诺之一。
+external_dependencies: []
