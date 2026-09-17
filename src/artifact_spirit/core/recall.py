@@ -434,28 +434,58 @@ class Recaller:
         return neighbors, seeds
 
 
+RRF_K = 60
+"""RRF 的平滑常数。取 60 是通行值（Cormack et al.）——**它不需要按语料调**。"""
+
+
+def _ranked(scores: Mapping[str, float | None]) -> list[str]:
+    """按分数降序的 id 列表（分数为 None 的剔除）。"""
+    return [
+        mid
+        for mid, _ in sorted(
+            ((mid, value) for mid, value in scores.items() if value is not None),
+            key=lambda pair: -float(pair[1]),
+        )
+    ]
+
+
 def _merge_semantic(
     vector: Mapping[str, float | None], lexical: Mapping[str, float | None]
 ) -> dict[str, float]:
-    """语义 + BM25 混合。
+    """向量与 BM25 的融合——**按排名，不按分数**（RRF）。
 
-    BM25 是无界分，先做 min-max 归一化；随后两路**取大**——
-    任一路强命中就应该被算作强命中（"或"语义而非"与"）。
+    ## 为什么不能取 max（旧实现如此）
+
+    两路的分数**量纲不可比**，而旧实现是 `max(向量相似度, minmax(BM25))`：
+
+    - BM25 经 min-max 之后，**这道题里最高的那条恒为 1.0**——那是个*相对*分；
+    - 余弦相似度是 [0,1] 的*绝对*语义分。
+
+    于是 BM25 的第一名**总是**压过向量，"含同一个词的句子"被稳定地排到最前。
+    实测 LoCoMo 的 Top-10 全是"含 LGBTQ 但不相关"的句子，
+    而库里那条真正相关的**一条都进不来**——那不是召回能力差，是两把尺子被直接相加了。
+
+    ## RRF 为什么合适
+
+    `score = Σ 1/(k + rank)`：**只看排名，不碰分数本身**。
+    不同量纲的东西一旦只比排名，可比性问题就不存在了。它既不需要调参
+    （`RRF_K` 用通行值即可），也不怕某一路整体偏高或偏低。
+
+    ## 归一化回 [0,1]
+
+    融合分是排名倒数和，量纲与其它五个因子不同，必须归一化——
+    `fuse()` 的加权求和假定每一路都在 [0,1]。**归一化后它是相对量**：
+    "在这道题的候选里，这一条综合两路排得多前"。这对一个**排序**因子来说正是要的东西。
     """
-    lex_values = [v for v in lexical.values() if v is not None]
-    lex_norm = dict(
-        zip(
-            [k for k, v in lexical.items() if v is not None],
-            normalize_minmax(lex_values),
-            strict=False,
-        )
-    )
-    merged: dict[str, float] = {}
-    for mid in set(vector) | set(lexical):
-        vec = vector.get(mid)
-        lex = lex_norm.get(mid, 0.0)
-        merged[mid] = max(_clip01(vec) if vec is not None else 0.0, lex)
-    return merged
+    fused: dict[str, float] = {}
+    for scores in (vector, lexical):
+        for rank, mid in enumerate(_ranked(scores), start=1):
+            fused[mid] = fused.get(mid, 0.0) + 1.0 / (RRF_K + rank)
+    if not fused:
+        return {}
+    ranked = _ranked(fused)
+    normalised = normalize_minmax([fused[mid] for mid in ranked])
+    return dict(zip(ranked, normalised, strict=False))
 
 
 def _record_of(hit: Hit) -> MemoryRecord:

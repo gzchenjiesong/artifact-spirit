@@ -331,7 +331,7 @@ def check_archive_version(raw: object) -> None:
         # 所以"缺失"不等于"未知"，不能一律拒绝（否则老档案全部读不进来）。
         return
     try:
-        version = int(raw)  # type: ignore[arg-type]
+        version = int(raw)
     except (TypeError, ValueError) as exc:
         raise ValueError(f"档案的 archive_version 不是整数：{raw!r}") from exc
     if version not in _SUPPORTED_ARCHIVE_VERSIONS:
@@ -556,4 +556,4 @@ def _text_or_none(value: Any) -> str | None:
     return text or None
 
 
-_RECORD_FIELDS = frozenset(MemoryRecord.__dataclass_fields__)  # type: ignore[attr-defined]
+_RECORD_FIELDS = frozenset(MemoryRecord.__dataclass_fields__)

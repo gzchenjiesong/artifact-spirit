@@ -69,19 +69,33 @@ class IntentApplier:
         self.backend.put(record, vector, audit=intent.audit)
 
     def _op_update(self, intent: WriteIntent) -> None:
+        # `WriteIntent` 的字段是**按 op 分用**的（`put` 用 `record`、`update` 用 `mem_id`…），
+        # 所以类型上它们一律是可选的。走到这个函数说明 `op == "update"`，`mem_id` 必然在。
+        #
+        # 这些断言**不是写给类型检查器看的注释**——它们真的会执行：
+        # 万一哪天有人构造出一个 `op="update"` 却没有 `mem_id` 的意图，
+        # 这里当场报错，而不是把一个 `None` 写进库。
+        assert intent.mem_id is not None, "update 意图必须有 mem_id"
         patch = dict(intent.patch or {})
         self._refresh_vector_if_needed(intent, patch)
         self.backend.update(intent.mem_id, patch, audit=intent.audit)
 
     def _op_set_status(self, intent: WriteIntent) -> None:
+        assert intent.mem_id is not None, "set_status 意图必须有 mem_id"
+        assert intent.status is not None, "set_status 意图必须有 status"
         self.backend.set_status(
             intent.mem_id, intent.status, reason=intent.reason or "", actor=intent.actor
         )
 
     def _op_touch(self, intent: WriteIntent) -> None:
+        assert intent.mem_id is not None, "touch 意图必须有 mem_id"
         self.backend.touch(intent.mem_id, intent.ts or "", strength=intent.strength)
 
     def _op_link(self, intent: WriteIntent) -> None:
+        assert intent.a_kind is not None, "link 意图必须有 a_kind"
+        assert intent.b_kind is not None, "link 意图必须有 b_kind"
+        assert intent.a_id is not None, "link 意图必须有 a_id"
+        assert intent.b_id is not None, "link 意图必须有 b_id"
         self.backend.link(
             intent.a_kind, intent.a_id, intent.b_kind, intent.b_id,
             intent.rel_type, intent.weight,

@@ -722,7 +722,7 @@ def resolve_host_thread_factory():
     """
     try:  # pragma: no cover - 取决于宿主是否安装
         from agent.memory_provider import (
-            spawn_context_thread,  # type: ignore[import-not-found]
+            spawn_context_thread,
         )
     except Exception:
         from .runtime.threading_ import default_thread_factory
@@ -746,7 +746,7 @@ def _resolve_hermes_home() -> str:
     全程 import-guarded：器灵不把宿主当作硬依赖。
     """
     try:  # pragma: no cover - 取决于宿主是否在场
-        from hermes_constants import get_hermes_home  # type: ignore[import-not-found]
+        from hermes_constants import get_hermes_home
 
         resolved = get_hermes_home()
         if resolved:

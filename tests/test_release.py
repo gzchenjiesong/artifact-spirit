@@ -64,6 +64,23 @@ def test_license_text_exists_and_is_shipped():
     )
 
 
+def test_mypy_is_configured_not_left_implicit():
+    """`mypy` 必须有**显式配置**——不能"从没跑过"却出现在门禁表里。
+
+    v1.0 时它一条配置都没有（仓库里只有 `[tool.ruff]`），却在内外部被当作 CI 门禁提。
+    那是典型的**纸面门禁**：给人已经检查过的错觉，比没有门禁更误导。
+
+    这里要求的不是"清零"，而是**配置在案、剩余项可解释**：
+    第三方无 stub 与宿主模块按模块声明豁免，条件定义（`try/except` 同名）按模块豁免，
+    其余一类在实现记录里写明。
+    """
+    text = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+    assert "[tool.mypy]" in text, "mypy 必须有显式配置，不能只靠默认值"
+    assert "[[tool.mypy.overrides]]" in text, (
+        "豁免要**按模块**声明；全局放行会把'依赖真的装错了'也一起放过"
+    )
+
+
 def test_ci_runs_exactly_the_gates_the_readme_claims():
     """CI 配置要存在，且**跑的就是 README 写的门禁**。
 

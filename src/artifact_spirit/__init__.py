@@ -7,7 +7,7 @@
 
 from __future__ import annotations
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 """本包版本。**必须与 `pyproject.toml` 的 `[project].version` 一致**——
 前者给打包器、后者给运行时自报，不一致会让「装的是哪个版本」有两个都说得通的答案。
 由 `tests/test_release.py` 钉住（R6 只约束"不放业务逻辑"，版本号属于元数据）。

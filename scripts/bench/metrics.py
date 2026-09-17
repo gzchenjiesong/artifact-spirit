@@ -193,6 +193,22 @@ def recall_at_k(retrieved: list[str], gold_ids: set[str], k: int) -> float:
     return hit / len(gold_ids)
 
 
+def recall_at_gold(retrieved: list[str], gold_ids: set[str]) -> float:
+    """**上限恒为 1.0 的召回**：只看前 `|gold|` 条。
+
+    为什么必须有它——`R@10` 的**上限是 `10 / |gold|`**：
+    实测 LoCoMo 有 **46% 的题 gold 超过 10 条**，于是 R@10 再怎么完美
+    也到不了 0.241。那个数字低**不代表检索差**，但从报告上读起来一模一样。
+
+    这个口径把 `k` 与被测对象对齐，回答的是：
+    **"把相关记忆按数量取回来，取对了几成"**——它不因 `top_k` 的设置而变。
+    """
+    if not gold_ids:
+        return 0.0
+    hit = len(set(retrieved[: len(gold_ids)]) & gold_ids)
+    return hit / len(gold_ids)
+
+
 def mrr(retrieved: list[str], gold_ids: set[str]) -> float:
     """首个命中的倒数排名（MRR）。**衡量"排得对不对"**，不只是"找没找到"。"""
     for rank, mem_id in enumerate(retrieved, start=1):
@@ -235,6 +251,8 @@ class Metrics:
     f1_sum: float = 0.0
     contains_sum: float = 0.0
     recall_sum: float = 0.0
+    recall_gold_sum: float = 0.0
+    """`R@|gold|` 的累加——**上限恒为 1.0**，不受 `top_k` 卡（见 `recall_at_gold`）。"""
     mrr_sum: float = 0.0
     ndcg_sum: float = 0.0
     by_category: dict[str, Metrics] = field(default_factory=dict)
@@ -255,6 +273,21 @@ class Metrics:
         k: int = 10,
     ) -> None:
         self.total += 1
+
+        # **检索指标先算，且与生成无关。**
+        #
+        # `pred is None` 的意思是"没走到生成"——那**恰恰是检索失败的证据**
+        # （没召回到相关记忆）。早先这里先 `return` 再算检索指标，于是那些题
+        # 既不进分子也不进分母：**召回越差，分母越小，指标反而越好看**。
+        # 这与 `accuracy` 那条"分母不能用 answered"的教训是同一个错误，
+        # 只是它藏在了另一个属性里。
+        self.recall_sum += recall_at_k(retrieved, gold_ids, k)
+        self.recall_gold_sum += recall_at_gold(retrieved, gold_ids)
+        # `mrr` / `ndcg` 衡量的是**前 k 名排得对不对**——传全长会把"多取了"算成好处，
+        # 而它们要回答的是"在系统实际给出的 top_k 里，相关记忆排得如何"。
+        self.mrr_sum += mrr(retrieved[:k], gold_ids)
+        self.ndcg_sum += ndcg_at_k(retrieved, gold_ids, k)
+
         if pred is None:
             # **未命中**：不算答错，但 F1/EM 都是 0——它必须拉低分数，
             # 否则"召回坏了"会被"没答的题不计分"悄悄抹平。
@@ -263,9 +296,6 @@ class Metrics:
         self.em_sum += exact_match(pred, gold)
         self.f1_sum += token_f1(pred, gold)
         self.contains_sum += contains_answer(pred, gold)
-        self.recall_sum += recall_at_k(retrieved, gold_ids, k)
-        self.mrr_sum += mrr(retrieved, gold_ids)
-        self.ndcg_sum += ndcg_at_k(retrieved, gold_ids, k)
         if contains_answer(pred, gold) or exact_match(pred, gold):
             self.correct += 1
 
@@ -284,15 +314,26 @@ class Metrics:
 
     @property
     def recall(self) -> float:
-        return self.recall_sum / self.answered if self.answered else 0.0
+        """**分母是 `total`，不是 `answered`。**
+
+        与 `accuracy` 同一条理由：没召回到的题**必须算 0**。
+        用 `answered` 当分母时，召回越差、进分母的题越少、指标反而越好看——
+        **在最坏的时候最好看**，而这正是最需要报警的时刻。
+        """
+        return self.recall_sum / self.total if self.total else 0.0
+
+    @property
+    def recall_gold(self) -> float:
+        """`R@|gold|`——**不受 `top_k` 卡上限**的召回（见 `recall_at_gold`）。"""
+        return self.recall_gold_sum / self.total if self.total else 0.0
 
     @property
     def mrr(self) -> float:
-        return self.mrr_sum / self.answered if self.answered else 0.0
+        return self.mrr_sum / self.total if self.total else 0.0
 
     @property
     def ndcg(self) -> float:
-        return self.ndcg_sum / self.answered if self.answered else 0.0
+        return self.ndcg_sum / self.total if self.total else 0.0
 
     @property
     def answer_rate(self) -> float:
@@ -314,6 +355,7 @@ class Metrics:
             "em": round(self.em_sum / self.total, 4) if self.total else 0.0,
             "contains": round(self.contains_sum / self.total, 4) if self.total else 0.0,
             "recall@k": round(self.recall, 4),
+            "recall@gold": round(self.recall_gold, 4),
             "mrr": round(self.mrr, 4),
             "ndcg@k": round(self.ndcg, 4),
             "by_category": {name: m.to_dict() for name, m in self.by_category.items()},

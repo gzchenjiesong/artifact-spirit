@@ -41,7 +41,7 @@ from .base import Clock, TransferReport, WriteIntent
 
 __all__ = ["Transferrer"]
 
-_RECORD_FIELDS = frozenset(MemoryRecord.__dataclass_fields__)  # type: ignore[attr-defined]
+_RECORD_FIELDS = frozenset(MemoryRecord.__dataclass_fields__)
 
 _ACTOR = "cli"
 """传承导入的 actor。用 `cli` 而不是 `user`：它确实是**命令行工具**发起的批量操作，

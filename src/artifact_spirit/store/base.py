@@ -420,7 +420,14 @@ class MemoryBackend(Protocol):
     def audit_for(self, mem_id: str, *, limit: int = 200) -> list[AuditEvent]: ...
 
     # ---------- 活性 ----------
-    def touch(self, mem_id: str, ts: str) -> None: ...
+    def touch(self, mem_id: str, ts: str, *, strength: float | None = None) -> None: ...
+    """记录一次访问：`access_count += 1`、刷新 `last_access_at`，可选回升 `strength`。
+
+    `strength` **原先只有实现有、协议里没声明**——与 `wm_list`（§15）、
+    `outbound_edges`（§18.4）是同一类：**协议落后于实现**。
+    运行时一直是对的（拿到的确实是 `SQLiteBackend`），
+    但"按协议编程"的调用方会看不到这个参数——**而协议正是分层边界本身**。
+    """
 
     # ---------- 会话 ----------
     def session_create(self, session_id: str, started_at: str) -> None: ...

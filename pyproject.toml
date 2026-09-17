@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "artifact-spirit"
-version = "1.0.0"
+version = "1.1.0"
 description = "器灵 —— 为 AI Agent 设计的借鉴脑科学研究的记忆系统：按需回忆、逐级展开，记忆可见、可审、可修、可带走"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -42,6 +42,36 @@ artifact-spirit = "artifact_spirit.cli:main"
 # 那意味着"今天全绿"在升级之后可能变成一堆新报错；更糟的是反过来——
 # **新规则本来能抓到的东西，因为没人升级而永远没人看**。
 # 显式列出来，规则集就成了本仓库的一部分，涨落都看得见。
+[tool.mypy]
+python_version = "3.11"
+warn_unused_ignores = true
+warn_redundant_casts = true
+# **不设 `ignore_missing_imports = true` 全局放行**——那会把"依赖真的装错了"
+# 也一起放过。缺失只按模块逐个声明（见下面的 overrides）。
+#
+# ## 它不是发布门禁，但也不该是"纸面门禁"
+#
+# 当前剩余 **30 项**，全是同一类：**宽类型传给窄类型**
+# （`str | None` → `str`、`str` → `Literal[...]`、`object` → 具体类型）。
+# 修法是在每个边界加 `cast` / `assert`，逐处机械但量大，**留待后续版本**。
+#
+# v1.0 的问题不是"有 41 项错误"，而是**一条配置都没有**——
+# 于是它既没跑过、又被当作 CI 门禁提起（见实现记录 §18.5 / §19.4）。
+# 现在的要求是：**配置在案、每一类剩余项都说得清理由**。
+# 门禁只有 `ruff` 与 `pytest` 两条（见 README「开发」与 CI 配置）。
+
+# 宿主模块与第三方无 stub 的依赖：它们"装不装都可能"，找不到是对的。
+[[tool.mypy.overrides]]
+module = ["sqlite_vec", "agent", "agent.*", "hermes_constants", "hermes_agent"]
+ignore_missing_imports = true
+
+# `try: from host import X / except: class X` —— 这是**有意的条件定义**
+# （宿主可用就用宿主的，否则用本地替身，两分支同名才能让下游代码统一）。
+# mypy 把它判成"重复定义"，是它的局限，不是代码的问题。
+[[tool.mypy.overrides]]
+module = ["artifact_spirit.config_schema"]
+disable_error_code = ["no-redef"]
+
 [tool.ruff]
 line-length = 100
 # `tests/vendor/` 是**第三方代码的副本**（宿主契约的对照实现）。

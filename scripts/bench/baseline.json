@@ -8,6 +8,7 @@
     "em": 0.0,
     "contains": 1.0,
     "recall@k": 1.0,
+    "recall@gold": 0.9,
     "mrr": 0.95,
     "ndcg@k": 0.9631,
     "by_category": {
@@ -20,6 +21,7 @@
         "em": 0.0,
         "contains": 1.0,
         "recall@k": 1.0,
+        "recall@gold": 1.0,
         "mrr": 1.0,
         "ndcg@k": 1.0,
         "by_category": {}
@@ -33,6 +35,7 @@
         "em": 0.0,
         "contains": 1.0,
         "recall@k": 1.0,
+        "recall@gold": 1.0,
         "mrr": 1.0,
         "ndcg@k": 1.0,
         "by_category": {}
@@ -46,6 +49,7 @@
         "em": 0.0,
         "contains": 1.0,
         "recall@k": 1.0,
+        "recall@gold": 1.0,
         "mrr": 1.0,
         "ndcg@k": 1.0,
         "by_category": {}
@@ -59,6 +63,7 @@
         "em": 0.0,
         "contains": 1.0,
         "recall@k": 1.0,
+        "recall@gold": 0.0,
         "mrr": 0.5,
         "ndcg@k": 0.6309,
         "by_category": {}
@@ -72,6 +77,7 @@
         "em": 0.0,
         "contains": 1.0,
         "recall@k": 1.0,
+        "recall@gold": 1.0,
         "mrr": 1.0,
         "ndcg@k": 1.0,
         "by_category": {}
@@ -85,6 +91,7 @@
         "em": 0.0,
         "contains": 1.0,
         "recall@k": 1.0,
+        "recall@gold": 1.0,
         "mrr": 1.0,
         "ndcg@k": 1.0,
         "by_category": {}
@@ -98,6 +105,7 @@
         "em": 0.0,
         "contains": 1.0,
         "recall@k": 1.0,
+        "recall@gold": 1.0,
         "mrr": 1.0,
         "ndcg@k": 1.0,
         "by_category": {}
@@ -112,10 +120,10 @@
       "answer": "深色主题",
       "prediction": "请记住：我偏好深色主题，夜里写代码刺眼",
       "retrieved_ids": [
-        "epi_01M2PKBCYN6A3KH6KCVGV2D7DY"
+        "epi_01M2Q86Z5QPB1Z0RFWEJK6A071"
       ],
       "gold_ids": [
-        "epi_01M2PKBCYN6A3KH6KCVGV2D7DY"
+        "epi_01M2Q86Z5QPB1Z0RFWEJK6A071"
       ],
       "hit": true
     },
@@ -126,10 +134,10 @@
       "answer": "杭州",
       "prediction": "请记住：我住在杭州，西湖边上",
       "retrieved_ids": [
-        "epi_01M2PKBCZDS2V1J8KBNX1X0ZXV"
+        "epi_01M2Q86Z6JGBYXCB3C0Q4E7487"
       ],
       "gold_ids": [
-        "epi_01M2PKBCZDS2V1J8KBNX1X0ZXV"
+        "epi_01M2Q86Z6JGBYXCB3C0Q4E7487"
       ],
       "hit": true
     },
@@ -140,12 +148,11 @@
       "answer": "Rust",
       "prediction": "请记住：晨曦是用 Rust 写的\n请记住：我的项目叫晨曦",
       "retrieved_ids": [
-        "epi_01M2PKBD03V072VQAT5GW80TCJ",
-        "epi_01M2PKBD02YH9GVX194ZNV4ZM4"
+        "epi_01M2Q86Z7BKAQ02W8ZFRFANEA4",
+        "epi_01M2Q86Z7AVEQ85KSJK4PBM36B"
       ],
       "gold_ids": [
-        "epi_01M2PKBD02YH9GVX194ZNV4ZM4",
-        "epi_01M2PKBD03V072VQAT5GW80TCJ"
+        "epi_01M2Q86Z7BKAQ02W8ZFRFANEA4"
       ],
       "hit": true
     },
@@ -156,11 +163,11 @@
       "answer": "北京",
       "prediction": "请记住：我住在上海\n请记住：我搬到北京了，住在朝阳区",
       "retrieved_ids": [
-        "epi_01M2PKBD0VAG8ZSMMANPS4SGCX",
-        "epi_01M2PKBD0VAG8ZSMMANPS4SGCZ"
+        "epi_01M2Q86Z84MMNM67KCZSXQ0P4R",
+        "epi_01M2Q86Z84MMNM67KCZSXQ0P4T"
       ],
       "gold_ids": [
-        "epi_01M2PKBD0VAG8ZSMMANPS4SGCZ"
+        "epi_01M2Q86Z84MMNM67KCZSXQ0P4T"
       ],
       "hit": true
     },
@@ -171,10 +178,10 @@
       "answer": "注重隐私",
       "prediction": "请记住：我是一个非常注重隐私的人",
       "retrieved_ids": [
-        "epi_01M2PKBD1JN2JFPZC250BXTYGG"
+        "epi_01M2Q86Z8W5GY9R69P8130YVQP"
       ],
       "gold_ids": [
-        "epi_01M2PKBD1JN2JFPZC250BXTYGG"
+        "epi_01M2Q86Z8W5GY9R69P8130YVQP"
       ],
       "hit": true
     },
@@ -185,10 +192,10 @@
       "answer": "先跑测试再发布",
       "prediction": "请记住：我的发布流程是先跑测试再发布",
       "retrieved_ids": [
-        "epi_01M2PKBD2BQY3KJBK7Q4T926AC"
+        "epi_01M2Q86Z9NPZQ3TB4HWEPJ2K0Q"
       ],
       "gold_ids": [
-        "epi_01M2PKBD2BQY3KJBK7Q4T926AC"
+        "epi_01M2Q86Z9NPZQ3TB4HWEPJ2K0Q"
       ],
       "hit": true
     },
@@ -199,10 +206,10 @@
       "answer": "RAGFlow",
       "prediction": "请记住：RAGFlow 是我常用的检索工具",
       "retrieved_ids": [
-        "epi_01M2PKBD33NQBN9QF06XB5MMWV"
+        "epi_01M2Q86ZADJTVXFDJ5RACNMXQ3"
       ],
       "gold_ids": [
-        "epi_01M2PKBD33NQBN9QF06XB5MMWV"
+        "epi_01M2Q86ZADJTVXFDJ5RACNMXQ3"
       ],
       "hit": true
     },
@@ -213,10 +220,10 @@
       "answer": "3000",
       "prediction": "请记住：我的预算是每月 3000 元",
       "retrieved_ids": [
-        "epi_01M2PKBD3SXQN1N142ETBDYSBF"
+        "epi_01M2Q86ZB52R423D32TR413YJZ"
       ],
       "gold_ids": [
-        "epi_01M2PKBD3SXQN1N142ETBDYSBF"
+        "epi_01M2Q86ZB52R423D32TR413YJZ"
       ],
       "hit": true
     },
@@ -227,10 +234,10 @@
       "answer": "香菜",
       "prediction": "请记住：我不吃香菜，闻到就难受",
       "retrieved_ids": [
-        "epi_01M2PKBD4GPNRHT012WD8ZNNBA"
+        "epi_01M2Q86ZBY0388FRD08KXZNGDS"
       ],
       "gold_ids": [
-        "epi_01M2PKBD4GPNRHT012WD8ZNNBA"
+        "epi_01M2Q86ZBY0388FRD08KXZNGDS"
       ],
       "hit": true
     },
@@ -241,10 +248,10 @@
       "answer": "六点",
       "prediction": "请记住：我的作息是早上六点起床",
       "retrieved_ids": [
-        "epi_01M2PKBD580M0V3TKFGQSJ6ZMH"
+        "epi_01M2Q86ZCS8JC7V71E5GH6T1FQ"
       ],
       "gold_ids": [
-        "epi_01M2PKBD580M0V3TKFGQSJ6ZMH"
+        "epi_01M2Q86ZCS8JC7V71E5GH6T1FQ"
       ],
       "hit": true
     }

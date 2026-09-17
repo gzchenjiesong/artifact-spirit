@@ -161,6 +161,57 @@ def test_answer_rate_diagnoses_where_the_failure_is():
     assert m.accuracy == 0.0, "召回到了但答错 → 该修生成，不是修召回"
 
 
+def test_recall_at_gold_is_not_capped_by_top_k():
+    """`R@|gold|` 只看前 `|gold|` 条——**上限恒为 1.0**，不受 `top_k` 卡。
+
+    钉的是一个读数陷阱：`R@10` 的上限是 `10/|gold|`。
+    实测 LoCoMo 有 **46% 的题 gold 超过 10 条**，那些题的 R@10 上限只有 0.241——
+    分数低**不代表检索差**，但从报告上读起来一模一样。
+    """
+    from bench.metrics import recall_at_gold, recall_at_k
+
+    gold = {f"g{i}" for i in range(30)}
+    retrieved = [f"g{i}" for i in range(30)]  # 全部召回、且排在最前
+
+    assert recall_at_gold(retrieved, gold) == 1.0, "只看前 |gold| 条时应当满分"
+    assert abs(recall_at_k(retrieved, gold, 10) - 10 / 30) < 1e-9, (
+        "R@10 的上限就是 10/|gold| —— 这正是需要一个不受限口径的原因"
+    )
+
+
+def test_recall_counts_unanswered_questions_as_zero():
+    """**没召回到的题必须进分母。**
+
+    早先检索指标算在 `pred is None` 之后，于是那些题既不进分子也不进分母——
+    **召回越差、分母越小、指标反而越好看**。这与 `accuracy` 那条
+    「分母不能用 answered」的教训是同一个错误，只是藏在了另一个属性里。
+    """
+    from bench.metrics import Metrics
+
+    metrics = Metrics()
+    metrics.add(pred="上海", gold="上海", retrieved=["m1", "m2"], gold_ids={"m1"}, k=10)
+    metrics.add(pred=None, gold="北京", retrieved=[], gold_ids={"m9"}, k=10)
+
+    assert metrics.total == 2
+    assert metrics.answered == 1
+    assert metrics.recall == 0.5, f"分母应当是 total=2，实得 {metrics.recall}"
+    assert metrics.recall_gold == 0.5
+    assert metrics.mrr == 0.5
+    assert metrics.answer_rate == 0.5
+
+
+def test_reference_metric_is_f1_like_the_official_benchmark():
+    """判定指标必须与 LoCoMo 官方一致（**官方在问答任务上用 F1-score**）。
+
+    早先按"准确率 × 100 ≥ 70"判定——**指标就用错了**，那个分数没有可比对象；
+    而 `70 / 75` 这两个数字本身也没有出处（官方不设通过门槛，
+    它的参照系是「相对基线与人类」）。这条钉住判定口径不许再漂回去。
+    """
+    from bench.run import REFERENCE_METRIC
+
+    assert REFERENCE_METRIC == "f1"
+
+
 def test_to_dict_is_json_serialisable_and_keeps_n():
     m = Metrics()
     m.add(pred="住在上海", gold="住在上海", retrieved=["x"], gold_ids={"x"})

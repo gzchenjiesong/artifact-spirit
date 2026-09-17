@@ -753,6 +753,66 @@ def test_extraction_prompt_demands_absolute_dates_and_same_language():
     assert "跟随对话原文" in SYSTEM_PROMPT
 
 
+def test_semantic_fusion_prefers_items_ranked_high_by_both_paths():
+    """融合**按排名**（RRF）：两路都靠前的条目，必须胜过只在单路排第一的。
+
+    钉住的是"两把尺子不能直接相加"：BM25 经 min-max 后**最高分恒为 1.0**（相对分），
+    余弦相似度是 [0,1]（绝对分）。旧实现取 `max`，于是 BM25 的第一名**总是**
+    压过向量，"含同一个词的句子"被稳定排到最前——实测 LoCoMo 的 Top-10
+    全是"含 LGBTQ 但不相关"的句子，而库里那条真正相关的进不来。
+
+    实测改善（`--ingest llm` 的库、20 题）：R@10 0.201→0.252、
+    R@|gold| 0.158→0.212、MRR 0.487→0.682。
+    """
+    from artifact_spirit.core.recall import _merge_semantic
+
+    # 让 `both` 在**两路都排第一**，其余两条各有一路落后。
+    vector = {"both": 0.95, "vec_only": 0.90, "lex_only": 0.10}
+    lexical = {"both": 12.0, "lex_only": 9.0, "vec_only": 0.5}
+
+    fused = _merge_semantic(vector, lexical)
+
+    assert fused["both"] > fused["vec_only"], "两路都靠前的应当胜过只有向量靠前的"
+    assert fused["both"] > fused["lex_only"], "两路都靠前的应当胜过只有关键词靠前的"
+    assert all(0.0 <= value <= 1.0 for value in fused.values()), (
+        "融合结果必须落在 [0,1]——`fuse()` 的加权求和假定每一路都在这个区间"
+    )
+
+
+def test_semantic_fusion_is_rank_based_so_swapped_ranks_tie():
+    """RRF **只看排名**：两条各在一路排第一时，融合分**完全相同**。
+
+    这不是缺陷，是它的代价与收益：用"丢掉分数强度"换"无参数、抗量纲"。
+    写下来是因为它反直觉——**向量分 0.95 与关键词分 12.0 的两条，会被融合成同分**
+    （`1/61 + 1/62` 与 `1/62 + 1/61`），于是高下交给下游因子
+    （importance / recency …）去决定。
+
+    需要注意的是：**它们只是"分不出高下"，不是"被算成一样好"**——
+    与旧的 `max` 相比，后者会直接让关键词那条满分、向量那条落败。
+    """
+    from artifact_spirit.core.recall import _merge_semantic
+
+    vector = {"a": 0.95, "b": 0.10}  # 向量排名：a, b
+    lexical = {"a": 0.5, "b": 12.0}  # 关键词排名：b, a
+
+    fused = _merge_semantic(vector, lexical)
+
+    assert fused["a"] == fused["b"], "排名互换 → 倒数和相同（加法交换律）"
+
+
+def test_semantic_fusion_handles_a_missing_path():
+    """某一路缺席时照常工作，**且顺序仍然正确**（降级不等于失效）。"""
+    from artifact_spirit.core.recall import _merge_semantic
+
+    only_vector = _merge_semantic({"a": 0.9, "b": 0.2}, {})
+    assert only_vector["a"] > only_vector["b"]
+
+    only_lexical = _merge_semantic({}, {"a": 1.0, "b": 8.0})
+    assert only_lexical["b"] > only_lexical["a"], "只有关键词时也要按它的排名走"
+
+    assert _merge_semantic({}, {}) == {}, "两路都没有时不该造出条目"
+
+
 def test_recall_computes_the_vector_when_the_caller_did_not(backend, embedding):
     """`recall` 在调用方没给 `vec` 时**自己算**——否则向量路静默失效。
 

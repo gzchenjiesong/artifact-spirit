@@ -2046,7 +2046,7 @@ class SQLiteBackend:
             )
 
 
-_RECORD_FIELDS = frozenset(MemoryRecord.__dataclass_fields__)  # type: ignore[attr-defined]
+_RECORD_FIELDS = frozenset(MemoryRecord.__dataclass_fields__)
 
 
 # --------------------------------------------------------------------------- #

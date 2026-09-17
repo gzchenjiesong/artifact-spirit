@@ -75,11 +75,24 @@ def _resolve_path(dataset: str, given: str | None) -> Path:
         )
     return resolved
 
-THRESHOLDS = {"locomo": 70.0, "longmemeval": 75.0}
-"""D-13 的量化门槛。**只有对外标尺有绝对门槛**——
+REFERENCE_METRIC = "f1"
+"""公开标尺的判定指标——**与 LoCoMo 官方一致**。
 
-自建集不设绝对线：它的用途是"向内自证机制没坏"，判据是**相对基线不退步**（`--baseline`）。
-给自建集定一个绝对分数，会诱导人去调题而不是修系统。
+官方（arXiv:2402.17753）在问答任务上用的是 **F1-score**，不是准确率。
+早先这里按"准确率 × 100 ≥ 70"判定，**指标就用错了**。
+
+## 为什么删掉了写死的 `70 / 75`
+
+那两个数字**没有任何出处**：
+LoCoMo 官方页面**不设通过门槛**，它用的是**相对口径**——
+"长上下文模型 / RAG 相对基线提升 22–66%，但仍落后人类约 56%，
+时间推理类落后约 73%"。整篇没有一个"合格线"。
+
+拿一个自己编的门槛去判定，得到的只会是"未达标"这句**没有信息量**的结论，
+而它还会把人推去追一个不存在的目标。所以判定改成两条**站得住的**路：
+
+1. `--baseline <json>`：与本仓库冻结的基线比，判**有没有退化**（相对口径，与官方一致）；
+2. `--min-f1 <n>`：显式给一条线——**谁给的谁负责**，报告里会写明它来自命令行。
 """
 
 _API_KEY_ENV = "ARTIFACT_SPIRIT_API_KEY"
@@ -381,8 +394,22 @@ def _ask(services, question: Question, *, top_k: int, mode: str) -> dict:
     """在**已经灌好**的库上问一题。"""
     from artifact_spirit.core.base import RecallQuery
 
-    hits = services.core.recall(RecallQuery(text=question.question, top_k=top_k))
-    pred = answer_llm(question.question, hits) if mode == "llm" else answer_extract(hits)
+    # **先算 gold，再决定召回多少条。**
+    #
+    # `R@|gold|` 的语义是"如果允许返回 |gold| 条，能取对几成"。
+    # 若照旧只召回 `top_k` 条，`retrieved[:|gold|]` 拿到的还是那 10 条——
+    # **`top_k` 的上限又从这个门偷渡回来了**，指标退化成另一个 R@k。
+    # 所以这里按 `max(top_k, |gold|)` 取，两个口径才各自成立。
+    gold_ids = _gold_ids(services, question)
+    want = max(top_k, len(gold_ids))
+
+    hits = services.core.recall(RecallQuery(text=question.question, top_k=want))
+    # 生成只用 `top_k` 条——那是系统真实提供给模型的上下文，与召回口径无关。
+    context = hits[:top_k]
+    pred = (
+        answer_llm(question.question, context) if mode == "llm" else answer_extract(context)
+    )
+    retrieved = [hit.record.id for hit in hits]
     retrieved = [h.record.id for h in hits]
     gold_ids = _gold_ids(services, question)
     return {
@@ -592,17 +619,17 @@ def _thresholds(
     拿它去比「LoCoMo ≥ 70」只会得到一个"系统很差"的**错误结论**，
     而那个结论会把人引向完全错误的优化方向。
     """
-    if args.dataset in THRESHOLDS:
-        if args.answer_mode != "llm":
-            print(
-                f"\n[提示] {args.dataset} 的绝对门槛（≥ {THRESHOLDS[args.dataset]}）"
-                "**只在 `--answer-mode llm` 下才有意义**。"
-            )
-            print("       本次是 extract 模式——分数不可与公开标尺比较，**不判定门槛**。")
-            return []
-        return [(f"{args.dataset} ≥ {THRESHOLDS[args.dataset]}", THRESHOLDS[args.dataset])]
+    if args.min_f1 is not None:
+        return [(f"{REFERENCE_METRIC} ≥ {args.min_f1}（来自命令行）", float(args.min_f1))]
     if args.min_accuracy is not None:
-        return [(f"自建集 ≥ {args.min_accuracy}", float(args.min_accuracy))]
+        return [(f"自建集准确率 ≥ {args.min_accuracy}（来自命令行）", float(args.min_accuracy))]
+    if args.dataset in ("locomo", "longmemeval") and args.answer_mode != "llm":
+        print(
+            f"\n[提示] {args.dataset} 用 `extract` 模式跑出来的分数"
+            "**不可与公开标尺比较**（它把召回内容整段当答案），因此只记录、不判定。"
+        )
+        print("       要与官方口径对齐，用 `--answer-mode llm`。")
+        return []
     print("\n[提示] 自建集没有绝对门槛——用 --min-accuracy 显式给一个，")
     print("       或把分数存成基线后用 --baseline 比。这样设计是刻意的：")
     print("       给自建集定死一个线，会诱导人去调题，而不是去修系统。")
@@ -611,7 +638,9 @@ def _thresholds(
 
 def _verdict(report: dict, thresholds: list[tuple[str, float]], args, details: list[dict]) -> int:
     failures: list[str] = []
-    score = report["accuracy"] * 100
+    # **用 F1，与 LoCoMo 官方口径一致**（官方在问答任务上用 F1-score）。
+    # 早先用准确率判定——指标用错了，那个分数其实没有可比对象。
+    score = report[REFERENCE_METRIC] * 100
 
     # **异常优先于门槛判定**，且本身就算失败。
     # 一个"每题都抛异常"的运行会得到 accuracy=0——如果只看分数，
@@ -632,11 +661,14 @@ def _verdict(report: dict, thresholds: list[tuple[str, float]], args, details: l
         baseline_path = Path(args.baseline)
         if baseline_path.exists():
             previous = json.loads(baseline_path.read_text(encoding="utf-8"))
-            drop = previous.get("accuracy", 0.0) * 100 - score
+            # 与 `--min-f1` 用**同一个指标**（F1）——否则"基线比较"和"门槛判定"
+            # 各看一个数，一次运行会给出两个方向相反的结论。
+            previous_score = (previous.get("report") or previous).get(REFERENCE_METRIC, 0.0) * 100
+            drop = previous_score - score
             if drop > args.tolerance:
                 failures.append(
                     f"相对基线退步 {drop:.1f} 分（容差 {args.tolerance}）"
-                    f"—— 基线 {previous.get('accuracy', 0) * 100:.1f}，现在 {score:.1f}"
+                    f"—— 基线 {previous_score:.1f}，现在 {score:.1f}"
                 )
             else:
                 print(f"\n对基线：{drop:+.1f} 分（容差 ±{args.tolerance}）")
@@ -693,7 +725,16 @@ def _print_report(report: dict, details: list[dict], args) -> None:
     print(f"\n{'=' * 66}\n结果\n{'=' * 66}")
     print(f"  题数 {report['total']} · 答题率 {report['answer_rate']:.1%}")
     print(f"  准确率 {report['accuracy'] * 100:.1f} · F1 {report['f1']:.3f} · EM {report['em']:.3f}")
-    print(f"  召回 R@{args.top_k} {report['recall@k']:.3f} · MRR {report['mrr']:.3f}")
+    print(
+        f"  召回 R@{args.top_k} {report['recall@k']:.3f}"
+        f" · R@|gold| {report['recall@gold']:.3f}"
+        f" · MRR {report['mrr']:.3f}"
+    )
+    print(
+        f"    **R@{args.top_k} 的上限是 {args.top_k}/|gold|**——相关记忆多于 {args.top_k} 条时，"
+        "它再完美也到不了 1.0。"
+    )
+    print("    `R@|gold|` 只看前 |gold| 条，**上限恒为 1.0**，不受 top_k 设置影响；两者要一起看。")
     print("  ——答题率与准确率的关系就是诊断：答题率高而准确率低 → 修生成；")
     print("    答题率低 → 修检索或提取（与生成无关）。")
 
@@ -702,7 +743,7 @@ def _print_report(report: dict, details: list[dict], args) -> None:
         print("    它把召回内容整段当答案，必然比标准答案长——EM 恒为 0、F1 偏低是")
         print("    **设计使然，不是系统差**。此模式下有解释力的只有三个：")
         print("    答题率（召回走通没有）、R@k（相关内容找到几成）、MRR（排得对不对）。")
-        print("    要出可与 LoCoMo ≥ 70 对标的分，必须用 --answer-mode llm。")
+        print("    要与官方口径对齐（**LoCoMo 用 F1**），必须用 --answer-mode llm。")
         print("    **另外**：检索指标（R@k / MRR）只在**配置了 embedding** 时才代表系统的召回能力；")
         print("    未配置时它们是**纯关键词检索**的基线——不能拿它判断「语义召回好不好」。")
 
@@ -777,7 +818,16 @@ def main(argv: list[str] | None = None) -> int:
         "公开数据集上千题，全量跑一次要几十分钟，链路坏了却要跑完才知道",
     )
     parser.add_argument("--inspect", action="store_true", help="只打印加载器读出的内容，不跑分")
-    parser.add_argument("--min-accuracy", type=float, default=None, help="自建集的最小通过分（0-100）")
+    parser.add_argument(
+        "--min-f1",
+        type=float,
+        default=None,
+        help="显式给一条判定线（**用 F1，与 LoCoMo 官方一致**）。"
+        "不给就只记录、不判定——因为官方不设通过门槛，它的参照系是「相对基线与人类」",
+    )
+    parser.add_argument(
+        "--min-accuracy", type=float, default=None, help="按准确率判定的最小分（0-100）"
+    )
     parser.add_argument("--baseline", help="基线 JSON（`--out` 产出的），用于判定**不退步**")
     parser.add_argument("--tolerance", type=float, default=2.0, help="允许的退步幅度（分，默认 2）")
     parser.add_argument("--out", help="把明细写成 JSON")
