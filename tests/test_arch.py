@@ -42,6 +42,35 @@ def test_no_secrets_currently():
     assert scan_secrets(project_root, extra_files=(project_root / "pyproject.toml",)) == []
 
 
+def test_secret_scan_skips_directories_that_never_ship(tmp_path: Path):
+    """密钥扫描**跳过不进版本控制的目录**——但**不削弱工程目录的保护**。
+
+    判据是「它进不进仓库」，不是「它可不可疑」：对 `.codebuddy/` 里的本地笔记
+    报「疑似密钥」是**报错了对象**（那些文件已被 `.gitignore` 排除，
+    不会随仓库外泄）。而误报的代价是——人会开始加 `# noqa`，
+    或者把密钥挪到"扫不到的地方"，**门禁因此被绕过而不是被满足**。
+
+    下半个用例钉住另一面：**同样一段内容放进 `src/` 必须仍被抓到**。
+    **放宽范围与放弃检查是两件事。**
+    """
+    # **运行时拼接**，于是源码里不出现完整的 `sk-…` 字面量——
+    # 否则**仓库级扫描会命中这个测试文件自己**（本次实测就命中了，
+    # 而这恰好证明扫描器在工作）。这不是"放宽扫描"，
+    # 而是**夹具不该长得像真凭据**。
+    #
+    # `S105`（硬编码口令）：这串是**构造出来的探针**，不是凭据。
+    secret = "sk-" + "abcdefghijklmnopqrstuvwxyz012345"
+
+    (tmp_path / "src").mkdir()
+    notes = tmp_path / ".codebuddy" / "memory"
+    notes.mkdir(parents=True)
+    (notes / "note.md").write_text(f'KEY = "{secret}"\n', encoding="utf-8")
+    assert scan_secrets(tmp_path) == [], "工具私有目录里的笔记不该被当成工程密钥"
+
+    (tmp_path / "src" / "bad.py").write_text(f'KEY = "{secret}"\n', encoding="utf-8")
+    assert scan_secrets(tmp_path), "工程目录里的真密钥必须仍然被抓到"
+
+
 def test_pyproject_has_no_forbidden_dependency():
     project_root = PACKAGE_ROOT.parent.parent
     assert scan_dependencies(PACKAGE_ROOT, pyproject=project_root / "pyproject.toml") == []

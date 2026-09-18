@@ -1202,15 +1202,16 @@ def _print_report(report: dict, details: list[dict], args) -> None:
             print("      别把它读成检索问题。")
     print(f"  准确率 {report['accuracy'] * 100:.1f} · F1 {report['f1']:.3f} · EM {report['em']:.3f}")
     print(
-        f"  召回 R@{args.top_k} {report['recall@k']:.3f}"
-        f" · R@|gold| {report['recall@gold']:.3f}"
+        f"  召回 hit@1 {report['hit@1']:.3f} · hit@{args.top_k} {report['hit@k']:.3f}"
         f" · MRR {report['mrr']:.3f}"
     )
+    print(f"       R@{args.top_k} {report['recall@k']:.3f} · R@|gold| {report['recall@gold']:.3f}")
+    print("    `hit@k` 问的是「**找得到找不到**」，不受 gold 集大小影响，**先看它**。")
     print(
-        f"    **R@{args.top_k} 的上限是 {args.top_k}/|gold|**——相关记忆多于 {args.top_k} 条时，"
-        "它再完美也到不了 1.0。"
+        "    `R@|gold|` 的分母是 |gold|，而 gold 是「**该会话产生的全部记忆**」——"
+        "一个会话里往往只有\n    一两条与某道题真正相关，所以它低**可能只是量尺错配**，"
+        "不代表检索差。要一起读。"
     )
-    print("    `R@|gold|` 只看前 |gold| 条，**上限恒为 1.0**，不受 top_k 设置影响；两者要一起看。")
     print("  ——答题率与准确率的关系就是诊断：答题率高而准确率低 → 修生成；")
     print("    答题率低 → 修检索或提取（与生成无关）。")
 

@@ -131,14 +131,47 @@ def declared_requirements(pyproject: Path) -> list[str]:
     return names
 
 
+_NOT_SHIPPED = frozenset(
+    {
+        "__pycache__",
+        ".git",
+        ".codebuddy",
+        ".venv",
+        "venv",
+        ".mypy_cache",
+        ".pytest_cache",
+        ".ruff_cache",
+        "node_modules",
+    }
+)
+"""**不会随仓库发布**的目录——密钥扫描跳过它们。
+
+判据是「它**进不进版本控制**」（`.gitignore` 已排除），而不是「它可不可疑」。
+这样扫描器的**范围**才与它的**目的**（别把密钥提交进仓库）对齐：
+对一个不入库的文件报「疑似密钥」，是**报错了对象**。
+
+更要紧的是**误报的代价**：本地笔记、工具数据一旦被扫进来，人会开始加
+`# noqa`，或者干脆把密钥挪到"扫不到的地方"——**门禁会因此被绕过，
+而不是被满足**。
+
+`extra_files` 不受本集合影响——那是调用方**显式**要求检查的文件
+（如 `pyproject.toml`），显式优先于默认排除。
+"""
+
+
 def scan_secrets(root: Path, *, extra_files: tuple[Path, ...] = ()) -> list[dict]:
     """扫描源码与给定文件中的疑似真实密钥。
 
-    跳过明显的占位/示例串（``example``、``your-key``、``xxx`` 等）。
+    跳过明显的占位/示例串（``example``、``your-key``、``xxx`` 等），
+    以及**不进版本控制**的目录（见 `_NOT_SHIPPED`）。
     """
     root = Path(root)
     violations: list[dict] = []
-    targets = [p for p in sorted(root.rglob("*")) if p.is_file() and "__pycache__" not in p.parts]
+    targets = [
+        p
+        for p in sorted(root.rglob("*"))
+        if p.is_file() and not any(part in _NOT_SHIPPED for part in p.parts)
+    ]
     targets.extend(extra_files)
 
     for path in targets:

@@ -19,6 +19,7 @@ from bench.metrics import (
     Metrics,
     contains_answer,
     exact_match,
+    hit_at_k,
     mrr,
     ndcg_at_k,
     normalize,
@@ -26,6 +27,41 @@ from bench.metrics import (
     token_f1,
     tokens,
 )
+
+# --------------------------------------------------------------------------- #
+# 两个检索口径的分工（`hit@k` 与 `R@k` 测的不是同一件事）
+# --------------------------------------------------------------------------- #
+
+
+def test_hit_at_k_is_not_diluted_by_a_wide_gold_set():
+    """`hit@k` 与 `R@k` 是**两个问题**：「找得到找不到」 vs 「找到多少」。
+
+    差别在 gold 集变宽时暴露：**同一批召回**，gold 从 1 条变成 6 条，
+    `R@k` 掉到 1/6，而 `hit@k` **纹丝不动**——因为相关的那条仍在第 1 位。
+
+    实测的非对称就在这里（LoCoMo 全量）：
+    `R@|gold| 0.204` 读起来像"检索很差"，而 `hit@10 0.900` 说明
+    **90% 的题都能找到相关记忆**。前者低是量尺错配，不是能力不足。
+    """
+    retrieved = ["a", "b", "c"]
+    narrow = {"a"}
+    # 同一个会话里的其他记忆：都在库里，但与**这道题**无关
+    wide = {"a", "x", "y", "z", "w", "v"}
+
+    assert recall_at_k(retrieved, narrow, 10) == 1.0
+    assert recall_at_k(retrieved, wide, 10) == pytest.approx(1 / 6), "被 gold 集大小稀释"
+    assert hit_at_k(retrieved, narrow, 10) == 1.0
+    assert hit_at_k(retrieved, wide, 10) == 1.0, "hit 不受 gold 集大小影响"
+
+
+def test_hit_at_k_boundaries():
+    """边界：没命中、没有 qrel、没有召回——三者都不算"找到"。"""
+    assert hit_at_k(["a", "b"], {"z"}, 10) == 0.0, "一条都没进前 k"
+    assert hit_at_k(["a", "b"], {"b"}, 1) == 0.0, "第 2 条不算 hit@1"
+    assert hit_at_k(["a", "b"], {"b"}, 2) == 1.0
+    assert hit_at_k(["a"], set(), 10) == 0.0, "没有 qrel 就不构成「找到」"
+    assert hit_at_k([], {"a"}, 10) == 0.0
+
 
 # --------------------------------------------------------------------------- #
 # 归一化与分词

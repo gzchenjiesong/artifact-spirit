@@ -37,6 +37,7 @@ __all__ = [
     "Metrics",
     "contains_answer",
     "exact_match",
+    "hit_at_k",
     "mrr",
     "ndcg_at_k",
     "normalize",
@@ -209,6 +210,31 @@ def recall_at_gold(retrieved: list[str], gold_ids: set[str]) -> float:
     return hit / len(gold_ids)
 
 
+def hit_at_k(retrieved: list[str], gold_ids: set[str], k: int) -> float:
+    """前 k 条里**有没有**相关记忆——只问"找得到找不到"，不问"找到多少"。
+
+    ## 为什么它与 `R@k` 是两个必须分开的问题
+
+    `R@k` 的分母是 `|gold|`，而本仓库的 gold 是「**该会话产生的全部记忆**」。
+    在**原子记忆**粒度下，同一个会话里往往只有一两条与某道题真正相关。
+    实测（conv-26#82）：
+
+    - 问：`What did the charity race raise awareness for?`
+    - gold 6 条：`Melanie is a parent`、`Caroline is researching adoption agencies`、
+      `Melanie ran a charity race for mental health…`、`…going camping`、
+      `…carves out me-time`、`Caroline chose an adoption agency…`
+    - **只有第 3 条相关**，而系统**把它排在第 1 位**
+
+    于是 `R@|gold|` 把"准确地排在第 1 位"记成"只找到 1/6"。
+    这个数字低**不代表检索差**——它代表**量尺与问题不匹配**。
+
+    `hit@k` 不受 gold 集大小影响，所以它在两种粒度下都可读。
+    """
+    if not gold_ids:
+        return 0.0
+    return 1.0 if set(retrieved[:k]) & gold_ids else 0.0
+
+
 def mrr(retrieved: list[str], gold_ids: set[str]) -> float:
     """首个命中的倒数排名（MRR）。**衡量"排得对不对"**，不只是"找没找到"。"""
     for rank, mem_id in enumerate(retrieved, start=1):
@@ -253,6 +279,10 @@ class Metrics:
     recall_sum: float = 0.0
     recall_gold_sum: float = 0.0
     """`R@|gold|` 的累加——**上限恒为 1.0**，不受 `top_k` 卡（见 `recall_at_gold`）。"""
+    hit_sum: float = 0.0
+    hit_at_1_sum: float = 0.0
+    """`hit@k` / `hit@1` 的累加——问的是"**找得到找不到**"，
+    不受 gold 集大小影响（见 `hit_at_k`），因此对 gold 口径不敏感。"""
     mrr_sum: float = 0.0
     ndcg_sum: float = 0.0
     by_category: dict[str, Metrics] = field(default_factory=dict)
@@ -283,6 +313,8 @@ class Metrics:
         # 只是它藏在了另一个属性里。
         self.recall_sum += recall_at_k(retrieved, gold_ids, k)
         self.recall_gold_sum += recall_at_gold(retrieved, gold_ids)
+        self.hit_sum += hit_at_k(retrieved, gold_ids, k)
+        self.hit_at_1_sum += hit_at_k(retrieved, gold_ids, 1)
         # `mrr` / `ndcg` 衡量的是**前 k 名排得对不对**——传全长会把"多取了"算成好处，
         # 而它们要回答的是"在系统实际给出的 top_k 里，相关记忆排得如何"。
         self.mrr_sum += mrr(retrieved[:k], gold_ids)
@@ -324,8 +356,27 @@ class Metrics:
 
     @property
     def recall_gold(self) -> float:
-        """`R@|gold|`——**不受 `top_k` 卡上限**的召回（见 `recall_at_gold`）。"""
+        """`R@|gold|`——**不受 `top_k` 卡上限**的召回（见 `recall_at_gold`）。
+
+        **读它之前先看 gold 的构成**：本仓库的 gold 是「该会话产生的全部记忆」，
+        其中往往只有一两条与某道题真正相关。所以这个数字低**可能只是量尺错配**，
+        而不是检索差——判断时请对照 `hit` 与 `mrr`。
+        """
         return self.recall_gold_sum / self.total if self.total else 0.0
+
+    @property
+    def hit(self) -> float:
+        """`hit@k`——**相关记忆进没进前 k**。
+
+        它是这一层评测里**最该先看**的检索指标：不受 gold 集大小影响，
+        也不会被"gold 口径过宽"打偏。它掉下去，才是真的没找到。
+        """
+        return self.hit_sum / self.total if self.total else 0.0
+
+    @property
+    def hit_at_1(self) -> float:
+        """`hit@1`——**第一条就是相关记忆**的比例，衡量排序顶端的精度。"""
+        return self.hit_at_1_sum / self.total if self.total else 0.0
 
     @property
     def mrr(self) -> float:
@@ -354,6 +405,8 @@ class Metrics:
             "f1": round(self.f1, 4),
             "em": round(self.em_sum / self.total, 4) if self.total else 0.0,
             "contains": round(self.contains_sum / self.total, 4) if self.total else 0.0,
+            "hit@1": round(self.hit_at_1, 4),
+            "hit@k": round(self.hit, 4),
             "recall@k": round(self.recall, 4),
             "recall@gold": round(self.recall_gold, 4),
             "mrr": round(self.mrr, 4),
