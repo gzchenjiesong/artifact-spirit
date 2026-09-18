@@ -64,6 +64,68 @@ def test_hit_at_k_boundaries():
 
 
 # --------------------------------------------------------------------------- #
+# 时间点归一（`time_match`）：写法不同 ≠ 答错
+# --------------------------------------------------------------------------- #
+
+
+def test_time_match_accepts_the_same_date_written_differently():
+    """同一个日期的不同写法要判对——**判分器不该对排版有意见**。
+
+    LoCoMo 的 `temporal` 题：标准答案 `7 May 2023`，模型答 `2023-05-07`。
+    按 token 重叠算**一个 token 都不共享**，于是判成错。
+    实测这类误判占了 `temporal` 答错题的 **60.7%**。
+    """
+    from bench.metrics import time_match
+
+    assert time_match("2023-05-07", "7 May 2023") == 1.0
+    assert time_match("2023-05-07", "May 7, 2023") == 1.0
+    assert time_match("2023年7月", "July 2023") == 1.0
+    assert time_match("2022年12月，Maria在海滩拍了一张日落照片。", "December 2022") == 1.0
+    assert time_match("2023-08-13", "13 August") == 1.0, "标准答案没给年份也要能对上"
+
+    chinese = "在2023年6月27日之前的那一周，Melanie带家人去山里露营。"
+    assert time_match(chinese, "The week before 27 June 2023") == 1.0
+
+
+def test_time_match_refuses_to_be_loose():
+    """**只归写法，不做模糊匹配**——边界必须钉死，否则是在制造假分。
+
+    两条最关键的边界：
+
+    1. 相邻日期不能混（`7 May` ≠ `8 May`）；
+    2. 标准答案里**没有**时间记号时**不给分**——否则空集会与任意预测"相交"，
+       把不含时间的题全判成对。
+    """
+    from bench.metrics import time_match
+
+    assert time_match("2023-05-08", "7 May 2023") == 0.0, "差一天就是错"
+    assert time_match("2023-06", "July 2023") == 0.0, "差一个月就是错"
+    assert time_match("2024-05-07", "7 May 2023") == 0.0, "差一年就是错"
+    assert time_match("不知道", "7 May 2023") == 0.0, "答不出就是答不出"
+    assert time_match("2023-05-07", "mental health") == 0.0, "标准答案没有时间点，不走这条路"
+    assert time_match("", "7 May 2023") == 0.0
+    assert time_match("2023-05-07", "") == 0.0
+
+
+def test_time_marks_produce_all_three_granularities():
+    """同一个时间点固定产出**三种粒度**，且**两种写法要产出同一组**。
+
+    固定产出三种，是因为三条边界各需要一种（见 `_marks`）。
+    而"两种写法必须等价"是最容易被忽略的一条：第一版里
+    `7 May 2023` 从 `may 2023` 那支**多拿了** `2023-05`，而 `2023-05-07` 没有，
+    于是两个本该相等的时间点不相等、判成错——**而测试不钉这一条就抓不到它**。
+    """
+    from bench.metrics import time_marks
+
+    assert time_marks("2023-08-13") == {"2023-08", "2023-08-13", "08-13"}
+    assert time_marks("13 August 2023") == {"2023-08", "2023-08-13", "08-13"}
+    assert time_marks("August 13, 2023") == {"2023-08", "2023-08-13", "08-13"}
+    assert time_marks("13 August") == {"08-13"}, "只给月日时只有省年粒度"
+    assert time_marks("June 2023") == {"2023-06"}
+    assert time_marks("没有时间") == set()
+
+
+# --------------------------------------------------------------------------- #
 # 归一化与分词
 # --------------------------------------------------------------------------- #
 

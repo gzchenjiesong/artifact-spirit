@@ -42,6 +42,8 @@ __all__ = [
     "ndcg_at_k",
     "normalize",
     "recall_at_k",
+    "time_marks",
+    "time_match",
     "token_f1",
     "tokens",
 ]
@@ -153,6 +155,113 @@ def contains_answer(prediction: str, gold: str) -> float:
     if not gold_norm:
         return 0.0
     return 1.0 if gold_norm in normalize(prediction) else 0.0
+
+
+_MONTHS = {
+    "january": 1, "jan": 1, "february": 2, "feb": 2, "march": 3, "mar": 3,
+    "april": 4, "apr": 4, "may": 5, "june": 6, "jun": 6, "july": 7, "jul": 7,
+    "august": 8, "aug": 8, "september": 9, "sept": 9, "sep": 9,
+    "october": 10, "oct": 10, "november": 11, "nov": 11, "december": 12, "dec": 12,
+}  # fmt: skip
+
+
+def _marks(year: int, month: int, day: int | None = None) -> set[str]:
+    """同一个时间点产出**三种粒度**：`2023-05`（年月）/ `2023-05-07`（日）/ `05-07`（省年）。
+
+    **必须一次产出全部三种**，理由是三条边界各需要一种：
+
+    - `7 May 2023` 与 `2023-05-07` 要**相等** → 两边都得产出同一组记号。
+      只给一边多一种粒度就会不等（这正是第一版的 bug：`7 May 2023` 从
+      `may 2023` 那支多拿了 `2023-05`，而 `2023-05-07` 没有，于是判成错）；
+    - 标准答案只问"哪个月"（`June 2023`）而模型答了具体某天（`2023-06-15`）→
+      **那是对的**，靠年月粒度相遇；
+    - 标准答案只给"几月几号"（`13 August`）而模型答了带年的 → 靠省年粒度相遇。
+    """
+    out = {f"{year:04d}-{month:02d}"}
+    if day is not None:
+        out.add(f"{year:04d}-{month:02d}-{day:02d}")
+        out.add(f"{month:02d}-{day:02d}")
+    return out
+
+
+def time_marks(text: str) -> set[str]:
+    """把文本里的**时间表达**抽成可比较的记号。
+
+    **只归写法，不做模糊匹配**：`7 May` 与 `8 May` 仍是两个记号。
+    能识别的写法：`2023-05-07` / `2023/5/7` / `2023年5月7日` / `7 May 2023` /
+    `May 7, 2023` / `June 2023` / `2023年6月` / `13 August`（无年）。
+    """
+    folded = str(text or "").casefold()
+    out: set[str] = set()
+    for m in re.finditer(r"\b(\d{4})[-/](\d{1,2})[-/](\d{1,2})\b", folded):
+        out |= _marks(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    for m in re.finditer(r"\b(\d{4})[-/](\d{1,2})\b(?![-/]\d)", folded):
+        out |= _marks(int(m.group(1)), int(m.group(2)))
+    for m in re.finditer(r"(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*[日号]?", folded):
+        out |= _marks(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    for m in re.finditer(r"(\d{4})\s*年\s*(\d{1,2})\s*月", folded):
+        out |= _marks(int(m.group(1)), int(m.group(2)))
+    for m in re.finditer(r"\b(\d{1,2})\s+([a-z]{3,9})\.?\s*(\d{4})?\b", folded):
+        month = _MONTHS.get(m.group(2))
+        if not month or not 1 <= int(m.group(1)) <= 31:
+            continue
+        year_text = m.group(3)
+        if year_text:
+            out |= _marks(int(year_text), month, int(m.group(1)))
+        else:
+            out.add(f"{month:02d}-{int(m.group(1)):02d}")
+    # `<Month> <day>, <year>`——美式写法（`May 7, 2023`），
+    # 与上面的「日 月 年」是**同一批数据的两种排版**，都要认。
+    month_day = r"\b([a-z]{3,9})\.?\s+(\d{1,2})(?:st|nd|rd|th)?,?\s*(\d{4})?\b"
+    for m in re.finditer(month_day, folded):
+        month = _MONTHS.get(m.group(1))
+        if not month or not 1 <= int(m.group(2)) <= 31:
+            continue
+        year_text = m.group(3)
+        if year_text:
+            out |= _marks(int(year_text), month, int(m.group(2)))
+        else:
+            out.add(f"{month:02d}-{int(m.group(2)):02d}")
+    for m in re.finditer(r"\b([a-z]{3,9})\.?\s+(\d{4})\b", folded):
+        month = _MONTHS.get(m.group(1))
+        if month:
+            out |= _marks(int(m.group(2)), month)
+    return out
+
+
+def time_match(prediction: str, gold: str) -> float:
+    """答案里的**时间点**与标准答案是否一致——只归一写法，不做模糊匹配。
+
+    ## 为什么需要它
+
+    LoCoMo 的 `temporal` 题，标准答案是 `7 May 2023`，而模型答 `2023-05-07`：
+    **同一个日期**，但按 token 重叠算**一个 token 都不共享**，于是被判成错。
+
+    实测的规模：`temporal` 答错的题里 **195/321（60.7%）** 预测与标准答案
+    含相同数字；加上归一后**全量准确率 20.5% → 27.0%**，其中
+    `temporal` **13.1% → 43.3%**，而其余三类合计只动了 **0.5 个点**
+    （`single_hop` +0.2 / `multihop` +0.3 / `open_domain` ±0）——
+    **它只在该生效的地方生效**。
+
+    ## 三条边界（**不许放松**）
+
+    - `7 May` 与 `8 May` 是两个记号 → 仍判错；
+    - **标准答案里没有时间记号时直接返回 0**：否则空集会与任意预测"相交"，
+      把不含时间的题判成对；
+    - `13 August`（无年）能对上 `2023-08-13`，靠的是降级形式（见 `_marks`）——
+      那是刻意的，因为标准答案常只给到"几月几号"。
+
+    ## 与 F1 的关系
+
+    **它只进"准确率"，不进 F1。** F1 是 token 重叠、与 LoCoMo 官方口径一致，
+    刻意保持原样：官方的 F1 同样会惩罚写法差异，所以那一列仍可与公开数字比较。
+    """
+    if not prediction or not gold:
+        return 0.0
+    wanted = time_marks(gold)
+    if not wanted:
+        return 0.0
+    return 1.0 if wanted <= time_marks(prediction) else 0.0
 
 
 def token_f1(prediction: str, gold: str) -> float:
@@ -283,6 +392,8 @@ class Metrics:
     hit_at_1_sum: float = 0.0
     """`hit@k` / `hit@1` 的累加——问的是"**找得到找不到**"，
     不受 gold 集大小影响（见 `hit_at_k`），因此对 gold 口径不敏感。"""
+    time_sum: float = 0.0
+    """时间点一致的题数累加——**只归写法**（`2023-05-07` ≡ `7 May 2023`），见 `time_match`。"""
     mrr_sum: float = 0.0
     ndcg_sum: float = 0.0
     by_category: dict[str, Metrics] = field(default_factory=dict)
@@ -328,7 +439,11 @@ class Metrics:
         self.em_sum += exact_match(pred, gold)
         self.f1_sum += token_f1(pred, gold)
         self.contains_sum += contains_answer(pred, gold)
-        if contains_answer(pred, gold) or exact_match(pred, gold):
+        self.time_sum += time_match(pred, gold)
+        # **判对有三个来源**：字面全等 / 包含 / **时间点一致**。
+        # 第三个是"写法归一"——`2023-05-07` 与 `7 May 2023` 是同一个答案，
+        # 只因为写法不同就判错，那是**判分器在表达它对排版的观点**。
+        if contains_answer(pred, gold) or exact_match(pred, gold) or time_match(pred, gold):
             self.correct += 1
 
     @property
@@ -379,6 +494,15 @@ class Metrics:
         return self.hit_at_1_sum / self.total if self.total else 0.0
 
     @property
+    def time_hit(self) -> float:
+        """时间点与标准答案一致（含写法归一）的题占比。
+
+        **它是一条规模尺，不是能力指标**：它高，说明"答对了但写法不同"
+        被原口径误判的多；它掉下去，才说明时间类的题答得差。
+        """
+        return self.time_sum / self.total if self.total else 0.0
+
+    @property
     def mrr(self) -> float:
         return self.mrr_sum / self.total if self.total else 0.0
 
@@ -405,6 +529,7 @@ class Metrics:
             "f1": round(self.f1, 4),
             "em": round(self.em_sum / self.total, 4) if self.total else 0.0,
             "contains": round(self.contains_sum / self.total, 4) if self.total else 0.0,
+            "time_match": round(self.time_hit, 4),
             "hit@1": round(self.hit_at_1, 4),
             "hit@k": round(self.hit, 4),
             "recall@k": round(self.recall, 4),

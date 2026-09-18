@@ -1200,7 +1200,10 @@ def _print_report(report: dict, details: list[dict], args) -> None:
             print(f"    ✗ 最后一次失败：{_GEN.last_error[:160]}")
             print("      **这不是答错，是没跑成**——上面的答题率因此失去意义，")
             print("      别把它读成检索问题。")
-    print(f"  准确率 {report['accuracy'] * 100:.1f} · F1 {report['f1']:.3f} · EM {report['em']:.3f}")
+    print(
+        f"  准确率 {report['accuracy'] * 100:.1f} · F1 {report['f1']:.3f}"
+        f" · EM {report['em']:.3f} · 时间点一致 {report['time_match']:.1%}"
+    )
     print(
         f"  召回 hit@1 {report['hit@1']:.3f} · hit@{args.top_k} {report['hit@k']:.3f}"
         f" · MRR {report['mrr']:.3f}"
