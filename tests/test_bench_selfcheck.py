@@ -45,6 +45,36 @@ def test_readable_ts_renders_month_name_for_keyword_matching():
     assert _readable_ts("不是时间") == ""
 
 
+def test_context_lines_carry_each_memory_time():
+    """给模型的上下文里，每条记忆都要带**它自己的时间**。
+
+    时间在本仓库里存在 `valid_from`（提取时把「昨天」换成了绝对日期），
+    而 `content` 里往往没有。只喂 content，模型看到的是"一条没有时间的事实"，
+    于是它答「不知道，记忆里没说时间」——**在它可见的信息下完全正确**，
+    而报告会记成"生成不行"。实测这类占 `temporal` 答「不知道」的 36/59。
+    """
+    from bench.run import _format_context
+
+    class _Record:
+        def __init__(self, content, valid_from=None):
+            self.content = content
+            self.valid_from = valid_from
+
+    class _Hit:
+        def __init__(self, content, valid_from=None):
+            self.record = _Record(content, valid_from)
+
+    context = _format_context(
+        [
+            _Hit("Jon is expanding his studio's social media presence.", "2023-04-18T00:00:00+00:00"),
+            _Hit("Gina joined a pottery class.", None),
+        ]
+    )
+    lines = context.splitlines()
+    assert lines[0] == "- [18 April 2023] Jon is expanding his studio's social media presence."
+    assert lines[1] == "- Gina joined a pottery class.", "没有时间就不加空括号"
+
+
 def test_gold_matching_needs_two_keywords_when_available():
     """命中**一个**关键词不算相关——否则年份会命中全库，recall 虚高到接近 1。
 

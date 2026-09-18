@@ -455,14 +455,45 @@ def answer_extract(hits) -> str | None:
     return "\n".join((h.record.abstract or h.record.content or "") for h in hits[:5]).strip() or None
 
 
+def _format_context(hits) -> str:
+    """把召回的记忆拼成给模型的上下文——**每条都带上它自己的时间**。
+
+    理由见 `answer_llm`。抽成函数是为了能离线测（它不碰网络）。
+    """
+    lines: list[str] = []
+    for hit in hits:
+        record = hit.record
+        stamp = _readable_ts(record.valid_from)
+        lines.append(f"- [{stamp}] {record.content}" if stamp else f"- {record.content}")
+    return "\n".join(lines)
+
+
 def answer_llm(question: str, hits) -> str | None:
     """让模型读召回内容作答。**只在给得出上下文时才调用**——没有召回就不问，
-    否则模型会用自己的先验编一个答案，而那会把「检索失败」伪装成「生成成功」。"""
+    否则模型会用自己的先验编一个答案，而那会把「检索失败」伪装成「生成成功」。
+
+    ## 每条记忆必须带上**它自己的时间**
+
+    这是被数据逼出来的：本仓库的记忆把时间放在 `valid_from` 字段里
+    （提取时把「昨天」换算成了绝对日期），而 `content` 里往往**没有**时间：
+
+    - `content`：`Jon is expanding his dance studio's social media presence…`
+    - `valid_from`：`2023-04-XX`　← 问题问的"什么时候"**在这里**
+
+    只喂 `content`，模型看到的就是一条**没有时间的事实**，
+    于是它答「不知道，记忆里没说时间」——**那个回答在它可见的信息下完全正确**，
+    而报告会把它记成"生成不行"，把人推去改模型。
+
+    实测：`temporal` 里 59 题答「不知道」，其中 **36 题的上下文里确实有相关记忆**，
+    而它们的共同点正是 content 无时间、时间在 `valid_from`。
+    """
     if not hits:
         return None
-    context = "\n".join(f"- {h.record.content}" for h in hits[:10])
+    context = _format_context(hits[:10])
     return _llm_generate(
-        "只根据给定的记忆回答，不要使用你自己的知识。记忆里没有就回答「不知道」。答案尽量短。",
+        "只根据给定的记忆回答，不要使用你自己的知识。记忆里没有就回答「不知道」。"
+        "每条记忆开头的方括号是**这条记忆成立的时间**，它通常就是该事件发生的时间，"
+        "回答时间类问题时以它作答；若记忆正文里另有更具体的日期，以正文为准。答案尽量短。",
         f"记忆：\n{context}\n\n问题：{question}",
     )
 
@@ -612,11 +643,15 @@ def evaluate_group(
             print(f"  [只灌入] {key}：库已就绪，本次不提问")
             return []
 
-        for question in questions:
+        for index, question in enumerate(questions, 1):
             try:
                 rows.append(_ask(services, question, top_k=top_k, mode=mode))
             except Exception as exc:
                 rows.append(_error_row(question, exc))
+            # **评测阶段同样要可见**：每题一次生成调用（约 4 秒），152 题就是 10 分钟静默。
+            # 与灌入进度同一个理由（§21.6）：静默在命令行里等同于"卡死了"，
+            # 外面的人区分不了它在干活还是已经死了。
+            print(f"      [{index}/{len(questions)}] {question.id}", flush=True)
     finally:
         services.stop(drain=True)
     return rows
