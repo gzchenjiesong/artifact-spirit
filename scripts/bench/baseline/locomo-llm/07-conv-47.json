@@ -8,12 +8,15 @@
   },
   "report": {
     "total": 150,
-    "answered": 150,
-    "answer_rate": 1.0,
-    "accuracy": 0.2667,
-    "f1": 0.306,
-    "em": 0.1133,
-    "contains": 0.2667,
+    "answered": 146,
+    "answer_rate": 0.9733,
+    "accuracy": 0.4467,
+    "f1": 0.2476,
+    "em": 0.0533,
+    "contains": 0.3667,
+    "time_match": 0.1267,
+    "hit@1": 0.6867,
+    "hit@k": 0.9333,
     "recall@k": 0.2606,
     "recall@gold": 0.2462,
     "mrr": 0.7823,
@@ -23,10 +26,13 @@
         "total": 13,
         "answered": 13,
         "answer_rate": 1.0,
-        "accuracy": 0.0769,
-        "f1": 0.1696,
-        "em": 0.0769,
-        "contains": 0.0769,
+        "accuracy": 0.1538,
+        "f1": 0.1094,
+        "em": 0.0,
+        "contains": 0.1538,
+        "time_match": 0.0,
+        "hit@1": 0.3846,
+        "hit@k": 0.7692,
         "recall@k": 0.1533,
         "recall@gold": 0.1382,
         "mrr": 0.4872,
@@ -35,12 +41,15 @@
       },
       "temporal": {
         "total": 34,
-        "answered": 34,
-        "answer_rate": 1.0,
-        "accuracy": 0.0,
-        "f1": 0.2163,
+        "answered": 31,
+        "answer_rate": 0.9118,
+        "accuracy": 0.6471,
+        "f1": 0.1822,
         "em": 0.0,
-        "contains": 0.0,
+        "contains": 0.2941,
+        "time_match": 0.5294,
+        "hit@1": 0.6765,
+        "hit@k": 0.9412,
         "recall@k": 0.2507,
         "recall@gold": 0.2405,
         "mrr": 0.799,
@@ -51,10 +60,13 @@
         "total": 20,
         "answered": 20,
         "answer_rate": 1.0,
-        "accuracy": 0.1,
-        "f1": 0.1985,
-        "em": 0.05,
-        "contains": 0.1,
+        "accuracy": 0.05,
+        "f1": 0.1759,
+        "em": 0.0,
+        "contains": 0.05,
+        "time_match": 0.0,
+        "hit@1": 0.35,
+        "hit@k": 0.9,
         "recall@k": 0.1731,
         "recall@gold": 0.2039,
         "mrr": 0.563,
@@ -63,12 +75,15 @@
       },
       "single_hop": {
         "total": 83,
-        "answered": 83,
-        "answer_rate": 1.0,
-        "accuracy": 0.4458,
-        "f1": 0.39,
-        "em": 0.1807,
-        "contains": 0.4458,
+        "answered": 82,
+        "answer_rate": 0.988,
+        "accuracy": 0.506,
+        "f1": 0.3134,
+        "em": 0.0964,
+        "contains": 0.506,
+        "time_match": 0.012,
+        "hit@1": 0.8193,
+        "hit@k": 0.9639,
         "recall@k": 0.3025,
         "recall@gold": 0.2756,
         "mrr": 0.8745,
@@ -83,7 +98,7 @@
       "category": "open_domain",
       "question": "What are John's suspected health problems?",
       "answer": "Obesity",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories contain no information about John's health problems.",
       "retrieved_ids": [
         "cor_01M2QSWY0ES943CHRPXVDBMW82",
         "sem_01M2QSE0YQY0S271GFX3X44HWD",
@@ -106,7 +121,7 @@
       "category": "temporal",
       "question": "Which recreational activity was James pursuing on March 16, 2022?",
       "answer": "bowling",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories contain no information about what James was doing on March 16, 2022 (the only March 2022 entry concerns John, not James).",
       "retrieved_ids": [
         "epi_01M2QSVRY160JF1H8SJEPJJ05R",
         "epi_01M2QRT4B185HKXY62TTGWGENG",
@@ -129,7 +144,7 @@
       "category": "multihop",
       "question": "Which places or events have John and James planned to meet at?",
       "answer": "VR Club, McGee's, baseball game",
-      "prediction": "- McGee's Pub — to have drinks on 2022-08-27.\n- The organization that provides necessary items to people in need — James agreed to take John there for a visit (weekend of 2022-06-25).\n- They also agreed to travel somewhere together in 2023, but no destination has been chosen yet.",
+      "prediction": "Based on the memories, John and James planned to meet at:\n\n1. **McGee's Pub** – on 2022-08-27, to have drinks (light beer for John), since John had the day off.\n2. **The organization that provides necessary items to people in need** – on the weekend of 2022-06-25, where James would take John to visit and introduce him to some staff.\n3. **A trip somewhere together in 2023** – agreed on 2022-04-20, with James to look for a destination country and keep John posted.",
       "retrieved_ids": [
         "epi_01M2QSH0HE2P5XTCMKX6WRM0ZW",
         "sem_01M2QS391KAKHNH0VP9DFPA898",
@@ -177,7 +192,7 @@
       "category": "multihop",
       "question": "Do both James and John have pets?",
       "answer": "No",
-      "prediction": "No. James has pets (dogs), but John currently has no pets, though he wants to get one someday.",
+      "prediction": "No. James has pets (dogs), but John does not have any pets yet—he wants to get one someday.",
       "retrieved_ids": [
         "sem_01M2QSAKCZXCB0NG8YRGQF6Q34",
         "sem_01M2QSCAT14BKCEMYCDBRRHWQ2",
@@ -207,7 +222,7 @@
       "category": "temporal",
       "question": "When did John resume playing drums in his adulthood?",
       "answer": "February 2022",
-      "prediction": "大约在 2022-02-27（截至 2022-03-27，他已重新打鼓一个月）。",
+      "prediction": "John resumed playing drums around **2022-02",
       "retrieved_ids": [
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE7A",
         "sem_01M2QR9DFVW7VD5SQZN0K07642",
@@ -238,7 +253,7 @@
       "category": "multihop",
       "question": "What are John and James' favorite games?",
       "answer": "John's favorite game is CS:GO, and James's is Apex Legends.",
-      "prediction": "John's favorite game is CS:GO. James's favorite game is not mentioned in the memory (only that he's into RPGs and likes trying new games).",
+      "prediction": "John's favorite game is CS:GO. James's favorite game isn't mentioned in the memory — it only says he's really into RPGs and always up for trying new games.",
       "retrieved_ids": [
         "sem_01M2QSWY0ES943CHRPXVDBMW86",
         "sem_01M2QR9DFVW7VD5SQZN0K07644",
@@ -280,7 +295,7 @@
       "category": "open_domain",
       "question": "Does James live in Connecticut?",
       "answer": "Likely yes",
-      "prediction": "不知道。记忆中只提到James从Stamford的收容所领养了小狗，以及租了离McGee's酒吧不远的公寓，但没有说明他是否住在Connecticut。",
+      "prediction": "The memories don't say. They only mention that James adopted his puppy Ned from a shelter in Stamford, but there's no information confirming where James himself lives.",
       "retrieved_ids": [
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE75",
         "epi_01M2QT25H51C6JQNGAYAVS93EW",
@@ -306,7 +321,7 @@
       "category": "open_domain",
       "question": "In which state is the shelter from which James adopted the puppy?",
       "answer": "Connecticut.",
-      "prediction": "不知道。记忆中只提到收容所在 Stamford，没有说明所在的州。",
+      "prediction": "I don't know. The memory only says James adopted Ned from a shelter in Stamford, but it doesn't mention which state Stamford is in.",
       "retrieved_ids": [
         "epi_01M2QRBYA911CQ4JD7WFNDCMXK",
         "sem_01M2QSCAT14BKCEMYCDBRRHWQ2",
@@ -332,7 +347,7 @@
       "category": "multihop",
       "question": "How many pets does James have?",
       "answer": "Three dogs.",
-      "prediction": "不知道。记忆中提到James养了狗（包括名叫Max和Daisy的狗以及一只小狗），但没有说明宠物的具体数量。",
+      "prediction": "The memories don't state an exact number. We know James has dogs—including one named Max, one named Daisy, and a puppy—but the total count of his pets isn't specified.",
       "retrieved_ids": [
         "sem_01M2QRJCXDCQQWJ5M49ZQP96PS",
         "sem_01M2QSCAT14BKCEMYCDBRRHWQ2",
@@ -359,7 +374,7 @@
       "category": "multihop",
       "question": "What are the names of James's dogs?",
       "answer": "Ned, Daisy, Max",
-      "prediction": "Max, Daisy, and Ned.",
+      "prediction": "James's dogs are named **Max, Daisy, and Ned** (Ned being the new puppy he introduced to the other two on 2022-06-17).",
       "retrieved_ids": [
         "sem_01M2QRGP3FPWVRWKXJDBQMVNV1",
         "sem_01M2QR7VNQFGDZNMAJARF59TC6",
@@ -386,7 +401,7 @@
       "category": "temporal",
       "question": "When did James adopt Ned?",
       "answer": "first week of April 2022",
-      "prediction": "Around 2022-04-05 (the week before 2022-04-12).",
+      "prediction": "James adopted Ned around 2022-04-05 (during the week before 2022-04-12), from a shelter in Stamford.",
       "retrieved_ids": [
         "sem_01M2QS4CBZZ6AMFHY3GGW9BF94",
         "epi_01M2QRBYA911CQ4JD7WFNDCMXK",
@@ -412,7 +427,7 @@
       "category": "temporal",
       "question": "How was John feeling on April 10, 2022?",
       "answer": "seeking solitude",
-      "prediction": "不知道。",
+      "prediction": null,
       "retrieved_ids": [
         "epi_01M2QT25H51C6JQNGAYAVS93EV",
         "epi_01M2QRT4B185HKXY62TTGWGENG",
@@ -450,7 +465,7 @@
       "category": "open_domain",
       "question": "Did James have a girlfriend during April 2022?",
       "answer": "Presumably not",
-      "prediction": "不知道。记忆中只提到 James 在 2022-09-03 才请 Samantha 做他女朋友，没有提到 2022 年 4 月时他有女朋友。",
+      "prediction": "No. James only asked Samantha to be his girlfriend on 2022-09-03, so he did not have a girlfriend during April 2022. (In April he had only seen a woman he fell in love with at first sight but never approached her.)",
       "retrieved_ids": [
         "epi_01M2QRT4B185HKXY62TTGWGENG",
         "epi_01M2QSKN71Y1R5XM5Z40AR81FY",
@@ -461,9 +476,9 @@
         "epi_01M2QRF27EWQRQKBQYBV4RAYTD",
         "pro_01M2QRT4B185HKXY62TTGWGENH",
         "epi_01M2QRGP3FPWVRWKXJDBQMVNTY",
+        "epi_01M2QSY7Y13P77G0R0T526TDMY",
         "epi_01M2QRT4B185HKXY62TTGWGENE",
         "epi_01M2QS4CBZZ6AMFHY3GGW9BF99",
-        "epi_01M2QSY7Y13P77G0R0T526TDMY",
         "epi_01M2QS5NVSDRSEAFTD4FZ2J3TF"
       ],
       "gold_ids": [
@@ -488,7 +503,7 @@
       "category": "temporal",
       "question": "When did James visit Italy?",
       "answer": "In 2021",
-      "prediction": "2021年。",
+      "prediction": "James visited Italy in 2021.",
       "retrieved_ids": [
         "sem_01M2QRD7CCZ68EMJS39PFYF2DH",
         "sem_01M2QS5NVSDRSEAFTD4FZ2J3TJ",
@@ -526,7 +541,7 @@
       "category": "temporal",
       "question": "When did James buy himself a new adventure book?",
       "answer": "April 26, 2022",
-      "prediction": "2022年4月26日（2022-04-26）。",
+      "prediction": "James bought himself a new adventure book on 26 April 2022 (2022-04-26).",
       "retrieved_ids": [
         "epi_01M2QRGP3FPWVRWKXJDBQMVNTY",
         "sem_01M2QS391KAKHNH0VP9DFPA897",
@@ -539,8 +554,8 @@
         "epi_01M2QRT4B185HKXY62TTGWGENG",
         "sem_01M2QSVRY160JF1H8SJEPJJ05N",
         "epi_01M2QRAK7EH3ZYKBKA5TA47P50",
-        "cor_01M2QSRF5DVAQ2VYZ50KFDWE78",
-        "epi_01M2QSWY0ES943CHRPXVDBMW85"
+        "epi_01M2QSWY0ES943CHRPXVDBMW85",
+        "epi_01M2QRF27EWQRQKBQYBV4RAYTD"
       ],
       "gold_ids": [
         "cor_01M2QRGP3FPWVRWKXJDBQMVNTW",
@@ -564,7 +579,7 @@
       "category": "temporal",
       "question": "When did James start playing Civilization VI?",
       "answer": "March 2022",
-      "prediction": "Around 2022-03-29.",
+      "prediction": "James started playing Civilization VI around March 29, 2022.",
       "retrieved_ids": [
         "sem_01M2QRGP3FPWVRWKXJDBQMVNV4",
         "sem_01M2QSH0HE2P5XTCMKX6WRM0ZT",
@@ -602,7 +617,7 @@
       "category": "open_domain",
       "question": "What is the game with different colored cards that was John talking about with James?",
       "answer": "UNO",
-      "prediction": "不知道",
+      "prediction": "根据记忆，无法回答这个问题。记忆中提到了 John 和 James 讨论过的几款游戏（未来反乌托邦题材的 RPG、冒充者推理派对游戏、2D 冒险手游、线上桌游等），但没有任何记忆提到「不同颜色的卡片」这一细节，因此不知道 John 说的是哪款游戏。",
       "retrieved_ids": [
         "epi_01M2QRBYA911CQ4JD7WFNDCMXP",
         "sem_01M2QRAK7F87NFAJS636GTGBA7",
@@ -640,7 +655,7 @@
       "category": "open_domain",
       "question": "What is the board game where you have to find the imposter that John mentions to James?",
       "answer": "Mafia",
-      "prediction": "不知道。记忆中只提到John最近在玩一款“找出内鬼”的推理派对游戏，但没有给出具体游戏名称。",
+      "prediction": "I don't know. The memories only mention that John plays an impostor-deduction party game with friends, but they don't give the game's specific name, nor do they record John mentioning this game to James.",
       "retrieved_ids": [
         "sem_01M2QT5TW7X19XKP49ESV09VB2",
         "epi_01M2QT5TW7X19XKP49ESV09VB1",
@@ -650,9 +665,9 @@
         "sem_01M2QSVRY160JF1H8SJEPJJ05P",
         "sem_01M2QRGP3FPWVRWKXJDBQMVNV6",
         "sem_01M2QT5TW7X19XKP49ESV09VB3",
-        "epi_01M2QRBYA911CQ4JD7WFNDCMXP",
-        "sem_01M2QRAK7F87NFAJS636GTGBA7",
         "sem_01M2QRBYA911CQ4JD7WFNDCMXM",
+        "sem_01M2QRAK7F87NFAJS636GTGBA7",
+        "epi_01M2QRBYA911CQ4JD7WFNDCMXP",
         "epi_01M2QSRF5DVAQ2VYZ50KFDWE74",
         "sem_01M2QR7VNQFGDZNMAJARF59TC8"
       ],
@@ -678,7 +693,7 @@
       "category": "multihop",
       "question": "Which books has John recommended to James?",
       "answer": "The Name of the Wind, Stormlight Archive, Kingkiller Chronicles, Expanse",
-      "prediction": "'The Name of the Wind' (a fantasy novel, recommended on 2022-04-29).",
+      "prediction": "John recommended the fantasy novel **'The Name of the Wind'** to James (on 2022-04-29).",
       "retrieved_ids": [
         "epi_01M2QRGP3FPWVRWKXJDBQMVNV0",
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE76",
@@ -736,7 +751,7 @@
       "category": "open_domain",
       "question": "Was James feeling lonely before meeting Samantha?",
       "answer": "Most likely yes, because he mentioned that the only creatures that gave him joy are dogs and he was actively trying to date.",
-      "prediction": "不知道。",
+      "prediction": "I don't know. The memories don't mention James feeling lonely before meeting Samantha — they only record his gaming activities, music interests, and how he met her at the beach outing on 2022-08-09.",
       "retrieved_ids": [
         "epi_01M2QSE0YRHXS1793M9K88KSRH",
         "epi_01M2QSE0YRHXS1793M9K88KSRG",
@@ -776,7 +791,7 @@
       "category": "multihop",
       "question": "How many charity tournaments has John organized till date?",
       "answer": "two",
-      "prediction": "**2** — the CS:GO tournament on 2022-05-07 (raised money for charity) and the gaming tournament on 2022-10-30 (raised money for a children's hospital).",
+      "prediction": "John has organized **2** charity tournaments so far:\n1. A CS:GO tournament on 2022-05-07, which raised a lot of money for charity.\n2. A gaming tournament (Fortnite, Overwatch, and Apex Legends) on 2022-10-30, which raised money for a children's hospital.",
       "retrieved_ids": [
         "epi_01M2QRKRA2G6SBAD0YGR542XXA",
         "epi_01M2QT25H51C6JQNGAYAVS93EV",
@@ -806,7 +821,7 @@
       "category": "temporal",
       "question": "When did John first organize a charity tournament with his friends?",
       "answer": "May 7, 2022",
-      "prediction": "2022-05-07（他组织了一场与朋友一起的 CS:GO 慈善锦标赛）。",
+      "prediction": "John first organized a charity tournament with his friends on **7 May 2022** — a CS:GO tournament that raised money for a dog shelter.",
       "retrieved_ids": [
         "epi_01M2QRKRA2G6SBAD0YGR542XXA",
         "sem_01M2QRKRA2G6SBAD0YGR542XXE",
@@ -833,7 +848,7 @@
       "category": "multihop",
       "question": "Who or which organizations have been the beneficiaries of John's charity tournaments?",
       "answer": "animal shelter, homeless, children's hospital",
-      "prediction": "根据记忆，受益方包括：\n\n- **一家儿童医院**：2022-10-30 的游戏锦标赛（Fortnite、Overwatch、Apex Legends）为其筹集了一笔可观的善款。\n- **慈善事业（未指明具体机构）**：2022-05-07 的 CS:GO 锦标赛筹集了大量善款用于慈善，但记忆中未说明具体受益组织。",
+      "prediction": "A children's hospital — the gaming tournament John organized on 2022-10-30 (Fortnite, Overwatch, Apex Legends) raised money for it. His earlier CS:GO tournament on 2022-05-07 also raised money for charity, but no specific organization is named.",
       "retrieved_ids": [
         "sem_01M2QSCAT14BKCEMYCDBRRHWPZ",
         "sem_01M2QRKRA2G6SBAD0YGR542XXE",
@@ -863,7 +878,7 @@
       "category": "temporal",
       "question": "When will John start his new job?",
       "answer": "In July, 2022",
-      "prediction": "July 2022.",
+      "prediction": "John plans to start his new dream job in July 2022.",
       "retrieved_ids": [
         "epi_01M2QRXPXP95KF59BC2MD8MHXX",
         "epi_01M2QSCAT14BKCEMYCDBRRHWPW",
@@ -892,7 +907,7 @@
       "category": "multihop",
       "question": "What kind of games has James tried to develop?",
       "answer": "football simulator, virtual world inspired by Witcher 3",
-      "prediction": "A strategy game similar to Civilization.",
+      "prediction": "James has tried to develop a strategy game similar to Civilization, inspired by his love of strategy games like Civilization and Total War. After releasing his first game, he also plans to develop more games in different genres and test out new ideas.",
       "retrieved_ids": [
         "sem_01M2QSY7Y13P77G0R0T526TDN0",
         "sem_01M2QRJCXDCQQWJ5M49ZQP96PV",
@@ -905,8 +920,8 @@
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE7D",
         "sem_01M2QSVRY160JF1H8SJEPJJ05S",
         "sem_01M2QRXPXP95KF59BC2MD8MHXY",
-        "cor_01M2QSRF5DVAQ2VYZ50KFDWE78",
-        "epi_01M2QT1B7DHNSV9ZCM1WZ0DE5A"
+        "epi_01M2QT1B7DHNSV9ZCM1WZ0DE5A",
+        "sem_01M2QRAK7F87NFAJS636GTGBA9"
       ],
       "gold_ids": [
         "epi_01M2QR737186FFTMV5FJPP79E2",
@@ -930,7 +945,7 @@
       "category": "open_domain",
       "question": "Are John and James fans of the same football team?",
       "answer": "No, James is a Liverpool fan and John is a Manchester City fan.",
-      "prediction": "No. James is a Liverpool FC fan, while John is a Manchester City FC fan.",
+      "prediction": "No. James is a devoted Liverpool FC fan, while John is a Manchester City FC fan — they support rival teams.",
       "retrieved_ids": [
         "sem_01M2QRXPXP95KF59BC2MD8MHY0",
         "epi_01M2QRAK7F87NFAJS636GTGBA6",
@@ -959,7 +974,7 @@
       "category": "multihop",
       "question": "Which countries has James visited?",
       "answer": "Italy, Mexico, Turkey, Canada, Greenland",
-      "prediction": "意大利、土耳其和墨西哥。",
+      "prediction": "James has visited Italy (in 2021), Turkey, Mexico, Canada (July 2022), and Greenland (where he visited the city of Nuuk).",
       "retrieved_ids": [
         "sem_01M2QRD7CCZ68EMJS39PFYF2DH",
         "sem_01M2QS5NVSDRSEAFTD4FZ2J3TJ",
@@ -1033,7 +1048,7 @@
       "category": "multihop",
       "question": "What kind of classes has James joined?",
       "answer": "game design course, cooking classes",
-      "prediction": "James 报名了烹饪课（2022-09-02，每节课 $10）。此外，2022年6月起他还在上一门结合游戏与编程的课程。",
+      "prediction": "James joined a **cooking class** (signed up on 2022-09-02, costing $10 per lesson), even though he never liked cooking before and wanted to learn something new. He is also taking a course that combines gaming and programming.",
       "retrieved_ids": [
         "sem_01M2QSAKD03N7XR684GHZHYTSW",
         "sem_01M2QS391KAKHNH0VP9DFPA898",
@@ -1081,7 +1096,7 @@
       "category": "temporal",
       "question": "When did James volunteer at an organization?",
       "answer": "May 2022",
-      "prediction": "2022年5月。",
+      "prediction": "In May 2022, James volunteered with an organization that provides necessary items to people who are less fortunate.",
       "retrieved_ids": [
         "epi_01M2QS4CBZZ6AMFHY3GGW9BF99",
         "epi_01M2QS4CBZZ6AMFHY3GGW9BF98",
@@ -1109,7 +1124,7 @@
       "category": "temporal",
       "question": "When did James depart for his trip to Canada?",
       "answer": "July 11, 2022",
-      "prediction": "On the evening of 2022-07-11.",
+      "prediction": "James departed for his trip to Canada on the evening of 2022-07-11 (July 11, 2022), when he flew to Toronto.",
       "retrieved_ids": [
         "sem_01M2QS5NVSDRSEAFTD4FZ2J3TJ",
         "epi_01M2QT3GT21D6ANAQGXB31CN0T",
@@ -1139,7 +1154,7 @@
       "category": "open_domain",
       "question": "Which country did James book tickets for in July 2022?",
       "answer": "Canada",
-      "prediction": "Canada.",
+      "prediction": "Canada. (He bought tickets to Toronto and also planned to visit Vancouver, both in Canada.)",
       "retrieved_ids": [
         "epi_01M2QS5NVSDRSEAFTD4FZ2J3TH",
         "sem_01M2QS5NVSDRSEAFTD4FZ2J3TJ",
@@ -1169,7 +1184,7 @@
       "category": "temporal",
       "question": "How many days did James plan to spend on his trip in Canada?",
       "answer": "19 days",
-      "prediction": "9天（2022年7月11日晚出发，7月20日返回）。",
+      "prediction": "James planned to spend **9 days** on his Canada trip — he was to depart on the evening of 2022-07-11 and return on 2022-07-20.",
       "retrieved_ids": [
         "sem_01M2QS5NVSDRSEAFTD4FZ2J3TJ",
         "epi_01M2QRD7CCZ68EMJS39PFYF2DM",
@@ -1199,7 +1214,7 @@
       "category": "temporal",
       "question": "Where was James at on July 12, 2022?",
       "answer": "Toronto, Canada",
-      "prediction": "Toronto（他于2022-07-11晚飞往多伦多，7月12日应在多伦多）。",
+      "prediction": "根据记忆推断：James 于 2022-07-11 晚乘飞机前往 Toronto（多伦多），并计划游览 Vancouver，7 月 20 日才返回。因此 2022 年 7 月 12 日，James 应该在加拿大的 Toronto（多伦多）。",
       "retrieved_ids": [
         "epi_01M2QS5NVSDRSEAFTD4FZ2J3TD",
         "epi_01M2QS5NVSDRSEAFTD4FZ2J3TF",
@@ -1229,7 +1244,7 @@
       "category": "open_domain",
       "question": "Did John and James study together?",
       "answer": "Yes",
-      "prediction": "不知道。",
+      "prediction": "No record of them studying together. The memories only show John promising to send James resources and tutorials about programming techniques (October 2022), but there is no mention of them actually studying together.",
       "retrieved_ids": [
         "sem_01M2QSAKD03N7XR684GHZHYTSW",
         "sem_01M2QT3GT3VM13DVDXVKJT3H8Q",
@@ -1261,7 +1276,7 @@
       "category": "multihop",
       "question": "Which countries did James visit in July 2022?",
       "answer": "Canada, Greenland",
-      "prediction": "Canada（他于2022年7月11日出发前往多伦多，还计划去温哥华，7月20日返回）。",
+      "prediction": "Canada — he flew to Toronto on 2022-07-11 and also planned to visit Vancouver, returning on 2022-07-20. This trip was his visit to his fourth country.",
       "retrieved_ids": [
         "sem_01M2QRD7CCZ68EMJS39PFYF2DH",
         "epi_01M2QS5NVSDRSEAFTD4FZ2J3TH",
@@ -1309,7 +1324,7 @@
       "category": "open_domain",
       "question": "What additional country did James visit during his trip to Canada?",
       "answer": "Greenland",
-      "prediction": "不知道。记忆中只提到James的加拿大之行包括多伦多和温哥华，没有提到在加拿大之行期间访问了其他额外国家。",
+      "prediction": "**Greenland**（格陵兰）。James 的加拿大之行于 2022-07-20 结束，而 2022-07-22 的记忆显示他最近完成的一次旅行中到访了努克（Nuuk，格陵兰），因此这次加拿大之行期间他还额外去了格陵兰。",
       "retrieved_ids": [
         "sem_01M2QS5NVSDRSEAFTD4FZ2J3TJ",
         "epi_01M2QS5NVSDRSEAFTD4FZ2J3TH",
@@ -1341,7 +1356,7 @@
       "category": "open_domain",
       "question": "Who is Jill?",
       "answer": "Most likely John's partner.",
-      "prediction": "Jill is a close person of John's, likely his partner (James referred to her as \"your Jill\").",
+      "prediction": "Jill is a close person of John's — James referred to her as \"your Jill,\" suggesting she is likely John's partner.",
       "retrieved_ids": [
         "sem_01M2QSAKD03N7XR684GHZHYTSV",
         "cor_01M2QRGP3FPWVRWKXJDBQMVNTW",
@@ -1373,7 +1388,7 @@
       "category": "temporal",
       "question": "When did John spend time with his sister and dogs?",
       "answer": "July 21, 2022",
-      "prediction": "不知道。记忆中是 James（而非 John）在 2022-07-21 和他的姐姐及狗一起看日落；John 目前没有宠物。",
+      "prediction": "The memory doesn't say John did this — it was **James** who chilled with his sister and his dogs on **2022-07-21**, watching a sunset near the ocean. John only received the best photo from James (John has no pets himself).",
       "retrieved_ids": [
         "epi_01M2QSGCR4AYZE6DGTGH2HC2Q4",
         "sem_01M2QSAKD03N7XR684GHZHYTSW",
@@ -1405,7 +1420,7 @@
       "category": "multihop",
       "question": "What happened to John's job situation in 2022?",
       "answer": "quit his IT Job, secured his dream job, aspires to become an eSports competition organizer",
-      "prediction": "In 2022, John left his IT job of 3 years because he wanted work that aligned with his values. On 2022-06-13, he accepted an offer for his dream job after many interviews, and started it in July 2022. He loves the new job and is happy about his career change.",
+      "prediction": "In 2022, John changed careers. He had worked at an IT job for 3 years, but left it because he wanted work that makes a difference and aligns with his values. On 2022-06-13, he told James he had received and accepted an offer for his dream job after many interviews and late nights, planning to start in July 2022. By August 2022, he had started the new job, which he loves, and he was happy about his decision to change careers.",
       "retrieved_ids": [
         "epi_01M2QRXPXP95KF59BC2MD8MHXX",
         "epi_01M2QSCAT14BKCEMYCDBRRHWPW",
@@ -1445,7 +1460,7 @@
       "category": "temporal",
       "question": "When did John start his job in IT?",
       "answer": "2019",
-      "prediction": "不知道。记忆中只提到 John 在 IT 工作做了 3 年后离职，没有说明具体开始时间。",
+      "prediction": "根据记忆，John 在 2022 年 8 月 6 日左右“最近”离开了他的 IT 工作，并且在那里工作了 3 年。由此可以推断，他大约在 **2019 年 8 月** 开始了那份 IT 工作。",
       "retrieved_ids": [
         "epi_01M2QRXPXP95KF59BC2MD8MHXX",
         "epi_01M2QSCAT14BKCEMYCDBRRHWPW",
@@ -1475,7 +1490,7 @@
       "category": "multihop",
       "question": "What kind of tricks do James's pets know?",
       "answer": "swimming, catching frisbees, balancing on a skateboard, sit, stay, paw, and rollover",
-      "prediction": "James的宠物会的把戏包括：坐下、等待、握手、打滚，以及站在滑板上保持平衡。",
+      "prediction": "James's dogs know tricks including sit, stay, paw, and rollover. He has also taught them to balance on a skateboard, which they love—chasing after the board and running alongside it.",
       "retrieved_ids": [
         "sem_01M2QR7VNQFGDZNMAJARF59TC6",
         "sem_01M2QRJCXDCQQWJ5M49ZQP96PS",
@@ -1541,7 +1556,7 @@
       "category": "temporal",
       "question": "When did James meet Samantha?",
       "answer": "August 9, 2022",
-      "prediction": "2022-08-09，在海滩郊游时。",
+      "prediction": "James met Samantha on 2022-08-09, at the beach outing.",
       "retrieved_ids": [
         "epi_01M2QSE0YRHXS1793M9K88KSRG",
         "epi_01M2QSE0YRHXS1793M9K88KSRH",
@@ -1571,7 +1586,7 @@
       "category": "temporal",
       "question": "When did James take his 3 dogs to the beach?",
       "answer": "August 9, 2022",
-      "prediction": "2022-08-09",
+      "prediction": "On 2022-08-09 (August 9, 2022), James took his three dogs to a beach outing.",
       "retrieved_ids": [
         "epi_01M2QSE0YRHXS1793M9K88KSRF",
         "epi_01M2QSE0YRHXS1793M9K88KSRG",
@@ -1601,7 +1616,7 @@
       "category": "temporal",
       "question": "When did John plan his next meeting with his siblings?",
       "answer": "In September, 2022",
-      "prediction": "2022年9月（他计划与兄弟姐妹们举办游戏之夜）。",
+      "prediction": "John planned to meet his siblings for a gaming night in September 2022 (organized as of 21 August 2022).",
       "retrieved_ids": [
         "sem_01M2QSGCR4AYZE6DGTGH2HC2Q9",
         "sem_01M2QSGCR4AYZE6DGTGH2HC2Q8",
@@ -1630,7 +1645,7 @@
       "category": "open_domain",
       "question": "Why didn't John want to go to Starbucks?",
       "answer": "Possibly because he likes to drink beer on his days off.",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention anything about Starbucks or John's reasons for not wanting to go there.",
       "retrieved_ids": [
         "sem_01M2QSAKCZXCB0NG8YRGQF6Q34",
         "epi_01M2QR737186FFTMV5FJPP79E2",
@@ -1658,7 +1673,7 @@
       "category": "multihop",
       "question": "What kind of beer does McGee's bar serve?",
       "answer": "Stout, lager",
-      "prediction": "不知道。记忆只提到Samantha在McGee's喝lager、John将在那里喝light beer，但未明确说明McGee's酒吧供应哪些种类的啤酒。",
+      "prediction": "Based on the memories, McGee's bar serves at least two kinds of beer: lager (Samantha loves lager, which James discovered when they were there) and light beer (John prefers light beer, and it was planned he would drink light beer when meeting James at McGee's Pub).",
       "retrieved_ids": [
         "sem_01M2QT25H51C6JQNGAYAVS93EX",
         "epi_01M2QT25H51C6JQNGAYAVS93EW",
@@ -1704,7 +1719,7 @@
       "category": "temporal",
       "question": "When did John and James meet at McGee's bar?",
       "answer": "August 27, 2022",
-      "prediction": "2022-08-27",
+      "prediction": "According to the memory, James and John agreed to meet on **2022-08-27** at McGee's Pub to have drinks, as John had the day off.",
       "retrieved_ids": [
         "epi_01M2QT25H51C6JQNGAYAVS93EW",
         "sem_01M2QT25H51C6JQNGAYAVS93EX",
@@ -1732,7 +1747,7 @@
       "category": "temporal",
       "question": "When did James ask Samantha to be his girlfriend?",
       "answer": "September 3, 2022",
-      "prediction": "On 2022-09-03, at the theater.",
+      "prediction": "On 2022-09-03, while they were at the theater.",
       "retrieved_ids": [
         "epi_01M2QSKN71Y1R5XM5Z40AR81FY",
         "epi_01M2QRD7CCZ68EMJS39PFYF2DD",
@@ -1766,7 +1781,7 @@
       "category": "temporal",
       "question": "When did James, Samantha and John go to the baseball game together?",
       "answer": "September 11, 2022",
-      "prediction": "2022-09-11（计划于当天去，John 也同意加入）。",
+      "prediction": "According to the memory, James, Samantha, and John planned to go to the baseball game on **2022-09-11** (September 11, 2022, that Sunday).",
       "retrieved_ids": [
         "epi_01M2QSKN71Y1R5XM5Z40AR81G2",
         "epi_01M2QT25H51C6JQNGAYAVS93EW",
@@ -1800,7 +1815,7 @@
       "category": "multihop",
       "question": "What gaming equipments did John buy or refurbish?",
       "answer": "Sennheiser headphones, Logitech mouse, gaming desk",
-      "prediction": "John bought a new Logitech mouse and new Sennheiser headphones (both in early September 2022).",
+      "prediction": "John bought a new Logitech mouse and new Sennheiser headphones (chosen for their excellent sound) in early September 2022.",
       "retrieved_ids": [
         "sem_01M2QSGCR4AYZE6DGTGH2HC2Q7",
         "epi_01M2QR9DFVW7VD5SQZN0K07646",
@@ -1848,7 +1863,7 @@
       "category": "temporal",
       "question": "When did James start taking cooking classes?",
       "answer": "September 2, 2022",
-      "prediction": "2022-09-02",
+      "prediction": "James started taking cooking classes on September 2, 2022, when he signed up for a class costing $10 per lesson.",
       "retrieved_ids": [
         "epi_01M2QSKN71Y1R5XM5Z40AR81G5",
         "sem_01M2QRXPXP95KF59BC2MD8MHXY",
@@ -1882,7 +1897,7 @@
       "category": "multihop",
       "question": "Which new games did John start play during the course of the conversation with James?",
       "answer": "AC Valhalla, Witcher 3, FIFA 23, Dungeons of the Dragons, futuristic dystopian game",
-      "prediction": "根据记忆，John 开始玩的新游戏包括：\n- **国际象棋**（约 2022-07-22 开始，为了提高策略水平）\n- **策略类和 RPG 游戏**（截至 2022-08-10，他不再玩惯常的射击游戏，转而探索这些新类型）",
+      "prediction": "John started playing **chess** (around 22 July 2022, to get better at strategy), and he also began playing **strategy and RPG games** (as of 10 August 2022), instead of his usual shooters.",
       "retrieved_ids": [
         "sem_01M2QR9DFVW7VD5SQZN0K07648",
         "sem_01M2QRXPXP95KF59BC2MD8MHXY",
@@ -1979,7 +1994,7 @@
       "category": "temporal",
       "question": "When did John start working on his 2D Adventure mobile game?",
       "answer": "approximately summer of 2022",
-      "prediction": "不知道。记忆中只提到John在过去几个月里秘密开发这款游戏，没有具体开始时间。",
+      "prediction": "Based on the memory, John worked on his 2D adventure mobile game in secret for \"the past few months\" as of 20 September 2022, so he started around mid-2022 (roughly June–July 2022). An exact start date isn't given.",
       "retrieved_ids": [
         "epi_01M2QSVRY160JF1H8SJEPJJ05K",
         "sem_01M2QSVRY160JF1H8SJEPJJ05P",
@@ -2009,7 +2024,7 @@
       "category": "temporal",
       "question": "How long did it take for James to complete his Witcher-inspired game?",
       "answer": "six months",
-      "prediction": "不知道。记忆中没有提到James完成他的Witcher灵感游戏所花费的时间。",
+      "prediction": null,
       "retrieved_ids": [
         "epi_01M2QSHV0VKK245SVDZTZ1H1YW",
         "sem_01M2QSH0HE2P5XTCMKX6WRM0ZT",
@@ -2057,7 +2072,7 @@
       "category": "multihop",
       "question": "What kind of programming-related events has John hosted?",
       "answer": "online programming competition, programming seminar",
-      "prediction": "John hosted a programming seminar (during the week of 2022-10-10 to 2022-10-16), which had a great turnout.",
+      "prediction": "John hosted a **programming seminar** — he organized it during the week of 2022-10-10 to 2022-10-16, and it had a great turnout.",
       "retrieved_ids": [
         "sem_01M2QRKRA2G6SBAD0YGR542XXE",
         "sem_01M2QSCAT14BKCEMYCDBRRHWQ1",
@@ -2091,7 +2106,7 @@
       "category": "temporal",
       "question": "When did John and his programming friends host an online programming competition?",
       "answer": "Last week before 13 October 2022.",
-      "prediction": "During the week of 2022-10-06.",
+      "prediction": "During the week of 2022-10-06 (October 6, 2022), John organized an online competition with his programmer friends where everyone showcased their skills.",
       "retrieved_ids": [
         "epi_01M2QSY7Y13P77G0R0T526TDN1",
         "epi_01M2QSGCR4AYZE6DGTGH2HC2Q3",
@@ -2118,7 +2133,7 @@
       "category": "multihop",
       "question": "Which of James's family members have visited him in the last year?",
       "answer": "mother, sister",
-      "prediction": "His mother (she visited him on 2022-10-19 with her army friend).",
+      "prediction": "His mother — she visited him on 2022-10-19, together with her army friend. (His sister is mentioned in the memories, but there's no record of her visiting him.)",
       "retrieved_ids": [
         "epi_01M2QT5TW7X19XKP49ESV09VAX",
         "epi_01M2QT1B7DHNSV9ZCM1WZ0DE58",
@@ -2162,7 +2177,7 @@
       "category": "temporal",
       "question": "When did James' mother and her friend visit him?",
       "answer": "October 19, 2022",
-      "prediction": "2022-10-19",
+      "prediction": "James's mother and her army friend visited him on 2022-10-19 (October 19, 2022).",
       "retrieved_ids": [
         "epi_01M2QS4CBZZ6AMFHY3GGW9BF99",
         "epi_01M2QT1B7DHNSV9ZCM1WZ0DE58",
@@ -2190,7 +2205,7 @@
       "category": "temporal",
       "question": "When did James try Cyberpunk 2077 game?",
       "answer": "October 20, 2022",
-      "prediction": "2022-10-20",
+      "prediction": "James tried Cyberpunk 2077 for the first time on 2022-10-20 (20 October 2022).",
       "retrieved_ids": [
         "epi_01M2QT1B7DHNSV9ZCM1WZ0DE5A",
         "epi_01M2QSWY0ES943CHRPXVDBMW87",
@@ -2218,7 +2233,7 @@
       "category": "temporal",
       "question": "When did John and his gaming friends organize the charity tournament?",
       "answer": "On the night of October 30 to 31, 2022",
-      "prediction": "2022-05-07（John 和朋友们组织的 CS:GO 慈善锦标赛）。另外，2022-10-30 他们还组织了一场为儿童医院筹款的游戏锦标赛。",
+      "prediction": null,
       "retrieved_ids": [
         "epi_01M2QRKRA2G6SBAD0YGR542XXA",
         "epi_01M2QT25H51C6JQNGAYAVS93EV",
@@ -2243,7 +2258,7 @@
       "category": "multihop",
       "question": "What games has John played with his friends at charity tournaments?",
       "answer": "CS:GO, Fortnite, Overwatch and Apex Legends",
-      "prediction": "CS:GO, Fortnite, Overwatch, and Apex Legends.",
+      "prediction": "John played **CS:GO**（2022-05-07 的慈善锦标赛）以及 **Fortnite、Overwatch 和 Apex Legends**（2022-10-30 为儿童医院筹款的锦标赛）。",
       "retrieved_ids": [
         "sem_01M2QSCAT14BKCEMYCDBRRHWPZ",
         "epi_01M2QRKRA2G6SBAD0YGR542XXA",
@@ -2273,7 +2288,7 @@
       "category": "temporal",
       "question": "What was James' big moment with Samantha in October 2023?",
       "answer": "They decided to live together and rented an apartment not far from McGee's bar.",
-      "prediction": "不知道。记忆中没有关于2023年10月James和Samantha的事件。",
+      "prediction": "I don't know. The memories contain no information about anything that happened in October 2023 — the latest recorded events are from October 2022 (moving in together, releasing his game).",
       "retrieved_ids": [
         "epi_01M2QSKN71Y1R5XM5Z40AR81FY",
         "sem_01M2QT25H51C6JQNGAYAVS93EX",
@@ -2298,7 +2313,7 @@
       "category": "temporal",
       "question": "How long did James and Samantha date for before deciding to move in together?",
       "answer": "nearly three months",
-      "prediction": "不知道。记忆中没有说明两人决定同居的具体时间，因此无法计算他们交往了多久。",
+      "prediction": "About 2 months — they became a couple on 2022-09-03 and decided to move in together on 2022-10-31. (Counting from when they first met on 2022-08-09, it was roughly 3 months.)",
       "retrieved_ids": [
         "epi_01M2QT25H51C6JQNGAYAVS93EW",
         "epi_01M2QSE0YRHXS1793M9K88KSRH",
@@ -2332,7 +2347,7 @@
       "category": "temporal",
       "question": "When did James, his family and his dogs start on a road trip together?",
       "answer": "November 4, 2022",
-      "prediction": "2022-11-04",
+      "prediction": "James, his family and his dogs started their road trip on **2022-11-04** (4 November 2022).",
       "retrieved_ids": [
         "epi_01M2QT3GT21D6ANAQGXB31CN0T",
         "epi_01M2QT5TW7X19XKP49ESV09VAX",
@@ -2361,7 +2376,7 @@
       "category": "temporal",
       "question": "How long did John practice chess for before winning the chess tournament?",
       "answer": "nearly four months",
-      "prediction": "大约3个月（从2022-07-22开始下棋，到2022-11-01赢得地区锦标赛）。",
+      "prediction": "John started playing chess around 2022-07-22 and won the regional chess tournament on 2022-11-01, so he practiced for about 3 months and 10 days (a little over 3 months) before winning.",
       "retrieved_ids": [
         "epi_01M2QT3GT3VM13DVDXVKJT3H8H",
         "epi_01M2QSAKCZXCB0NG8YRGQF6Q2Z",
@@ -2407,7 +2422,7 @@
       "category": "temporal",
       "question": "When did James and his family visit Mark and Josh?",
       "answer": "November 7, 2022",
-      "prediction": "在2022-11-04开始的公路旅行期间，2022-11-07之前（截至2022-11-07时已拜访了Josh和Mark）。",
+      "prediction": "Between 2022-11-04 and 2022-11-07 — James's road trip started on 2022-11-04, and by 2022-11-07 he and his family had already visited his friends Josh and Mark.",
       "retrieved_ids": [
         "epi_01M2QT5TW7X19XKP49ESV09VAX",
         "epi_01M2QS4CBZZ6AMFHY3GGW9BF99",
@@ -2437,7 +2452,7 @@
       "category": "temporal",
       "question": "When did John work with a game developer on a project?",
       "answer": "November 5-6, 2022",
-      "prediction": "Around 2022-11-07.",
+      "prediction": "Around November 7, 2022, John collaborated with a game developer to create an online board game.",
       "retrieved_ids": [
         "epi_01M2QT5TW7X19XKP49ESV09VB1",
         "epi_01M2QSGCR4AYZE6DGTGH2HC2Q4",
@@ -2467,7 +2482,7 @@
       "category": "single_hop",
       "question": "What programming languages has James worked with?",
       "answer": "Python and C++",
-      "prediction": "不知道。记忆中只提到James完成项目时需要学习“一门新语言”，但没有具体说明是哪种编程语言。",
+      "prediction": "The memories don't specify which programming languages James has worked with. They only mention that for a big project completed in April 2022, he had to learn a new language, but the language itself is not named.",
       "retrieved_ids": [
         "pro_01M2QRD7CCZ68EMJS39PFYF2DB",
         "sem_01M2QRXPXP95KF59BC2MD8MHXY",
@@ -2490,7 +2505,7 @@
       "category": "single_hop",
       "question": "What type of mobile application does James plan to build with John?",
       "answer": "An app for dog walking and pet care",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention James planning to build a mobile application with John. (James wants to create his own strategy game similar to Civilization, but there's no mention of him building it with John.)",
       "retrieved_ids": [
         "sem_01M2QSVRY160JF1H8SJEPJJ05P",
         "epi_01M2QSVRY160JF1H8SJEPJJ05K",
@@ -2513,7 +2528,7 @@
       "category": "single_hop",
       "question": "How does James plan to make his dog-sitting app unique?",
       "answer": "By allowing users to customize their pup's preferences/needs",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention anything about James planning a dog-sitting app.",
       "retrieved_ids": [
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE75",
         "sem_01M2QSH0HE2P5XTCMKX6WRM0ZT",
@@ -2536,7 +2551,7 @@
       "category": "single_hop",
       "question": "What has John mostly found with the metal detector so far?",
       "answer": "bottle caps",
-      "prediction": "Mostly bottle caps (occasionally coins, and once a gold ring).",
+      "prediction": "Mostly bottle caps, occasionally coins, and once even a gold ring.",
       "retrieved_ids": [
         "sem_01M2QR7VNQFGDZNMAJARF59TC4",
         "epi_01M2QR7VNQFGDZNMAJARF59TC5",
@@ -2594,7 +2609,7 @@
       "category": "single_hop",
       "question": "What instrument is John learning to play as of 27 March, 2022?",
       "answer": "Drums",
-      "prediction": "John is learning to play the **drums**.",
+      "prediction": "John is learning to play the **drums** — he started around 27 February 2022 and had been playing for one month as of 27 March 2022.",
       "retrieved_ids": [
         "sem_01M2QR9DFVW7VD5SQZN0K07642",
         "epi_01M2QRGP3FPWVRWKXJDBQMVNV5",
@@ -2625,7 +2640,7 @@
       "category": "single_hop",
       "question": "How long has John been playing the drums as of 27 March, 2022?",
       "answer": "One month",
-      "prediction": "One month (he started around 2022-02-27).",
+      "prediction": "One month — he started around 27 February 2022, so as of 27 March 2022 he had been playing for one month.",
       "retrieved_ids": [
         "sem_01M2QR9DFVW7VD5SQZN0K07642",
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE7A",
@@ -2656,7 +2671,7 @@
       "category": "single_hop",
       "question": "What game did John play in an intense tournament at the gaming convention in March 2022?",
       "answer": "CS:GO",
-      "prediction": "CS:GO",
+      "prediction": "CS:GO.",
       "retrieved_ids": [
         "epi_01M2QR9DFVW7VD5SQZN0K07645",
         "epi_01M2QT25H51C6JQNGAYAVS93EV",
@@ -2687,7 +2702,7 @@
       "category": "single_hop",
       "question": "What game was James playing in the online gaming tournament in April 2022?",
       "answer": "Apex Legends",
-      "prediction": "不知道。记忆中只提到James在2022-04-03参加了线上游戏锦标赛并进入半决赛，但没有说明他玩的是什么游戏。",
+      "prediction": "I don't know. The memories say James competed in an online gaming tournament on 2022-04-03, but they don't specify which game was played there (they only mention that his favourite game is Apex Legends).",
       "retrieved_ids": [
         "epi_01M2QS5NVSDRSEAFTD4FZ2J3TD",
         "epi_01M2QRAK7EH3ZYKBKA5TA47P50",
@@ -2743,7 +2758,7 @@
       "category": "single_hop",
       "question": "What advice did James receive from the famous players he met at the tournament?",
       "answer": "never put your ego above team success",
-      "prediction": "He got gaming tips from one of the players of the professional gaming team he met at the tournament on 2022-04-03.",
+      "prediction": "记忆中只提到 James 在 2022-04-03 的线上游戏锦标赛上遇到了一支职业战队，拿到了全队签名，并从其中一名选手那里得到了游戏技巧建议（gaming tips），但没有说明具体建议的内容。因此不知道具体是什么建议。",
       "retrieved_ids": [
         "epi_01M2QRAK7F87NFAJS636GTGBA6",
         "epi_01M2QRAK7EH3ZYKBKA5TA47P50",
@@ -2771,7 +2786,7 @@
       "category": "single_hop",
       "question": "What did James adopt in April 2022?",
       "answer": "a pup",
-      "prediction": "A puppy named Ned (from a shelter in Stamford, around 2022-04-05).",
+      "prediction": "James adopted a puppy named Ned from a shelter in Stamford (around 2022-04-05).",
       "retrieved_ids": [
         "epi_01M2QRT4B185HKXY62TTGWGENG",
         "epi_01M2QRAK7EH3ZYKBKA5TA47P50",
@@ -2797,7 +2812,7 @@
       "category": "single_hop",
       "question": "What is the name of the pup that was adopted by James?",
       "answer": "Ned",
-      "prediction": "Ned",
+      "prediction": "Ned.",
       "retrieved_ids": [
         "epi_01M2QRBYA911CQ4JD7WFNDCMXK",
         "sem_01M2QSH0HDYB38D66BATXETBCS",
@@ -2823,7 +2838,7 @@
       "category": "single_hop",
       "question": "Why did James embody the appearance of the game character from the woman he saw during a walk?",
       "answer": "He found her appearance and eyes amazing.",
-      "prediction": "因为他对她一见钟情，但没有上前搭讪，于是记住了她的外貌，并将其作为游戏角色的灵感来源。",
+      "prediction": "Because he fell in love with her at first sight but did not approach her, so he remembered her appearance and later used it as the inspiration for a game character.",
       "retrieved_ids": [
         "epi_01M2QRD7CCZ68EMJS39PFYF2DD",
         "pro_01M2QRD7CCZ68EMJS39PFYF2DB",
@@ -2861,7 +2876,7 @@
       "category": "single_hop",
       "question": "What inspired James to create the game character in the virtual world?",
       "answer": "Appearance of a woman he saw during a walk",
-      "prediction": "一位他在遛狗时一见钟情的女性——他没有上前搭话，但记住了她的外貌，后来以此作为游戏角色的灵感。",
+      "prediction": "A woman he saw while walking his dogs in his neighborhood around 2022-04-06 — he fell in love with her at first sight, didn't approach her, but remembered her appearance and later used it as the inspiration for a game character.",
       "retrieved_ids": [
         "pro_01M2QRD7CCZ68EMJS39PFYF2DB",
         "epi_01M2QRD7CCZ68EMJS39PFYF2DA",
@@ -2937,7 +2952,7 @@
       "category": "single_hop",
       "question": "What impresses John about Japan?",
       "answer": "Technologically advanced megacities and tasty street food",
-      "prediction": "John对日本的科技先进大都市、巨大的建筑屏幕和美味的街头小吃印象深刻。",
+      "prediction": "John was impressed by Japan's technologically advanced megacities, huge building screens, and tasty street food.",
       "retrieved_ids": [
         "epi_01M2QRD7CCZ68EMJS39PFYF2DJ",
         "sem_01M2QRD7CCZ68EMJS39PFYF2DG",
@@ -2975,7 +2990,7 @@
       "category": "single_hop",
       "question": "What kind of assignment was giving John a hard time at work?",
       "answer": "Coding assignment",
-      "prediction": "一个困难的编程项目——他试图让一个新算法运行得更好，但感觉毫无进展。",
+      "prediction": "A difficult coding project — he was stuck trying to make a new algorithm work better and felt he was making no progress.",
       "retrieved_ids": [
         "sem_01M2QRF27EWQRQKBQYBV4RAYTF",
         "sem_01M2QRF27FZ02KGN1SW8PA2YRK",
@@ -3042,7 +3057,7 @@
       "category": "single_hop",
       "question": "What type of pizza is James' favorite?",
       "answer": "Pepperoni",
-      "prediction": "Pepperoni.",
+      "prediction": "James's favorite pizza is pepperoni, which he loves for the combination of spicy salami and cheese.",
       "retrieved_ids": [
         "sem_01M2QRJCXDCQQWJ5M49ZQP96PN",
         "sem_01M2QRJCXDCQQWJ5M49ZQP96PP",
@@ -3082,7 +3097,7 @@
       "category": "single_hop",
       "question": "What type of pizza is John's favorite?",
       "answer": "Hawaiian",
-      "prediction": "Hawaiian pizza.",
+      "prediction": "Hawaiian pizza — John likes it for its sweet and salty combination.",
       "retrieved_ids": [
         "sem_01M2QRJCXDCQQWJ5M49ZQP96PQ",
         "sem_01M2QRKRA2G6SBAD0YGR542XXD",
@@ -3122,18 +3137,18 @@
       "category": "single_hop",
       "question": "What did John organize with his friends on May 8, 2022?",
       "answer": "A tournament for CS:GO",
-      "prediction": "不知道。记忆中只提到 John 在 2022-05-07 组织了 CS:GO 锦标赛，没有关于 2022-05-08 的记录。",
+      "prediction": "根据记忆，没有记录显示 John 在 2022 年 5 月 8 日组织了任何活动。5 月 8 日的记忆只是说他**希望**在未来组织更多像 CS:GO 锦标赛那样的慈善和社区活动。他实际组织的活动是 2022 年 5 月 7 日与朋友们举办的 CS:GO 锦标赛。",
       "retrieved_ids": [
         "epi_01M2QRKRA2G6SBAD0YGR542XXA",
         "sem_01M2QRKRA2G6SBAD0YGR542XXE",
-        "epi_01M2QRJCXDCQQWJ5M49ZQP96PY",
         "epi_01M2QT25H51C6JQNGAYAVS93EV",
         "epi_01M2QRGP3FPWVRWKXJDBQMVNV5",
+        "epi_01M2QRJCXDCQQWJ5M49ZQP96PY",
         "epi_01M2QSRF5DVAQ2VYZ50KFDWE7C",
         "epi_01M2QS4CBZZ6AMFHY3GGW9BF98",
         "epi_01M2QRT4B185HKXY62TTGWGENE",
-        "epi_01M2QRT4B185HKXY62TTGWGENF",
-        "epi_01M2QSGCR4AYZE6DGTGH2HC2Q4"
+        "epi_01M2QT1B7DHNSV9ZCM1WZ0DE56",
+        "epi_01M2QRT4B185HKXY62TTGWGENF"
       ],
       "gold_ids": [
         "epi_01M2QRKRA2G6SBAD0YGR542XXA",
@@ -3149,7 +3164,7 @@
       "category": "single_hop",
       "question": "What did John and his friends do with the remaining money after helping the dog shelter?",
       "answer": "Bought groceries and cooked food for the homeless",
-      "prediction": "They used the leftover money from their 2022-05-07 CS:GO tournament to buy groceries and cook food for homeless people.",
+      "prediction": "They used the leftover money from their CS:GO tournament to buy groceries and cook food for homeless people.",
       "retrieved_ids": [
         "epi_01M2QRKRA2G6SBAD0YGR542XXB",
         "sem_01M2QRKRA2G6SBAD0YGR542XXE",
@@ -3176,7 +3191,7 @@
       "category": "single_hop",
       "question": "What was the main goal of the money raised from the charity tournament organized by John and his friends in May 2022?",
       "answer": "Raise money for a dog shelter",
-      "prediction": "The money was donated to a dog shelter located not far from the street where John lives.",
+      "prediction": "The money raised from John's CS:GO tournament on 2022-05-07 was donated to a dog shelter located not far from the street where John lives.",
       "retrieved_ids": [
         "epi_01M2QRKRA2G6SBAD0YGR542XXA",
         "epi_01M2QT25H51C6JQNGAYAVS93EV",
@@ -3203,7 +3218,7 @@
       "category": "single_hop",
       "question": "What did the system John created help the charitable foundation with?",
       "answer": "tracking inventory, resources, and donations",
-      "prediction": "John's smartphone application helped the foundation track inventory, resources, and donations in one place and generate reports for analysis, replacing its previous manual paper-based record keeping and streamlining operations.",
+      "prediction": "John's smartphone application helped the foundation track inventory, resources, and donations in one place and generate reports for analysis, replacing its previous manual paper-based record keeping and streamlining its operations.",
       "retrieved_ids": [
         "epi_01M2QRNZ5WM4AK9BWR1ZVQC5S3",
         "sem_01M2QRNZ5WM4AK9BWR1ZVQC5S4",
@@ -3231,7 +3246,7 @@
       "category": "single_hop",
       "question": "What did John create for the charitable foundation that helped generate reports for analysis?",
       "answer": "computer application on smartphones",
-      "prediction": "A smartphone application (that tracks inventory, resources, and donations in one place and generates reports for analysis).",
+      "prediction": "John built a smartphone application for the charitable foundation that tracks inventory, resources, and donations in one place and generates reports for analysis, replacing the foundation's previous manual paper-based record keeping.",
       "retrieved_ids": [
         "epi_01M2QRNZ5WM4AK9BWR1ZVQC5S3",
         "sem_01M2QRNZ5WM4AK9BWR1ZVQC5S4",
@@ -3259,7 +3274,7 @@
       "category": "single_hop",
       "question": "What did John receive for achieving second place in the tournament?",
       "answer": "money and a trophy",
-      "prediction": "A cash prize and a trophy.",
+      "prediction": "John received a cash prize and a trophy for taking second place in the local tournament on 2022-05-20.",
       "retrieved_ids": [
         "epi_01M2QRT4B185HKXY62TTGWGENF",
         "epi_01M2QRKRA2G6SBAD0YGR542XXA",
@@ -3285,7 +3300,7 @@
       "category": "single_hop",
       "question": "What project is James working on in his game design course?",
       "answer": "a new part of the football simulator, collecting player databases",
-      "prediction": "不知道。记忆中只提到James在上一门结合游戏和编程的课程，但没有说明他在课程中具体做什么项目。",
+      "prediction": "The memories don't specify what project James is working on in his course. They only mention that as of June 2022, he is taking a course that combines his passion for gaming and programming, which he finds fun and challenging.",
       "retrieved_ids": [
         "sem_01M2QRJCXDCQQWJ5M49ZQP96PV",
         "sem_01M2QRXPXP95KF59BC2MD8MHXY",
@@ -3314,7 +3329,7 @@
       "category": "single_hop",
       "question": "Who does James support in football matches?",
       "answer": "Liverpool",
-      "prediction": "Liverpool FC.",
+      "prediction": "James supports Liverpool FC — he is a devoted Liverpool fan and never misses a single Liverpool match.",
       "retrieved_ids": [
         "sem_01M2QRXPXP95KF59BC2MD8MHY0",
         "sem_01M2QSY7Y13P77G0R0T526TDN2",
@@ -3343,7 +3358,7 @@
       "category": "single_hop",
       "question": "Which football club does John support?",
       "answer": "Manchester City",
-      "prediction": "Manchester City FC.",
+      "prediction": "John supports Manchester City FC.",
       "retrieved_ids": [
         "sem_01M2QRXPXP95KF59BC2MD8MHY1",
         "sem_01M2QT3GT3VM13DVDXVKJT3H8M",
@@ -3372,7 +3387,7 @@
       "category": "single_hop",
       "question": "What disagreement do James and John have about their football teams?",
       "answer": "debating on which team will perform better in the championship",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention any disagreement between James and John about their football teams — they only note that James is a devoted Liverpool FC fan and that John enjoys playing FIFA 23.",
       "retrieved_ids": [
         "sem_01M2QRXPXP95KF59BC2MD8MHY0",
         "sem_01M2QT3GT3VM13DVDXVKJT3H8M",
@@ -3401,7 +3416,7 @@
       "category": "single_hop",
       "question": "What is Max good at doing according to James?",
       "answer": "catching frisbees in mid-air",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories describe Max as a lovable, playful dog who brings James joy, but they don't mention any specific skill or activity that Max is good at.",
       "retrieved_ids": [
         "sem_01M2QS391KAKHNH0VP9DFPA893",
         "sem_01M2QS4CBZZ6AMFHY3GGW9BF94",
@@ -3433,7 +3448,7 @@
       "category": "single_hop",
       "question": "What is the main focus of the organization that James volunteered with?",
       "answer": "providing necessary items to those who are less fortunate",
-      "prediction": "该组织的主要工作是为不幸的人们提供必需品。",
+      "prediction": "The organization's main focus is providing necessary items to people who are less fortunate (people in need).",
       "retrieved_ids": [
         "epi_01M2QS4CBZZ6AMFHY3GGW9BF98",
         "epi_01M2QS4CBZZ6AMFHY3GGW9BF99",
@@ -3461,7 +3476,7 @@
       "category": "single_hop",
       "question": "Will there be an interview required to volunteer with the organization James volunteered for?",
       "answer": "No",
-      "prediction": "No, an interview is not required — only friendliness and a desire to help people.",
+      "prediction": "No. According to the memory, no interview is required to volunteer with that organization—only friendliness and a desire to help people.",
       "retrieved_ids": [
         "epi_01M2QS4CBZZ6AMFHY3GGW9BF99",
         "epi_01M2QS4CBZZ6AMFHY3GGW9BF98",
@@ -3489,7 +3504,7 @@
       "category": "single_hop",
       "question": "How did John relax in his free time on 9 July, 2022?",
       "answer": "Reading",
-      "prediction": "不知道。记忆中没有提到 John 在 2022 年 7 月 9 日如何放松。",
+      "prediction": "I don't know. The memories contain no information about how John relaxed on 9 July 2022. (The only memory near that date is about James winning an online gaming tournament, not about John.)",
       "retrieved_ids": [
         "epi_01M2QRXPXP95KF59BC2MD8MHXX",
         "epi_01M2QSGCR4AYZE6DGTGH2HC2Q4",
@@ -3519,7 +3534,7 @@
       "category": "single_hop",
       "question": "What did James enjoy doing on cold winter days?",
       "answer": "Reading while snuggled under the covers",
-      "prediction": "Reading, especially while snuggled under the covers.",
+      "prediction": "James enjoyed reading, especially while snuggled under the covers on a cold winter day.",
       "retrieved_ids": [
         "sem_01M2QS5NVSDRSEAFTD4FZ2J3TK",
         "epi_01M2QRD7CCZ68EMJS39PFYF2DD",
@@ -3549,7 +3564,7 @@
       "category": "single_hop",
       "question": "What new hobby did James become interested in on 9 July, 2022?",
       "answer": "Extreme sports",
-      "prediction": "不知道。记忆中没有提到 James 在 2022 年 7 月 9 日开始的新爱好（最接近的是 7 月 8 日他去玩绳索跳跃）。",
+      "prediction": "Extreme sports.",
       "retrieved_ids": [
         "epi_01M2QS5NVSDRSEAFTD4FZ2J3TD",
         "sem_01M2QS5NVSDRSEAFTD4FZ2J3TE",
@@ -3609,7 +3624,7 @@
       "category": "single_hop",
       "question": "When did James plan to return from his trip to Toronto and Vancouver?",
       "answer": "July 20",
-      "prediction": "2022-07-20",
+      "prediction": "James planned to return on **2022-07-20** (July 20, 2022).",
       "retrieved_ids": [
         "epi_01M2QS5NVSDRSEAFTD4FZ2J3TH",
         "epi_01M2QRD7CCZ68EMJS39PFYF2DM",
@@ -3639,7 +3654,7 @@
       "category": "single_hop",
       "question": "What online game did John start playing recently for improving strategy?",
       "answer": "Chess",
-      "prediction": "Chess.",
+      "prediction": "Chess. Around 2022-07-22, John started playing chess to get better at strategy and is really enjoying it.",
       "retrieved_ids": [
         "sem_01M2QSE0YQY0S271GFX3X44HWE",
         "epi_01M2QSAKCZXCB0NG8YRGQF6Q2Z",
@@ -3671,12 +3686,12 @@
       "category": "single_hop",
       "question": "What made John leave his IT job?",
       "answer": "to focus on things that align with his values and passions",
-      "prediction": "他想找一份有意义、符合自己价值观的工作。",
+      "prediction": "John left his IT job because he wanted work that makes a difference and aligns with his values.",
       "retrieved_ids": [
         "epi_01M2QSCAT14BKCEMYCDBRRHWPW",
         "sem_01M2QSCAT14BKCEMYCDBRRHWPX",
-        "epi_01M2QRXPXP95KF59BC2MD8MHXX",
         "epi_01M2QRXPXP95KF59BC2MD8MHXW",
+        "epi_01M2QRXPXP95KF59BC2MD8MHXX",
         "cor_01M2QRNZ5WM4AK9BWR1ZVQC5S5",
         "epi_01M2QR737186FFTMV5FJPP79E2",
         "cor_01M2QSWY0ES943CHRPXVDBMW82",
@@ -3701,7 +3716,7 @@
       "category": "single_hop",
       "question": "Which game tournaments does John plan to organize besides CS:GO?",
       "answer": "Fortnite competitions",
-      "prediction": "Fortnite.",
+      "prediction": "Besides CS:GO, John plans to organize tournaments for **Fortnite** (he wants to become an organizer of tournaments for computer games such as CS:GO and Fortnite in his state), and he also intends to host eSports competitions in general.",
       "retrieved_ids": [
         "sem_01M2QSCAT14BKCEMYCDBRRHWPZ",
         "sem_01M2QRKRA2G6SBAD0YGR542XXE",
@@ -3791,7 +3806,7 @@
       "category": "single_hop",
       "question": "Which RPG game is John playing and enjoying on 10 August, 2022?",
       "answer": "The Witcher 3",
-      "prediction": "The Witcher 3.",
+      "prediction": "On 10 August 2022, John is playing **The Witcher 3** and is hooked on its storytelling and characters, especially the monster hunter protagonist.",
       "retrieved_ids": [
         "sem_01M2QSE0YQY0S271GFX3X44HWE",
         "epi_01M2QRBYA911CQ4JD7WFNDCMXP",
@@ -3821,7 +3836,7 @@
       "category": "single_hop",
       "question": "What aspect of \"The Witcher 3\" does John find immersive?",
       "answer": "shaping the world with choices",
-      "prediction": "John is hooked on its storytelling and characters, especially the monster hunter protagonist.",
+      "prediction": "John is hooked on The Witcher 3's storytelling and characters, especially the monster hunter protagonist.",
       "retrieved_ids": [
         "epi_01M2QSE0YQY0S271GFX3X44HWF",
         "sem_01M2QSY7Y13P77G0R0T526TDMZ",
@@ -3851,7 +3866,7 @@
       "category": "single_hop",
       "question": "Whose phone number did James receive during the beach outing?",
       "answer": "Samantha",
-      "prediction": "Samantha.",
+      "prediction": "Samantha's.",
       "retrieved_ids": [
         "epi_01M2QSE0YRHXS1793M9K88KSRG",
         "sem_01M2QS391KAKHNH0VP9DFPA893",
@@ -3862,7 +3877,7 @@
         "epi_01M2QS5NVSDRSEAFTD4FZ2J3TG",
         "sem_01M2QSGCR4AYZE6DGTGH2HC2Q6",
         "epi_01M2QRAK7EH3ZYKBKA5TA47P50",
-        "sem_01M2QSVRY160JF1H8SJEPJJ05P"
+        "cor_01M2QSRF5DVAQ2VYZ50KFDWE78"
       ],
       "gold_ids": [
         "epi_01M2QSE0YQY0S271GFX3X44HWF",
@@ -3881,7 +3896,7 @@
       "category": "single_hop",
       "question": "What is James planning to do after receiving Samantha's phone number?",
       "answer": "call her",
-      "prediction": "James plans to call Samantha on 2022-08-11 (the day after meeting her) and is considering asking her out on a date.",
+      "prediction": "James plans to call Samantha on 2022-08-11, the day after meeting her, and is considering asking her out on a date.",
       "retrieved_ids": [
         "epi_01M2QSE0YRHXS1793M9K88KSRG",
         "epi_01M2QSE0YRHXS1793M9K88KSRH",
@@ -3911,7 +3926,7 @@
       "category": "single_hop",
       "question": "What is John organizing with his siblings?",
       "answer": "a gaming night",
-      "prediction": "A gaming night (in September 2022).",
+      "prediction": "John is organizing a gaming night with his siblings (planned for September 2022).",
       "retrieved_ids": [
         "sem_01M2QSGCR4AYZE6DGTGH2HC2Q9",
         "sem_01M2QSAKD03N7XR684GHZHYTSY",
@@ -3940,7 +3955,7 @@
       "category": "single_hop",
       "question": "What type of beer does John not like?",
       "answer": "dark beer",
-      "prediction": "John does not like dark beer.",
+      "prediction": "John does not like dark beer; he prefers light beer.",
       "retrieved_ids": [
         "sem_01M2QSH0HE2P5XTCMKX6WRM0ZV",
         "sem_01M2QRNZ5WM4AK9BWR1ZVQC5S8",
@@ -3968,7 +3983,7 @@
       "category": "single_hop",
       "question": "What were some difficulties James faced during the development of his game?",
       "answer": "balancing mechanics and ensuring fairness",
-      "prediction": "不知道。",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QSVRY160JF1H8SJEPJJ05S",
         "epi_01M2QSHV0VKK245SVDZTZ1H1YW",
@@ -3996,7 +4011,7 @@
       "category": "single_hop",
       "question": "What has John been teaching his siblings?",
       "answer": "coding",
-      "prediction": "John has been teaching his siblings programming (coding).",
+      "prediction": "John has been teaching his siblings coding/programming.",
       "retrieved_ids": [
         "sem_01M2QSH0HDYB38D66BATXETBCT",
         "sem_01M2QSAKD03N7XR684GHZHYTSY",
@@ -4024,7 +4039,7 @@
       "category": "single_hop",
       "question": "What kind of programs are John's siblings making?",
       "answer": "basic games and stories",
-      "prediction": "Basic games and stories.",
+      "prediction": "John's siblings are starting small by making basic games and stories — for example, they've been working with John on a simple text-based adventure game.",
       "retrieved_ids": [
         "sem_01M2QSHV0VKK245SVDZTZ1H1YY",
         "sem_01M2QSHV0VKK245SVDZTZ1H1YZ",
@@ -4086,7 +4101,7 @@
       "category": "single_hop",
       "question": "What did James and Samantha discover they both enjoy at McGee's bar?",
       "answer": "Lager beer",
-      "prediction": "不知道。记忆中只提到 James 在 McGee's 酒吧发现 Samantha 喜欢拉格啤酒，但没有说明两人共同喜欢的东西。",
+      "prediction": "They both enjoy spending time at McGee's bar — they love hanging out there together (and Samantha especially loves lager beer there).",
       "retrieved_ids": [
         "sem_01M2QT25H51C6JQNGAYAVS93EX",
         "epi_01M2QT25H51C6JQNGAYAVS93EW",
@@ -4120,7 +4135,7 @@
       "category": "single_hop",
       "question": "How much does James pay per cooking class?",
       "answer": "$10",
-      "prediction": "$10 per lesson.",
+      "prediction": "James pays $10 per cooking class lesson.",
       "retrieved_ids": [
         "epi_01M2QSKN71Y1R5XM5Z40AR81G5",
         "sem_01M2QSKN71Y1R5XM5Z40AR81G7",
@@ -4154,7 +4169,7 @@
       "category": "single_hop",
       "question": "What did James learn to make in the cooking class besides omelette and meringue?",
       "answer": "Dough",
-      "prediction": "Dough.",
+      "prediction": "Dough — in his first cooking class lesson, James was taught how to make dough.",
       "retrieved_ids": [
         "epi_01M2QSKN71Y1R5XM5Z40AR81G6",
         "epi_01M2QSKN71Y1R5XM5Z40AR81G5",
@@ -4188,7 +4203,7 @@
       "category": "single_hop",
       "question": "Why did James sign up for a cooking class?",
       "answer": "He wanted to learn something new",
-      "prediction": "He wanted to learn something new, even though he never liked cooking before.",
+      "prediction": "James signed up for the cooking class because he wanted to learn something new, even though he had never liked cooking before.",
       "retrieved_ids": [
         "epi_01M2QSKN71Y1R5XM5Z40AR81G5",
         "sem_01M2QSKN71Y1R5XM5Z40AR81G7",
@@ -4222,7 +4237,7 @@
       "category": "single_hop",
       "question": "What did James prepare for the first time in the cooking class?",
       "answer": "Omelette",
-      "prediction": "An omelette — he made a good one on his first try (he also made meringue and was taught how to make dough).",
+      "prediction": "In his first cooking class lesson, James made a good omelette on his first try, and he also made meringue (he was taught how to make dough).",
       "retrieved_ids": [
         "epi_01M2QSKN71Y1R5XM5Z40AR81G6",
         "epi_01M2QSKN71Y1R5XM5Z40AR81G5",
@@ -4256,7 +4271,7 @@
       "category": "single_hop",
       "question": "What is the name of the board game John tried in September 2022?",
       "answer": "Dungeons of the Dragon",
-      "prediction": "Dungeons of the Dragon",
+      "prediction": "Dungeons of the Dragon.",
       "retrieved_ids": [
         "sem_01M2QSGCR4AYZE6DGTGH2HC2Q9",
         "epi_01M2QSRF5DVAQ2VYZ50KFDWE74",
@@ -4290,7 +4305,7 @@
       "category": "single_hop",
       "question": "Where does James get his ideas from?",
       "answer": "books, movies, dreams",
-      "prediction": "From various sources including books, movies, and even his dreams.",
+      "prediction": "James gets his creative ideas from various sources, including books, movies, and even his dreams.",
       "retrieved_ids": [
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE76",
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE75",
@@ -4324,7 +4339,7 @@
       "category": "single_hop",
       "question": "What kind of dream did James have recently?",
       "answer": "a dream with a medieval castle full of puzzles and traps",
-      "prediction": "A vivid dream about a medieval castle with a labyrinth full of puzzles and traps, which inspired creative ideas he recorded in sketches and notes.",
+      "prediction": "James had a vivid dream about a medieval castle with a labyrinth full of puzzles and traps, which inspired creative ideas he recorded in sketches and notes.",
       "retrieved_ids": [
         "epi_01M2QSRF5DVAQ2VYZ50KFDWE77",
         "sem_01M2QS5NVSDRSEAFTD4FZ2J3TE",
@@ -4358,7 +4373,7 @@
       "category": "single_hop",
       "question": "What kind of music does John like?",
       "answer": "electronic and rock music",
-      "prediction": "John likes electronic and rock music.",
+      "prediction": "John is into electronic and rock music.",
       "retrieved_ids": [
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE79",
         "sem_01M2QSH0HE2P5XTCMKX6WRM0ZV",
@@ -4392,7 +4407,7 @@
       "category": "single_hop",
       "question": "What instrument did James used to play when he was younger?",
       "answer": "guitar",
-      "prediction": "The guitar.",
+      "prediction": "James used to play the **guitar** when he was younger, but he hasn't played in a while.",
       "retrieved_ids": [
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE7B",
         "sem_01M2QR9DFVW7VD5SQZN0K07647",
@@ -4426,7 +4441,7 @@
       "category": "single_hop",
       "question": "What did John use to play when he was younger to let off steam?",
       "answer": "drums",
-      "prediction": "John used to play the drums when he was younger.",
+      "prediction": "John used to play the drums when he was younger (he once owned an old drum set, but hasn't played in a while).",
       "retrieved_ids": [
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE7A",
         "sem_01M2QSRF5DVAQ2VYZ50KFDWE7B",
@@ -4438,7 +4453,7 @@
         "sem_01M2QS4CBZZ6AMFHY3GGW9BF97",
         "epi_01M2QSVRY160JF1H8SJEPJJ05K",
         "cor_01M2QSCAT14BKCEMYCDBRRHWPY",
-        "epi_01M2QR9DFVW7VD5SQZN0K07646"
+        "cor_01M2QRNZ5WM4AK9BWR1ZVQC5S5"
       ],
       "gold_ids": [
         "cor_01M2QSRF5DVAQ2VYZ50KFDWE78",
@@ -4460,7 +4475,7 @@
       "category": "single_hop",
       "question": "What career milestone did John achieve recently in September 2022?",
       "answer": "making his first mobile game",
-      "prediction": "John achieved a major career milestone by creating his first mobile game, which he worked on in secret for the past few months.",
+      "prediction": "John achieved a major career milestone by creating his first mobile game, which he had worked on in secret for the past few months.",
       "retrieved_ids": [
         "epi_01M2QSVRY160JF1H8SJEPJJ05K",
         "sem_01M2QSGCR4AYZE6DGTGH2HC2Q9",
@@ -4490,7 +4505,7 @@
       "category": "single_hop",
       "question": "What type of game is John's upcoming mobile game?",
       "answer": "2D adventure",
-      "prediction": "A 2D adventure game with puzzles and exploration.",
+      "prediction": "John's upcoming mobile game is a 2D adventure game with puzzles and exploration, scheduled to launch in October 2022.",
       "retrieved_ids": [
         "epi_01M2QSVRY160JF1H8SJEPJJ05K",
         "sem_01M2QSVRY160JF1H8SJEPJJ05P",
@@ -4520,7 +4535,7 @@
       "category": "single_hop",
       "question": "What does John do to stay informed and constantly learn about game design?",
       "answer": "watch tutorials and keep up with developer forums",
-      "prediction": "John 通过学习一本游戏设计书（他曾用它来设计游戏中的谜题）、观看教程以及关注开发者论坛来保持学习和了解游戏设计。",
+      "prediction": "John studies a game design book (which he used to create his game's puzzles), watches tutorials, and keeps up with developer forums.",
       "retrieved_ids": [
         "pro_01M2QSVRY160JF1H8SJEPJJ05Q",
         "cor_01M2QSCAT14BKCEMYCDBRRHWPY",
@@ -4550,7 +4565,7 @@
       "category": "single_hop",
       "question": "What kind of gig was John offered at the game dev non-profit organization?",
       "answer": "programming mentor for game developers",
-      "prediction": "A volunteer gig as a programming mentor, where he teaches coding and assists developers with their projects.",
+      "prediction": "John was offered a volunteer gig as a programming mentor, where he teaches coding and assists developers with their projects.",
       "retrieved_ids": [
         "epi_01M2QSWY0ES943CHRPXVDBMW81",
         "sem_01M2QRNZ5WM4AK9BWR1ZVQC5S8",
@@ -4579,7 +4594,7 @@
       "category": "single_hop",
       "question": "What does John feel about starting the journey as a programming mentor for game developers?",
       "answer": "excited and inspired",
-      "prediction": "He finds it deeply rewarding to use his programming skills to make a positive social impact.",
+      "prediction": "Based on the memories, John likely feels excited and deeply fulfilled about starting as a programming mentor. The role combines his two great passions—gaming and helping people—and aligns with his belief that using his programming skills to make a positive social impact is deeply rewarding.",
       "retrieved_ids": [
         "epi_01M2QSWY0ES943CHRPXVDBMW81",
         "cor_01M2QRNZ5WM4AK9BWR1ZVQC5S5",
@@ -4608,7 +4623,7 @@
       "category": "single_hop",
       "question": "What kind of games is James excited to play with his new video card?",
       "answer": "RPGs",
-      "prediction": "Cyberpunk 2077 — he plans to play it on his new video card after John recommended it.",
+      "prediction": "James is excited to play Cyberpunk 2077 on his new video card, after John recommended it to him.",
       "retrieved_ids": [
         "epi_01M2QSWY0ES943CHRPXVDBMW85",
         "epi_01M2QSWY0ES943CHRPXVDBMW87",
@@ -4637,7 +4652,7 @@
       "category": "single_hop",
       "question": "What inspired James to create his game?",
       "answer": "Witcher 3",
-      "prediction": "The Witcher 3 — its world and story motivated James to create his own game.",
+      "prediction": "The Witcher 3 inspired James — its world and story motivated him to create his own game.",
       "retrieved_ids": [
         "sem_01M2QSY7Y13P77G0R0T526TDMZ",
         "sem_01M2QSH0HE2P5XTCMKX6WRM0ZT",
@@ -4664,7 +4679,7 @@
       "category": "single_hop",
       "question": "What sparked James' passion for gaming when he was a kid?",
       "answer": "Super Mario and The Legend of Zelda games",
-      "prediction": "Playing Super Mario and The Legend of Zelda for hours on his first gaming system, a Nintendo console.",
+      "prediction": "Playing Super Mario and The Legend of Zelda for hours on his first gaming system, a Nintendo console, sparked James' lasting passion for gaming.",
       "retrieved_ids": [
         "sem_01M2QT1B7DHNSV9ZCM1WZ0DE59",
         "sem_01M2QRXPXP95KF59BC2MD8MHXY",
@@ -4692,7 +4707,7 @@
       "category": "single_hop",
       "question": "What did James lose progress on due to a power outage?",
       "answer": "a game",
-      "prediction": "He lost unsaved game progress during his gaming session.",
+      "prediction": "James lost unsaved game progress — a power outage on 2022-10-18 interrupted his gaming session, and he resolved to save more often.",
       "retrieved_ids": [
         "epi_01M2QT1B7C5AP0GBBHCGZVHKW0",
         "epi_01M2QRD7CCZ68EMJS39PFYF2DD",
@@ -4720,7 +4735,7 @@
       "category": "single_hop",
       "question": "What games were played at the gaming tournament organized by John on 31 October, 2022?",
       "answer": "Fortnite, Overwatch, Apex Legends",
-      "prediction": "不知道。记忆中John组织的游戏锦标赛是在2022年10月30日，而非10月31日。",
+      "prediction": "根据记忆，John 组织的游戏锦标赛是在 2022 年 10 月 30 日（而非 31 日），比赛的游戏是 Fortnite、Overwatch 和 Apex Legends。",
       "retrieved_ids": [
         "epi_01M2QT25H51C6JQNGAYAVS93EV",
         "epi_01M2QRKRA2G6SBAD0YGR542XXA",
@@ -4745,7 +4760,7 @@
       "category": "single_hop",
       "question": "What was the purpose of the gaming tournament organized by John on 31 October, 2022?",
       "answer": "To raise money for a children's hospital",
-      "prediction": "记忆中没有2022年10月31日的比赛记录。最接近的是2022年10月30日的比赛，目的是为儿童医院筹款。",
+      "prediction": "There is no record of a gaming tournament organized by John on 31 October 2022. According to the memories, John organized a gaming tournament on 30 October 2022 (playing Fortnite, Overwatch, and Apex Legends) to raise money for a children's hospital, but nothing is recorded for 31 October.",
       "retrieved_ids": [
         "epi_01M2QT25H51C6JQNGAYAVS93EV",
         "epi_01M2QRKRA2G6SBAD0YGR542XXA",
@@ -4770,7 +4785,7 @@
       "category": "single_hop",
       "question": "What decision did James and Samantha make on 31 October, 2022?",
       "answer": "To move in together",
-      "prediction": "不知道。",
+      "prediction": "On 31 October 2022, James and Samantha mutually decided to move in together and rented an apartment not far from McGee's bar.",
       "retrieved_ids": [
         "epi_01M2QSKN71Y1R5XM5Z40AR81FY",
         "epi_01M2QSE0YRHXS1793M9K88KSRH",
@@ -4801,10 +4816,10 @@
         "epi_01M2QSKN71Y1R5XM5Z40AR81FY",
         "epi_01M2QSE0YRHXS1793M9K88KSRG",
         "epi_01M2QSE0YRHXS1793M9K88KSRH",
-        "epi_01M2QSY7Y13P77G0R0T526TDMY",
         "epi_01M2QRD7CCZ68EMJS39PFYF2DM",
         "epi_01M2QSKN71Y1R5XM5Z40AR81G2",
         "epi_01M2QT3GT21D6ANAQGXB31CN0T",
+        "epi_01M2QSY7Y13P77G0R0T526TDMY",
         "epi_01M2QRAK7EH3ZYKBKA5TA47P50",
         "sem_01M2QT25H51C6JQNGAYAVS93EX"
       ],
@@ -4820,7 +4835,7 @@
       "category": "single_hop",
       "question": "Why did James and Samantha choose an apartment near McGee's bar?",
       "answer": "They love spending time together at the bar",
-      "prediction": "因为他们喜欢经常去 McGee's 酒吧，酒吧的近距离是他们选择新公寓的标准之一。",
+      "prediction": "Because they love spending time at McGee's bar, so its close proximity was one of the criteria for choosing their new apartment.",
       "retrieved_ids": [
         "epi_01M2QT25H51C6JQNGAYAVS93EW",
         "sem_01M2QT25H51C6JQNGAYAVS93EX",
@@ -4845,7 +4860,7 @@
       "category": "single_hop",
       "question": "What game is John hooked on playing on 5 November, 2022?",
       "answer": "FIFA 23",
-      "prediction": "FIFA 23。",
+      "prediction": "On 5 November 2022, John is hooked on FIFA 23, a football video game that lets him play online with players from all over the world.",
       "retrieved_ids": [
         "sem_01M2QT3GT3VM13DVDXVKJT3H8M",
         "epi_01M2QT25H51C6JQNGAYAVS93EV",
@@ -4874,7 +4889,7 @@
       "category": "single_hop",
       "question": "What did John suggest James practice before playing FIFA 23 together?",
       "answer": "Control with a gamepad and timing",
-      "prediction": "不知道。记忆中只提到James计划先练习FIFA 23这款游戏本身，但没有提到John具体建议他练习什么。",
+      "prediction": "The memories don't record John suggesting anything specific. They only say that James said he would go train/practice FIFA 23 himself before they play together online.",
       "retrieved_ids": [
         "sem_01M2QT3GT3VM13DVDXVKJT3H8N",
         "sem_01M2QT3GT3VM13DVDXVKJT3H8M",
@@ -4903,7 +4918,7 @@
       "category": "single_hop",
       "question": "What project did John work on with a game developer by 7 November, 2022?",
       "answer": "An online board game",
-      "prediction": "An online board game.",
+      "prediction": "By 7 November 2022, John collaborated with a game developer to create an **online board game**.",
       "retrieved_ids": [
         "epi_01M2QSGCR4AYZE6DGTGH2HC2Q4",
         "epi_01M2QT5TW7X19XKP49ESV09VB1",
@@ -4933,7 +4948,7 @@
       "category": "single_hop",
       "question": "What is the name of John's cousin's dog?",
       "answer": "Luna",
-      "prediction": "Luna",
+      "prediction": "Luna.",
       "retrieved_ids": [
         "sem_01M2QT5TW7X19XKP49ESV09VB5",
         "epi_01M2QRKRA2G6SBAD0YGR542XXB",

@@ -8,25 +8,31 @@
   },
   "report": {
     "total": 123,
-    "answered": 120,
-    "answer_rate": 0.9756,
-    "accuracy": 0.2195,
-    "f1": 0.2447,
-    "em": 0.0894,
-    "contains": 0.2195,
+    "answered": 117,
+    "answer_rate": 0.9512,
+    "accuracy": 0.3089,
+    "f1": 0.2051,
+    "em": 0.0244,
+    "contains": 0.2764,
+    "time_match": 0.0325,
+    "hit@1": 0.5041,
+    "hit@k": 0.9106,
     "recall@k": 0.2056,
     "recall@gold": 0.2137,
-    "mrr": 0.6347,
+    "mrr": 0.6348,
     "ndcg@k": 0.2987,
     "by_category": {
       "temporal": {
         "total": 24,
         "answered": 23,
         "answer_rate": 0.9583,
-        "accuracy": 0.0833,
-        "f1": 0.1509,
+        "accuracy": 0.2917,
+        "f1": 0.1646,
         "em": 0.0,
-        "contains": 0.0833,
+        "contains": 0.125,
+        "time_match": 0.1667,
+        "hit@1": 0.5417,
+        "hit@k": 0.9583,
         "recall@k": 0.2272,
         "recall@gold": 0.2173,
         "mrr": 0.6634,
@@ -35,16 +41,19 @@
       },
       "multihop": {
         "total": 30,
-        "answered": 29,
-        "answer_rate": 0.9667,
-        "accuracy": 0.1333,
-        "f1": 0.1497,
+        "answered": 27,
+        "answer_rate": 0.9,
+        "accuracy": 0.2,
+        "f1": 0.1522,
         "em": 0.0,
-        "contains": 0.1333,
+        "contains": 0.2,
+        "time_match": 0.0,
+        "hit@1": 0.3333,
+        "hit@k": 0.8,
         "recall@k": 0.0975,
         "recall@gold": 0.1692,
         "mrr": 0.4833,
-        "ndcg@k": 0.2636,
+        "ndcg@k": 0.2634,
         "by_category": {}
       },
       "open_domain": {
@@ -52,9 +61,12 @@
         "answered": 7,
         "answer_rate": 1.0,
         "accuracy": 0.1429,
-        "f1": 0.0656,
+        "f1": 0.0807,
         "em": 0.0,
         "contains": 0.1429,
+        "time_match": 0.0,
+        "hit@1": 0.2857,
+        "hit@k": 0.8571,
         "recall@k": 0.1055,
         "recall@gold": 0.1525,
         "mrr": 0.3857,
@@ -63,16 +75,19 @@
       },
       "single_hop": {
         "total": 62,
-        "answered": 61,
-        "answer_rate": 0.9839,
-        "accuracy": 0.3226,
-        "f1": 0.3473,
-        "em": 0.1774,
-        "contains": 0.3226,
+        "answered": 60,
+        "answer_rate": 0.9677,
+        "accuracy": 0.3871,
+        "f1": 0.2604,
+        "em": 0.0484,
+        "contains": 0.3871,
+        "time_match": 0.0,
+        "hit@1": 0.5968,
+        "hit@k": 0.9516,
         "recall@k": 0.2608,
         "recall@gold": 0.2407,
-        "mrr": 0.7249,
-        "ndcg@k": 0.3262,
+        "mrr": 0.7252,
+        "ndcg@k": 0.3263,
         "by_category": {}
       }
     }
@@ -83,7 +98,7 @@
       "category": "temporal",
       "question": "Which year did Audrey adopt the first three of her dogs?",
       "answer": "2020",
-      "prediction": "2020 (around March 2020, since she has had them for 3 years).",
+      "prediction": "Around **2020** — according to the memory, Audrey has had her three dogs (Pepper, Precious and Panda) since around March 2020.",
       "retrieved_ids": [
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN5",
         "sem_01M2QMYNFRWQB6ETNGGE53KX4S",
@@ -113,7 +128,7 @@
       "category": "temporal",
       "question": "When did Andrew start his new job as a financial analyst?",
       "answer": "The week before March 27, 2023",
-      "prediction": "Andrew 在 2023-03-20 那一周开始了他的财务分析师新工作。",
+      "prediction": "Andrew started his new job as a Financial Analyst in the week of 2023-03-20 (the week of March 20, 2023).",
       "retrieved_ids": [
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN4",
         "sem_01M2QNVHPF1V0SF6VZ262QVKQ3",
@@ -143,7 +158,7 @@
       "category": "multihop",
       "question": "What kind of indoor activities has Andrew pursued with his girlfriend?",
       "answer": "boardgames, volunteering at pet shelter, wine tasting, growing flowers",
-      "prediction": "根据记忆，Andrew 和女友一起做过的室内活动主要是：在城市里探索新的餐厅、尝试新的美食（作为一周忙碌后放松的方式）。此外，他们还一起在宠物收容所做过志愿者（2023-07-24）。",
+      "prediction": "根据记忆，Andrew 和女友一起做过的室内活动主要是**在城市里探索新的餐厅/觅食**（16 April 2023 提到他们喜欢发现城里新的吃饭地方，作为尝试新事物和放松的方式）。此外，他们还一起在宠物收容所做过志愿者（2023-07-24），这也可能涉及室内活动。",
       "retrieved_ids": [
         "cor_01M2QNE4PR20P352SRSR5VC9ZE",
         "sem_01M2QNZN95MKTHHG34N0F4WD63",
@@ -219,7 +234,7 @@
       "category": "multihop",
       "question": "What kind of places have Andrew and his girlfriend checked out around the city?",
       "answer": "cafes, new places to eat, open space for hikes, pet shelter, wine tasting event, park",
-      "prediction": "他们探索了城市里新的餐饮场所——例如，他们尝试了一家新咖啡馆，享用了美味的牛角包、玛芬和蛋挞。",
+      "prediction": "They've checked out new places to eat around the city — for example, they tried a new cafe and enjoyed croissants, muffins, and tarts there.",
       "retrieved_ids": [
         "sem_01M2QMEJXESBAH2JVVX8RGZ1NC",
         "epi_01M2QNYPD2FQER30RPBS7NGPSQ",
@@ -331,7 +346,7 @@
       "category": "temporal",
       "question": "When did Audrey make muffins for herself?",
       "answer": "The week of April 3rd to 9th",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention Audrey making muffins at any point.",
       "retrieved_ids": [
         "sem_01M2QN4PKGFY8BJSZEYAGW3ARD",
         "sem_01M2QMHWJMWMCYNAV1K54F6C1H",
@@ -361,7 +376,7 @@
       "category": "temporal",
       "question": "When did Audrey see a hummingbird?",
       "answer": "first week of May 2023",
-      "prediction": "During the week of 2023-04-24, while on a hike.",
+      "prediction": "Audrey saw a hummingbird during the week of 2023-04-24, while she was on a hike.",
       "retrieved_ids": [
         "epi_01M2QMHWJMWMCYNAV1K54F6C18",
         "epi_01M2QMKCMR2WFFA6EMX4GRHX79",
@@ -397,7 +412,7 @@
       "category": "temporal",
       "question": "When did Audrey adopt Pixie?",
       "answer": "around April 2, 2023",
-      "prediction": "Shortly before 2023-04-02.",
+      "prediction": "Shortly before 2 April 2023.",
       "retrieved_ids": [
         "epi_01M2QMCHVGGH39KYXVNSMVQK7E",
         "sem_01M2QN32Z7E0E11BW9HHWQMNDH",
@@ -425,7 +440,7 @@
       "category": "temporal",
       "question": "How many years passed between Audrey adopting Pixie and her other three dogs?",
       "answer": "three years",
-      "prediction": "大约 3 年。Audrey 在 2020 年 3 月左右领养了另外三只狗，而在 2023 年 4 月初才领养了 Pixie。",
+      "prediction": "About 3 years — Audrey got Pepper, Precious, and Panda around March 2020, and adopted Pixie shortly before April 2023.",
       "retrieved_ids": [
         "sem_01M2QN32Z7E0E11BW9HHWQMNDH",
         "epi_01M2QMCHVGGH39KYXVNSMVQK7E",
@@ -465,7 +480,7 @@
       "category": "temporal",
       "question": "Did Andrew have a pet dog during March 2023?",
       "answer": "No",
-      "prediction": "No. As of 2023-03-27, Andrew did not have any pets (though he loves animals).",
+      "prediction": "No. As of 2023-03-27, Andrew did not have any pets (though he loves animals). He only had his pet dog Toby by August 2023.",
       "retrieved_ids": [
         "sem_01M2QMQ7HRAMPJ64KFZAKBS2JM",
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN4",
@@ -493,7 +508,7 @@
       "category": "multihop",
       "question": "What kind of classes or groups has Audrey joined to take better care of her dogs?",
       "answer": "positive reinforcement training workshop to bond with pets, dog training course, agility training course, grooming course, dog-owners group",
-      "prediction": "Audrey 加入了：\n- 一个狗主人小组，学习如何更好地照顾她的四只狗\n- 一门具有挑战性但有收获的狗狗训练课程\n- 在狗狗公园参加敏捷训练课，每周和狗狗们练习两次",
+      "prediction": "Audrey has joined a dog owners group (meeting weekly with other dog parents to get tips and let the dogs play), taken a dog training course, and takes her dogs to agility classes at a dog park.",
       "retrieved_ids": [
         "sem_01M2QNYPD2FQER30RPBS7NGPSN",
         "epi_01M2QMTZR566HV3TC9372YV2E2",
@@ -587,7 +602,7 @@
       "category": "temporal",
       "question": "When did Audrey's positive reinforcement training course for dogs take place?",
       "answer": "June, 2023",
-      "prediction": "2023年6月。",
+      "prediction": "June 2023 — Audrey signed up in May 2023 for a positive reinforcement dog training workshop about bonding with pets, which took place in June 2023.",
       "retrieved_ids": [
         "epi_01M2QMPE88DZX96FVTFTBV6Q61",
         "epi_01M2QMTZR566HV3TC9372YV2E2",
@@ -615,7 +630,7 @@
       "category": "temporal",
       "question": "When did Andrew go rock climbing?",
       "answer": "June 11, 2023",
-      "prediction": "2023-06-11",
+      "prediction": "Andrew went rock climbing on 2023-06-11, when he took a rock climbing class with his friends and successfully reached the top.",
       "retrieved_ids": [
         "epi_01M2QMRF29TFC1BV9J8WBHQ2ZB",
         "sem_01M2QMRF29TFC1BV9J8WBHQ2ZC",
@@ -646,7 +661,7 @@
       "category": "multihop",
       "question": "What outdoor activities has Andrew done other than hiking in nature?",
       "answer": "rock climbing, fishing, camping",
-      "prediction": "Rock climbing.",
+      "prediction": "根据记忆，除了徒步，Andrew 还玩过攀岩（rock climbing），并且很喜欢（2023年6月13日）。此外，他住在城市里时会去附近的公园（2023年10月13日）。皮划艇和蹦极只是他想尝试的活动，还没做过。",
       "retrieved_ids": [
         "cor_01M2QMEJXESBAH2JVVX8RGZ1NB",
         "sem_01M2QN4PKGFY8BJSZEYAGW3ARG",
@@ -708,7 +723,7 @@
       "category": "temporal",
       "question": "When did Audrey move to a new place?",
       "answer": "June 2023",
-      "prediction": "Around 2023-06-26.",
+      "prediction": "Around June 26, 2023, Audrey moved to a new home with a bigger backyard for her dogs.",
       "retrieved_ids": [
         "epi_01M2QMSDF461BCNAC49PXRY7WH",
         "epi_01M2QMCHVGGH39KYXVNSMVQK7E",
@@ -736,7 +751,7 @@
       "category": "multihop",
       "question": "What is something that Andrew really misses while working in the city?",
       "answer": "being in nature",
-      "prediction": "Andrew really misses nature — especially hiking and exploring nature trails, which he treats as his escape and a way to find peace.",
+      "prediction": "Andrew really misses **nature** — especially hiking and exploring nature trails, which made him feel connected and recharged.",
       "retrieved_ids": [
         "sem_01M2QMEJXESBAH2JVVX8RGZ1N9",
         "sem_01M2QNFTFVNGAA7PCQQ5T8AFJB",
@@ -824,7 +839,7 @@
       "category": "temporal",
       "question": "When is Andrew going to go hiking with Audrey?",
       "answer": "August",
-      "prediction": "2023年11月4日（星期六），他们计划带狗去附近湖边对狗友好的步道远足。",
+      "prediction": "According to the most recent plan (28 October 2023), Andrew and Audrey are going hiking with their dogs on **Saturday, 4 November 2023**, at a nearby dog-friendly trail by a lake.",
       "retrieved_ids": [
         "sem_01M2QMW9D0994ARB15FR0QQ5R0",
         "sem_01M2QMW9D0994ARB15FR0QQ5R1",
@@ -852,7 +867,7 @@
       "category": "multihop",
       "question": "How many times did Audrey and Andew plan to hike together?",
       "answer": "three times",
-      "prediction": "根据记忆，Andrew 和 Audrey 计划一起徒步共 **4 次**（记录中）：\n1. 2023年8月，带 Audrey 的狗，选对狗安全的步道\n2. 2023年8月（2023-07-11 由 Andrew 计划，带 Toby 和 Audrey 的狗）——可能与第1条是同一次\n3. 2023年11月，带狗，Audrey 负责找远离城市的地点\n4. 2023年11月4日（周六），湖边对狗友好的步道，Audrey 带零食——可能与第3条是同一次\n\n如果按去重计算，实际是 **2 次不同的计划**（2023年8月和2023年11月各一次）。",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QMW9D0994ARB15FR0QQ5R0",
         "epi_01M2QNSX00NS3FX2CQBR8RFGX9",
@@ -902,14 +917,14 @@
       "category": "multihop",
       "question": "Where did Audrey get Pixie from?",
       "answer": "breeder",
-      "prediction": "From a breeder located near her home.",
+      "prediction": "Audrey got Pixie from a breeder located near her home.",
       "retrieved_ids": [
         "epi_01M2QMCHVGGH39KYXVNSMVQK7E",
         "sem_01M2QN32Z7E0E11BW9HHWQMNDH",
         "sem_01M2QMCHVGGH39KYXVNSMVQK7F",
         "sem_01M2QMCHVGGH39KYXVNSMVQK7G",
-        "sem_01M2QMW9D0994ARB15FR0QQ5QZ",
         "sem_01M2QMHWJMWMCYNAV1K54F6C1E",
+        "sem_01M2QMW9D0994ARB15FR0QQ5QZ",
         "sem_01M2QN32Z7E0E11BW9HHWQMNDN",
         "sem_01M2QNYPD2FQER30RPBS7NGPSP",
         "sem_01M2QMYNFRWQB6ETNGGE53KX4S",
@@ -938,7 +953,7 @@
       "category": "open_domain",
       "question": "What is an indoor activity that Andrew would enjoy doing while make his dog happy?",
       "answer": "cook dog treats",
-      "prediction": "Mental stimulation activities such as puzzles, training, and hide-and-seek.",
+      "prediction": "Andrew plans to try mental stimulation activities such as puzzles, training, and hide-and-seek to keep his dogs active and entertained indoors.",
       "retrieved_ids": [
         "sem_01M2QNYPD2FQER30RPBS7NGPSR",
         "epi_01M2QMSDF461BCNAC49PXRY7WK",
@@ -988,7 +1003,7 @@
       "category": "open_domain",
       "question": "Which meat does Audrey prefer eating more than others?",
       "answer": "chicken",
-      "prediction": "Chicken — her favorite recipe is Chicken Pot Pie, and one of her favorite dishes is Roasted Chicken.",
+      "prediction": "Chicken. Her favorite recipe is Chicken Pot Pie, and one of her favorite dishes (her favorite comfort meal) is Roasted Chicken.",
       "retrieved_ids": [
         "sem_01M2QMYNFRWQB6ETNGGE53KX4S",
         "sem_01M2QNQPHDYHAMXBCR99W1J9FS",
@@ -1026,7 +1041,7 @@
       "category": "multihop",
       "question": "What are the classes that Audrey took for her dogs to?",
       "answer": "Positive reinforcement training class for bonding, dog training course, agility class",
-      "prediction": "Audrey 带她的狗参加过：\n- 在狗狗公园的敏捷训练课\n- 一门有挑战性但有收获的狗狗训练课程\n- 2023年6月的正向强化狗狗训练工作坊（关于与宠物建立感情）",
+      "prediction": "Audrey took her dogs to **agility classes at a dog park** (practicing twice a week), and she also took a **dog training course** and signed up for a **positive reinforcement dog training workshop** (held in June 2023).",
       "retrieved_ids": [
         "epi_01M2QMTZR566HV3TC9372YV2E2",
         "sem_01M2QMZVHBA1SMR1X7K074TVMS",
@@ -1092,7 +1107,7 @@
       "category": "temporal",
       "question": "Where did Andrew go during the first weekend of August 2023?",
       "answer": "camping with girlfriend",
-      "prediction": "He went camping with his girlfriend and his dog Toby on the weekend of 2023-08-05.",
+      "prediction": "According to the memory, Andrew planned to go **camping** with his girlfriend and his dog Toby on the weekend of 2023-08-05 (the first weekend of August 2023).",
       "retrieved_ids": [
         "epi_01M2QN4PKGFY8BJSZEYAGW3ARH",
         "epi_01M2QMX576CY65AKFGA3MHKFHW",
@@ -1122,7 +1137,7 @@
       "category": "multihop",
       "question": "What are some problems that Andrew faces before he adopted Toby?",
       "answer": "Finding the right dog and pet-friendly apartments close to open spaces",
-      "prediction": "Before adopting, Andrew found it difficult to get a dog because it was hard to find a place that allows dogs and to find the right dog.",
+      "prediction": "Before adopting Toby, Andrew found it difficult to get a dog because it was hard to find a place that allows dogs and hard to find the right dog.",
       "retrieved_ids": [
         "sem_01M2QN84E1W4JV5HS9J1SQ760M",
         "sem_01M2QNZN95MKTHHG34N0F4WD62",
@@ -1164,7 +1179,7 @@
       "category": "multihop",
       "question": "Did Audrey and Andrew grow up with a pet dog?",
       "answer": "Yes",
-      "prediction": "不知道。",
+      "prediction": "不知道。记忆只提到 Audrey 目前（2023年）养狗，没有提到她或 Andrew 小时候是否养过狗，也没有任何关于 Andrew 的信息。",
       "retrieved_ids": [
         "sem_01M2QNVHPF1V0SF6VZ262QVKQ4",
         "sem_01M2QMYNFRWQB6ETNGGE53KX4T",
@@ -1202,7 +1217,7 @@
       "category": "temporal",
       "question": "When did Andrew and his girlfriend go fishing?",
       "answer": "weekend before August 24, 2023",
-      "prediction": "On the weekend of 2023-08-19.",
+      "prediction": "On the weekend of 2023-08-19 (August 19, 2023), Andrew and his girlfriend went fishing at a nearby lake.",
       "retrieved_ids": [
         "epi_01M2QN84E1W4JV5HS9J1SQ760H",
         "sem_01M2QN84E1W4JV5HS9J1SQ760J",
@@ -1232,7 +1247,7 @@
       "category": "multihop",
       "question": "What is the biggest stressor in Andrew's life besides not being able to hike frequently?",
       "answer": "work",
-      "prediction": "工作——Andrew 说工作一直很艰难且压力大（截至2023年9月6日），工作与生活的平衡使他的户外活动难以进行。",
+      "prediction": "Work — Andrew reported that his job has been tough and stressful, which is what caused his outdoor activities to take a backseat.",
       "retrieved_ids": [
         "cor_01M2QNFTFVNGAA7PCQQ5T8AFJD",
         "sem_01M2QNFTFVNGAA7PCQQ5T8AFJC",
@@ -1252,10 +1267,10 @@
         "sem_01M2QNFTFVNGAA7PCQQ5T8AFJB",
         "sem_01M2QNSX00NS3FX2CQBR8RFGXA",
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN9",
-        "sem_01M2QNQPHDYHAMXBCR99W1J9FJ",
-        "sem_01M2QMRF29TFC1BV9J8WBHQ2ZC",
         "sem_01M2QMX576CY65AKFGA3MHKFHQ",
+        "sem_01M2QNQPHDYHAMXBCR99W1J9FJ",
         "cor_01M2QNE4PR20P352SRSR5VC9ZE",
+        "sem_01M2QMRF29TFC1BV9J8WBHQ2ZC",
         "sem_01M2QN32Z7E0E11BW9HHWQMNDT",
         "sem_01M2QMZVHBA1SMR1X7K074TVMM",
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN8",
@@ -1314,7 +1329,7 @@
       "category": "multihop",
       "question": "How does Andrew feel about his current work?",
       "answer": "Stressful",
-      "prediction": "Andrew finds his work tough and stressful. As of September 6, 2023, he reported that work has been tough and stressful, causing his outdoor activities to take a backseat. He has also been under stress from piling up work, and the poor work-life balance has made hiking more challenging for him.",
+      "prediction": "Andrew finds his current work tough and stressful. Work has been piling up (as of July 2023), and by September 2023 he reported it was tough and stressful, causing his outdoor activities to take a backseat. His poor work-life balance has made hiking difficult, and he feels a void without nature as his escape because of his job and city life.",
       "retrieved_ids": [
         "epi_01M2QMX576CY65AKFGA3MHKFHS",
         "sem_01M2QNFTFVNGAA7PCQQ5T8AFJC",
@@ -1396,7 +1411,7 @@
       "category": "multihop",
       "question": "What is something that Audrey often dresses up her dogs with?",
       "answer": "Hats",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories mention Audrey's dogs, their grooming routine (daily brushing, baths, nail trims), and their favorite relaxing spots, but there is no information about anything she dresses her dogs up with.",
       "retrieved_ids": [
         "sem_01M2QMRF29TFC1BV9J8WBHQ2ZF",
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN6",
@@ -1444,7 +1459,7 @@
       "category": "multihop",
       "question": "What are the names of Audrey's dogs?",
       "answer": "Pepper, Precious, Panda, and Pixie",
-      "prediction": "Pepper, Pixie, Precious, and Panda.",
+      "prediction": "Audrey's dogs are named Pepper, Pixie, Precious, and Panda.",
       "retrieved_ids": [
         "cor_01M2QMZVHBA1SMR1X7K074TVMV",
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN6",
@@ -1496,7 +1511,7 @@
       "category": "temporal",
       "question": "When is Andrew planning to go to the beach with his girlfriend?",
       "answer": "November 2023",
-      "prediction": "不知道",
+      "prediction": "不知道。记忆中没有提到 Andrew 计划和女朋友去海滩的任何信息。",
       "retrieved_ids": [
         "epi_01M2QMZVHBA1SMR1X7K074TVMQ",
         "epi_01M2QMW9D0994ARB15FR0QQ5QW",
@@ -1530,7 +1545,7 @@
       "category": "multihop",
       "question": "What has Andrew done with his dogs?",
       "answer": "Taking walks and hiking",
-      "prediction": "Andrew has gone on walks with his dogs and explored new hiking trails together. (He has not yet taken them to the groomer.)",
+      "prediction": "Andrew goes on walks with his dogs and explores new hiking trails together with them. He and his girlfriend also care for his dogs, including the new puppy Scout, and he focuses on keeping Toby and Buddy happy and healthy.",
       "retrieved_ids": [
         "sem_01M2QNZN95MKTHHG34N0F4WD63",
         "epi_01M2QNZN95MKTHHG34N0F4WD65",
@@ -1572,7 +1587,7 @@
       "category": "multihop",
       "question": "What kind of tattoo does Audrey have on her arm?",
       "answer": "Tattoos of her four dogs.",
-      "prediction": "Audrey has a tattoo of her four dogs on her arm.",
+      "prediction": "Audrey has a tattoo of her four dogs on her arm, representing her love for them. Shortly before 2023-10-13, she also added more drawings to this existing tattoo.",
       "retrieved_ids": [
         "epi_01M2QN32Z7E0E11BW9HHWQMNDJ",
         "sem_01M2QMEJXESBAH2JVVX8RGZ1NF",
@@ -1593,10 +1608,10 @@
         "sem_01M2QMZVHBA1SMR1X7K074TVMS",
         "sem_01M2QN32Z7E0E11BW9HHWQMNDP",
         "sem_01M2QNH16ANTRDXJCA6Z3FJX66",
-        "sem_01M2QMHWJMWMCYNAV1K54F6C1F",
+        "sem_01M2QNVHPF1V0SF6VZ262QVKQ9",
         "cor_01M2QNBJQKZH35N9AANTEJW0CT",
         "sem_01M2QMTZR566HV3TC9372YV2E7",
-        "sem_01M2QNVHPF1V0SF6VZ262QVKQ9",
+        "sem_01M2QMHWJMWMCYNAV1K54F6C1F",
         "sem_01M2QNYPD2FQER30RPBS7NGPSM",
         "sem_01M2QMKCMR2WFFA6EMX4GRHX78",
         "sem_01M2QNZN95MKTHHG34N0F4WD67",
@@ -1642,7 +1657,7 @@
       "category": "open_domain",
       "question": "What can Andrew potentially do to improve his stress and accomodate his living situation with his dogs?",
       "answer": "Change to a hybrid or remote job so he can move away from the city to the suburbs to have a larger living space and be closer to nature.",
-      "prediction": "根据记忆，Andrew 可以尝试一些精神刺激活动，例如拼图、训练和捉迷藏，让他的狗狗 Toby 和 Buddy 在城市里保持活跃和开心。此外，他也可以带狗狗散步、探索新的徒步路线，这有助于缓解他因工作堆积而积累的压力，并弥补他错过户外徒步的遗憾。",
+      "prediction": "Based on the memories, Andrew could:\n\n1. **Go on walks and hikes with his dogs** — He loves hiking and exploring nature trails, and since he's been stressed from work and stuck indoors missing his outdoor hikes, taking Toby, Buddy, and Scout out on walks and new hiking trails could relieve his stress while exercising the dogs.\n\n2. **Try mental stimulation activities** — He already plans to use puzzles, training, and hide-and-seek to keep his dogs active and entertained in the city, which helps accommodate their living situation in an urban environment.\n\n3. **Share care duties with his girlfriend** — They already care for the dogs together, which can lighten the load and help manage both his stress and the dogs' needs.",
       "retrieved_ids": [
         "epi_01M2QNZN95MKTHHG34N0F4WD65",
         "sem_01M2QMCHVGGH39KYXVNSMVQK7K",
@@ -1664,7 +1679,7 @@
         "sem_01M2QNWMNVFMNJRNNTX34RVCJN",
         "epi_01M2QNQPHDYHAMXBCR99W1J9FK",
         "sem_01M2QNYPD2FQER30RPBS7NGPSJ",
-        "sem_01M2QMKCMR2WFFA6EMX4GRHX74"
+        "epi_01M2QMW9D0994ARB15FR0QQ5QW"
       ],
       "gold_ids": [
         "cor_01M2QNBJQKZH35N9AANTEJW0CT",
@@ -1696,7 +1711,7 @@
       "category": "temporal",
       "question": "How many months passed between Andrew adopting Toby and Buddy?",
       "answer": "three months",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories state that Buddy was adopted from a shelter around 19 October 2023, but they never mention when Toby was adopted, so there's no basis to calculate the time between the two adoptions.",
       "retrieved_ids": [
         "sem_01M2QNYPD2FQER30RPBS7NGPSJ",
         "sem_01M2QNZN95MKTHHG34N0F4WD62",
@@ -1734,7 +1749,7 @@
       "category": "multihop",
       "question": "What are the names of Andrew's dogs?",
       "answer": "Toby, Scout, Buddy",
-      "prediction": "Toby 和 Buddy（此外还有新领养的 Scout）。",
+      "prediction": "Andrew's dogs are named Toby, Buddy, and Scout (the newly adopted one).",
       "retrieved_ids": [
         "sem_01M2QNZN95MKTHHG34N0F4WD62",
         "sem_01M2QNSWZZVANM9PST405121KH",
@@ -1786,7 +1801,7 @@
       "category": "multihop",
       "question": "What are some foods that Audrey likes eating?",
       "answer": "chicken pot pie, chicken roast, blueberry muffins, sushi",
-      "prediction": "Audrey likes sushi (she enjoys trying its many types and flavors), Chicken Pot Pie (her favorite recipe), and Roasted Chicken with garlic, lemon, and herbs (a favorite comfort meal). She also loves garlic as a go-to ingredient.",
+      "prediction": "Audrey likes sushi (she loves trying its many types and flavors), Chicken Pot Pie (her favorite cozy family recipe), and Roasted Chicken with garlic, lemon, and herbs (a favorite comfort meal). She also loves garlic as a go-to ingredient.",
       "retrieved_ids": [
         "cor_01M2QMZVHBA1SMR1X7K074TVMV",
         "sem_01M2QNFTFVNGAA7PCQQ5T8AFJ9",
@@ -1858,11 +1873,11 @@
       "category": "temporal",
       "question": "When did Audrey get into an accident in the park?",
       "answer": "between October 19 and 24, 2023",
-      "prediction": "在2023年10月24日之前的那一周，Audrey在公园和她的狗玩耍时发生了事故，伤了手臂。",
+      "prediction": "During the week before 2023-10-24, Audrey had an accident while playing with her dogs at the park and injured her arm.",
       "retrieved_ids": [
         "epi_01M2QNVHPF1V0SF6VZ262QVKQ5",
-        "sem_01M2QMEJXESBAH2JVVX8RGZ1NE",
         "epi_01M2QMQ7HRAMPJ64KFZAKBS2JJ",
+        "sem_01M2QMEJXESBAH2JVVX8RGZ1NE",
         "sem_01M2QNE4PR20P352SRSR5VC9ZR",
         "epi_01M2QN4PKGFY8BJSZEYAGW3ARJ",
         "epi_01M2QMQ7HRAMPJ64KFZAKBS2JH",
@@ -1889,7 +1904,7 @@
       "category": "temporal",
       "question": "When did Andrew and his girlfriend go on a wine tasting trip?",
       "answer": "the weekend before October 24, 2023",
-      "prediction": "On the weekend of 2023-10-21.",
+      "prediction": "On the weekend of 2023-10-21 (October 21, 2023).",
       "retrieved_ids": [
         "epi_01M2QNVHPF1V0SF6VZ262QVKQ2",
         "epi_01M2QMZVHBA1SMR1X7K074TVMQ",
@@ -1920,7 +1935,7 @@
       "category": "multihop",
       "question": "What did Audrey get wtih having so many dogs?",
       "answer": "Companionship",
-      "prediction": "Great happiness — her dogs bring her great happiness, and she considers them part of her family.",
+      "prediction": "They bring her great happiness — Audrey considers her dogs family (her \"fur kids\") and cannot imagine life without them.",
       "retrieved_ids": [
         "sem_01M2QNVHPF1V0SF6VZ262QVKQ4",
         "sem_01M2QNFTFVNGAA7PCQQ5T8AFJ9",
@@ -1964,7 +1979,7 @@
       "category": "multihop",
       "question": "What is a good place for dogs to run around freely and meet new friends?",
       "answer": "The dog park",
-      "prediction": "公园——Audrey 会带狗去公园参加狗狗聚会，让狗结识新朋友；公园或树林附近的开阔空间也适合狗自由奔跑。",
+      "prediction": "The park. Audrey meets other dog owners at the park for doggie playdates, so her dogs can make new friends there, and parks (or woods) also give dogs open space to run around freely.",
       "retrieved_ids": [
         "sem_01M2QMHWJMWMCYNAV1K54F6C1G",
         "cor_01M2QMRF29TFC1BV9J8WBHQ2ZJ",
@@ -2036,7 +2051,7 @@
       "category": "multihop",
       "question": "What are the breeds of Audrey's dogs?",
       "answer": "Mongrel mixed with Lab for Pepper and Panda. Mongrel mixed with Chihuahua for Precious and Pixie.",
-      "prediction": "记忆中有两种说法，相互矛盾：\n- 一种是两只杰克罗素㹴混血和两只吉娃娃混血；\n- 另一种是 Pepper 和 Panda 是拉布拉多混血，Precious 和 Pixie 是吉娃娃混血。\n\n共同点是：Precious 和 Pixie 是吉娃娃混血，另外两只（Pepper 和 Panda）的品种说法不一致。",
+      "prediction": "Audrey's four dogs are all mutts: Pepper and Panda are Lab mixes, and Precious and Pixie are Chihuahua mixes.",
       "retrieved_ids": [
         "cor_01M2QMZVHBA1SMR1X7K074TVMV",
         "sem_01M2QMTZR566HV3TC9372YV2E3",
@@ -2072,7 +2087,7 @@
       "category": "multihop",
       "question": "What technique is Audrey using to discipline her dogs?",
       "answer": "Positive reinforcement",
-      "prediction": "不知道。记忆中只提到Audrey训练狗狗服从（obedience）和教它们技巧（如坐下、停留、握手、打滚），但没有提及具体的管教（discipline）方法。",
+      "prediction": "Audrey uses obedience training — she trains her dogs in obedience and teaches them commands/tricks like sit, stay, shake, and roll over. She's also taking a dog training course, which has helped her dogs improve.",
       "retrieved_ids": [
         "epi_01M2QMTZR566HV3TC9372YV2E2",
         "cor_01M2QMRF29TFC1BV9J8WBHQ2ZJ",
@@ -2108,7 +2123,7 @@
       "category": "open_domain",
       "question": "Which US state do Audrey and Andrew potentially live in?",
       "answer": "Minnesota",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention any US state where Audrey and Andrew might live.",
       "retrieved_ids": [
         "epi_01M2QMSDF461BCNAC49PXRY7WK",
         "epi_01M2QMAC6CVR3BRS1VMMZJGFNB",
@@ -2119,7 +2134,7 @@
         "sem_01M2QMKCMR2WFFA6EMX4GRHX74",
         "sem_01M2QNBJQKZH35N9AANTEJW0CS",
         "sem_01M2QMRF29TFC1BV9J8WBHQ2ZD",
-        "sem_01M2QMZVHBA1SMR1X7K074TVMP"
+        "epi_01M2QNZN95MKTHHG34N0F4WD65"
       ],
       "gold_ids": [
         "epi_01M2QMW9D0994ARB15FR0QQ5QW",
@@ -2136,7 +2151,7 @@
       "category": "open_domain",
       "question": "Which national park could Audrey and Andrew be referring to in their conversations?",
       "answer": "Voyageurs National Park",
-      "prediction": "不知道。记忆中只提到 Audrey 去过 national park，但没有说明具体是哪个国家公园。",
+      "prediction": "不知道。The memories mention that Audrey took her dogs to \"a beautiful national park\" (May 2023) and hiked with them in \"a national park\" reaching a peak at sunset (late May 2023), but no specific park name or location is ever given, so there is no basis to identify which national park they could be referring to.",
       "retrieved_ids": [
         "epi_01M2QMKCMR2WFFA6EMX4GRHX79",
         "epi_01M2QMQ7HRAMPJ64KFZAKBS2JJ",
@@ -2178,7 +2193,7 @@
       "category": "temporal",
       "question": "How many pets will Andrew have, as of December 2023?",
       "answer": "three",
-      "prediction": "**3 只宠物**——两只狗 Toby 和 Buddy，加上新领养的 Scout。",
+      "prediction": "As of December 2023, Andrew will have **3 pets** — his two dogs Toby and Buddy, plus the newly adopted Scout (as of 22 November 2023).",
       "retrieved_ids": [
         "pro_01M2QNYPD2FQER30RPBS7NGPSS",
         "epi_01M2QNSX00NS3FX2CQBR8RFGX9",
@@ -2230,7 +2245,7 @@
       "category": "temporal",
       "question": "How many pets did Andrew have, as of September 2023?",
       "answer": "one",
-      "prediction": null,
+      "prediction": "**Zero pets.** As of September 2023, Andrew had no pets yet — he was still looking for a dog to adopt (and searching for a dog-friendly place to live). He didn't adopt his first dog (Buddy) until October 2023.",
       "retrieved_ids": [
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN7",
         "sem_01M2QNYPD2FQER30RPBS7NGPSJ",
@@ -2268,7 +2283,7 @@
       "category": "temporal",
       "question": "How many months passed between Andrew adopting Buddy and Scout",
       "answer": "one month",
-      "prediction": "大约 1 个月。Andrew 于 2023-10-19 左右领养了 Buddy，而在 2023-11-22 前不久领养了 Scout。",
+      "prediction": "About 1 month. Andrew adopted Buddy around 19 October 2023, and adopted Scout shortly before 22 November 2023.",
       "retrieved_ids": [
         "sem_01M2QNZN95MKTHHG34N0F4WD61",
         "sem_01M2QNZN95MKTHHG34N0F4WD62",
@@ -2308,7 +2323,7 @@
       "category": "multihop",
       "question": "What does Andrew view his pets as?",
       "answer": "Family",
-      "prediction": "不知道。",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN7",
         "pro_01M2QNYPD2FQER30RPBS7NGPSS",
@@ -2356,7 +2371,7 @@
       "category": "multihop",
       "question": "What does Audrey view her pets as?",
       "answer": "Family",
-      "prediction": "Audrey views her pets as family — she calls them her 'fur babies'/'fur kids' and considers them more important to her than anything.",
+      "prediction": "Audrey views her pets as family — she calls them her \"fur babies\" and \"fur kids,\" considers them part of her family, and regards them as more important to her than anything.",
       "retrieved_ids": [
         "sem_01M2QMYNFRWQB6ETNGGE53KX4S",
         "sem_01M2QMYNFRWQB6ETNGGE53KX4T",
@@ -2410,7 +2425,7 @@
       "category": "multihop",
       "question": "What is a skill that Audrey learned to take care of her dogs?",
       "answer": "Grooming",
-      "prediction": "Audrey learned to groom her dogs herself (she also takes a dog training course).",
+      "prediction": "Audrey learned **dog training** — she took a dog training course (as of July 2023) that was challenging but rewarding, and her dogs improved because of it. She also grooms her dogs herself.",
       "retrieved_ids": [
         "sem_01M2QMHWJMWMCYNAV1K54F6C1D",
         "epi_01M2QMTZR566HV3TC9372YV2E2",
@@ -2452,7 +2467,7 @@
       "category": "multihop",
       "question": "What items has Audrey bought or made for her dogs?",
       "answer": "dog tags, toys, dog beds, collars",
-      "prediction": "Audrey bought toys for her dogs at a pet store (2023-10-16). The homemade goodies she made were for her neighbors, not for her dogs.",
+      "prediction": "Audrey bought **toys** for her dogs at a pet store (on 16 October 2023). That is the only item in the memories bought or made specifically for her dogs — the homemade goodies she made were to thank her neighbors, not for the dogs.",
       "retrieved_ids": [
         "epi_01M2QNQPHDYHAMXBCR99W1J9FV",
         "sem_01M2QNSWZZVANM9PST405121KK",
@@ -2524,7 +2539,7 @@
       "category": "open_domain",
       "question": "What is something that Andrew could do to make birdwatching hobby to fit in his city schedule?",
       "answer": "Install a bird feeder outside where he can see the birds without going outdoors.",
-      "prediction": "He could use a book with birdwatching guides to study the common birds in his area — since he lives in the city where open outdoor spaces are hard to find, studying local birds from a guide book is something he can do on his city schedule.",
+      "prediction": "Based on the memories, Andrew could fit birdwatching into his city schedule by doing short birdwatching sessions in local city parks or nearby green spaces, since open outdoor spaces are hard to find where he lives. He is already experienced in birdwatching, so he could also use his knowledge of common local birds (similar to how Audrey studies her area's birds with a guidebook) to spot species even in urban settings, making the hobby manageable alongside his job and city life.",
       "retrieved_ids": [
         "sem_01M2QNE4PR20P352SRSR5VC9ZM",
         "epi_01M2QNE4PR20P352SRSR5VC9ZJ",
@@ -2594,7 +2609,7 @@
       "category": "open_domain",
       "question": "What is a career that Andrew could potentially pursue with his love for animals and nature?",
       "answer": "Park ranger or a similar position working for the National Park Services.",
-      "prediction": "不知道。记忆中没有提到任何适合Andrew的职业建议。",
+      "prediction": "Based on his memories, Andrew could potentially pursue a career as a park ranger or nature/wildlife guide — this would combine his love of animals (including birds), his joy in hiking and being outdoors, and the peace he finds in nature, while also resolving the void he feels from city life.",
       "retrieved_ids": [
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN8",
         "cor_01M2QNFTFVNGAA7PCQQ5T8AFJD",
@@ -2772,7 +2787,7 @@
       "category": "temporal",
       "question": "When did Andrew make his dogs a fun indoor area?",
       "answer": "few days before November 22, 2023",
-      "prediction": "不知道",
+      "prediction": "不知道。记忆中没有提到 Andrew 为他的狗制作室内活动区。最接近的相关信息是 2023 年 6 月 26 日 Audrey 计划带她的狗去 Andrew 附近的一家狗狗日托中心，那里有一个供狗狗玩耍的大室内空间——但那是日托中心的设施，不是 Andrew 自己做的。",
       "retrieved_ids": [
         "epi_01M2QMSDF461BCNAC49PXRY7WK",
         "sem_01M2QNYPD2FQER30RPBS7NGPSR",
@@ -2801,7 +2816,7 @@
       "category": "multihop",
       "question": "Has Andrew moved into a new apartment for his dogs?",
       "answer": "No",
-      "prediction": "不知道。记忆中只提到Andrew在寻找适合养狗的公寓（截至2023-06-02尚未找到），但没有提到他已经搬进新公寓。",
+      "prediction": "No. There's no record of Andrew moving into a new apartment. The memories show he was looking for a dog-friendly/pet-friendly place (as of June 2023 he hadn't found one yet), but the latest memories (November 2023) only say he lives in the city and cares for his dogs there—including the new puppy Scout—with no mention of a move.",
       "retrieved_ids": [
         "epi_01M2QMCHVGGH39KYXVNSMVQK7H",
         "sem_01M2QNZN95MKTHHG34N0F4WD63",
@@ -2845,7 +2860,7 @@
       "category": "temporal",
       "question": "When did Andrew adopt Scout?",
       "answer": "few days before November 2023",
-      "prediction": "Shortly before 2023-11-22.",
+      "prediction": "Shortly before 22 November 2023.",
       "retrieved_ids": [
         "epi_01M2QMKCMR2WFFA6EMX4GRHX71",
         "sem_01M2QNZN95MKTHHG34N0F4WD61",
@@ -2874,7 +2889,7 @@
       "category": "temporal",
       "question": "What did Audrey eat for dinner on October 24, 2023?",
       "answer": "sushi",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention what Audrey ate for dinner on October 24, 2023.",
       "retrieved_ids": [
         "epi_01M2QNVHPF1V0SF6VZ262QVKQ6",
         "sem_01M2QNSWZZVANM9PST405121KK",
@@ -2905,7 +2920,7 @@
       "category": "temporal",
       "question": "How long has it been since Andrew adopted his first pet, as of November 2023?",
       "answer": "4 months",
-      "prediction": "不知道确切答案。记忆中最早的领养记录是2023-10-19领养的Buddy（到2023年11月约一个月），但Andrew还有一只狗Toby，其领养时间未记录，因此无法确定他第一只宠",
+      "prediction": null,
       "retrieved_ids": [
         "epi_01M2QNSWZZVANM9PST405121KF",
         "epi_01M2QMKCMR2WFFA6EMX4GRHX71",
@@ -2933,7 +2948,7 @@
       "category": "multihop",
       "question": "How many dogs does Andrew have?",
       "answer": "3",
-      "prediction": "根据记忆，Andrew 有 **3 只狗**：Toby、Buddy，以及新领养的 Scout。",
+      "prediction": "Andrew has **3 dogs**: Toby, Buddy, and the newly adopted Scout (as of 22 November 2023).",
       "retrieved_ids": [
         "sem_01M2QMPE88DZX96FVTFTBV6Q65",
         "sem_01M2QNVHPF1V0SF6VZ262QVKQ4",
@@ -2954,7 +2969,7 @@
       "category": "single_hop",
       "question": "Which specific type of bird mesmerizes Andrew?",
       "answer": "Eagles",
-      "prediction": "The eagle.",
+      "prediction": "The eagle — it mesmerizes Andrew with its strength and grace.",
       "retrieved_ids": [
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN9",
         "sem_01M2QMW9D0994ARB15FR0QQ5R2",
@@ -2984,7 +2999,7 @@
       "category": "single_hop",
       "question": "What did Andrew express missing about exploring nature trails with his family's dog?",
       "answer": "The peaceful moments",
-      "prediction": "他怀念与家人的狗一起探索自然小径时那些宁静的时刻。",
+      "prediction": "He missed the peaceful moments he shared with his family's dog while hiking and exploring nature trails.",
       "retrieved_ids": [
         "sem_01M2QMCHVGGH39KYXVNSMVQK7K",
         "sem_01M2QNSWZZVANM9PST405121KJ",
@@ -2995,7 +3010,7 @@
         "sem_01M2QMSDF461BCNAC49PXRY7WM",
         "epi_01M2QMRF29TFC1BV9J8WBHQ2ZK",
         "epi_01M2QMKCMR2WFFA6EMX4GRHX71",
-        "sem_01M2QNBJQKZH35N9AANTEJW0CR"
+        "cor_01M2QMEJXESBAH2JVVX8RGZ1NB"
       ],
       "gold_ids": [
         "epi_01M2QMCHVGGH39KYXVNSMVQK7E",
@@ -3012,7 +3027,7 @@
       "category": "single_hop",
       "question": "What kind of pastries did Andrew and his girlfriend have at the cafe?",
       "answer": "croissants, muffins, and tarts",
-      "prediction": "Croissants, muffins, and tarts.",
+      "prediction": "They had croissants, muffins, and tarts.",
       "retrieved_ids": [
         "epi_01M2QMEJXESBAH2JVVX8RGZ1ND",
         "epi_01M2QN84E1W4JV5HS9J1SQ760H",
@@ -3042,7 +3057,7 @@
       "category": "single_hop",
       "question": "What kind of flowers does Audrey have a tattoo of?",
       "answer": "sunflowers",
-      "prediction": "不知道。记忆中只提到Audrey的手臂上纹有她四只狗的纹身，没有提到纹身中有花。",
+      "prediction": "The memories don't mention Audrey having a tattoo of any flowers — her tattoos are of her four dogs (with some additional drawings added later).",
       "retrieved_ids": [
         "epi_01M2QN32Z7E0E11BW9HHWQMNDJ",
         "sem_01M2QNQPHDYHAMXBCR99W1J9FP",
@@ -3072,7 +3087,7 @@
       "category": "single_hop",
       "question": "What does Audrey do during dog playdates in the park?",
       "answer": "chat with people while dogs make new friends",
-      "prediction": "在狗狗聚会时，Audrey 与其他狗主人聊天，同时让她的狗狗们结交新朋友。",
+      "prediction": "During dog playdates at the park, Audrey meets other dog owners so her dogs can make new friends while she chats with the other people.",
       "retrieved_ids": [
         "sem_01M2QMHWJMWMCYNAV1K54F6C1G",
         "sem_01M2QMZVHBA1SMR1X7K074TVMS",
@@ -3108,7 +3123,7 @@
       "category": "single_hop",
       "question": "What type of dog was Andrew looking to adopt based on his living space?",
       "answer": "smaller dog",
-      "prediction": "A smaller dog — since Andrew lives in an apartment, he thought a smaller dog would be the best fit for him.",
+      "prediction": "A smaller dog — Andrew lives in an apartment and thought a smaller dog would be the best fit for him.",
       "retrieved_ids": [
         "epi_01M2QMKCMR2WFFA6EMX4GRHX71",
         "sem_01M2QMQ7HRAMPJ64KFZAKBS2JM",
@@ -3139,7 +3154,7 @@
       "category": "single_hop",
       "question": "Where does Andrew want to live to give their dog a large, open space to run around?",
       "answer": "near a park or woods",
-      "prediction": "Near a park or woods.",
+      "prediction": "Near a park or woods — Andrew wants to live there to stay close to nature and give a dog open space to run around.",
       "retrieved_ids": [
         "sem_01M2QMQ7HRAMPJ64KFZAKBS2JM",
         "sem_01M2QNBJQKZH35N9AANTEJW0CS",
@@ -3170,7 +3185,7 @@
       "category": "single_hop",
       "question": "Why did Audrey sign up for a workshop about bonding with pets?",
       "answer": "Strengthen the bond with her pets",
-      "prediction": "因为她在家附近的宠物店看到了一张传单。",
+      "prediction": "She signed up after seeing a flyer at her local pet store.",
       "retrieved_ids": [
         "epi_01M2QMPE88DZX96FVTFTBV6Q61",
         "sem_01M2QNYPD2FQER30RPBS7NGPSP",
@@ -3226,7 +3241,7 @@
       "category": "single_hop",
       "question": "What type of training was the workshop Audrey signed up for in May 2023?",
       "answer": "Positive reinforcement training",
-      "prediction": "A positive reinforcement dog training workshop (about bonding with pets).",
+      "prediction": "It was a positive reinforcement dog training workshop, focused on bonding with pets.",
       "retrieved_ids": [
         "epi_01M2QMPE88DZX96FVTFTBV6Q61",
         "epi_01M2QMQ7HRAMPJ64KFZAKBS2JJ",
@@ -3254,7 +3269,7 @@
       "category": "single_hop",
       "question": "How did Audrey describe she dog he met at the pet store?",
       "answer": "Friendly and playful",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention Audrey meeting or describing a dog at the pet store — they only say she bought toys for her own dogs there (16 October 2023) and saw a flyer for a training workshop there (11 May 2023).",
       "retrieved_ids": [
         "sem_01M2QNYPD2FQER30RPBS7NGPSN",
         "sem_01M2QMHWJMWMCYNAV1K54F6C1D",
@@ -3282,7 +3297,7 @@
       "category": "single_hop",
       "question": "Why did Audrey think positive reinforcement training is important for pets?",
       "answer": "To have pets learn how to behave in a positive way",
-      "prediction": "因为她认为惩罚绝不是训练宠物的正确方式，所以宠物应该通过正向强化来训练。",
+      "prediction": "Because she believes punishment is never the proper way to train pets—pets should be trained through positive reinforcement instead.",
       "retrieved_ids": [
         "sem_01M2QMPE88DZX96FVTFTBV6Q62",
         "epi_01M2QMTZR566HV3TC9372YV2E2",
@@ -3310,7 +3325,7 @@
       "category": "single_hop",
       "question": "What challenge is Andrew facing in their search for a pet?",
       "answer": "Finding a pet-friendly spot in the city",
-      "prediction": "Andrew is struggling to find a dog-friendly place to live (rentals that allow dogs) and also has difficulty finding the right dog to adopt.",
+      "prediction": "Andrew is struggling to find a dog-friendly place to live in the city — the search for a rental that allows dogs has been challenging — and he also hasn't yet found the right dog to adopt.",
       "retrieved_ids": [
         "sem_01M2QMQ7HRAMPJ64KFZAKBS2JM",
         "sem_01M2QNBJQKZH35N9AANTEJW0CS",
@@ -3337,7 +3352,7 @@
       "category": "single_hop",
       "question": "How does Andrew feel about their search for a pet-friendly place?",
       "answer": "Discouraged but determined",
-      "prediction": "Andrew feels discouraged and finds the search challenging — he has been struggling to find a dog-friendly place to rent and hasn't found one yet.",
+      "prediction": "Andrew feels discouraged and finds the search challenging — he has been struggling to find a dog-friendly place to rent and considers it difficult.",
       "retrieved_ids": [
         "sem_01M2QMKCMR2WFFA6EMX4GRHX74",
         "sem_01M2QMQ7HRAMPJ64KFZAKBS2JM",
@@ -3364,7 +3379,7 @@
       "category": "single_hop",
       "question": "What outdoor activities does Andrew plan on trying after the rock climbing class?",
       "answer": "kayaking and bungee jumping",
-      "prediction": "Kayaking and maybe bungee jumping.",
+      "prediction": "After enjoying rock climbing, Andrew plans to do outdoor activities every week, mentioning **kayaking** and maybe **bungee jumping** as things he wants to try.",
       "retrieved_ids": [
         "epi_01M2QMRF29TFC1BV9J8WBHQ2ZB",
         "sem_01M2QMRF29TFC1BV9J8WBHQ2ZC",
@@ -3426,7 +3441,7 @@
       "category": "single_hop",
       "question": "What did Audrey set up in the backyard for their dogs on June 26, 2023?",
       "answer": "a doggy play area with agility stuff and toys",
-      "prediction": "A doggy play area with agility equipment and toys for her dogs.",
+      "prediction": "On June 26, 2023, Audrey set up a doggy play area in her new backyard, complete with agility equipment and toys for her dogs.",
       "retrieved_ids": [
         "epi_01M2QMPE88DZX96FVTFTBV6Q61",
         "epi_01M2QMSDF461BCNAC49PXRY7WJ",
@@ -3454,7 +3469,7 @@
       "category": "single_hop",
       "question": "What did Audrey and her friends stumble across during a hike a few years back, as mentioned on June 26, 2023?",
       "answer": "a stunning lake in the mountains",
-      "prediction": "A stunning lake in the mountains.",
+      "prediction": "They stumbled across a stunning lake in the mountains, where they sat by it chatting and admiring the peacefulness of nature.",
       "retrieved_ids": [
         "epi_01M2QMSDF461BCNAC49PXRY7WP",
         "epi_01M2QMHWJMWMCYNAV1K54F6C18",
@@ -3482,7 +3497,7 @@
       "category": "single_hop",
       "question": "What is Audrey's favorite recipe that she shares with Andrew on 3 July, 2023?",
       "answer": "Chicken Pot Pie",
-      "prediction": "Chicken Pot Pie——这是Audrey最喜欢的食谱，是她家传多年的温馨家庭食谱，让她想起奶奶的厨房。她在2023年7月3日的对话后答应把这个食谱（以及Roasted Chicken食谱）发给Andrew。",
+      "prediction": "Audrey's favorite recipe is Chicken Pot Pie — a cozy family recipe that has been in her family for years and reminds her of her grandma's kitchen. She promised to send it to Andrew (along with her Roasted Chicken recipe) shortly after their 3 July 2023 conversation.",
       "retrieved_ids": [
         "sem_01M2QMTZR566HV3TC9372YV2E7",
         "sem_01M2QMTZR566HV3TC9372YV2E9",
@@ -3520,7 +3535,7 @@
       "category": "single_hop",
       "question": "What dish is one of Audrey's favorite dishes that includes garlic and is shared with Andrew on 3 July, 2023?",
       "answer": "Roasted Chicken",
-      "prediction": "Roasted Chicken（含鸡肉、大蒜、柠檬和香草，受地中海风味启发）。",
+      "prediction": "Roasted Chicken — made with chicken, garlic, lemon, and herbs, inspired by Mediterranean flavors. It's one of Audrey's favorite dishes, and she promised to send Andrew the recipe after their 3 July 2023 conversation.",
       "retrieved_ids": [
         "sem_01M2QMTZR566HV3TC9372YV2E8",
         "sem_01M2QMTZR566HV3TC9372YV2E7",
@@ -3587,7 +3602,7 @@
       "category": "single_hop",
       "question": "What is the name of Audrey's childhood dog?",
       "answer": "Max",
-      "prediction": "Max",
+      "prediction": "Max.",
       "retrieved_ids": [
         "sem_01M2QMYNFRWQB6ETNGGE53KX4V",
         "epi_01M2QMYNFRWQB6ETNGGE53KX4X",
@@ -3616,7 +3631,7 @@
       "category": "single_hop",
       "question": "What special memories does Audrey have with her childhood dog, Max?",
       "answer": "Long walks in the neighborhood, exploring new paths, sharing worries and hopes",
-      "prediction": "Audrey 的童年狗狗 Max 精力充沛，喜欢玩捡球游戏。小时候，Audrey 常带他在社区里长时间散步、探索新的路径，还会向他倾诉自己的烦恼和希望。",
+      "prediction": "Audrey's childhood dog Max had lots of energy and loved playing fetch. As a kid, she took long walks with him around the neighborhood, exploring new paths, and shared her worries and hopes with him.",
       "retrieved_ids": [
         "sem_01M2QMYNFRWQB6ETNGGE53KX4V",
         "epi_01M2QMYNFRWQB6ETNGGE53KX4X",
@@ -3645,7 +3660,7 @@
       "category": "single_hop",
       "question": "What are some of the personalities of Audrey's four fur babies?",
       "answer": "oldest is relaxed, second is playful, third can be naughty but loves cuddles, youngest is full of life",
-      "prediction": "根据记忆，Audrey的四只毛孩子各有不同性格：最年长的最放松悠闲，第二只总是随时准备玩耍，第三只虽然调皮但喜欢抱抱，最小的充满活力、总爱冒险。",
+      "prediction": "According to the memories, Audrey's four fur babies each have distinct personalities: the oldest is the most relaxed, the second is always ready for a game, the third can be naughty but loves cuddles, and the youngest is full of life and always up for an adventure.",
       "retrieved_ids": [
         "sem_01M2QMYNFRWQB6ETNGGE53KX4S",
         "sem_01M2QMYNFRWQB6ETNGGE53KX4T",
@@ -3674,13 +3689,13 @@
       "category": "single_hop",
       "question": "What type of classes did Audrey start with her pups recently on 4 August, 2023?",
       "answer": "Agility classes",
-      "prediction": "敏捷课程（agility classes）——Audrey 带她的狗狗去狗狗公园上敏捷课程，每周练习两次，作为身体和脑力锻炼。",
+      "prediction": "On 4 August 2023, Audrey started taking her pups to **agility classes** at a dog park, practicing with them twice a week as a physical and mental workout.",
       "retrieved_ids": [
         "pro_01M2QN4PKGFY8BJSZEYAGW3ARC",
         "sem_01M2QMZVHBA1SMR1X7K074TVMS",
         "epi_01M2QMX576CY65AKFGA3MHKFHW",
-        "sem_01M2QNYPD2FQER30RPBS7NGPSN",
         "sem_01M2QNFTFVNGAA7PCQQ5T8AFJ9",
+        "sem_01M2QNYPD2FQER30RPBS7NGPSN",
         "sem_01M2QNVHPF1V0SF6VZ262QVKQ4",
         "sem_01M2QMW9D0994ARB15FR0QQ5R0",
         "epi_01M2QMPE88DZX96FVTFTBV6Q61",
@@ -3704,7 +3719,7 @@
       "category": "single_hop",
       "question": "How often does Audrey take her pups to the park for practice?",
       "answer": "Twice a week",
-      "prediction": "Twice a week.",
+      "prediction": "Twice a week — she practices with her dogs at the dog park (agility classes) twice a week as a physical and mental workout.",
       "retrieved_ids": [
         "sem_01M2QMZVHBA1SMR1X7K074TVMS",
         "sem_01M2QMEJXESBAH2JVVX8RGZ1NE",
@@ -3734,7 +3749,7 @@
       "category": "single_hop",
       "question": "How long did the trail hike that Audrey went on with her pups take?",
       "answer": "Two hours",
-      "prediction": "Two hours.",
+      "prediction": "The trail hike Audrey went on with her pups took **two hours** (on 2023-08-04).",
       "retrieved_ids": [
         "epi_01M2QMZVHBA1SMR1X7K074TVMT",
         "epi_01M2QMAC6CVR3BRS1VMMZJGFNB",
@@ -3764,7 +3779,7 @@
       "category": "single_hop",
       "question": "What advice did Audrey give to Andrew regarding grooming Toby?",
       "answer": "Grooming slowly and gently, paying attention to sensitive areas like ears and paws. And remember to stay patient and positive throughout the grooming process.",
-      "prediction": "不知道。记忆中Audrey给Andrew的建议是关于与Toby建立感情需要时间，不要急于求成，没有提到关于给Toby美容（grooming）的建议。",
+      "prediction": "The memories don't mention any advice from Audrey about grooming Toby. The only advice from Audrey mentioned is that bonding with Toby takes time, so Andrew won't rush it.",
       "retrieved_ids": [
         "sem_01M2QN32Z7E0E11BW9HHWQMNDS",
         "sem_01M2QN84E1W4JV5HS9J1SQ760K",
@@ -3793,7 +3808,7 @@
       "category": "single_hop",
       "question": "What is essential to keep the dogs looking good according to Audrey?",
       "answer": "Daily brushing, regular baths, nail trims, and lots of love",
-      "prediction": "Regular grooming — including daily brushing, regular baths, and nail trims.",
+      "prediction": "According to Audrey, regular grooming is essential — including daily brushing, regular baths, and nail trims — to keep her dogs healthy, happy, and looking good.",
       "retrieved_ids": [
         "cor_01M2QMRF29TFC1BV9J8WBHQ2ZJ",
         "epi_01M2QMTZR566HV3TC9372YV2E2",
@@ -3823,7 +3838,7 @@
       "category": "single_hop",
       "question": "What did Audrey organize with the neighbors' dogs?",
       "answer": "a doggy playdate",
-      "prediction": "A doggy playdate.",
+      "prediction": "Audrey organized a doggy playdate with the neighbors' dogs, and she shared a photo of the dogs having fun together.",
       "retrieved_ids": [
         "epi_01M2QNBJQKZH35N9AANTEJW0CV",
         "epi_01M2QNQPHDYHAMXBCR99W1J9FV",
@@ -3854,18 +3869,18 @@
       "category": "single_hop",
       "question": "What did Audrey do to give her dogs extra comfort as the weather cooled down?",
       "answer": "Got new beds for them",
-      "prediction": "She bought new beds for her dogs.",
+      "prediction": "Audrey bought new beds for her dogs because the weather was cooling down, and her dogs love curling up and sleeping on them.",
       "retrieved_ids": [
         "sem_01M2QNZN95MKTHHG34N0F4WD67",
-        "epi_01M2QNQPHDYHAMXBCR99W1J9FT",
         "sem_01M2QNCKDGQNSB621E7B8P0CC6",
-        "sem_01M2QMKCMR2WFFA6EMX4GRHX78",
+        "epi_01M2QNQPHDYHAMXBCR99W1J9FT",
         "cor_01M2QN32Z7E0E11BW9HHWQMNDR",
         "sem_01M2QNVHPF1V0SF6VZ262QVKQ4",
         "sem_01M2QNFTFVNGAA7PCQQ5T8AFJ9",
         "epi_01M2QNBJQKZH35N9AANTEJW0CW",
         "sem_01M2QMHWJMWMCYNAV1K54F6C1D",
-        "cor_01M2QMZVHBA1SMR1X7K074TVMV"
+        "cor_01M2QMZVHBA1SMR1X7K074TVMV",
+        "cor_01M2QMRF29TFC1BV9J8WBHQ2ZJ"
       ],
       "gold_ids": [
         "cor_01M2QNBJQKZH35N9AANTEJW0CT",
@@ -3916,7 +3931,7 @@
       "category": "single_hop",
       "question": "How did Audrey calm down her dog after the leash incident?",
       "answer": "Petted, hugged, spoke calmly and slowly walked the dog",
-      "prediction": "不知道",
+      "prediction": "The memories don't say how Audrey calmed her dog down after the leash incident. They only mention that on 2023-09-22, when her female dog's leash broke, Audrey chased after her and caught her before anything bad happened.",
       "retrieved_ids": [
         "sem_01M2QNYPD2FQER30RPBS7NGPSN",
         "epi_01M2QNCKDGQNSB621E7B8P0CC5",
@@ -3944,7 +3959,7 @@
       "category": "single_hop",
       "question": "How often does Audrey take her dogs for walks?",
       "answer": "Multiple times a day",
-      "prediction": "Multiple times a day.",
+      "prediction": "Audrey walks her dogs multiple times a day, as exercise for the dogs and bonding time for them.",
       "retrieved_ids": [
         "sem_01M2QMRF29TFC1BV9J8WBHQ2ZF",
         "sem_01M2QNCKDGQNSB621E7B8P0CC6",
@@ -3972,7 +3987,7 @@
       "category": "single_hop",
       "question": "What kind of flowers does Audrey take care of?",
       "answer": "Peruvian Lilies",
-      "prediction": "Audrey takes care of Peruvian Lilies, which she grows in her small garden.",
+      "prediction": "Audrey takes care of Peruvian Lilies, which she grows in her small garden (she finds them easy to care for—just watering and sunlight). She also has a vegetable patch that is coming along well.",
       "retrieved_ids": [
         "sem_01M2QMHWJMWMCYNAV1K54F6C1D",
         "sem_01M2QNCKDGQNSB621E7B8P0CC8",
@@ -4034,7 +4049,7 @@
       "category": "single_hop",
       "question": "What did Andrew suggest as a way to reduce carbon footprint?",
       "answer": "biking or using public transport",
-      "prediction": "Biking — Andrew offered to show Audrey the best bike routes near the river.",
+      "prediction": "Andrew suggested biking — he offered to show Audrey the best bike routes near the river, and she wants to try biking to reduce her carbon footprint.",
       "retrieved_ids": [
         "cor_01M2QNFTFVNGAA7PCQQ5T8AFJD",
         "sem_01M2QNVHPF1V0SF6VZ262QVKQ3",
@@ -4068,7 +4083,7 @@
       "category": "single_hop",
       "question": "How does Andrew suggest helping the planet while also training the body?",
       "answer": "by biking",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't contain any information about Andrew suggesting ways to help the planet while training the body.",
       "retrieved_ids": [
         "cor_01M2QMEJXESBAH2JVVX8RGZ1NB",
         "pro_01M2QNYPD2FQER30RPBS7NGPSS",
@@ -4102,7 +4117,7 @@
       "category": "single_hop",
       "question": "What did Audrey do with her pups over the weekend before 4th October, 2023?",
       "answer": "Took them to the beach",
-      "prediction": "不知道。",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QNFTFVNGAA7PCQQ5T8AFJ9",
         "sem_01M2QNVHPF1V0SF6VZ262QVKQ4",
@@ -4130,7 +4145,7 @@
       "category": "single_hop",
       "question": "What was the reason Audrey couldn't walk her dogs for a period of time?",
       "answer": "Knee injury",
-      "prediction": "膝盖受伤。",
+      "prediction": "Audrey couldn't walk her dogs due to a knee injury. She has since recovered and resumed walking them.",
       "retrieved_ids": [
         "sem_01M2QNCKDGQNSB621E7B8P0CC6",
         "epi_01M2QNQPHDYHAMXBCR99W1J9FT",
@@ -4158,7 +4173,7 @@
       "category": "single_hop",
       "question": "What type of jewelry does Audrey make?",
       "answer": "Jewelry made from recycled objects",
-      "prediction": "Audrey makes one-of-a-kind jewelry from recycled objects such as bottle caps, buttons, and broken jewelry.",
+      "prediction": "Audrey makes one-of-a-kind jewelry from recycled objects, such as bottle caps, buttons, and broken jewelry.",
       "retrieved_ids": [
         "pro_01M2QNH16ANTRDXJCA6Z3FJX65",
         "sem_01M2QNH16ANTRDXJCA6Z3FJX66",
@@ -4186,7 +4201,7 @@
       "category": "single_hop",
       "question": "Why does Audrey make jewelry out of recycled objects?",
       "answer": "To show love for creativity and sustainability",
-      "prediction": "因为她重视创造力和可持续性，这体现在她用回收材料制作首饰上。",
+      "prediction": "Because she values creativity and sustainability, which is reflected in her jewelry making from recycled materials.",
       "retrieved_ids": [
         "pro_01M2QNH16ANTRDXJCA6Z3FJX65",
         "sem_01M2QNH16ANTRDXJCA6Z3FJX66",
@@ -4214,7 +4229,7 @@
       "category": "single_hop",
       "question": "What organization does Audrey donate a portion of his profits to?",
       "answer": "Animal shelter",
-      "prediction": "An animal shelter.",
+      "prediction": "Audrey donates a portion of her jewelry sales profits to an animal shelter.",
       "retrieved_ids": [
         "sem_01M2QNH16ANTRDXJCA6Z3FJX67",
         "sem_01M2QMYNFRWQB6ETNGGE53KX4W",
@@ -4242,7 +4257,7 @@
       "category": "single_hop",
       "question": "How does Audrey help out the animal shelter?",
       "answer": "By donating a portion of his profits frmo selling jwelery",
-      "prediction": "Audrey donates a portion of her jewelry sales profits to the animal shelter.",
+      "prediction": "Audrey donates a portion of her jewelry sales profits to the animal shelter. Since she can no longer volunteer in person, this is her way of helping out.",
       "retrieved_ids": [
         "sem_01M2QNH16ANTRDXJCA6Z3FJX67",
         "sem_01M2QMYNFRWQB6ETNGGE53KX4W",
@@ -4270,7 +4285,7 @@
       "category": "single_hop",
       "question": "What type of games do Audrey's dogs like to play at the park?",
       "answer": "Fetch and Frisbee",
-      "prediction": "Audrey's dogs love playing Fetch and Frisbee (chasing a ball or frisbee), and they also enjoy running around and socializing with other dogs at the dog park.",
+      "prediction": "Audrey's dogs love playing Fetch and Frisbee — she usually plays fetch with a ball or frisbee, which they love chasing. They also enjoy running around and socializing with other dogs at the dog park.",
       "retrieved_ids": [
         "sem_01M2QMKCMR2WFFA6EMX4GRHX77",
         "sem_01M2QNQPHDYHAMXBCR99W1J9FR",
@@ -4302,7 +4317,7 @@
       "category": "single_hop",
       "question": "What did Audrey make to thank her neighbors?",
       "answer": "Goodies",
-      "prediction": "Homemade goodies.",
+      "prediction": "Audrey made homemade goodies to thank her neighbors for their pup-friendly homes.",
       "retrieved_ids": [
         "epi_01M2QNQPHDYHAMXBCR99W1J9FV",
         "epi_01M2QNBJQKZH35N9AANTEJW0CV",
@@ -4366,7 +4381,7 @@
       "category": "single_hop",
       "question": "How does Audrey describe her dogs' response to snow?",
       "answer": "They definitely prefer nice, sunny days in the grass.",
-      "prediction": "Audrey's dogs hate snow — they were confused during a snowy outing last winter (around early 2023). They prefer nice, sunny days in the grass.",
+      "prediction": "Audrey says her dogs hate snow — they were confused during a snowy outing last winter (around early 2023), and they prefer nice, sunny days in the grass.",
       "retrieved_ids": [
         "cor_01M2QMZVHBA1SMR1X7K074TVMV",
         "sem_01M2QNYPD2FQER30RPBS7NGPSN",
@@ -4398,7 +4413,7 @@
       "category": "single_hop",
       "question": "What kind of experiences are Audrey's dogs the best companions for?",
       "answer": "Exploring the great outdoors",
-      "prediction": "They are best companions for bringing her joy and supporting her through tough times.",
+      "prediction": "Audrey's dogs are best companions for adventures—exploring new parks, trails, and hikes in nature—and for supporting her through tough times, bringing her joy.",
       "retrieved_ids": [
         "cor_01M2QMZVHBA1SMR1X7K074TVMV",
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN6",
@@ -4430,7 +4445,7 @@
       "category": "single_hop",
       "question": "What activity do Andrew and Buddy enjoy doing together?",
       "answer": "Walking",
-      "prediction": "不知道。",
+      "prediction": "I don't know. The memories don't mention any specific activity that Andrew and Buddy enjoy doing together. (The hiking plan mentioned is about Andrew's other dog Toby, and the park trip was planned as Scout's first adventure.)",
       "retrieved_ids": [
         "sem_01M2QNYPD2FQER30RPBS7NGPSJ",
         "sem_01M2QNZN95MKTHHG34N0F4WD62",
@@ -4459,7 +4474,7 @@
       "category": "single_hop",
       "question": "What do Andrew and Buddy like doing on walks?",
       "answer": "Checking out new hiking trails",
-      "prediction": "根据记忆，Andrew 喜欢和他的狗（包括 Buddy）一起散步并探索新的徒步路线（exploring new hiking trails together）。",
+      "prediction": "Andrew and Buddy enjoy exploring new hiking trails together on walks.",
       "retrieved_ids": [
         "sem_01M2QNSWZZVANM9PST405121KJ",
         "epi_01M2QNZN95MKTHHG34N0F4WD64",
@@ -4488,7 +4503,7 @@
       "category": "single_hop",
       "question": "What cuisine did Andrew recently try at a new spot in town?",
       "answer": "sushi",
-      "prediction": "Sushi.",
+      "prediction": "Sushi — Andrew tried it for the first time at a new restaurant in his town shortly before October 24, 2023, and enjoyed it.",
       "retrieved_ids": [
         "epi_01M2QNVHPF1V0SF6VZ262QVKQ7",
         "sem_01M2QNVHPF1V0SF6VZ262QVKQ3",
@@ -4519,7 +4534,7 @@
       "category": "single_hop",
       "question": "Which type of sushi did Audrey suggest trying first to someone new to sushi?",
       "answer": "California or salmon roll",
-      "prediction": "A California roll or salmon roll (with different sauces and dips).",
+      "prediction": "Audrey suggested trying a California roll or salmon roll (with different sauces and dips) as a first sushi experience.",
       "retrieved_ids": [
         "sem_01M2QNVHPF1V0SF6VZ262QVKQ9",
         "sem_01M2QMTZR566HV3TC9372YV2E6",
@@ -4550,7 +4565,7 @@
       "category": "single_hop",
       "question": "What type of date is Andrew going on Sunday?",
       "answer": "picnic date",
-      "prediction": "不知道",
+      "prediction": "A wine tasting date — on the weekend of 2023-10-21, Andrew and his girlfriend attended a wine tasting and tried many unique wines.",
       "retrieved_ids": [
         "epi_01M2QNVHPF1V0SF6VZ262QVKQ2",
         "epi_01M2QMKCMR2WFFA6EMX4GRHX71",
@@ -4578,7 +4593,7 @@
       "category": "single_hop",
       "question": "What did Andrew and Audrey plan to do on the Saturday after October 28, 2023?",
       "answer": "Go hiking",
-      "prediction": "他们计划在2023年11月4日（星期六）带狗去附近一个湖边风景优美的宠物友好步道远足，Audrey会带零食。",
+      "prediction": "On Saturday, November 4, 2023, Andrew and Audrey planned to go hiking with their dogs at a nearby dog-friendly trail by a lake with great views, and Audrey would bring snacks.",
       "retrieved_ids": [
         "epi_01M2QNSX00NS3FX2CQBR8RFGX9",
         "epi_01M2QNWMNVFMNJRNNTX34RVCJJ",
@@ -4606,7 +4621,7 @@
       "category": "single_hop",
       "question": "What aspect of autumn does Andrew find beautiful?",
       "answer": "The autumn colors",
-      "prediction": "秋天的色彩（autumn colors）——他和Audrey计划去一条以美丽秋色闻名的步道。",
+      "prediction": "Andrew finds the **autumn colors** beautiful — he and Audrey agreed to visit a nearby trail known for its beautiful autumn colors after the 2023-11-04 hike.",
       "retrieved_ids": [
         "cor_01M2QNFTFVNGAA7PCQQ5T8AFJD",
         "epi_01M2QNBJQKZH35N9AANTEJW0CP",
@@ -4634,7 +4649,7 @@
       "category": "single_hop",
       "question": "What did Audrey do in November 2023 to better take care of her dogs?",
       "answer": "Joined a dog owners group",
-      "prediction": "In November 2023, Audrey took her dogs to a pet salon (on 2023-11-17), where they were well-behaved and came back well groomed. She also planned to go on a hike with Andrew and their dogs, researching a nice spot away from the city.",
+      "prediction": "In November 2023, Audrey joined a dog owners group to learn how to better take care of her four dogs. She also took her dogs to a pet salon (on 2023-11-17), where they came back well groomed.",
       "retrieved_ids": [
         "sem_01M2QNYPD2FQER30RPBS7NGPSN",
         "epi_01M2QNSX00NS3FX2CQBR8RFGX9",
@@ -4692,7 +4707,7 @@
       "category": "single_hop",
       "question": "What did Audrey share to show ways to keep dogs active in the city?",
       "answer": "photography of a basket full of stuffed animals",
-      "prediction": "不知道。记忆中提到的是 Andrew 计划尝试益智游戏、训练和捉迷藏等活动来让狗狗在城市里保持活跃，并没有提到 Audrey 分享过让狗狗在城市保持活跃的方法。",
+      "prediction": "Audrey shared mental stimulation activities—such as puzzles, training, and hide-and-seek—as ways to keep dogs active and entertained in the city.",
       "retrieved_ids": [
         "sem_01M2QMAC6CVR3BRS1VMMZJGFN6",
         "sem_01M2QMW9D0994ARB15FR0QQ5R1",
@@ -4721,7 +4736,7 @@
       "category": "single_hop",
       "question": "What type of activities does Audrey suggest for mental stimulation of the dogs?",
       "answer": "puzzles, training, hide-and-seek",
-      "prediction": "不知道。记忆中提到 puzzles、training 和 hide-and-seek 等益智活动的是 Andrew，而不是 Audrey。",
+      "prediction": "不知道。记忆中提到计划尝试益智游戏、训练和捉迷藏等益智活动的是 Andrew，而不是 Audrey；关于 Audrey 的记忆里没有提到她建议过哪些益智活动。",
       "retrieved_ids": [
         "sem_01M2QMZVHBA1SMR1X7K074TVMS",
         "pro_01M2QNYPD2FQER30RPBS7NGPSS",
@@ -4750,7 +4765,7 @@
       "category": "single_hop",
       "question": "What is Andrew planning to do with Scout, Toby, and Buddy?",
       "answer": "Take them to a nearby park",
-      "prediction": "As of 2023-11-22, Andrew plans to take Scout, Toby, and Buddy to a nearby park as Scout's first adventure, keeping Scout on a leash while the pup gets used to being outside.",
+      "prediction": "Andrew plans to take Scout, Toby, and Buddy to a nearby park as Scout's first adventure, keeping Scout on a leash while the pup gets used to being outside.",
       "retrieved_ids": [
         "sem_01M2QNZN95MKTHHG34N0F4WD62",
         "epi_01M2QNZN95MKTHHG34N0F4WD64",
@@ -4779,7 +4794,7 @@
       "category": "single_hop",
       "question": "What did Andrew get for Scout to create a safe and fun space for them?",
       "answer": "essentials like a bed, toys, and puppy pads",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention Andrew getting anything for Scout to create a safe and fun space. They only mention that he adopted Scout, plans to take Scout to a nearby park on a leash for the pup's first adventure, and cares for Scout together with his girlfriend.",
       "retrieved_ids": [
         "sem_01M2QNZN95MKTHHG34N0F4WD61",
         "epi_01M2QNZN95MKTHHG34N0F4WD64",

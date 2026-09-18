@@ -8,39 +8,48 @@
   },
   "report": {
     "total": 178,
-    "answered": 178,
-    "answer_rate": 1.0,
-    "accuracy": 0.2865,
-    "f1": 0.3168,
-    "em": 0.1404,
-    "contains": 0.2865,
+    "answered": 174,
+    "answer_rate": 0.9775,
+    "accuracy": 0.3764,
+    "f1": 0.2435,
+    "em": 0.0393,
+    "contains": 0.3652,
+    "time_match": 0.0337,
+    "hit@1": 0.6573,
+    "hit@k": 0.9719,
     "recall@k": 0.2101,
-    "recall@gold": 0.2123,
-    "mrr": 0.7729,
-    "ndcg@k": 0.3292,
+    "recall@gold": 0.2116,
+    "mrr": 0.7701,
+    "ndcg@k": 0.3282,
     "by_category": {
       "multihop": {
         "total": 31,
-        "answered": 31,
-        "answer_rate": 1.0,
-        "accuracy": 0.0323,
-        "f1": 0.1977,
-        "em": 0.0323,
-        "contains": 0.0323,
+        "answered": 29,
+        "answer_rate": 0.9355,
+        "accuracy": 0.0645,
+        "f1": 0.1803,
+        "em": 0.0,
+        "contains": 0.0645,
+        "time_match": 0.0,
+        "hit@1": 0.4839,
+        "hit@k": 0.9032,
         "recall@k": 0.1392,
         "recall@gold": 0.206,
         "mrr": 0.6401,
-        "ndcg@k": 0.3367,
+        "ndcg@k": 0.3366,
         "by_category": {}
       },
       "open_domain": {
         "total": 14,
-        "answered": 14,
-        "answer_rate": 1.0,
-        "accuracy": 0.0,
-        "f1": 0.0444,
+        "answered": 13,
+        "answer_rate": 0.9286,
+        "accuracy": 0.1429,
+        "f1": 0.0759,
         "em": 0.0,
-        "contains": 0.0,
+        "contains": 0.1429,
+        "time_match": 0.0,
+        "hit@1": 0.5,
+        "hit@k": 0.9286,
         "recall@k": 0.1541,
         "recall@gold": 0.1897,
         "mrr": 0.6312,
@@ -51,28 +60,34 @@
         "total": 26,
         "answered": 26,
         "answer_rate": 1.0,
-        "accuracy": 0.5,
-        "f1": 0.3292,
-        "em": 0.1923,
-        "contains": 0.5,
+        "accuracy": 0.6538,
+        "f1": 0.2566,
+        "em": 0.0769,
+        "contains": 0.6154,
+        "time_match": 0.1923,
+        "hit@1": 0.8077,
+        "hit@k": 1.0,
         "recall@k": 0.2427,
-        "recall@gold": 0.2229,
+        "recall@gold": 0.2181,
         "mrr": 0.8814,
-        "ndcg@k": 0.3623,
+        "ndcg@k": 0.3603,
         "by_category": {}
       },
       "single_hop": {
         "total": 107,
-        "answered": 107,
-        "answer_rate": 1.0,
-        "accuracy": 0.3458,
-        "f1": 0.3839,
-        "em": 0.1776,
-        "contains": 0.3458,
+        "answered": 106,
+        "answer_rate": 0.9907,
+        "accuracy": 0.4299,
+        "f1": 0.2806,
+        "em": 0.0467,
+        "contains": 0.4206,
+        "time_match": 0.0093,
+        "hit@1": 0.6916,
+        "hit@k": 0.9907,
         "recall@k": 0.23,
         "recall@gold": 0.2145,
-        "mrr": 0.8035,
-        "ndcg@k": 0.3223,
+        "mrr": 0.7988,
+        "ndcg@k": 0.3212,
         "by_category": {}
       }
     }
@@ -83,7 +98,7 @@
       "category": "multihop",
       "question": "what are John's goals with regards to his basketball career?",
       "answer": "improve shooting percentage, win a championship",
-      "prediction": "John 在篮球生涯中的头号目标是赢得总冠军。在球场上，他的目标是提高投篮水平、在场上产生更大影响，并成为帮助球队的稳定表现者。",
+      "prediction": "John's number one goal in his basketball career is winning a championship. His on-court goals are to improve his shooting, make more of an impact on the court, and be known as a consistent performer who helps his team.",
       "retrieved_ids": [
         "sem_01M2QJDZAPM46Q9HYQ37WPH1BD",
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZV",
@@ -108,9 +123,9 @@
         "epi_01M2QK0JFVRPWG1GESJDAYVEBV",
         "sem_01M2QKBPMRXYZ3N858HXDR976K",
         "sem_01M2QJDZAPM46Q9HYQ37WPH1BA",
-        "epi_01M2QJ5D5HKS7GTK8QRE2XMXBW",
         "sem_01M2QK3JFZX64994YBPT94EWS0",
         "sem_01M2QKKW968DC7Z06HBFZBN2Y5",
+        "epi_01M2QJ5D5HKS7GTK8QRE2XMXBW",
         "sem_01M2QJFEY0Q6ERMCT44E01K7PE",
         "epi_01M2QHYJ1A6K73YTJX1YM76MAT"
       ],
@@ -151,7 +166,7 @@
       "category": "multihop",
       "question": "What are John's goals for his career that are not related to his basketball skills?",
       "answer": "get endorsements, build his brand, do charity work",
-      "prediction": "根据记忆，John 与篮球技能无关的职业目标包括：\n\n1. **追求代言和打造个人品牌**——为退役后的生活做准备（Tim 建议他选择符合自己价值观、对粉丝真诚的代言）。\n2. **退役后创办基金会、做慈善工作**——希望借此激励他人，留下有意义的遗产。",
+      "prediction": "John's non-skill career goals are:\n- **Winning a championship** — his number one career goal.\n- **Pursuing more endorsements and building his personal brand** as preparation for life after basketball.\n- **Starting a foundation and doing charity work** after his playing career, to inspire others and leave a meaningful legacy.",
       "retrieved_ids": [
         "sem_01M2QJDZAPM46Q9HYQ37WPH1BD",
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZV",
@@ -203,7 +218,7 @@
       "category": "multihop",
       "question": "What items does John collect?",
       "answer": "sneakers, fantasy movie DVDs, jerseys",
-      "prediction": "John collects jerseys and sneakers.",
+      "prediction": "John collects jerseys and sneakers — he likes to collect jerseys, and he has a sneaker collection that he loves talking to people about.",
       "retrieved_ids": [
         "sem_01M2QJFEY0Q6ERMCT44E01K7PF",
         "sem_01M2QHTA6WPFVC05FD3CGGHVD3",
@@ -281,7 +296,7 @@
       "category": "open_domain",
       "question": "Would Tim enjoy reading books by C. S. Lewis or John Greene?",
       "answer": "C. S.Lewis",
-      "prediction": "不知道。",
+      "prediction": "Likely yes for C. S. Lewis — Tim loves fantasy (Harry Potter, Game of Thrones, Patrick Rothfuss, and he wants to read Dune), so Lewis's fantasy would probably appeal to him. For John Greene, it's less certain, since his books are realistic fiction rather than fantasy, though Tim generally enjoys reading and makes time for books.",
       "retrieved_ids": [
         "sem_01M2QJN888WX7CSY7FWPDC8VE5",
         "sem_01M2QHYJ1A6K73YTJX1YM76MB3",
@@ -311,7 +326,7 @@
       "category": "multihop",
       "question": "What books has Tim read?",
       "answer": "Harry Potter, Game of Thrones, the Name of the Wind, The Alchemist, The Hobbit, A Dance with Dragons, and the Wheel of Time.",
-      "prediction": "根据记忆，Tim 读过的书包括：\n- 《哈利·波特》系列（他最喜欢的书之一）\n- George R. R. Martin 的《权力的游戏》系列，截至 2023-12-08 刚读完《魔龙的狂舞》并强烈推荐\n- 一本关于英国城堡的书\n\n（他还向 John 推荐过 Patrick Rothfuss 的一本奇幻小说，但记忆中未明确说明他自己读过。）",
+      "prediction": "Based on the memories, Tim has read:\n- **Harry Potter** (one of his favorite books)\n- **George R. R. Martin's Game of Thrones series** — as of 2023-12-08 he had just finished \"A Dance with Dragons\" and highly recommends it\n- **A book about castles in the UK**, which he found fascinating",
       "retrieved_ids": [
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
         "sem_01M2QJ0T4YCSYH60RKD0T568FP",
@@ -423,7 +438,7 @@
       "category": "open_domain",
       "question": "Based on Tim's collections, what is a shop that he would enjoy visiting in New York city?",
       "answer": "House of MinaLima",
-      "prediction": "不知道。记忆中没有提到纽约市的任何商店信息。",
+      "prediction": "A bookstore — for example, The Strand, a famous bookstore in New York City. Since Tim is passionate about reading and writing, and loves Harry Potter and fantasy, a bookshop like this would suit his interests well.",
       "retrieved_ids": [
         "sem_01M2QJA5R1BNS6Y62979D8YM69",
         "sem_01M2QKRWB9TD8J4V5C0PC7JNV5",
@@ -452,7 +467,7 @@
       "category": "temporal",
       "question": "In which month's game did John achieve a career-high score in points?",
       "answer": "June 2023",
-      "prediction": "July（2023年7月，约7月9日的比赛中得到40分，个人最高分）。",
+      "prediction": "July — around July 9, 2023, John scored 40 points in a game, his personal highest ever.",
       "retrieved_ids": [
         "epi_01M2QHYJ1A6K73YTJX1YM76MAT",
         "epi_01M2QK875P1TPHGKT2G3W4A547",
@@ -486,7 +501,7 @@
       "category": "multihop",
       "question": "Which geographical locations has Tim been to?",
       "answer": "California, London, the Smoky Mountains",
-      "prediction": "Tim has been to Europe and the UK.",
+      "prediction": "Tim has been to **Europe** (he has traveled there before), and specifically the **UK**, where he has personal experiences he uses as writing material.",
       "retrieved_ids": [
         "sem_01M2QJPP98P7Y4M32PJF53RC0Z",
         "sem_01M2QK3JFZX64994YBPT94EWRY",
@@ -542,7 +557,7 @@
       "category": "open_domain",
       "question": "Which outdoor gear company likely signed up John for an endorsement deal?",
       "answer": "Under Armour",
-      "prediction": "不知道。记忆中只提到John与一家知名户外装备公司签约，但没有说明具体是哪家公司。",
+      "prediction": "很可能是 Under Armour。记忆中提到 John 一直喜欢 Under Armour 并希望与他们合作代言，而他当时已在考虑的品牌中，Nike 已在 2023 年 7 月签了篮球鞋装备的代言，因此 2023 年 12 月签下的这家知名户外装备公司最有可能是 Under Armour。",
       "retrieved_ids": [
         "epi_01M2QKD082P5ZTAWP767YXJ7TD",
         "epi_01M2QKRWB9TD8J4V5C0PC7JNV2",
@@ -588,7 +603,7 @@
       "category": "multihop",
       "question": "Which endorsement deals has John been offered?",
       "answer": "basketball shoes and gear deal with Nike, potential sponsorship with Gatorade, Moxie a popular beverage company, outdoor gear company",
-      "prediction": "根据记忆，John获得/签署的代言包括：\n\n- **Nike**：篮球鞋和装备代言（2023年7月已签署）\n- **某知名户外装备公司**（2023年12月中旬签署）\n- **某热门饮料公司**（2024年1月初签署，他称之为梦想成真）\n- **Gatorade**：2023年7月正在洽谈潜在赞助协议（尚未确定）\n\n（Under Armour只是他希望合作的品牌，记忆中未提及对方提出协议。）",
+      "prediction": "Based on the memories, John has been offered (and signed) the following endorsement deals:\n\n1. **Nike** – signed in July 2023 for basketball shoes and gear.\n2. **A renowned outdoor gear company** – signed in the week of 2023-12-11.\n3. **A popular beverage company** – signed in early January 2024 (around 2024-01-05), which",
       "retrieved_ids": [
         "sem_01M2QK3JFZX64994YBPT94EWS1",
         "epi_01M2QKRWB9TD8J4V5C0PC7JNV2",
@@ -642,7 +657,7 @@
       "category": "temporal",
       "question": "When was John in Seattle for a game?",
       "answer": "early August, 2023",
-      "prediction": "2023年8月。",
+      "prediction": "August 2023.",
       "retrieved_ids": [
         "epi_01M2QHYJ1A6K73YTJX1YM76MAY",
         "sem_01M2QHYJ1A6K73YTJX1YM76MAZ",
@@ -690,7 +705,7 @@
       "category": "multihop",
       "question": "What sports does John like besides basketball?",
       "answer": "surfing",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories only mention John playing basketball (a court-based team sport); they don't mention any other sports he likes.",
       "retrieved_ids": [
         "sem_01M2QJ2ACRC97BA0GGHGHY2H7S",
         "sem_01M2QKD082P5ZTAWP767YXJ7TG",
@@ -754,7 +769,7 @@
       "category": "temporal",
       "question": "What year did John start surfing?",
       "answer": "2018",
-      "prediction": "2018",
+      "prediction": "John started surfing around 2018.",
       "retrieved_ids": [
         "sem_01M2QHYJ1A6K73YTJX1YM76MB1",
         "sem_01M2QK3JFZX64994YBPT94EWS0",
@@ -788,7 +803,7 @@
       "category": "multihop",
       "question": "What does Tim do to escape reality?",
       "answer": "Read fantasy books.",
-      "prediction": "Tim escapes reality by reading fantasy books (e.g., Harry Potter and other fantasy novels), and he keeps Harry Potter-related items at home as reminders that help him escape daily reality.",
+      "prediction": "Tim escapes reality through reading fantasy books — he relaxes and feels free reading great fantasy novels in a comfy spot, and keeps a bookshelf of favorite fantasy novels (including Harry Potter-related items) that fire up his imagination and serve as his escape from daily reality.",
       "retrieved_ids": [
         "cor_01M2QHVAXMHY932HHQN210ENQJ",
         "sem_01M2QJFEY0Q6ERMCT44E01K7PH",
@@ -836,7 +851,7 @@
       "category": "multihop",
       "question": "What kind of writing does Tim do?",
       "answer": "comments on favorite books in a fantasy literature forum, articles on fantasy novels, studying characters, themes, and making book recommendations, writing a fantasy novel",
-      "prediction": "Tim writes fantasy novels (stories with plot twists) and articles about fantasy novels for an online magazine.",
+      "prediction": "Tim writes fantasy fiction and articles. Specifically, he is writing a fantasy novel with plot twists, and he also writes articles about fantasy novels for an online magazine, where he analyzes characters and themes and makes book recommendations.",
       "retrieved_ids": [
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
         "sem_01M2QJN888WX7CSY7FWPDC8VE3",
@@ -900,7 +915,7 @@
       "category": "open_domain",
       "question": "Who is Anthony?",
       "answer": "likely John's friend, colleague or family",
-      "prediction": "记忆中只提到 Anthony 和 John 一起参加了慈善活动并参加了哈利·波特知识竞赛，没有说明他的身份或职业。",
+      "prediction": "Based on the memories, Anthony is someone who attended a charity event with John on 2 August 2023, where they competed together in a Harry Potter trivia contest and did reasonably well, though another contestant won the signed prize. No other information about Anthony is available.",
       "retrieved_ids": [
         "cor_01M2QJPP97CM1JD3HDK27EXN96",
         "sem_01M2QKRWB9TD8J4V5C0PC7JNV3",
@@ -928,7 +943,7 @@
       "category": "temporal",
       "question": "After how many weeks did Tim reconnect with the fellow Harry Potter fan from California?",
       "answer": "three weeks",
-      "prediction": "大约 4 周（一个月）。Tim 在 2023-07-09 左右在加州遇到那位哈利·波特粉丝，并于 2023-08-09 通过 Skype 重新联系。",
+      "prediction": "大约 4 周后（约一个月）。Tim 在 2023-07-09 左右在加州遇到那位哈利·波特粉丝，并于 2023-08-09 通过 Skype 通话重新联系上对方。",
       "retrieved_ids": [
         "sem_01M2QHYJ1A6K73YTJX1YM76MB2",
         "epi_01M2QJ2ACRC97BA0GGHGHY2H7X",
@@ -976,7 +991,7 @@
       "category": "multihop",
       "question": "How many games has John mentioned winning?",
       "answer": "6",
-      "prediction": "1场——他提到过一场比赛获胜：球队落后10分时他投进压哨球赢下的那场比赛。（他还提到赢得过一座奖杯，但那是奖杯，不是具体某场比赛。）",
+      "prediction": "**1 场。**\n\n记忆中 John 明确提到赢下的比赛只有一场：他最喜欢的比赛——球队在第四节落后 10 分时，他投进压哨球绝杀获胜（2023-12-11 提到）。\n\n（另外他提到随队赢得过一座奖杯，但那是奖杯而非具体某场比赛；慈善篮球赛只是举办成功，也未提及获胜。）",
       "retrieved_ids": [
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZV",
         "epi_01M2QK3JFZX64994YBPT94EWS2",
@@ -997,7 +1012,7 @@
       "category": "multihop",
       "question": "What authors has Tim read books from?",
       "answer": "J.K. Rowling, R.R. Martin, Patrick Rothfuss, Paulo Coelho, and J. R. R. Tolkien.",
-      "prediction": "根据记忆，Tim 读过以下作者的书：\n- **Patrick Rothfuss**（他读过并推荐给 John 的奇幻小说）\n- **George R. R. Martin**（《权力的游戏》系列，Tim 推荐给了 John）\n\n记忆中提到 Tim 喜欢《哈利·波特》，但没有说明其作者，所以不知道该作者。",
+      "prediction": "Based on the memories, Tim has read books by **Patrick Rothfuss** (he was reading one of his fantasy books and praised its world-building and characters) and **George R. R. Martin** (the Game of Thrones series, which is among Tim's favorites and which he recommended to John).",
       "retrieved_ids": [
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
         "sem_01M2QJ0T4YCSYH60RKD0T568FP",
@@ -1098,7 +1113,7 @@
       "category": "open_domain",
       "question": "What is a prominent charity organization that John might want to work with and why?",
       "answer": "Good Sports, because they work with Nike, Gatorade, and Under Armour and they aim toprovide youth sports opportunities for kids ages 3-18 in high-need communities.",
-      "prediction": "John might want to work with an organization that helps disadvantaged kids through sports and school, because he hopes to use his platform to give back to the community and inspire others.",
+      "prediction": "Based on the memories, John might want to work with a prominent organization that helps disadvantaged kids through sports and education. This is because he is already teaming up with a local organization doing exactly that (hoping to give back to the community and inspire others), and after his basketball career he wants to do charity work that inspires others and leaves a meaningful legacy — so a larger organization with that same mission would align with his goals.",
       "retrieved_ids": [
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZW",
         "cor_01M2QJDZAPM46Q9HYQ37WPH1BF",
@@ -1152,7 +1167,7 @@
       "category": "temporal",
       "question": "Which city was John in before traveling to Chicago?",
       "answer": "Seattle",
-      "prediction": "不知道。记忆中没有提到 John 去芝加哥之前在哪个城市。",
+      "prediction": "I don't know. The memories don't mention which city John was in before his trip to Chicago in early August 2023.",
       "retrieved_ids": [
         "epi_01M2QJ3M0RY0SDDS6PHKATJ6ZX",
         "sem_01M2QJA5R1BNS6Y62979D8YM6D",
@@ -1292,7 +1307,7 @@
       "category": "temporal",
       "question": "When did John meet with his teammates after returning from Chicago?",
       "answer": "August 15, 2023",
-      "prediction": "2023年8月15日。",
+      "prediction": "On August 15, 2023, John reunited with his basketball teammates after his trip (to Chicago in early August 2023) and received a warm welcome from them.",
       "retrieved_ids": [
         "epi_01M2QJ5D5HKS7GTK8QRE2XMXBV",
         "epi_01M2QJDZAPM46Q9HYQ37WPH1B9",
@@ -1319,7 +1334,7 @@
       "category": "temporal",
       "question": "When is Tim attending a book conference?",
       "answer": "September 2023",
-      "prediction": "Tim hopes to attend a book conference in September 2023. He also attended a Harry Potter conference in the UK during the week of 2023-10-02 to 2023-10-08.",
+      "prediction": "Tim hoped to attend a book conference in September 2023 (as of 17 August 2023). He did attend a Harry Potter conference in the UK during the week of 2–8 October 2023, which he found deeply inspiring.",
       "retrieved_ids": [
         "epi_01M2QJGE3BZWWCKXSAEFPP0JHM",
         "sem_01M2QJ5D5HKS7GTK8QRE2XMXBX",
@@ -1346,7 +1361,7 @@
       "category": "temporal",
       "question": "Where was John between August 11 and August 15 2023?",
       "answer": "Chicago",
-      "prediction": "根据记忆，8月初John在芝加哥旅行；8月14-20那一周他回家探望家人和老朋友，并于8月15日旅行归来后与篮球队友重聚。所以8月11-15日期间，他是在芝加哥旅行结束后回家（与家人朋友在一起）。",
+      "prediction": "Based on the memories, John was at home during that time — during the week of August 14–20, 2023, he visited home and caught up with his family and old friends. On August 15, he reunited with his basketball teammates after a trip.",
       "retrieved_ids": [
         "epi_01M2QHYJ1A6K73YTJX1YM76MAY",
         "epi_01M2QJA5R1BNS6Y62979D8YM6A",
@@ -1388,7 +1403,7 @@
       "category": "multihop",
       "question": "What similar sports collectible do Tim and John own?",
       "answer": "signed basketball",
-      "prediction": "不知道。根据记忆，John 喜欢收集球衣，而 Tim 的珍藏是一个签名篮球，两者并不相同，记忆中没有提到他们拥有相似的体育收藏品。",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QHVAXNYPDW9TKM6A2R5C58",
         "sem_01M2QKD082P5ZTAWP767YXJ7TG",
@@ -1430,7 +1445,7 @@
       "category": "multihop",
       "question": "Which TV series does Tim mention watching?",
       "answer": "That, Wheel of Time",
-      "prediction": "The Wheel of Time（Tim 期待其 2024 年 1 月推出的电视剧版）。",
+      "prediction": "\"That\" — it's one of Tim's favorite fantasy shows (as of November 2023).",
       "retrieved_ids": [
         "sem_01M2QKG9WSBD8NP207WW2NPW43",
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJ8",
@@ -1445,8 +1460,8 @@
         "epi_01M2QJ2ACRC97BA0GGHGHY2H7V",
         "sem_01M2QJSD60SR0QW2SKX1A7Y7AX",
         "sem_01M2QJ0T4YCSYH60RKD0T568FP",
-        "sem_01M2QKKW968DC7Z06HBFZBN2XS",
         "epi_01M2QKG9WSBD8NP207WW2NPW3Y",
+        "sem_01M2QKKW968DC7Z06HBFZBN2XS",
         "sem_01M2QJCG7B79A18FMVBBDB2Y3G"
       ],
       "gold_ids": [
@@ -1474,7 +1489,7 @@
       "category": "open_domain",
       "question": "Which popular time management technique does Tim use to prepare for exams?",
       "answer": "Pomodoro technique",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories only mention that Tim was working hard preparing for his exams (November 2023) and was overwhelmed with assignments and exams (August 2023), but they do not mention any specific time management technique he uses.",
       "retrieved_ids": [
         "sem_01M2QJA5R1BNS6Y62979D8YM66",
         "epi_01M2QJVAAWJK08X2Z1QNYG028E",
@@ -1502,7 +1517,7 @@
       "category": "open_domain",
       "question": "Which popular music composer's tunes does Tim enjoy playing on the piano?",
       "answer": "John Williams",
-      "prediction": "不知道。记忆中只提到 Tim 最喜欢弹《哈利·波特与魔法石》的主题曲，但没有提到作曲家的名字。",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QK3JFZX64994YBPT94EWS6",
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJ9",
@@ -1536,7 +1551,7 @@
       "category": "multihop",
       "question": "What schools did John play basketball in and how many years was he with his team during high school?",
       "answer": "Middle school, high school, and college and he was with his high school team for 4 years.",
-      "prediction": "John played basketball through middle school and high school, and he was with his high school team for four years.",
+      "prediction": "John played basketball through middle school and high school（记忆中未提及具体学校名称）。高中期间，他和同一批队友一起打了四年球。",
       "retrieved_ids": [
         "sem_01M2QJA5R1BNS6Y62979D8YM6B",
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZT",
@@ -1586,7 +1601,7 @@
       "category": "multihop",
       "question": "Which cities has John been to?",
       "answer": "Seattle, Chicago, New York, and Paris.",
-      "prediction": "根据记忆，John 去过的城市有：\n- **巴黎**（去过并很喜欢，尤其是埃菲尔铁塔的景色）\n- **西雅图**（他最喜欢的探索城市之一）\n- **纽约市**（去过并享受探索城市和尝试餐厅）\n\n（2023年12月他还去过意大利，但记忆中未提及具体城市。）",
+      "prediction": "根据记忆，John 去过的城市有：\n\n- **巴黎**（他以前去过并非常喜欢，尤其是埃菲尔铁塔的景色）\n- **西雅图**（他最喜欢的探索城市之一）\n- **纽约市**（他曾去过并享受探索城市和尝试餐厅）\n\n此外，他 2023 年 12 月去过**意大利**旅行（但记忆中未提及具体城市）。",
       "retrieved_ids": [
         "sem_01M2QKKW97JETXB6YJ9SJ1PF4A",
         "sem_01M2QHYJ1A6K73YTJX1YM76MAZ",
@@ -1689,7 +1704,7 @@
       "category": "temporal",
       "question": "What month did Tim plan on going to Universal Studios?",
       "answer": "September, 2023",
-      "prediction": "September (2023).",
+      "prediction": "September 2023.",
       "retrieved_ids": [
         "epi_01M2QJCG7B79A18FMVBBDB2Y3B",
         "epi_01M2QK6Z2K36GJS74TE0F0K49K",
@@ -1719,7 +1734,7 @@
       "category": "open_domain",
       "question": "Which US states might Tim be in during September 2023 based on his plans of visiting Universal Studios?",
       "answer": "California or Florida",
-      "prediction": "不知道",
+      "prediction": "Don't know. The memory only says Tim planned a trip to Universal Studios in September 2023, but it doesn't mention which state (or even that it is in the US), so no state can be inferred from the given memories.",
       "retrieved_ids": [
         "epi_01M2QJCG7B79A18FMVBBDB2Y3B",
         "sem_01M2QJ5D5HKS7GTK8QRE2XMXBX",
@@ -1781,7 +1796,7 @@
       "category": "open_domain",
       "question": "What could John do after his basketball career?",
       "answer": "become a basketball coach since he likes giving back and leadership",
-      "prediction": "After his basketball career, John wants to use his platform to start a foundation and do charity work, in order to inspire others and leave a meaningful legacy.",
+      "prediction": "After his basketball career, John could start a foundation and do charity work to inspire others and leave a meaningful legacy. He is also pursuing endorsements and building his personal brand as part of preparing for life after basketball.",
       "retrieved_ids": [
         "cor_01M2QJDZAPM46Q9HYQ37WPH1BF",
         "cor_01M2QJ3M0RY0SDDS6PHKATJ6ZS",
@@ -1871,7 +1886,7 @@
       "category": "multihop",
       "question": "What outdoor activities does John enjoy?",
       "answer": "Hiking, surfing",
-      "prediction": "根据记忆，John 喜欢的户外活动包括：\n- 徒步（如在河流和岩石附近徒步）\n- 露营（2022年曾在落基山脉露营）\n- 亲近大自然、享受户外时光\n- 去海边，喜欢大海并品尝当地海鲜",
+      "prediction": "John enjoys hiking (especially near rivers and rocks), camping (like his 2022 trip in the Rocky Mountains), and visiting the ocean/coastal areas where he loves trying local seafood. He loves nature and being outdoors in general, which energizes him.",
       "retrieved_ids": [
         "epi_01M2QKD082P5ZTAWP767YXJ7TD",
         "epi_01M2QKD082P5ZTAWP767YXJ7TE",
@@ -1919,7 +1934,7 @@
       "category": "multihop",
       "question": "Who is Tim and John's favorite basketball player?",
       "answer": "LeBron James",
-      "prediction": "LeBron James.",
+      "prediction": "LeBron James is both Tim's and John's favorite basketball player.",
       "retrieved_ids": [
         "cor_01M2QHYJ1A6K73YTJX1YM76MAS",
         "sem_01M2QJPP98P7Y4M32PJF53RC0X",
@@ -1965,7 +1980,7 @@
       "category": "temporal",
       "question": "Which week did Tim visit the UK for the Harry Potter Conference?",
       "answer": "The week before October 13th, 2023.",
-      "prediction": "Tim visited the UK for the Harry Potter conference during the week of 2023-10-02 to 2023-10-08.",
+      "prediction": "Tim visited the UK for the Harry Potter Conference during the week of 2023-10-02 to 2023-10-08 (October 2–8, 2023).",
       "retrieved_ids": [
         "epi_01M2QJGE3BZWWCKXSAEFPP0JHM",
         "epi_01M2QHVAXMHY932HHQN210ENQM",
@@ -1974,9 +1989,9 @@
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJ9",
         "sem_01M2QK0JFVRPWG1GESJDAYVEBY",
         "sem_01M2QHVAXMHY932HHQN210ENQK",
+        "sem_01M2QHTA6WPFVC05FD3CGGHVD5",
         "epi_01M2QJ8MDRP6FY9AR2VHRSWEJD",
-        "sem_01M2QJ5D5HKS7GTK8QRE2XMXBX",
-        "sem_01M2QHTA6WPFVC05FD3CGGHVD5"
+        "sem_01M2QJ5D5HKS7GTK8QRE2XMXBX"
       ],
       "gold_ids": [
         "epi_01M2QJGE3BZWWCKXSAEFPP0JHM",
@@ -1992,7 +2007,7 @@
       "category": "multihop",
       "question": "which country has Tim visited most frequently in his travels?",
       "answer": "UK",
-      "prediction": "不知道。记忆中没有关于Tim去过各国次数的信息，无法判断他最常去哪个国家。",
+      "prediction": "**The UK (United Kingdom).** Based on the memories, Tim has multiple connections to the UK: he has personal experiences there that he uses as writing material, he visited a Harry Potter-related place in London a few years ago, and he visited a castle during a trip to the UK on 10 November 2023. No other country appears more than once as a place he has visited.",
       "retrieved_ids": [
         "sem_01M2QKRWB9TD8J4V5C0PC7JNV4",
         "epi_01M2QKG9WSBD8NP207WW2NPW3Y",
@@ -2042,7 +2057,7 @@
       "category": "temporal",
       "question": "What year did Tim go to the Smoky Mountains?",
       "answer": "2022",
-      "prediction": "2022",
+      "prediction": "2022 (in the summer of 2022).",
       "retrieved_ids": [
         "epi_01M2QJHRBJRV6FPMBD5ZVRXM5B",
         "epi_01M2QKPA9N74BMQTAP132ZP3J6",
@@ -2067,7 +2082,7 @@
       "category": "temporal",
       "question": "Has Tim been to North Carolina and/or Tennesee states in the US?",
       "answer": "Yes",
-      "prediction": "不知道。记忆只提到 Tim 在2022年夏天去了大烟山（Smoky Mountains）旅行并拍摄风景，但没有说明他是否到过北卡罗来纳州或田纳西州。",
+      "prediction": "Yes. Tim took a trip to the Smoky Mountains in the summer of 2022, and that region spans both North Carolina and Tennessee, so he has been to both states.",
       "retrieved_ids": [
         "sem_01M2QK3JFZX64994YBPT94EWRY",
         "sem_01M2QJPP98P7Y4M32PJF53RC0Z",
@@ -2150,7 +2165,7 @@
       "category": "multihop",
       "question": "What has John cooked?",
       "answer": "Soup, a slow cooker meal, and honey garlic chicken with roasted veg.",
-      "prediction": "John cooked a tasty soup seasoned with sage, and he also has a honey garlic chicken with roasted vegetables recipe.",
+      "prediction": "John has cooked a tasty soup seasoned with sage (which he improvised) and honey garlic chicken with roasted vegetables.",
       "retrieved_ids": [
         "sem_01M2QJCG7B79A18FMVBBDB2Y3D",
         "epi_01M2QHTA6WPFVC05FD3CGGHVD1",
@@ -2250,7 +2265,7 @@
       "category": "temporal",
       "question": "When did John and his wife go on a European vacation?",
       "answer": "November, 2023.",
-      "prediction": "Around 2023-11-06.",
+      "prediction": "Around November 6, 2023, John and his wife left for a short European vacation, and shortly before November 11, 2023, they went on a road trip along the European coastline.",
       "retrieved_ids": [
         "epi_01M2QJPP98P7Y4M32PJF53RC13",
         "epi_01M2QJSD60SR0QW2SKX1A7Y7AT",
@@ -2282,7 +2297,7 @@
       "category": "temporal",
       "question": "Which country was Tim visiting in the second week of November?",
       "answer": "UK",
-      "prediction": "The UK (he visited a castle there on 2023-11-10).",
+      "prediction": "The UK. Tim visited a castle there on 2023-11-10, which falls in the second week of November.",
       "retrieved_ids": [
         "epi_01M2QJVAAWJK08X2Z1QNYG028E",
         "epi_01M2QK23JM4TTXJ67YD5RXMGKG",
@@ -2310,7 +2325,7 @@
       "category": "temporal",
       "question": "Where was Tim in the week before 16 November 2023?",
       "answer": "UK",
-      "prediction": "Tim was on a trip to the UK — on 2023-11-10 he visited a castle there and was impressed by its architecture and history.",
+      "prediction": "In the week before 16 November 2023, Tim was on a trip to the UK — on 2023-11-10 he visited a castle there and was impressed by its architecture and history.",
       "retrieved_ids": [
         "epi_01M2QJVAAWJK08X2Z1QNYG028E",
         "epi_01M2QK23JM4TTXJ67YD5RXMGKG",
@@ -2319,8 +2334,8 @@
         "epi_01M2QJVAAWJK08X2Z1QNYG028C",
         "epi_01M2QJPP98P7Y4M32PJF53RC0W",
         "epi_01M2QK6Z2K36GJS74TE0F0K49K",
-        "epi_01M2QJCG7B79A18FMVBBDB2Y3B",
         "epi_01M2QKG9WSBD8NP207WW2NPW3Y",
+        "epi_01M2QHVAXMHY932HHQN210ENQG",
         "sem_01M2QJA5R1BNS6Y62979D8YM66"
       ],
       "gold_ids": [
@@ -2338,7 +2353,7 @@
       "category": "temporal",
       "question": "When did John get married at a greenhouse?",
       "answer": "last week of September 2023",
-      "prediction": "Around 2023-09-25.",
+      "prediction": "John got married at a greenhouse venue around September 25, 2023.",
       "retrieved_ids": [
         "epi_01M2QJFEY0Q6ERMCT44E01K7PC",
         "sem_01M2QJPP98P7Y4M32PJF53RC12",
@@ -2367,7 +2382,7 @@
       "category": "multihop",
       "question": "When did John get an ankle injury in 2023?",
       "answer": "around November 16, 2023",
-      "prediction": "记忆中没有具体日期。只知道John是在上一个篮球赛季中伤了脚踝，到2023-11-21时仍在恢复中。",
+      "prediction": "John hurt his ankle during the previous basketball season (before November 2023) — as of 2023-11-21 he was still recovering from it, taking it slow with time off and physical therapy.",
       "retrieved_ids": [
         "epi_01M2QK0JFVRPWG1GESJDAYVEBV",
         "epi_01M2QJVAAWJK08X2Z1QNYG028D",
@@ -2395,7 +2410,7 @@
       "category": "multihop",
       "question": "How many times has John injured his ankle?",
       "answer": "two times",
-      "prediction": "根据记忆，John 的脚踝受伤只被明确提到过一次——在上一个篮球赛季中扭伤了脚踝，需要休养和物理治疗。（2023年12月前的另一次受伤未说明是否为脚踝。）",
+      "prediction": "Based on the memories, John is known to have injured his ankle **once** — during the previous basketball season (mentioned on 21 November 2023), which required time off and physical therapy. The other injuries mentioned in November and December 2023 are not specified as ankle injuries and may refer to the same ongoing injury.",
       "retrieved_ids": [
         "epi_01M2QK0JFVRPWG1GESJDAYVEBV",
         "sem_01M2QKBPMRXYZ3N858HXDR976K",
@@ -2437,7 +2452,7 @@
       "category": "multihop",
       "question": "Which book was John reading during his recovery from an ankle injury?",
       "answer": "The Alchemist",
-      "prediction": "根据记忆，John 在 2023 年 8 月（脚踝伤恢复期间）读的是一本激励人心、提醒他坚持梦想的书，但记忆中没有提到",
+      "prediction": null,
       "retrieved_ids": [
         "epi_01M2QK0JFVRPWG1GESJDAYVEBV",
         "epi_01M2QJVAAWJK08X2Z1QNYG028D",
@@ -2479,7 +2494,7 @@
       "category": "open_domain",
       "question": "What kind of yoga for building core strength might John benefit from?",
       "answer": "Hatha Yoga",
-      "prediction": "不知道。记忆中没有提到适合增强核心力量的瑜伽类型。",
+      "prediction": "Based on the memories, John might benefit from a strength-focused style of yoga that emphasizes holding poses for longer durations (30–60 seconds) to build strength and stability. Since he already enjoys Warrior II—which makes him feel strong—along with balance and stability poses, a yoga practice centered on these kinds of strength- and stability-building poses would suit him well and complement the strength, flexibility, focus, and balance gains he's already experienced.",
       "retrieved_ids": [
         "sem_01M2QK23JM4TTXJ67YD5RXMGKH",
         "sem_01M2QK23JM4TTXJ67YD5RXMGKK",
@@ -2509,7 +2524,7 @@
       "category": "multihop",
       "question": "What does John do to supplement his basketball training?",
       "answer": "Yoga, strength training",
-      "prediction": "He follows a workout schedule that balances basketball practice with strength training, which improved his shooting accuracy, agility and explosiveness.",
+      "prediction": "John supplements his basketball training with strength training — he follows a workout schedule that balances basketball practice with strength training, which he says improved his shooting accuracy, agility and explosiveness.",
       "retrieved_ids": [
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJ5",
         "cor_01M2QJDZAPM46Q9HYQ37WPH1BF",
@@ -2518,9 +2533,9 @@
         "epi_01M2QJ8MDRP6FY9AR2VHRSWEJ4",
         "sem_01M2QKKW968DC7Z06HBFZBN2Y5",
         "sem_01M2QJDZAPM46Q9HYQ37WPH1BD",
-        "cor_01M2QJ8MDRP6FY9AR2VHRSWEJ3",
         "sem_01M2QK875P1TPHGKT2G3W4A54A",
         "sem_01M2QKBPMRXYZ3N858HXDR976K",
+        "cor_01M2QJ8MDRP6FY9AR2VHRSWEJ3",
         "cor_01M2QJ3M0RY0SDDS6PHKATJ6ZS",
         "cor_01M2QHYJ1A6K73YTJX1YM76MAS",
         "epi_01M2QHTA6WPFVC05FD3CGGHVD1",
@@ -2559,7 +2574,7 @@
       "category": "open_domain",
       "question": "What other exercises can help John with his basketball performance?",
       "answer": "Sprinting, long-distance running, and boxing.",
-      "prediction": "不知道。",
+      "prediction": "Based on the memories, strength training is one — John's workout schedule balances basketball practice with strength training, which he says improved his shooting accuracy, agility and explosiveness. Additionally, he does physical therapy exercises every day, though those are for his injury rehabilitation rather than performance. Beyond these, the memories don't mention any other specific exercises.",
       "retrieved_ids": [
         "sem_01M2QJDZAPM46Q9HYQ37WPH1BD",
         "sem_01M2QJ2ACRC97BA0GGHGHY2H7S",
@@ -2609,7 +2624,7 @@
       "category": "temporal",
       "question": "When did John take a trip to the Rocky Mountains?",
       "answer": "2022",
-      "prediction": "2022年。",
+      "prediction": "John took a trip to the Rocky Mountains in 2022, where he went camping and enjoyed the fresh air, mountain views, and peaceful time in nature.",
       "retrieved_ids": [
         "epi_01M2QK23JM4TTXJ67YD5RXMGKP",
         "epi_01M2QJHRBJRV6FPMBD5ZVRXM5B",
@@ -2639,7 +2654,7 @@
       "category": "temporal",
       "question": "When did John start playing professionally?",
       "answer": "May, 2023",
-      "prediction": "Around early 2023 — he signed with the Minnesota Wolves in May 2023.",
+      "prediction": "John started playing professional basketball around early 2023 (he signed with the Minnesota Wolves in May 2023).",
       "retrieved_ids": [
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZT",
         "sem_01M2QK3JFZX64994YBPT94EWS0",
@@ -2655,8 +2670,8 @@
         "cor_01M2QJDZAPM46Q9HYQ37WPH1B8",
         "sem_01M2QHVAXNYPDW9TKM6A2R5C59",
         "cor_01M2QJ8MDRP6FY9AR2VHRSWEJ3",
-        "epi_01M2QJPP98P7Y4M32PJF53RC13",
         "cor_01M2QJ5D5HKS7GTK8QRE2XMXBT",
+        "epi_01M2QJPP98P7Y4M32PJF53RC13",
         "epi_01M2QJ5D5HKS7GTK8QRE2XMXBV"
       ],
       "gold_ids": [
@@ -2685,7 +2700,7 @@
       "category": "temporal",
       "question": "When did Tim start playing the violin?",
       "answer": "August 2023",
-      "prediction": "Around August 2023 (2023-08).",
+      "prediction": "Tim started playing the violin around August 2023 (he had been playing an instrument for about four months as of 2023-12-06).",
       "retrieved_ids": [
         "sem_01M2QK3JFZX64994YBPT94EWS5",
         "epi_01M2QK0JFVRPWG1GESJDAYVEBX",
@@ -2716,7 +2731,7 @@
       "category": "multihop",
       "question": "What instruments does Tim play?",
       "answer": "piano, violin",
-      "prediction": "Tim plays the violin and the piano (both started around August 2023).",
+      "prediction": "Tim plays the **violin** (learning since around August 2023) and the **piano** (started learning around August 2023).",
       "retrieved_ids": [
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
         "sem_01M2QK3JFZX64994YBPT94EWS5",
@@ -2768,7 +2783,7 @@
       "category": "temporal",
       "question": "When did John attend the Harry Potter trivia?",
       "answer": "August 2023.",
-      "prediction": "2023年8月。",
+      "prediction": "John attended the Harry Potter trivia in August 2023, at a charity event (around 1–2 August 2023), where he competed alongside Anthony.",
       "retrieved_ids": [
         "epi_01M2QK6Z2K36GJS74TE0F0K49N",
         "epi_01M2QJ0T4YCSYH60RKD0T568FQ",
@@ -2812,7 +2827,7 @@
       "category": "multihop",
       "question": "Which career-high performances did John achieve in 2023?",
       "answer": "highest point score, highest assist",
-      "prediction": "In 2023, John achieved two career-high performances:\n1. On 2023-12-08, he had a career-high in assists in the big game against their rival.\n2. Around 2023-07-09, he scored 40 points in a game, his personal highest ever.",
+      "prediction": "In 2023, John achieved two career-high performances:\n1. **Career-high in assists** — on December 8, 2023, in his team's big game against their rival.\n2. **Personal highest of 40 points** in a game — around July 9, 2023, when his team pulled off a tough win.",
       "retrieved_ids": [
         "epi_01M2QK875P1TPHGKT2G3W4A547",
         "epi_01M2QHYJ1A6K73YTJX1YM76MAT",
@@ -2856,7 +2871,7 @@
       "category": "temporal",
       "question": "When did John achieve a career-high assist performance?",
       "answer": "December 11, 2023",
-      "prediction": "2023-12-08（上周五），在对阵对手的重要篮球比赛中，John 创下了职业生涯助攻新高。",
+      "prediction": "John achieved a career-high in assists on December 8, 2023, in his team's big basketball game against their rival.",
       "retrieved_ids": [
         "epi_01M2QK875P1TPHGKT2G3W4A547",
         "epi_01M2QHYJ1A6K73YTJX1YM76MAT",
@@ -2883,7 +2898,7 @@
       "category": "multihop",
       "question": "What books has John read?",
       "answer": "inpsiring book on dreaming big, The Alchemist, fantasy series, non-fiction books on personal development, Dune",
-      "prediction": "根据记忆，John 读过的书有：\n- **《The Alchemist》（牧羊少年奇幻之旅）**——他读过并非常喜欢，强烈推荐。\n- **《The Hobbit》（霍比特人）**——这是他最喜欢的奇幻书之一。\n\n（其他如 George R. R. Martin 的书和 Patrick Rothfuss 的书只是计划去读，尚未读过。）",
+      "prediction": "According to the memories, John has read and loved **'The Alchemist'** — it sits on his bookshelf, made him reflect on the importance of following one's dreams, and he highly recommends it.\n\n(The other books mentioned — George R. R. Martin's Game of Thrones series, Patrick Rothfuss's book, and \"The Name of the Wind\" — are only books John plans to read or has added to his reading list, not ones he has finished.)",
       "retrieved_ids": [
         "sem_01M2QK6Z2K36GJS74TE0F0K49W",
         "epi_01M2QJ2ACRC97BA0GGHGHY2H7Y",
@@ -2973,7 +2988,7 @@
       "category": "multihop",
       "question": "What does John do to share his knowledge?",
       "answer": "gives seminars, mentors younger players.",
-      "prediction": "John writes down his honey garlic chicken with roasted vegetables recipe and mails it to Tim, and he also shares his thoughts on books with Tim after finishing them.",
+      "prediction": "John writes down his honey garlic chicken with roasted vegetables recipe and mails it to Tim so Tim can try it. He also shares his thoughts on books with Tim after reading them, and uses his platform to inspire others by teaming up with a local organization that helps disadvantaged kids.",
       "retrieved_ids": [
         "epi_01M2QJ2ACRC97BA0GGHGHY2H7Y",
         "sem_01M2QJN888WX7CSY7FWPDC8VED",
@@ -3013,7 +3028,7 @@
       "category": "temporal",
       "question": "When did John organize a basketball camp for kids?",
       "answer": "summer 2023",
-      "prediction": "In summer 2023.",
+      "prediction": "In summer 2023, John organized a week-long basketball camp for kids in his hometown.",
       "retrieved_ids": [
         "epi_01M2QKG9WSBD8NP207WW2NPW3V",
         "sem_01M2QK3JFZX64994YBPT94EWS0",
@@ -3047,7 +3062,7 @@
       "category": "temporal",
       "question": "Which month was John in Italy?",
       "answer": "December, 2023",
-      "prediction": "December (2023).",
+      "prediction": "John was in Italy in December 2023.",
       "retrieved_ids": [
         "epi_01M2QKKW968DC7Z06HBFZBN2Y1",
         "sem_01M2QKKW968DC7Z06HBFZBN2Y2",
@@ -3095,7 +3110,7 @@
       "category": "multihop",
       "question": "What fantasy movies does Tim like?",
       "answer": "Lord of the Rings, Harry Potter, and Star Wars.",
-      "prediction": "Tim likes **Lord of the Rings** (his favorite movie) and **Star Wars** (his favorite fantasy movie, which he says never gets old).",
+      "prediction": "Tim likes **Lord of the Rings** (his favorite movie) and **Star Wars** (his favorite fantasy movie, which he says never gets old). He also enjoys **The Hobbit** among his fantasy books and movies.",
       "retrieved_ids": [
         "sem_01M2QK23JM4TTXJ67YD5RXMGKM",
         "sem_01M2QKG9WSBD8NP207WW2NPW40",
@@ -3187,7 +3202,7 @@
       "category": "open_domain",
       "question": "What is a Star Wars book that Tim might enjoy?",
       "answer": "Star Wars: Jedi Apprentice by Judy Blundell and David Farland. It is a highly rated and immersive series about his favorite movies.",
-      "prediction": "不知道。记忆中只提到 Tim 最喜欢的奇幻电影是 Star Wars，但没有提到任何 Star Wars 相关的书籍。",
+      "prediction": "Based on the memories, Tim loves Star Wars and also loves immersive fantasy books with strong world-building and characters (like Patrick Rothfuss's work). So he might enjoy a Star Wars novel that expands the Star Wars universe with rich world-building and compelling characters.",
       "retrieved_ids": [
         "sem_01M2QKKW968DC7Z06HBFZBN2XX",
         "sem_01M2QKKW968DC7Z06HBFZBN2XW",
@@ -3235,7 +3250,7 @@
       "category": "open_domain",
       "question": "What would be a good hobby related to his travel dreams for Tim to pick up?",
       "answer": "Writing a travel blog.",
-      "prediction": "Travel writing — Tim is passionate about writing and reading, and he already enjoys travel stories from travelers around the world, so writing his own travel stories would fit well with his travel dreams.",
+      "prediction": "Travel writing (or keeping a travel journal) would be a great fit. Tim is already passionate about writing and loves reading travel stories from travelers around the world, so writing about his own adventures would combine his two passions and tie directly into his travel dreams.",
       "retrieved_ids": [
         "sem_01M2QKRWB9TD8J4V5C0PC7JNV4",
         "epi_01M2QKG9WSBD8NP207WW2NPW3Y",
@@ -3337,18 +3352,18 @@
       "category": "temporal",
       "question": "What day did Tim get into his study abroad program?",
       "answer": "Januarty 5, 2024",
-      "prediction": "2024-01-05（2024年1月5日）。",
+      "prediction": "Tim was accepted into his study abroad program on January 5, 2024.",
       "retrieved_ids": [
         "epi_01M2QKPA9N74BMQTAP132ZP3J6",
         "sem_01M2QKPA9N74BMQTAP132ZP3J7",
-        "sem_01M2QKPA9N74BMQTAP132ZP3J9",
         "epi_01M2QK6Z2K36GJS74TE0F0K49K",
         "epi_01M2QK0JFVRPWG1GESJDAYVEBX",
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
         "sem_01M2QKRWB9TD8J4V5C0PC7JNV4",
         "sem_01M2QKKW968DC7Z06HBFZBN2XS",
         "pro_01M2QJVAAWJK08X2Z1QNYG028F",
-        "epi_01M2QKG9WSBD8NP207WW2NPW3Y"
+        "epi_01M2QKG9WSBD8NP207WW2NPW3Y",
+        "sem_01M2QKPA9N74BMQTAP132ZP3J9"
       ],
       "gold_ids": [
         "epi_01M2QKPA9N74BMQTAP132ZP3J6",
@@ -3367,7 +3382,7 @@
       "category": "temporal",
       "question": "When will Tim leave for Ireland?",
       "answer": "February, 2024",
-      "prediction": "Tim will leave for Ireland in February 2024.",
+      "prediction": "Tim will leave for Ireland in February 2024, when his study abroad semester begins.",
       "retrieved_ids": [
         "epi_01M2QKPA9N74BMQTAP132ZP3J6",
         "sem_01M2QKPA9N74BMQTAP132ZP3J7",
@@ -3397,7 +3412,7 @@
       "category": "open_domain",
       "question": "Which Star Wars-related locations would Tim enjoy during his visit to Ireland?",
       "answer": "Skellig Michael, Malin Head, Loop Head, Ceann Sibéal, and Brow Head because they are Star Wars filming locations.",
-      "prediction": "不知道。",
+      "prediction": "I don't know. The memories mention that Star Wars is Tim's favorite fantasy movie and that he plans to visit Ireland (e.g., The Cliffs of Moher, staying in Galway), but they don't mention any Star Wars-related locations in Ireland, so there's no basis to identify which ones he would enjoy.",
       "retrieved_ids": [
         "epi_01M2QKPA9N74BMQTAP132ZP3J8",
         "sem_01M2QKPA9N74BMQTAP132ZP3J9",
@@ -3477,7 +3492,7 @@
       "category": "single_hop",
       "question": "Which team did John sign with on 21 May, 2023?",
       "answer": "The Minnesota Wolves",
-      "prediction": "The Minnesota Wolves basketball team.",
+      "prediction": "John signed with the Minnesota Wolves basketball team.",
       "retrieved_ids": [
         "epi_01M2QHTA6WPFVC05FD3CGGHVCZ",
         "epi_01M2QJGE3BZWWCKXSAEFPP0JHQ",
@@ -3507,7 +3522,7 @@
       "category": "single_hop",
       "question": "What is John's position on the team he signed with?",
       "answer": "shooting guard",
-      "prediction": "不知道。记忆中没有提到John在球队中的具体位置。",
+      "prediction": "I don't know. The memories mention that John signed with the Minnesota Wolves in May 2023 and that he values creating plays and opportunities for his teammates, but they never state his specific position on the team.",
       "retrieved_ids": [
         "epi_01M2QHTA6WPFVC05FD3CGGHVCZ",
         "epi_01M2QJ5D5HKS7GTK8QRE2XMXBW",
@@ -3537,7 +3552,7 @@
       "category": "single_hop",
       "question": "What challenge did John encounter during pre-season training?",
       "answer": "fitting into the new team's style of play",
-      "prediction": "Fitting into the Minnesota Wolves' style of play.",
+      "prediction": "During pre-season training, John's main challenge was fitting into the Minnesota Wolves' style of play.",
       "retrieved_ids": [
         "epi_01M2QHTA6WPFVC05FD3CGGHVD2",
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJ5",
@@ -3567,7 +3582,7 @@
       "category": "single_hop",
       "question": "What aspects of the Harry Potter universe will be discussed in John's fan project collaborations?",
       "answer": "characters, spells, magical creatures",
-      "prediction": "不知道。记忆中提到的是 Tim（而非 John）在做哈利·波特粉丝项目，其合作讨论的内容包括角色、咒语和魔法生物。",
+      "prediction": "The fan project with collaborations is Tim's, not John's. According to the memory, Tim's Harry Potter fan project collaborations will discuss characters, spells, and magical creatures from the Harry Potter universe.",
       "retrieved_ids": [
         "sem_01M2QKG9WSBD8NP207WW2NPW3X",
         "sem_01M2QHTA6WPFVC05FD3CGGHVD5",
@@ -3597,7 +3612,7 @@
       "category": "single_hop",
       "question": "What forum did Tim join recently?",
       "answer": "fantasy literature forum",
-      "prediction": "Tim joined a fantasy literature forum (on 2023-06-14).",
+      "prediction": "Tim joined a **fantasy literature forum** (on 2023-06-14).",
       "retrieved_ids": [
         "epi_01M2QHVAXMHY932HHQN210ENQG",
         "epi_01M2QKKW968DC7Z06HBFZBN2XR",
@@ -3655,7 +3670,7 @@
       "category": "single_hop",
       "question": "What was the highest number of points John scored in a game recently?",
       "answer": "40 points",
-      "prediction": "40分（约2023-07-09那场比赛，是他的个人最高纪录）。",
+      "prediction": "40 points — around 2023-07-09, John scored 40 points in a game, which was his personal highest ever.",
       "retrieved_ids": [
         "epi_01M2QHYJ1A6K73YTJX1YM76MAT",
         "epi_01M2QK875P1TPHGKT2G3W4A549",
@@ -3689,7 +3704,7 @@
       "category": "single_hop",
       "question": "What did John celebrate at a restaurant with teammates?",
       "answer": "a tough win",
-      "prediction": "He celebrated scoring 40 points (his personal highest ever) and his team's tough win in the game, around 2023-07-09.",
+      "prediction": "John celebrated scoring 40 points in a game—his personal highest ever—and his team pulling off a tough win, celebrating together at a restaurant around 2023-07-09.",
       "retrieved_ids": [
         "epi_01M2QJDZAPM46Q9HYQ37WPH1B9",
         "epi_01M2QJ5D5HKS7GTK8QRE2XMXBV",
@@ -3723,7 +3738,7 @@
       "category": "single_hop",
       "question": "What kind of deals did John sign with Nike and Gatorade?",
       "answer": "basketball shoe and gear deal with Nike, potential sponsorship deal with Gatorade",
-      "prediction": "根据记忆：John 与 Nike 签署了一份篮球鞋和装备的代言协议。至于 Gatorade，截至 2023 年 7 月，他只是在洽谈一项潜在的赞助协议，尚未签署。",
+      "prediction": "John signed an endorsement deal with Nike for basketball shoes and gear. With Gatorade, he had not signed a deal — as of July 2023 he was only in talks about a potential sponsorship deal.",
       "retrieved_ids": [
         "sem_01M2QHYJ1A6K73YTJX1YM76MAV",
         "sem_01M2QHYJ1A6K73YTJX1YM76MAW",
@@ -3791,7 +3806,7 @@
       "category": "single_hop",
       "question": "How long has John been surfing?",
       "answer": "five years",
-      "prediction": "大约五年（他大约在2018年开始冲浪）。",
+      "prediction": "John started surfing around 2018, so as of July 2023 he had been surfing for about five years.",
       "retrieved_ids": [
         "sem_01M2QHYJ1A6K73YTJX1YM76MB1",
         "sem_01M2QK3JFZX64994YBPT94EWS0",
@@ -3887,7 +3902,7 @@
       "category": "single_hop",
       "question": "Which two fantasy novels does Tim particularly enjoy writing about?",
       "answer": "Harry Potter and Game of Thrones",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories mention that Tim writes articles about fantasy novels in general and is passionate about Harry Potter, but they don't specify which two fantasy novels he particularly enjoys writing about.",
       "retrieved_ids": [
         "sem_01M2QJ0T4YCSYH60RKD0T568FM",
         "sem_01M2QJN888WX7CSY7FWPDC8VE3",
@@ -3915,7 +3930,7 @@
       "category": "single_hop",
       "question": "What did Anthony and John end up playing during the charity event?",
       "answer": "an intense Harry Potter trivia contest",
-      "prediction": "They played Harry Potter trivia (a trivia contest) at the charity event.",
+      "prediction": "They competed in a Harry Potter trivia contest at the charity event, doing reasonably well, though another contestant won the signed prize.",
       "retrieved_ids": [
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZW",
         "epi_01M2QK6Z2K36GJS74TE0F0K49N",
@@ -3943,7 +3958,7 @@
       "category": "single_hop",
       "question": "What did John share with the person he skyped about?",
       "answer": "Characters from Harry Potter",
-      "prediction": "不知道。记忆中提到的是 Tim 在 2023-08-09 与一位哈利·波特粉丝进行了 Skype 通话，他们聊了角色相关的话题，但没有提到 John 与人 Skype 通话。",
+      "prediction": "According to the memories, it was Tim—not John—who had a Skype call (on 2023-08-09, with a Harry Potter fan he met in California, and they talked about characters). There is no record of John having a Skype call with anyone, so I don't know what John shared in a Skype call.",
       "retrieved_ids": [
         "epi_01M2QJ2ACRC97BA0GGHGHY2H7Y",
         "epi_01M2QJFEY0Q6ERMCT44E01K7PG",
@@ -3972,7 +3987,7 @@
       "category": "single_hop",
       "question": "How did John describe the team bond?",
       "answer": "Awesome",
-      "prediction": "John described his team as \"like a second family.\"",
+      "prediction": "John described his team as being like a **second family**.",
       "retrieved_ids": [
         "epi_01M2QKD082P5ZTAWP767YXJ7TH",
         "epi_01M2QKBPMRXYZ3N858HXDR976J",
@@ -4001,7 +4016,7 @@
       "category": "single_hop",
       "question": "How did John get introduced to basketball?",
       "answer": "Dad signed him up for a local league",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't contain any information about how John was first introduced to basketball — they only mention his later career (college scholarship, being drafted, playing professionally).",
       "retrieved_ids": [
         "cor_01M2QJ5D5HKS7GTK8QRE2XMXBT",
         "cor_01M2QJ8MDRP6FY9AR2VHRSWEJ3",
@@ -4033,7 +4048,7 @@
       "category": "single_hop",
       "question": "What is John's number one goal in his basketball career?",
       "answer": "Winning a championship",
-      "prediction": "Winning a championship.",
+      "prediction": "John's number one goal in his basketball career is winning a championship.",
       "retrieved_ids": [
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZV",
         "epi_01M2QHTA6WPFVC05FD3CGGHVD1",
@@ -4065,7 +4080,7 @@
       "category": "single_hop",
       "question": "What organization is John teaming up with for his charity work?",
       "answer": "A local organization helping disadvantaged kids with sports and school",
-      "prediction": "记忆中只提到John正在与一个通过体育和学校帮助弱势儿童的地方组织合作，没有给出该组织的具体名称（不知道具体名字）。",
+      "prediction": "John is teaming up with a local organization that helps disadvantaged kids through sports and school.",
       "retrieved_ids": [
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZW",
         "epi_01M2QKPA9N74BMQTAP132ZP3JA",
@@ -4097,7 +4112,7 @@
       "category": "single_hop",
       "question": "When did John meet back up with his teammates after his trip in August 2023?",
       "answer": "Aug 15th",
-      "prediction": "2023年8月15日。",
+      "prediction": "John reunited with his basketball teammates on August 15, 2023, after his trip, and received a warm welcome from them.",
       "retrieved_ids": [
         "epi_01M2QJ5D5HKS7GTK8QRE2XMXBV",
         "epi_01M2QJA5R1BNS6Y62979D8YM6A",
@@ -4124,7 +4139,7 @@
       "category": "single_hop",
       "question": "What did John's teammates give him when they met on Aug 15th?",
       "answer": "a basketball with autographs on it",
-      "prediction": "A signed basketball.",
+      "prediction": "A signed basketball — given as a token of their friendship and appreciation.",
       "retrieved_ids": [
         "epi_01M2QJ5D5HKS7GTK8QRE2XMXBW",
         "sem_01M2QK3JFZX64994YBPT94EWS3",
@@ -4178,7 +4193,7 @@
       "category": "single_hop",
       "question": "What is the main intention behind Tim wanting to attend the book conference?",
       "answer": "to learn more about literature and create a stronger bond to it",
-      "prediction": "To discuss favorite novels and new releases with authors, publishers, and book lovers — as an avid book lover, he enjoys discussing novels and learning more about literature.",
+      "prediction": "Tim's main intention is to discuss favorite novels and new releases with authors, publishers, and fellow book lovers — as an avid book lover, he enjoys discussing novels and learning more about literature.",
       "retrieved_ids": [
         "sem_01M2QJ5D5HKS7GTK8QRE2XMXBX",
         "epi_01M2QJGE3BZWWCKXSAEFPP0JHM",
@@ -4205,7 +4220,7 @@
       "category": "single_hop",
       "question": "What new activity has Tim started learning in August 2023?",
       "answer": "play the piano",
-      "prediction": "Tim started learning how to play the piano (as of 2023-08-21).",
+      "prediction": "In August 2023, Tim started learning to play the piano (as of 21 August 2023). He also began learning the violin around the same time (started around August 2023).",
       "retrieved_ids": [
         "sem_01M2QK3JFZX64994YBPT94EWS5",
         "sem_01M2QKKW968DC7Z06HBFZBN2XS",
@@ -4239,7 +4254,7 @@
       "category": "single_hop",
       "question": "Which movie's theme is Tim's favorite to play on the piano?",
       "answer": "\"Harry Potter and the Philosopher's Stone\"",
-      "prediction": "'Harry Potter and the Philosopher's Stone'",
+      "prediction": "'Harry Potter and the Philosopher's Stone' — Tim's favorite song to play on the piano is a theme from that movie.",
       "retrieved_ids": [
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJ9",
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJ8",
@@ -4273,7 +4288,7 @@
       "category": "single_hop",
       "question": "What special memory does \"Harry Potter and the Philosopher's Stone\" bring to Tim?",
       "answer": "Watching it with his family",
-      "prediction": "It brings back great memories of watching it with his family.",
+      "prediction": "It brings back great memories of watching the film with his family — he loved watching it, the first in the series, together with them.",
       "retrieved_ids": [
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJ8",
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJ9",
@@ -4307,19 +4322,19 @@
       "category": "single_hop",
       "question": "Which movie does Tim mention they enjoy watching during Thanksgiving?",
       "answer": "\"Home Alone\"",
-      "prediction": "Tim's family traditionally watches 'Home Alone', 'Elf', and 'The Santa Clause' during Thanksgiving and the holiday season.",
+      "prediction": "Tim's family traditionally watches **'Home Alone', 'Elf', and 'The Santa Clause'** together during Thanksgiving and the holiday season.",
       "retrieved_ids": [
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJ8",
         "sem_01M2QKG9WSBD8NP207WW2NPW43",
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJA",
         "sem_01M2QKKW968DC7Z06HBFZBN2XX",
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJB",
-        "sem_01M2QJFEY0Q6ERMCT44E01K7PJ",
         "sem_01M2QK23JM4TTXJ67YD5RXMGKM",
         "sem_01M2QJA5R1BNS6Y62979D8YM69",
         "epi_01M2QJCG7B79A18FMVBBDB2Y3B",
         "epi_01M2QK3JFZX64994YBPT94EWRX",
-        "epi_01M2QK0JFWHY9MCTK9E216MSQQ"
+        "epi_01M2QK0JFWHY9MCTK9E216MSQQ",
+        "sem_01M2QJFEY0Q6ERMCT44E01K7PH"
       ],
       "gold_ids": [
         "cor_01M2QJ8MDRP6FY9AR2VHRSWEJ3",
@@ -4345,8 +4360,8 @@
       "retrieved_ids": [
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJA",
         "sem_01M2QJ8MDRP6FY9AR2VHRSWEJB",
-        "sem_01M2QKG9WSBD8NP207WW2NPW43",
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
+        "sem_01M2QKG9WSBD8NP207WW2NPW43",
         "sem_01M2QKPA9N74BMQTAP132ZP3J9",
         "sem_01M2QJFEY0Q6ERMCT44E01K7PJ",
         "epi_01M2QJVAAWJK08X2Z1QNYG028E",
@@ -4375,7 +4390,7 @@
       "category": "single_hop",
       "question": "How long did John and his high school basketball teammates play together?",
       "answer": "Four years",
-      "prediction": "Four years.",
+      "prediction": "Four years — John played with the same group of teammates throughout his four years of high school.",
       "retrieved_ids": [
         "sem_01M2QJA5R1BNS6Y62979D8YM6B",
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZT",
@@ -4406,7 +4421,7 @@
       "category": "single_hop",
       "question": "How was John's experience in New York City?",
       "answer": "Amazing",
-      "prediction": "John enjoyed exploring New York City and trying its restaurants. At first he had trouble figuring out the subway, but someone helped explain it to him.",
+      "prediction": "John enjoyed his trip to New York City — he loved exploring the city and trying its restaurants. At first he had trouble figuring out the subway, but someone helped explain it to him.",
       "retrieved_ids": [
         "sem_01M2QJA5R1BNS6Y62979D8YM6D",
         "epi_01M2QJCG7B79A18FMVBBDB2Y3E",
@@ -4437,7 +4452,7 @@
       "category": "single_hop",
       "question": "What did John say about NYC, enticing Tim to visit?",
       "answer": "It's got so much to check out - the culture, food - you won't regret it.",
-      "prediction": "不知道。记忆中只提到John去过纽约并在地铁上遇到困难，没有提到他说了什么吸引Tim去纽约的话。",
+      "prediction": "The memories don't record John saying anything enticing about NYC. The only related fact is that John recently took a trip to New York City and at first had trouble figuring out the subway until someone helped explain it (31 August 2023) — nothing he said to entice Tim is mentioned.",
       "retrieved_ids": [
         "sem_01M2QJA5R1BNS6Y62979D8YM69",
         "epi_01M2QJCG7B79A18FMVBBDB2Y3E",
@@ -4468,7 +4483,7 @@
       "category": "single_hop",
       "question": "What kind of soup did John make recently?",
       "answer": "tasty soup with sage",
-      "prediction": "An improvised soup seasoned with sage.",
+      "prediction": "John improvised a tasty soup seasoned with sage.",
       "retrieved_ids": [
         "sem_01M2QJCG7B79A18FMVBBDB2Y3D",
         "epi_01M2QKD082P5ZTAWP767YXJ7TE",
@@ -4508,8 +4523,8 @@
         "sem_01M2QK6Z2K36GJS74TE0F0K49X",
         "sem_01M2QJN888WX7CSY7FWPDC8VED",
         "sem_01M2QHYJ1A6K73YTJX1YM76MB0",
-        "sem_01M2QHYJ1A6K73YTJX1YM76MAW",
-        "sem_01M2QJPP98P7Y4M32PJF53RC12"
+        "sem_01M2QJPP98P7Y4M32PJF53RC12",
+        "sem_01M2QHYJ1A6K73YTJX1YM76MAW"
       ],
       "gold_ids": [
         "epi_01M2QJCG7ARQ18D1WEDA4SH0FB",
@@ -4528,7 +4543,7 @@
       "category": "single_hop",
       "question": "What is Tim excited to see at Universal Studios?",
       "answer": "The Harry Potter stuff",
-      "prediction": "The Harry Potter attractions.",
+      "prediction": "Tim is excited about the Harry Potter attractions at Universal Studios.",
       "retrieved_ids": [
         "epi_01M2QJCG7B79A18FMVBBDB2Y3B",
         "sem_01M2QJCG7B79A18FMVBBDB2Y3F",
@@ -4558,7 +4573,7 @@
       "category": "single_hop",
       "question": "Where are John and his teammates planning to explore on a team trip?",
       "answer": "a new city",
-      "prediction": "目的地尚未确定。Tim建议去苏格兰爱丁堡（Harry Potter的诞生地，以历史和建筑闻名），John认为值得考虑，因为他从未去过那里。",
+      "prediction": "The destination was still being decided, but Tim suggested Edinburgh, Scotland (the birthplace of Harry Potter, known for its history and architecture), which John considers worth considering since he has never been there.",
       "retrieved_ids": [
         "sem_01M2QJGE3BZWWCKXSAEFPP0JHP",
         "sem_01M2QJDZAPM46Q9HYQ37WPH1BB",
@@ -4656,8 +4671,8 @@
       "answer": "Ensure they align with values and brand, look for companies that share the desire to make a change and help others, make sure the endorsement feels authentic",
       "prediction": "Tim advised John to choose endorsements that align with his values and feel authentic to his followers.",
       "retrieved_ids": [
-        "sem_01M2QHVAXNYPDW9TKM6A2R5C58",
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
+        "sem_01M2QHVAXNYPDW9TKM6A2R5C58",
         "sem_01M2QJDZAPM46Q9HYQ37WPH1BE",
         "sem_01M2QJGE3BZWWCKXSAEFPP0JHN",
         "sem_01M2QJHRBJRV6FPMBD5ZVRXM58",
@@ -4686,7 +4701,7 @@
       "category": "single_hop",
       "question": "What book recommendation did Tim give to John for the trip?",
       "answer": "A fantasy novel by Patrick Rothfuss",
-      "prediction": "Tim recommended \"The Name of the Wind\" by Patrick Rothfuss to John as travel reading for his team trip.",
+      "prediction": "Tim recommended a fantasy novel by Patrick Rothfuss — \"The Name of the Wind\" — to John as travel reading for his team trip.",
       "retrieved_ids": [
         "epi_01M2QKG9WSBD8NP207WW2NPW3Y",
         "sem_01M2QK6Z2K36GJS74TE0F0K49X",
@@ -4747,7 +4762,7 @@
       "category": "single_hop",
       "question": "What was the setting for John and his wife's first dance?",
       "answer": "Cozy restaurant",
-      "prediction": "不知道。记忆中只提到婚礼在温室场地举行，但没有提到第一支舞的相关信息。",
+      "prediction": "I don't know. The memories mention that John married his girlfriend at a greenhouse venue around 2023-09-25, but there is no information about a first dance or its setting.",
       "retrieved_ids": [
         "epi_01M2QJFEY0Q6ERMCT44E01K7PC",
         "epi_01M2QK875P1TPHGKT2G3W4A549",
@@ -4776,7 +4791,7 @@
       "category": "single_hop",
       "question": "Which basketball team does Tim support?",
       "answer": "The Wolves",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories mention that Tim's favorite basketball player is LeBron James, but they never state which basketball team Tim supports.",
       "retrieved_ids": [
         "sem_01M2QJPP98P7Y4M32PJF53RC0Y",
         "sem_01M2QJ2ACRC97BA0GGHGHY2H7S",
@@ -4805,7 +4820,7 @@
       "category": "single_hop",
       "question": "What passion does Tim mention connects him with people from all over the world?",
       "answer": "passion for fantasy stuff",
-      "prediction": "Tim 提到他对 Harry Potter 和奇幻（fantasy）的热情将他与来自世界各地的人们联系在一起。",
+      "prediction": "Harry Potter and fantasy — Tim says this passion connects him with people from all over the world.",
       "retrieved_ids": [
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
         "sem_01M2QK3JFZX64994YBPT94EWRY",
@@ -4832,7 +4847,7 @@
       "category": "single_hop",
       "question": "How does John describe the game season for his team?",
       "answer": "intense with tough losses and great wins",
-      "prediction": "An intense season with both tough losses and great wins.",
+      "prediction": "John described the season as intense, with both tough losses and great wins — and his team won a trophy after it (reported on 2023-10-13).",
       "retrieved_ids": [
         "epi_01M2QK875P1TPHGKT2G3W4A549",
         "epi_01M2QJGE3BZWWCKXSAEFPP0JHQ",
@@ -4859,7 +4874,7 @@
       "category": "single_hop",
       "question": "How does John say his team handles tough opponents?",
       "answer": "by backing each other up and not quitting",
-      "prediction": "John 说他的队友们会互相支持（teammates back each other up）。",
+      "prediction": "John says his team competes in seasons against tough opponents and the teammates back each other up.",
       "retrieved_ids": [
         "sem_01M2QJGE3BZWWCKXSAEFPP0JHP",
         "epi_01M2QJGE3BZWWCKXSAEFPP0JHQ",
@@ -4886,7 +4901,7 @@
       "category": "single_hop",
       "question": "What motivates John's team to get better, according to John?",
       "answer": "facing tough opponents",
-      "prediction": "不知道",
+      "prediction": "According to John, the team's unity and bonding motivate them to get better — they strengthen it through team dinners, outings, and basketball games outside of practice, and this growth in communication and bonding has improved their performances by helping them understand each other's strengths and weaknesses.",
       "retrieved_ids": [
         "sem_01M2QJDZAPM46Q9HYQ37WPH1BD",
         "sem_01M2QK6Z2K36GJS74TE0F0K49R",
@@ -4940,7 +4955,7 @@
       "category": "single_hop",
       "question": "Where did Tim capture the photography of the sunset over the mountain range?",
       "answer": "Smoky Mountains",
-      "prediction": "The Smoky Mountains (he photographed the scenery there in the summer of 2022).",
+      "prediction": "The Smoky Mountains — Tim photographed the scenery there during his trip in the summer of 2022.",
       "retrieved_ids": [
         "epi_01M2QJHRBJRV6FPMBD5ZVRXM5B",
         "sem_01M2QKKW968DC7Z06HBFZBN2XY",
@@ -4965,7 +4980,7 @@
       "category": "single_hop",
       "question": "How does John feel about being seen as a mentor by some of the younger players?",
       "answer": "It feels great",
-      "prediction": "不知道。记忆中只提到John在休赛期指导年轻球员、提供建议和支持，但没有说明他对被视为导师的感受。",
+      "prediction": "John seems to embrace the mentor role positively. He actively mentors the younger players on his team during the off-season, giving them advice and support both on and off the court, and he's passionate about being a strong teammate—so he appears to value and willingly take on this role.",
       "retrieved_ids": [
         "sem_01M2QJHRBJRV6FPMBD5ZVRXM58",
         "sem_01M2QJVAAWJK08X2Z1QNYG028H",
@@ -4990,7 +5005,7 @@
       "category": "single_hop",
       "question": "What does John find rewarding about mentoring the younger players?",
       "answer": "Seeing their growth, improvement, and confidence",
-      "prediction": "不知道。记忆中只提到John在休赛期指导年轻球员，为他们提供建议和支持，但没有说明他觉得这样做有什么回报。",
+      "prediction": "The memories don't state what John finds rewarding about it. They only say that during the off-season he mentors the younger players on his team, providing them with advice and support on and off the court.",
       "retrieved_ids": [
         "sem_01M2QJHRBJRV6FPMBD5ZVRXM58",
         "pro_01M2QJVAAWJK08X2Z1QNYG028G",
@@ -5015,7 +5030,7 @@
       "category": "single_hop",
       "question": "What has John been able to help the younger players achieve?",
       "answer": "reach their goals",
-      "prediction": "不知道",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QJHRBJRV6FPMBD5ZVRXM58",
         "epi_01M2QHTA6WPFVC05FD3CGGHVD1",
@@ -5040,7 +5055,7 @@
       "category": "single_hop",
       "question": "What genre is the novel that Tim is writing?",
       "answer": "Fantasy",
-      "prediction": "Fantasy.",
+      "prediction": "Tim is writing a **fantasy** novel.",
       "retrieved_ids": [
         "sem_01M2QJN888WX7CSY7FWPDC8VE3",
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
@@ -5078,7 +5093,7 @@
       "category": "single_hop",
       "question": "Who is one of Tim's sources of inspiration for writing?",
       "answer": "J.K. Rowling",
-      "prediction": "J.K. Rowling.",
+      "prediction": "J.K. Rowling — her detailed, creative storytelling inspires Tim, and he takes notes on her style for his own writing.",
       "retrieved_ids": [
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
         "epi_01M2QJN888WX7CSY7FWPDC8VE9",
@@ -5116,7 +5131,7 @@
       "category": "single_hop",
       "question": "What J.K. Rowling quote does Tim resonate with?",
       "answer": "\"Turn on the light - happiness hides in the darkest of times.\"",
-      "prediction": "Tim resonates with the J.K. Rowling quote: \"Turn on the light - happiness hides in the darkest of times.\"",
+      "prediction": "Tim's favorite J.K. Rowling quote is \"Turn on the light - happiness hides in the darkest of times,\" which helps him keep hope alive during tough times.",
       "retrieved_ids": [
         "sem_01M2QJN888WX7CSY7FWPDC8VE6",
         "sem_01M2QJN888WX7CSY7FWPDC8VE5",
@@ -5154,7 +5169,7 @@
       "category": "single_hop",
       "question": "What does John write on the whiteboard to help him stay motivated?",
       "answer": "motivational quotes and strategies",
-      "prediction": "Motivational quotes and workout strategies.",
+      "prediction": "John writes **motivational quotes and workout strategies** on the whiteboard to help him stay focused during tough workouts.",
       "retrieved_ids": [
         "sem_01M2QJN888WX7CSY7FWPDC8VEF",
         "pro_01M2QJVAAWJK08X2Z1QNYG028G",
@@ -5192,7 +5207,7 @@
       "category": "single_hop",
       "question": "What hobby is a therapy for John when away from the court?",
       "answer": "Cooking",
-      "prediction": "Cooking.",
+      "prediction": "Cooking — it's a way for him to be creative and experiment with flavors while taking a break.",
       "retrieved_ids": [
         "sem_01M2QJN888WX7CSY7FWPDC8VEA",
         "epi_01M2QK0JFVRPWG1GESJDAYVEBV",
@@ -5230,7 +5245,7 @@
       "category": "single_hop",
       "question": "What type of meal does John often cook using a slow cooker?",
       "answer": "honey garlic chicken with roasted veg",
-      "prediction": "不知道",
+      "prediction": "The memories don't mention John using a slow cooker, so I don't know. (The only dish noted as one he cooks often is honey garlic chicken with roasted vegetables, but no slow cooker is mentioned.)",
       "retrieved_ids": [
         "sem_01M2QJN888WX7CSY7FWPDC8VEC",
         "sem_01M2QJPP98P7Y4M32PJF53RC12",
@@ -5306,7 +5321,7 @@
       "category": "single_hop",
       "question": "What was Tim's huge writing issue last week,as mentioned on November 6, 2023?",
       "answer": "He got stuck on a plot twist",
-      "prediction": "Tim got stuck on a plot twist in his writing during the week of 2023-10-30, but he kept pushing and eventually got his ideas flowing again.",
+      "prediction": "Tim got stuck on a plot twist in his writing during the week of 2023-10-30 (the week before November 6), but he kept pushing and eventually got his ideas flowing again.",
       "retrieved_ids": [
         "epi_01M2QK0JFVRPWG1GESJDAYVEBX",
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
@@ -5370,7 +5385,7 @@
       "category": "single_hop",
       "question": "Why do Tim and John find LeBron inspiring?",
       "answer": "LeBron's determination and the epic block in Game 7 of the '16 Finals",
-      "prediction": "Tim admires LeBron for moments like the Game 7 chasedown block in the 2016 Finals, while John admires him for his skills, leadership, and work ethic.",
+      "prediction": "Tim admires LeBron for iconic moments like the Game 7 chasedown block in the 2016 Finals, while John admires him for his skills, leadership, and work ethic.",
       "retrieved_ids": [
         "sem_01M2QJPP98P7Y4M32PJF53RC0X",
         "sem_01M2QJFEY0Q6ERMCT44E01K7PE",
@@ -5402,7 +5417,7 @@
       "category": "single_hop",
       "question": "How did John describe the views during their road trip out on the European coastline?",
       "answer": "Spectacular",
-      "prediction": "He described them as spectacular.",
+      "prediction": "John described the views as spectacular.",
       "retrieved_ids": [
         "epi_01M2QJSD60SR0QW2SKX1A7Y7AT",
         "epi_01M2QJPP98P7Y4M32PJF53RC13",
@@ -5429,18 +5444,18 @@
       "category": "single_hop",
       "question": "What is one of Tim's favorite fantasy TV shows, as mentioned on November 11, 2023?",
       "answer": "\"That\"",
-      "prediction": "That",
+      "prediction": "\"That\" is one of Tim's favorite fantasy shows, as mentioned on November 11, 2023.",
       "retrieved_ids": [
-        "sem_01M2QJSD60SR0QW2SKX1A7Y7AY",
         "sem_01M2QK0JFVRPWG1GESJDAYVEBZ",
+        "sem_01M2QJSD60SR0QW2SKX1A7Y7AY",
         "epi_01M2QK0JFVRPWG1GESJDAYVEBX",
         "sem_01M2QKG9WSBD8NP207WW2NPW40",
         "epi_01M2QHVAXMHY932HHQN210ENQG",
         "epi_01M2QJVAAWJK08X2Z1QNYG028E",
         "sem_01M2QKKW968DC7Z06HBFZBN2XX",
         "sem_01M2QJ0T4YCSYH60RKD0T568FP",
-        "sem_01M2QHVAXMHY932HHQN210ENQH",
-        "epi_01M2QJN888WX7CSY7FWPDC8VE9"
+        "epi_01M2QJN888WX7CSY7FWPDC8VE9",
+        "sem_01M2QHVAXMHY932HHQN210ENQH"
       ],
       "gold_ids": [
         "epi_01M2QJSD60SR0QW2SKX1A7Y7AT",
@@ -5456,7 +5471,7 @@
       "category": "single_hop",
       "question": "How does Tim stay motivated during difficult study sessions?",
       "answer": "Visualizing goals and success",
-      "prediction": "Tim breaks his studying into 25-minute focused sessions followed by 5-minute fun breaks, which keeps him from feeling overwhelmed. His passion for writing and reading also keeps him motivated when things get tough.",
+      "prediction": "Tim stays motivated by breaking his studying into 25-minute focused sessions followed by 5-minute fun breaks, which keeps him from feeling overwhelmed. His passion for writing and reading also keeps him motivated when things get tough.",
       "retrieved_ids": [
         "pro_01M2QJVAAWJK08X2Z1QNYG028F",
         "pro_01M2QJVAAWJK08X2Z1QNYG028G",
@@ -5484,7 +5499,7 @@
       "category": "single_hop",
       "question": "What did Tim say about his injury on 16 November, 2023?",
       "answer": "The doctor said it's not too serious",
-      "prediction": "不知道。记忆中没有提到Tim在2023年11月16日有受伤；当时有受伤的是John，不是Tim。",
+      "prediction": "There is no record of Tim having an injury. The injury mentioned on 16 November 2023 was John's — it prevented him from playing on the court, but his doctor said it was not too serious.",
       "retrieved_ids": [
         "epi_01M2QJVAAWJK08X2Z1QNYG028E",
         "epi_01M2QK0JFVRPWG1GESJDAYVEBX",
@@ -5512,7 +5527,7 @@
       "category": "single_hop",
       "question": "What was the setback Tim faced in his writing project on 21 November, 2023?",
       "answer": "Story based on experiences in the UK didn't go as planned",
-      "prediction": "在2023-11-13那一周，Tim尝试根据他在英国的经历写一个故事，但结果不如他所愿，他把这视为一次挫折。",
+      "prediction": "The setback was that Tim tried writing a story based on his experiences in the UK, but it did not turn out the way he wanted, so he saw it as a setback. (This occurred during the week of 2023-11-13.)",
       "retrieved_ids": [
         "epi_01M2QK0JFVRPWG1GESJDAYVEBX",
         "sem_01M2QJN888WX7CSY7FWPDC8VE3",
@@ -5520,8 +5535,8 @@
         "epi_01M2QJPP98P7Y4M32PJF53RC0W",
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
         "epi_01M2QK23JM4TTXJ67YD5RXMGKG",
-        "sem_01M2QJA5R1BNS6Y62979D8YM66",
         "epi_01M2QJCG7B79A18FMVBBDB2Y3A",
+        "sem_01M2QJA5R1BNS6Y62979D8YM66",
         "sem_01M2QK0JFVRPWG1GESJDAYVEBY",
         "sem_01M2QHTA6WPFVC05FD3CGGHVD5"
       ],
@@ -5543,7 +5558,7 @@
       "category": "single_hop",
       "question": "How did John overcome his ankle injury from last season?",
       "answer": "stayed focused on recovery and worked hard to strengthen his body",
-      "prediction": "John通过休息和每天做物理治疗康复训练来克服脚踝伤。到2023-12-15，他达到了康复里程碑——自受伤以来第一次在健身房慢跑且没有疼痛。",
+      "prediction": "John overcame his ankle injury by taking time off and doing physical therapy exercises every day as part of his rehabilitation. This gradual approach paid off: on 2023-12-15, he hit a rehab milestone by jogging at the gym without any pain for the first time since his injury.",
       "retrieved_ids": [
         "epi_01M2QK0JFVRPWG1GESJDAYVEBV",
         "epi_01M2QJVAAWJK08X2Z1QNYG028D",
@@ -5574,7 +5589,7 @@
       "category": "single_hop",
       "question": "What motivated Tim to keep pushing himself to get better in writing and reading?",
       "answer": "Love for writing and reading",
-      "prediction": "His passion for writing and reading — these are what keep him motivated when things get tough.",
+      "prediction": "Tim's passion for writing and reading itself is what keeps him motivated when things get tough.",
       "retrieved_ids": [
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
         "sem_01M2QHYJ1A6K73YTJX1YM76MB3",
@@ -5605,7 +5620,7 @@
       "category": "single_hop",
       "question": "How did John overcome a mistake he made during a big game in basketball?",
       "answer": "Worked hard to get better and focused on growth",
-      "prediction": "不知道",
+      "prediction": "The memories don't mention John making a mistake during a big game, so I don't know.",
       "retrieved_ids": [
         "epi_01M2QK875P1TPHGKT2G3W4A549",
         "epi_01M2QJPP98P7Y4M32PJF53RC14",
@@ -5636,7 +5651,7 @@
       "category": "single_hop",
       "question": "What book did John recently finish rereading that left him feeling inspired and hopeful about following dreams?",
       "answer": "The Alchemist",
-      "prediction": "《The Alchemist》（牧羊少年奇幻之旅）。",
+      "prediction": "'The Alchemist' — shortly before 21 November 2023, John finished rereading it and found it inspiring and motivating about following his dreams.",
       "retrieved_ids": [
         "epi_01M2QK0JFWHY9MCTK9E216MSQP",
         "sem_01M2QJ0T4YCSYH60RKD0T568FR",
@@ -5667,7 +5682,7 @@
       "category": "single_hop",
       "question": "How did \"The Alchemist\" impact John's perspective on following dreams?",
       "answer": "made him think again about following dreams and searching for personal legends",
-      "prediction": "It inspired and motivated John to follow his dreams, making him reflect on how important it is to pursue them. He highly recommends the book.",
+      "prediction": "\"The Alchemist\" made John reflect on how important it is to follow one's dreams. He found it inspiring and motivating about pursuing his dreams, loved the book, and highly recommends it.",
       "retrieved_ids": [
         "epi_01M2QK0JFWHY9MCTK9E216MSQP",
         "sem_01M2QJDZAPM46Q9HYQ37WPH1BG",
@@ -5698,7 +5713,7 @@
       "category": "single_hop",
       "question": "What is John trying out to improve his strength and flexibility after recovery from ankle injury?",
       "answer": "yoga",
-      "prediction": "Yoga.",
+      "prediction": "Yoga. According to the memory from 1 December 2023, John practices yoga and has found it improves his strength, flexibility, focus, and balance during workouts.",
       "retrieved_ids": [
         "epi_01M2QK0JFVRPWG1GESJDAYVEBV",
         "sem_01M2QK23JM4TTXJ67YD5RXMGKH",
@@ -5728,7 +5743,7 @@
       "category": "single_hop",
       "question": "How long does John usually hold the yoga pose he shared with Tim?",
       "answer": "30-60 seconds",
-      "prediction": "30-60秒。",
+      "prediction": "John typically holds his yoga poses for 30-60 seconds to build strength and stability.",
       "retrieved_ids": [
         "sem_01M2QK23JM4TTXJ67YD5RXMGKJ",
         "sem_01M2QK23JM4TTXJ67YD5RXMGKH",
@@ -5758,7 +5773,7 @@
       "category": "single_hop",
       "question": "Where was the forest picture shared by John on December 1,2023 taken?",
       "answer": "near his hometown",
-      "prediction": "在约翰家乡附近的一片宁静森林里。",
+      "prediction": "The photo was taken in a tranquil forest near John's hometown.",
       "retrieved_ids": [
         "epi_01M2QKD082P5ZTAWP767YXJ7TE",
         "sem_01M2QK23JM4TTXJ67YD5RXMGKQ",
@@ -5788,7 +5803,7 @@
       "category": "single_hop",
       "question": "What did Tim recently start learning in addition to being part of a travel club and working on studies?",
       "answer": "an instrument",
-      "prediction": "Tim is learning German.",
+      "prediction": "Tim recently started learning German, which he finds tough but fun and rewarding (as of 2 January 2024).",
       "retrieved_ids": [
         "epi_01M2QKKW968DC7Z06HBFZBN2XR",
         "sem_01M2QK3JFZX64994YBPT94EWS4",
@@ -5819,7 +5834,7 @@
       "category": "single_hop",
       "question": "What instrument is Tim learning to play in December 2023?",
       "answer": "violin",
-      "prediction": "The violin.",
+      "prediction": "Tim is learning to play the **violin** — as of 2023-12-06 he had been playing an instrument for about four months (started around August 2023). He also started learning the **piano** in August 2023, so he was learning both instruments in December 2023.",
       "retrieved_ids": [
         "sem_01M2QK3JFZX64994YBPT94EWS5",
         "epi_01M2QJ8MDRP6FY9AR2VHRSWEJ6",
@@ -5850,7 +5865,7 @@
       "category": "single_hop",
       "question": "How long has Tim been playing the piano for, as of December 2023?",
       "answer": "about four months",
-      "prediction": "About four months (he started around August 2023).",
+      "prediction": "About 4 months — Tim started learning the piano around August 2023, so by December 2023 he had been playing for roughly four months.",
       "retrieved_ids": [
         "epi_01M2QJ8MDRP6FY9AR2VHRSWEJ6",
         "sem_01M2QK3JFZX64994YBPT94EWS5",
@@ -5881,7 +5896,7 @@
       "category": "single_hop",
       "question": "What book did Tim just finish reading on 8th December, 2023?",
       "answer": "\"A Dance with Dragons\"",
-      "prediction": "Tim just finished reading \"A Dance with Dragons\" by George R. R. Martin, and he highly recommends it.",
+      "prediction": "On 8th December 2023, Tim had just finished \"A Dance with Dragons\" by George R. R. Martin, and he highly recommends it.",
       "retrieved_ids": [
         "epi_01M2QJ2ACRC97BA0GGHGHY2H7V",
         "epi_01M2QK6Z2K36GJS74TE0F0K49K",
@@ -5913,7 +5928,7 @@
       "category": "single_hop",
       "question": "Which book did Tim recommend to John as a good story on 8th December, 2023?",
       "answer": "\"A Dance with Dragons\"",
-      "prediction": "不知道。记忆中，Tim 在 2023-08-09 向 John 推荐了 Patrick Rothfuss 的奇幻书，而 2023-12-08 他只是参加了哈利·波特聚会，没有记录显示他在那天推荐了书。",
+      "prediction": "Based on the memories, there is no record of Tim recommending a book on 8 December 2023 — on that day he attended a Harry Potter party. The book Tim recommended to John was \"The Name of the Wind\" by Patrick Rothfuss, but that recommendation happened in August 2023, not on 8 December.",
       "retrieved_ids": [
         "epi_01M2QJ2ACRC97BA0GGHGHY2H7V",
         "epi_01M2QK0JFVRPWG1GESJDAYVEBX",
@@ -5945,11 +5960,11 @@
       "category": "single_hop",
       "question": "What is the topic of discussion between John and Tim on 11 December, 2023?",
       "answer": "Academic achievements and sports successes",
-      "prediction": "不知道。记忆中没有提到 John 和 Tim 在 2023 年 12 月 11 日的讨论话题。",
+      "prediction": "不知道。记忆中没有关于 John 和 Tim 在 2023 年 12 月 11 日进行过讨论或讨论内容的任何记录。",
       "retrieved_ids": [
         "epi_01M2QJVAAWJK08X2Z1QNYG028D",
-        "epi_01M2QKKW968DC7Z06HBFZBN2Y1",
         "epi_01M2QK0JFVRPWG1GESJDAYVEBX",
+        "epi_01M2QKKW968DC7Z06HBFZBN2Y1",
         "epi_01M2QJVAAWJK08X2Z1QNYG028E",
         "epi_01M2QKG9WSBD8NP207WW2NPW3Y",
         "epi_01M2QK23JM4TTXJ67YD5RXMGKG",
@@ -5972,7 +5987,7 @@
       "category": "single_hop",
       "question": "What kind of game did John have a career-high in assists in?",
       "answer": "basketball",
-      "prediction": "在2023-12-08，John在球队对阵宿敌的一场重要篮球比赛中创下了助攻生涯新高。",
+      "prediction": "John had a career-high in assists in his team's big basketball game against their rival (on 2023-12-08).",
       "retrieved_ids": [
         "epi_01M2QK875P1TPHGKT2G3W4A547",
         "epi_01M2QHYJ1A6K73YTJX1YM76MAT",
@@ -5999,7 +6014,7 @@
       "category": "single_hop",
       "question": "What was John's way of dealing with doubts and stress when he was younger?",
       "answer": "practicing basketball outside for hours",
-      "prediction": "As a child, John practiced basketball outside for hours dreaming of playing in big games — that was his way of dealing with doubts and stress.",
+      "prediction": "As a child, John dealt with doubts and stress by practicing basketball outside for hours, dreaming of playing in big games.",
       "retrieved_ids": [
         "sem_01M2QK875P1TPHGKT2G3W4A54A",
         "epi_01M2QK875P1TPHGKT2G3W4A549",
@@ -6026,7 +6041,7 @@
       "category": "single_hop",
       "question": "How did John feel about the atmosphere during the big game against the rival team?",
       "answer": "electric and intense",
-      "prediction": "记忆中没有具体描述那场对阵宿敌比赛的氛围感受，但John喜欢现场比赛热烈的氛围（观众欢呼、呐喊、一起兴奋）。",
+      "prediction": "Based on the memories, John loves the energetic atmosphere of live sports games, with crowds cheering, chanting, and getting excited together. So during the big game against their rival, he most likely loved the energetic atmosphere.",
       "retrieved_ids": [
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZZ",
         "sem_01M2QJGE3BZWWCKXSAEFPP0JHP",
@@ -6053,7 +6068,7 @@
       "category": "single_hop",
       "question": "How did John feel after being able to jog without pain?",
       "answer": "It was a huge success.",
-      "prediction": "不知道",
+      "prediction": "Based on the memories, John likely felt relieved, happy, and encouraged. He had hated being sidelined by his injury and being unable to help his team, so jogging pain-free for the first time since his injury was a meaningful rehab milestone that would have boosted his mood and given him hope for his recovery and return to basketball.",
       "retrieved_ids": [
         "epi_01M2QKBPMRXYZ3N858HXDR976N",
         "sem_01M2QKD082P5ZTAWP767YXJ7TF",
@@ -6138,7 +6153,7 @@
       "category": "single_hop",
       "question": "In which area has John's team seen the most growth during training?",
       "answer": "Communication and bonding",
-      "prediction": "Communication and bonding.",
+      "prediction": "John's team has seen its most growth in **communication and bonding**, which has improved their performances by helping them understand each other's strengths and weaknesses.",
       "retrieved_ids": [
         "sem_01M2QKD082P5ZTAWP767YXJ7TJ",
         "epi_01M2QKD082P5ZTAWP767YXJ7TH",
@@ -6166,7 +6181,7 @@
       "category": "single_hop",
       "question": "What type of seminars is John conducting?",
       "answer": "Sports and marketing seminars",
-      "prediction": "John is conducting seminars helping people with sports and marketing.",
+      "prediction": "John is conducting seminars helping people with sports and marketing (started around December 2023).",
       "retrieved_ids": [
         "sem_01M2QKG9WSBD8NP207WW2NPW3S",
         "sem_01M2QHYJ1A6K73YTJX1YM76MAW",
@@ -6200,7 +6215,7 @@
       "category": "single_hop",
       "question": "What activity did Tim do after reading the stories about the Himalayan trek?",
       "answer": "visited a travel agency",
-      "prediction": "在阅读了关于喜马拉雅徒步的故事后，Tim 计划他的下一次冒险旅行——他去了一家旅行社咨询相关要求。",
+      "prediction": "After being motivated by the book story about two hikers trekking through the Himalayas, Tim planned his next adventure trip and visited a travel agency to check the requirements.",
       "retrieved_ids": [
         "sem_01M2QK0JFVRPWG1GESJDAYVEBW",
         "epi_01M2QK0JFVRPWG1GESJDAYVEBX",
@@ -6234,7 +6249,7 @@
       "category": "single_hop",
       "question": "What is one cause that John supports with his influence and resources?",
       "answer": "youth sports and fair chances in sports",
-      "prediction": "John supports youth sports and fair access to sports programs for underserved communities.",
+      "prediction": "John supports youth sports and fair access to sports programs for underserved communities, collaborating with organizations to create opportunities for young athletes.",
       "retrieved_ids": [
         "sem_01M2QKG9WSBD8NP207WW2NPW3W",
         "sem_01M2QJ3M0RY0SDDS6PHKATJ6ZW",
@@ -6268,7 +6283,7 @@
       "category": "single_hop",
       "question": "What new fantasy TV series is Tim excited about?",
       "answer": "\"The Wheel of Time\"",
-      "prediction": "The Wheel of Time TV adaptation (which he expected to come out in January 2024).",
+      "prediction": "The Wheel of Time TV adaptation. Tim loves the Wheel of Time book series and was excited for its TV adaptation, which he expected to come out in January 2024.",
       "retrieved_ids": [
         "sem_01M2QHVAXMHY932HHQN210ENQH",
         "sem_01M2QK23JM4TTXJ67YD5RXMGKM",
@@ -6302,7 +6317,7 @@
       "category": "single_hop",
       "question": "Which language is Tim learning?",
       "answer": "German",
-      "prediction": "German.",
+      "prediction": "Tim is learning German.",
       "retrieved_ids": [
         "sem_01M2QKKW968DC7Z06HBFZBN2XS",
         "sem_01M2QKKW968DC7Z06HBFZBN2Y0",
@@ -6350,7 +6365,7 @@
       "category": "single_hop",
       "question": "What language does Tim know besides German?",
       "answer": "Spanish",
-      "prediction": "不知道。记忆中只提到 Tim 在学德语，西班牙语是 John 会说的语言，没有提到 Tim 还会其他语言。",
+      "prediction": "I don't know. The memories don't mention Tim knowing any language besides German (he is learning German). The memory about knowing Spanish refers to John, not Tim.",
       "retrieved_ids": [
         "sem_01M2QKKW968DC7Z06HBFZBN2XS",
         "sem_01M2QKKW968DC7Z06HBFZBN2Y0",
@@ -6398,7 +6413,7 @@
       "category": "single_hop",
       "question": "What book did Tim get in Italy that inspired him to cook?",
       "answer": "a cooking book",
-      "prediction": "不知道。记忆中提到的是 John（而非 Tim）在 2023 年 12 月的意大利之行中买了一本给他烹饪灵感的书。",
+      "prediction": "According to the memories, it was **John**, not Tim, who bought a book during his December 2023 trip to Italy that has been giving him cooking inspiration. The title of the book is not mentioned in the memories.",
       "retrieved_ids": [
         "epi_01M2QJN888WX7CSY7FWPDC8VE9",
         "sem_01M2QKKW968DC7Z06HBFZBN2XZ",
@@ -6446,7 +6461,7 @@
       "category": "single_hop",
       "question": "What is John's favorite book series?",
       "answer": "Harry Potter",
-      "prediction": "不知道。记忆中只提到约翰喜欢奇幻系列，《霍比特人》和另一部热门奇幻系列是他最喜欢的作品之一，但没有明确说明他最喜欢的书系列是哪一部。",
+      "prediction": "Based on the memories, John doesn't have a single explicitly named favorite series, but **The Hobbit** (along with another popular fantasy series) is listed among his favorites. Given that his favorite Lord of the Rings character is Aragorn, it's reasonable to infer that **The Lord of the Rings / Middle-earth series** is his favorite.",
       "retrieved_ids": [
         "sem_01M2QKKW968DC7Z06HBFZBN2Y7",
         "sem_01M2QK6Z2K36GJS74TE0F0K49W",
@@ -6494,7 +6509,7 @@
       "category": "single_hop",
       "question": "According to John, who is his favorite character from Lord of the Rings?",
       "answer": "Aragorn",
-      "prediction": "Aragorn.",
+      "prediction": "According to John, his favorite Lord of the Rings character is **Aragorn**, because he is brave, selfless, a great leader who puts others first, and grows from a ranger into the king of Gondor.",
       "retrieved_ids": [
         "sem_01M2QKKW968DC7Z06HBFZBN2Y7",
         "sem_01M2QKKW968DC7Z06HBFZBN2Y6",
@@ -6542,7 +6557,7 @@
       "category": "single_hop",
       "question": "Why does John like Aragorn from Lord of the Rings?",
       "answer": "brave, selfless, down-to-earth attitude",
-      "prediction": "John likes Aragorn because he is brave, selfless, a great leader who puts others first, and grows from a ranger into king of Gondor.",
+      "prediction": "John likes Aragorn because he is brave, selfless, a great leader who puts others first, and grows from a ranger into the king of Gondor.",
       "retrieved_ids": [
         "sem_01M2QKKW968DC7Z06HBFZBN2Y7",
         "sem_01M2QKKW968DC7Z06HBFZBN2Y6",
@@ -6590,7 +6605,7 @@
       "category": "single_hop",
       "question": "What kind of painting does John have in his room as a reminder?",
       "answer": "a painting of Aragorn",
-      "prediction": "A painting of Aragorn.",
+      "prediction": "John has a painting of Aragorn in his room, which reminds him to stay true and be a leader in everything he does.",
       "retrieved_ids": [
         "sem_01M2QKKW97JETXB6YJ9SJ1PF49",
         "sem_01M2QKBPMRXYZ3N858HXDR976R",
@@ -6638,7 +6653,7 @@
       "category": "single_hop",
       "question": "What is the painting of Aragorn a reminder for John to be in everything he does?",
       "answer": "be a leader",
-      "prediction": "To stay true and be a leader.",
+      "prediction": "The painting of Aragorn reminds John to stay true and be a leader in everything he does.",
       "retrieved_ids": [
         "sem_01M2QKKW97JETXB6YJ9SJ1PF49",
         "sem_01M2QKKW968DC7Z06HBFZBN2Y7",
@@ -6651,13 +6666,13 @@
         "sem_01M2QKBPMRXYZ3N858HXDR976M",
         "sem_01M2QKBPMRXYZ3N858HXDR976R",
         "sem_01M2QJ0T4YCSYH60RKD0T568FR",
-        "sem_01M2QJN888WX7CSY7FWPDC8VEE",
         "sem_01M2QJN888WX7CSY7FWPDC8VEF",
         "sem_01M2QK6Z2K36GJS74TE0F0K49W",
         "sem_01M2QKBPMRXYZ3N858HXDR976K",
         "epi_01M2QKPA9N74BMQTAP132ZP3JC",
-        "epi_01M2QKD082P5ZTAWP767YXJ7TE",
-        "epi_01M2QJ2ACRC97BA0GGHGHY2H7Y"
+        "sem_01M2QJN888WX7CSY7FWPDC8VEE",
+        "epi_01M2QJ2ACRC97BA0GGHGHY2H7Y",
+        "epi_01M2QKD082P5ZTAWP767YXJ7TE"
       ],
       "gold_ids": [
         "epi_01M2QKKW968DC7Z06HBFZBN2XR",
@@ -6734,7 +6749,7 @@
       "category": "single_hop",
       "question": "Where will Tim be going for a semester abroad?",
       "answer": "Ireland",
-      "prediction": "Ireland — he'll be staying in Galway for the semester starting February 2024.",
+      "prediction": "Tim will be going to Ireland for a semester abroad, staying in Galway, starting in February 2024.",
       "retrieved_ids": [
         "epi_01M2QKPA9N74BMQTAP132ZP3J6",
         "sem_01M2QKPA9N74BMQTAP132ZP3J7",
@@ -6764,7 +6779,7 @@
       "category": "single_hop",
       "question": "Which city in Ireland will Tim be staying in during his semester abroad?",
       "answer": "Galway",
-      "prediction": "Galway.",
+      "prediction": "Tim will be staying in **Galway**, Ireland during his semester abroad.",
       "retrieved_ids": [
         "sem_01M2QKPA9N74BMQTAP132ZP3J7",
         "epi_01M2QKPA9N74BMQTAP132ZP3J6",
@@ -6794,7 +6809,7 @@
       "category": "single_hop",
       "question": "What charity event did John organize recently in 2024?",
       "answer": "benefit basketball game",
-      "prediction": "John organized a benefit basketball game (in the week before 2024-01-07), which was a total success with a large turnout and raised money for charity.",
+      "prediction": "John organized a **benefit basketball game** in the week before 2024-01-07. It was a total success, with a large turnout, and raised money for charity.",
       "retrieved_ids": [
         "epi_01M2QK6Z2K36GJS74TE0F0K49N",
         "epi_01M2QKPA9N74BMQTAP132ZP3JA",
@@ -6876,7 +6891,7 @@
       "category": "single_hop",
       "question": "Which city did John recommend to Tim in January 2024?",
       "answer": "Barcelona",
-      "prediction": "Barcelona.",
+      "prediction": "Barcelona. On 2024-01-12, John recommended Barcelona to Tim as a must-visit city for its culture, architecture, food, and nearby beaches, and Tim added it to his travel list.",
       "retrieved_ids": [
         "sem_01M2QJA5R1BNS6Y62979D8YM69",
         "epi_01M2QKPA9N74BMQTAP132ZP3J6",

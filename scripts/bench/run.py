@@ -491,9 +491,13 @@ def answer_llm(question: str, hits) -> str | None:
         return None
     context = _format_context(hits[:10])
     return _llm_generate(
-        "只根据给定的记忆回答，不要使用你自己的知识。记忆里没有就回答「不知道」。"
-        "每条记忆开头的方括号是**这条记忆成立的时间**，它通常就是该事件发生的时间，"
-        "回答时间类问题时以它作答；若记忆正文里另有更具体的日期，以正文为准。答案尽量短。",
+        "只根据给定的记忆回答，不要使用你自己的知识。"
+        "**用与问题相同的语言回答**（问题用英文就问英文，用中文就问中文）。"
+        "每条记忆开头的方括号是它成立的时间，回答时间类问题时以它作答；"
+        "若正文里另有更具体的日期，以正文为准。"
+        "**若问题问的是「可能会怎样」「会是什么」这类需要推断的，"
+        "请基于记忆里的事实做合理推断并给出答案**——"
+        "只有当记忆里连推断的依据都没有时，才回答「不知道」。答案尽量短。",
         f"记忆：\n{context}\n\n问题：{question}",
     )
 
@@ -1001,6 +1005,9 @@ def run(args: argparse.Namespace) -> int:
     if blocked is not None:
         return blocked
 
+    if args.category:
+        questions = [q for q in questions if q.category == args.category]
+        print(f"[类别过滤] 只跑 {args.category}：{len(questions)} 题")
     if args.skip:
         questions = questions[args.skip :]
     if args.limit:
@@ -1347,6 +1354,13 @@ def main(argv: list[str] | None = None) -> int:
         default=0,
         help="跳过前 N 题，配合 --limit 表达「第 M 批」。"
         "切片点不影响灌入（灌入按**组**做，每组只灌一次），所以切在任意位置都安全",
+    )
+    parser.add_argument(
+        "--category",
+        default=None,
+        help="只跑某一类别的题。**为什么要它**：某一类往往只占单组的十几题"
+        "（`open_domain` 在 conv-26 只有 13 题），而单组样本小到**测不出改动**"
+        "（§24 的教训：噪声量级与要测的效果相当）。类别过滤让 96 题一次跑完",
     )
     parser.add_argument("--inspect", action="store_true", help="只打印加载器读出的内容，不跑分")
     parser.add_argument(

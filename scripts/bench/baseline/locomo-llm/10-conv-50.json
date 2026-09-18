@@ -8,25 +8,31 @@
   },
   "report": {
     "total": 158,
-    "answered": 157,
-    "answer_rate": 0.9937,
-    "accuracy": 0.1899,
-    "f1": 0.2251,
-    "em": 0.057,
-    "contains": 0.1899,
+    "answered": 151,
+    "answer_rate": 0.9557,
+    "accuracy": 0.3544,
+    "f1": 0.225,
+    "em": 0.0443,
+    "contains": 0.3165,
+    "time_match": 0.1139,
+    "hit@1": 0.5253,
+    "hit@k": 0.8291,
     "recall@k": 0.1907,
-    "recall@gold": 0.1865,
+    "recall@gold": 0.1876,
     "mrr": 0.6303,
     "ndcg@k": 0.2691,
     "by_category": {
       "temporal": {
         "total": 32,
-        "answered": 32,
-        "answer_rate": 1.0,
-        "accuracy": 0.0625,
-        "f1": 0.2259,
-        "em": 0.0312,
-        "contains": 0.0625,
+        "answered": 31,
+        "answer_rate": 0.9688,
+        "accuracy": 0.6562,
+        "f1": 0.2048,
+        "em": 0.0,
+        "contains": 0.4688,
+        "time_match": 0.5625,
+        "hit@1": 0.625,
+        "hit@k": 0.9062,
         "recall@k": 0.2507,
         "recall@gold": 0.2295,
         "mrr": 0.7215,
@@ -37,24 +43,30 @@
         "total": 32,
         "answered": 32,
         "answer_rate": 1.0,
-        "accuracy": 0.0312,
-        "f1": 0.1212,
+        "accuracy": 0.125,
+        "f1": 0.1657,
         "em": 0.0312,
-        "contains": 0.0312,
+        "contains": 0.125,
+        "time_match": 0.0,
+        "hit@1": 0.375,
+        "hit@k": 0.8125,
         "recall@k": 0.1409,
         "recall@gold": 0.1958,
         "mrr": 0.5222,
-        "ndcg@k": 0.2687,
+        "ndcg@k": 0.2685,
         "by_category": {}
       },
       "open_domain": {
         "total": 7,
-        "answered": 7,
-        "answer_rate": 1.0,
-        "accuracy": 0.2857,
-        "f1": 0.0317,
+        "answered": 6,
+        "answer_rate": 0.8571,
+        "accuracy": 0.4286,
+        "f1": 0.1338,
         "em": 0.0,
-        "contains": 0.2857,
+        "contains": 0.4286,
+        "time_match": 0.0,
+        "hit@1": 0.5714,
+        "hit@k": 0.8571,
         "recall@k": 0.151,
         "recall@gold": 0.1981,
         "mrr": 0.6905,
@@ -63,14 +75,17 @@
       },
       "single_hop": {
         "total": 87,
-        "answered": 86,
-        "answer_rate": 0.9885,
-        "accuracy": 0.2874,
-        "f1": 0.2786,
-        "em": 0.0805,
-        "contains": 0.2874,
+        "answered": 82,
+        "answer_rate": 0.9425,
+        "accuracy": 0.3218,
+        "f1": 0.2615,
+        "em": 0.069,
+        "contains": 0.3218,
+        "time_match": 0.0,
+        "hit@1": 0.5402,
+        "hit@k": 0.8046,
         "recall@k": 0.1901,
-        "recall@gold": 0.1664,
+        "recall@gold": 0.1683,
         "mrr": 0.6317,
         "ndcg@k": 0.2469,
         "by_category": {}
@@ -83,7 +98,7 @@
       "category": "temporal",
       "question": "When did Calvin first travel to Tokyo?",
       "answer": "between 26 March and 20 April 2023",
-      "prediction": "2023年4月（约2023-04-20，他首次赴日本参加东京的音乐节）。",
+      "prediction": "Calvin first traveled to Tokyo in April 2023 — it was his first trip to Japan, and he attended a music festival in Tokyo around April 20, 2023.",
       "retrieved_ids": [
         "epi_01M2QZ6PMQ1634J76SJHV9P2AK",
         "sem_01M2R0KGQYPAVVFASGQQJXPR3Q",
@@ -117,7 +132,7 @@
       "category": "multihop",
       "question": "What items did Calvin buy in March 2023?",
       "answer": "mansion in Japan, luxury car Ferrari 488 GTB",
-      "prediction": "Calvin bought a new luxury car in late March 2023.",
+      "prediction": "A new luxury car (bought in late March 2023, which was a longtime dream come true for him).",
       "retrieved_ids": [
         "epi_01M2QZ6PMQ1634J76SJHV9P2AK",
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4Q",
@@ -163,7 +178,7 @@
       "category": "temporal",
       "question": "When did Dave see Aerosmith perform live?",
       "answer": "on the weekend before March 26, 2023",
-      "prediction": "在 2023-03-26 之前的周末（大约 2023-03-18/19），Dave 在波士顿的一个音乐节上第一次现场观看了 Aerosmith 的演出。",
+      "prediction": "Dave saw Aerosmith perform live for the first time at a music festival in Boston on the weekend before 2023-03-26, around March 18–19, 2023.",
       "retrieved_ids": [
         "epi_01M2QZ862MDJ2X7R68X8SS23P6",
         "sem_01M2QZ862MDJ2X7R68X8SS23P5",
@@ -192,7 +207,7 @@
       "category": "multihop",
       "question": "Which bands has Dave enjoyed listening to?",
       "answer": "Aerosmith, The Fireworks",
-      "prediction": "Aerosmith（Dave最喜欢的乐队）。",
+      "prediction": "根据记忆，Dave 喜欢听的乐队是 **Aerosmith**——这是他最喜欢的乐队（2023年3月26日记录）。此外，他迷上了日本音乐、最近也在听经典摇滚（classic rock），并加入了他喜欢已久的某支摇滚乐队，但记忆中没有提到这些乐队的具体名字。",
       "retrieved_ids": [
         "sem_01M2R0X2G0YF02FETM93TYAF8F",
         "epi_01M2R0QACFJK8K7AV5V36YRCX5",
@@ -230,7 +245,7 @@
       "category": "open_domain",
       "question": "Which country do Calvin and Dave want to meet in?",
       "answer": "United States",
-      "prediction": "不知道。记忆中只提到他们计划在波士顿（Boston）见面，没有说明是哪个国家。",
+      "prediction": "The United States — they plan to meet up in Boston.",
       "retrieved_ids": [
         "sem_01M2R02BSNJZWBS832DTBSWYSC",
         "epi_01M2R057HTCXZGF798KQ2FMM2S",
@@ -264,7 +279,7 @@
       "category": "multihop",
       "question": "What are Dave's dreams?",
       "answer": "open a car maintenance shop, work on classic cars, build a custom car from scratch",
-      "prediction": "Dave's dream is to build a custom car from scratch someday, and he has always wanted to learn auto engineering to do so. He also plans to keep making people happy through his car restoration work.",
+      "prediction": "Dave's dreams are to build a custom car from scratch someday and to learn auto engineering. He also plans to keep making people happy through his car restoration work.",
       "retrieved_ids": [
         "cor_01M2R0AJ2S65NMYDYQYPHTBS8Y",
         "sem_01M2QZDTQKHWBJ0WAYXPVKM4XG",
@@ -298,7 +313,7 @@
       "category": "multihop",
       "question": "Which types of cars does Dave like the most?",
       "answer": "classic vintage cars",
-      "prediction": "Classic cars (vintage cars) — Dave is obsessed with them, loves their design and engineering, and enjoys restoring them.",
+      "prediction": "Dave likes classic cars (vintage cars) the most. He is obsessed with them, loves their design and engineering, and his hobby is restoring vintage cars.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE4",
@@ -320,9 +335,9 @@
         "epi_01M2QZX2ANZPW1B2TE1BFWA2VX",
         "sem_01M2QZDTQKHWBJ0WAYXPVKM4XH",
         "sem_01M2R0HEAECV0DY3A2RRT8CH0A",
+        "sem_01M2QZSXDEB5DGN376ANPC8TPW",
         "sem_01M2QZZSV9FF96NZ5HG5SS9881",
         "epi_01M2R0RDQ4V2S2F1GE2WC8T9CR",
-        "sem_01M2QZSXDEB5DGN376ANPC8TPW",
         "sem_01M2R0QACFJK8K7AV5V36YRCX9",
         "epi_01M2QZBEBVSGQ5SPWHZ1Q0SYM6",
         "sem_01M2R0D21KKJV9MDCR7AMR8R3B"
@@ -362,7 +377,7 @@
       "category": "open_domain",
       "question": "Does Dave's shop employ a lot of people?",
       "answer": "Yes",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't contain any information about how many people Dave's shop employs.",
       "retrieved_ids": [
         "sem_01M2R0HEAECV0DY3A2RRT8CH09",
         "sem_01M2QZBEBVSGQ5SPWHZ1Q0SYM9",
@@ -389,7 +404,7 @@
       "category": "temporal",
       "question": "When did Dave start his car maintenance shop?",
       "answer": "May 1, 2023",
-      "prediction": "2023-05-01（并于2023-05-08那一周庆祝开业）。",
+      "prediction": "Dave started his car maintenance shop on May 1, 2023 (he opened it in early May 2023 and celebrated with friends that week).",
       "retrieved_ids": [
         "sem_01M2R0HEAECV0DY3A2RRT8CH09",
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4P",
@@ -416,7 +431,7 @@
       "category": "temporal",
       "question": "When did a mishap occur with Calvin's musical gear and favorite mic?",
       "answer": "On a week before 16 May, 2023",
-      "prediction": "2023年5月——Calvin家发生洪水，他抢救出了他的音乐设备和心爱的麦克风。",
+      "prediction": "The mishap occurred in May 2023, when a flood hit Calvin's home — he managed to save his music gear and favorite microphone from it.",
       "retrieved_ids": [
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4J",
         "sem_01M2R0YK3B65AR98SN598TT0J7",
@@ -446,7 +461,7 @@
       "category": "temporal",
       "question": "When did Calvin's place get flooded in Tokyo?",
       "answer": "On a week before 16 May, 2023",
-      "prediction": "在2023年5月8日那一周。",
+      "prediction": "Calvin's home was flooded during the week of 2023-05-08 (the week of May 8, 2023).",
       "retrieved_ids": [
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4H",
         "sem_01M2R0KGQYPAVVFASGQQJXPR3Q",
@@ -476,7 +491,7 @@
       "category": "multihop",
       "question": "What mishaps has Calvin run into?",
       "answer": "flooding of his mansion, car accident",
-      "prediction": "不知道",
+      "prediction": "The memories don't mention any mishaps Calvin has run into, so I don't know.",
       "retrieved_ids": [
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE7",
         "sem_01M2R0D21KKJV9MDCR7AMR8R3C",
@@ -518,7 +533,7 @@
       "category": "temporal",
       "question": "When was Calvin's concert in Tokyo?",
       "answer": "last week of May 2023",
-      "prediction": "During the week of 2023-05-22, while on tour with Frank Ocean.",
+      "prediction": "Calvin's concert in Tokyo was during the week of 2023-05-22 (May 2023), while he was on tour with Frank Ocean.",
       "retrieved_ids": [
         "epi_01M2R0KGQYPAVVFASGQQJXPR3N",
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4R",
@@ -562,7 +577,7 @@
       "category": "open_domain",
       "question": "Would Calvin enjoy performing at the Hollywood Bowl?",
       "answer": "Yes; because he enjoys the rush of performing onstage to large crowds",
-      "prediction": "是的。Calvin 热爱现场演出，与观众互动让他充满能量，他还说在大舞台上演出是梦想成真，所以他很可能会喜欢在 Hollywood Bowl 演出。",
+      "prediction": "Yes. Calvin loves performing live—the rush and connection with the crowd gives him an \"indescribable high,\" and he described performing on the big stage as a dream come true. So he would very likely enjoy performing at the Hollywood Bowl.",
       "retrieved_ids": [
         "sem_01M2QZHTZX5QETMC80PZF0R9HC",
         "cor_01M2QZHTZX5QETMC80PZF0R9HB",
@@ -592,7 +607,7 @@
       "category": "temporal",
       "question": "When did Calvin meet with the creative team for his new album?",
       "answer": "8 June, 2023",
-      "prediction": "2023-06-08。",
+      "prediction": "Calvin met with the creative team for his album on 2023-06-08 (June 8, 2023), in a long session where he felt stoked seeing everything come together.",
       "retrieved_ids": [
         "epi_01M2QZK4HW0RK87AJFKEEF63PJ",
         "sem_01M2QZK4HW0RK87AJFKEEF63PK",
@@ -619,7 +634,7 @@
       "category": "multihop",
       "question": "Why does Dave regularly visit parks?",
       "answer": "because it relaxes and calms him",
-      "prediction": "为了放松并为接下来的一周充电（他喜欢在周末探索公园和散步）。",
+      "prediction": "Dave regularly visits parks because he enjoys exploring parks and taking walks on weekends to relax and recharge for the upcoming week.",
       "retrieved_ids": [
         "sem_01M2QZK4HW0RK87AJFKEEF63PM",
         "epi_01M2QZ6PMQ1634J76SJHV9P2AS",
@@ -661,7 +676,7 @@
       "category": "temporal",
       "question": "When did Dave take a trip to mountainous regions?",
       "answer": "July 2023",
-      "prediction": "2023年7月（Dave预订了2023年7月去山区的旅行）。",
+      "prediction": "July 2023 — Dave booked a trip to a mountainous region for that time (per his 9 June 2023 booking).",
       "retrieved_ids": [
         "epi_01M2QZK4HW0RK87AJFKEEF63PN",
         "sem_01M2QZF72X8B2Q7KSGND3ZTS4S",
@@ -688,7 +703,7 @@
       "category": "temporal",
       "question": "When did Calvin have a car incident?",
       "answer": "on the Friday before 21 June, 2023",
-      "prediction": "2023-06-16（一次轻微车祸，无人受伤）。",
+      "prediction": "Calvin had a minor car accident on 2023-06-16 (June 16, 2023); no one was hurt.",
       "retrieved_ids": [
         "sem_01M2R06ENX4D3DNNB0ANBXXM4E",
         "sem_01M2R0D21KKJV9MDCR7AMR8R3C",
@@ -699,7 +714,7 @@
         "epi_01M2QZ862MDJ2X7R68X8SS23P0",
         "sem_01M2QZVQ9XS9W7TG2ST02E679Y",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE7",
-        "epi_01M2R02BSNJZWBS832DTBSWYSM"
+        "sem_01M2QZVQ9XS9W7TG2ST02E679Z"
       ],
       "gold_ids": [
         "epi_01M2QZP5R1YWGBG02PNY1HDGJT",
@@ -717,7 +732,7 @@
       "category": "multihop",
       "question": "How many times has Calvin had to deal with insurance paperwork?",
       "answer": "two times",
-      "prediction": "**2次**：\n1. 2023年6月16日车祸的保险理赔（涉及大量文书工作）\n2. 房屋水灾损坏的保险赔付（截至2023年5月16日仍在等待赔付）",
+      "prediction": "Based on the memories, Calvin has dealt with insurance paperwork **2 times**:\n\n1. **Car accident claim** (June 2023) — he sorted out the insurance claim for his 2023-06-16 car accident, which involved a lot of paperwork.\n2. **Flood-damaged home claim** (May 2023) — he filed an insurance claim for his flood-damaged home and was waiting for the payout to start repairs.",
       "retrieved_ids": [
         "epi_01M2QZP5R1YWGBG02PNY1HDGJV",
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4K",
@@ -759,7 +774,7 @@
       "category": "multihop",
       "question": "Which places or events has Calvin visited in Tokyo?",
       "answer": "music festival, car museum, Shibuya crossing, Shinjuku",
-      "prediction": "根据记忆，Calvin 在东京去过/参加过：\n\n- **音乐节**（约 2023-04-20），在那里认识了有才华的艺人和音乐界人士，也是他遇见 Frank Ocean 的地方\n- **与 Frank Ocean 巡演期间的演唱会**（2023-05-22 那一周），观众跟着合唱让他觉得非常神奇\n- **2023-05-15 晚上**在东京拍摄了城市夜景天际线\n\n（Shibuya Crossing 和 Shinjuku 是他计划 2023 年 11 月去探索的地方，尚未去过。）",
+      "prediction": "Based on the memories, Calvin has visited/attended in Tokyo:\n\n- **A music festival** (around 2023-04-20), where he met talented artists and music industry professionals, and where he met Frank Ocean and they began sharing ideas.\n- **Concerts he performed** during his tour with Frank Ocean (week of 2023-05-22), where he described the crowd energy as insane and felt alive; at one show the audience sang along to one of his songs, which he called magical.\n- **The city itself at night** — he was in Tokyo on the night of 2023-05-15 and took a photo of the city's night skyline.\n\n(Note: Shibuya Crossing and Shinjuku are places he *plans* to explore in November 2023, not places he has already visited.)",
       "retrieved_ids": [
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4Q",
         "epi_01M2R0KGQYPAVVFASGQQJXPR3P",
@@ -829,7 +844,7 @@
       "category": "multihop",
       "question": "Who inspired Dave's passion for car engineering?",
       "answer": "His Dad",
-      "prediction": "Dave's dad — he took Dave to his first car show when Dave was 10, which sparked his lifelong passion for cars and engineering.",
+      "prediction": "Dave's dad — he took Dave to his first car show when Dave was 10 years old, which sparked his lifelong passion for cars and engineering.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "sem_01M2R0QACFJK8K7AV5V36YRCX8",
@@ -875,7 +890,7 @@
       "category": "open_domain",
       "question": "Does Calvin wish to become more popular?",
       "answer": "Yes; he want's to grow his fanbase",
-      "prediction": "是的。Calvin 计划扩大品牌、增长粉丝群，并参加了社交活动以结识其他艺术家来帮助建立粉丝基础。",
+      "prediction": "Yes. Calvin wants to grow his fanbase, expand his brand worldwide, and make his music reach more people and make an impact. He also attended a networking event hoping the connections would help him build his fan base.",
       "retrieved_ids": [
         "cor_01M2QZVQ9XS9W7TG2ST02E67A4",
         "sem_01M2R06ENX4D3DNNB0ANBXXM4C",
@@ -917,7 +932,7 @@
       "category": "multihop",
       "question": "Does Calvin want to expand his brand?",
       "answer": "yes",
-      "prediction": "是的。Calvin 目前的计划是将他的品牌扩展到全球，扩大粉丝群，并让他的音乐影响更多人。",
+      "prediction": "Yes. As of 3 August 2023, Calvin's plan is to expand his brand worldwide, grow his fanbase, and make his music reach more people. He also planned (as of 13 September 2023) to explore opportunities to grow his brand after his music tour.",
       "retrieved_ids": [
         "cor_01M2QZVQ9XS9W7TG2ST02E67A4",
         "sem_01M2R06ENX4D3DNNB0ANBXXM4C",
@@ -957,7 +972,7 @@
       "category": "multihop",
       "question": "What is Dave's main passion?",
       "answer": "auto engineering",
-      "prediction": "Dave's main passion is working on cars — especially restoring and modifying broken cars and making them into something awesome.",
+      "prediction": "Dave's main passion is cars — working on, restoring, and modifying them. His dad took him to his first car show at age 10, which sparked his lifelong passion for cars and engineering, and he now works professionally in car restoration.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "sem_01M2QZHTZX5QETMC80PZF0R9HF",
@@ -1023,7 +1038,7 @@
       "category": "multihop",
       "question": "Can Dave work with engines?",
       "answer": "yes",
-      "prediction": "是的。Dave 从小就在他父亲的车库里摆弄引擎，而且他是一名汽车工程师，从事汽车修复和改装工作。",
+      "prediction": "Yes. Dave has been tinkering with engines since childhood in his dad's garage, and he is now an automotive engineer who works professionally in car restoration and modification.",
       "retrieved_ids": [
         "sem_01M2R0ECR75WWXD6SA88D4CRRD",
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
@@ -1067,7 +1082,7 @@
       "category": "temporal",
       "question": "When did Dave host a card-playing night with his friends?",
       "answer": "on the Friday before 22 August, 2023",
-      "prediction": "2023-08-18",
+      "prediction": "Dave hosted a card-night with his friends on **August 18, 2023**, where they laughed and had a great time.",
       "retrieved_ids": [
         "epi_01M2R02BSNJZWBS832DTBSWYSD",
         "sem_01M2R02BSNJZWBS832DTBSWYSC",
@@ -1099,7 +1114,7 @@
       "category": "temporal",
       "question": "When did Calvin record a podcast with his friends?",
       "answer": "21 August, 2023",
-      "prediction": "On 2023-08-21.",
+      "prediction": "Calvin recorded the podcast with his friends on 2023-08-21 (21 August 2023).",
       "retrieved_ids": [
         "epi_01M2R02BSNJZWBS832DTBSWYSM",
         "epi_01M2R02BSNJZWBS832DTBSWYSK",
@@ -1131,7 +1146,7 @@
       "category": "temporal",
       "question": "Which city was Calvin visiting in August 2023?",
       "answer": "Miami",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't contain any information about where Calvin was in August 2023 — they only mention plans for Boston in July 2023, living in a Japanese mansion as of 7 July 2023, and touring with Frank Ocean (including a Tokyo concert) by October 2023, with nothing specific to August 2023.",
       "retrieved_ids": [
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE2",
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4R",
@@ -1161,7 +1176,7 @@
       "category": "multihop",
       "question": "What does Calvin do to relax?",
       "answer": "take long drives in his car, embrace nature, fixing cars",
-      "prediction": "Calvin relaxes by taking long drives (feeling the wind and open road), working on cars as a hobby (fixing cars calms him down like meditating), and making music, which he finds cathartic and therapeutic.",
+      "prediction": "Calvin relaxes by taking long drives (feeling the wind and open road clears his head), working on cars as a hobby (fixing cars calms him down like meditating), and making music, which he finds cathartic — his own form of therapy.",
       "retrieved_ids": [
         "sem_01M2QZDTQKHWBJ0WAYXPVKM4XJ",
         "sem_01M2R0D21KKJV9MDCR7AMR8R3C",
@@ -1201,7 +1216,7 @@
       "category": "multihop",
       "question": "What are Dave's hobbies other than fixing cars?",
       "answer": "take a walk, go hiking, listen to favorite albums, live concerts, photography",
-      "prediction": "不知道",
+      "prediction": "Based on the memories, no hobbies other than fixing cars are mentioned. All of Dave's hobbies relate to fixing and restoring cars (e.g., refurbishing cars, restoring vintage cars). The closest thing is a general passion for \"fixing up broken things,\" but no other distinct hobby appears in the memories.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "cor_01M2R057HTCXZGF798KQ2FMM2Q",
@@ -1247,7 +1262,7 @@
       "category": "multihop",
       "question": "What kind of music does Dave listen to?",
       "answer": "classic rock, Japanese music",
-      "prediction": "Dave listens to classic rock (his favorite band is Aerosmith) and is hooked on Japanese music.",
+      "prediction": "Dave listens to classic rock (which he's recently been getting into and finds timeless) and Japanese music (he's hooked on it). His favorite band is Aerosmith.",
       "retrieved_ids": [
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE3",
         "epi_01M2R0C0MGQ5AZHF7BF48A9XJ1",
@@ -1309,7 +1324,7 @@
       "category": "temporal",
       "question": "Where was Dave in the last two weeks of August 2023?",
       "answer": "San Francisco",
-      "prediction": "不知道。记忆中只提到 Dave 在 2023-08-18 和朋友们玩牌之夜（card-night），但没有说明具体地点。",
+      "prediction": "Dave was in San Francisco — he returned from there on 2023-09-01, so he was there in the last part of August 2023.",
       "retrieved_ids": [
         "epi_01M2QZ9PTJMEKPACC0EZKYAJE5",
         "epi_01M2R0AJ2S65NMYDYQYPHTBS8S",
@@ -1373,7 +1388,7 @@
       "category": "multihop",
       "question": "What was Dave doing in San Francisco?",
       "answer": "attending a car modification workshop",
-      "prediction": "Dave 在旧金山参加了一个汽车工作坊，学习汽车修复技术，并获得了关于汽车改装的见解和知识。",
+      "prediction": "Dave was attending a car workshop in San Francisco, where he learned about car restoration techniques and gained insights and knowledge on car modification.",
       "retrieved_ids": [
         "epi_01M2QZZSV9FF96NZ5HG5SS987Y",
         "epi_01M2R057HTCXZGF798KQ2FMM2P",
@@ -1381,10 +1396,10 @@
         "epi_01M2QZ9PTJMEKPACC0EZKYAJE5",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8R",
         "sem_01M2R0HEAECV0DY3A2RRT8CH0A",
+        "sem_01M2R0N1T5HNJK2WE5PMV8HQVM",
         "epi_01M2R10A3WR6J81J4FPA05XS5Y",
         "sem_01M2R0D21KKJV9MDCR7AMR8R3A",
-        "sem_01M2R0N1T5HNJK2WE5PMV8HQVM",
-        "sem_01M2R0AJ2S65NMYDYQYPHTBS8X"
+        "sem_01M2QZ9PTJMEKPACC0EZKYAJE3"
       ],
       "gold_ids": [
         "cor_01M2R057HTCXZGF798KQ2FMM2Q",
@@ -1405,7 +1420,7 @@
       "category": "temporal",
       "question": "When did Dave return from San Francisco?",
       "answer": "September 1, 2023",
-      "prediction": "2023-09-01",
+      "prediction": "Dave returned from San Francisco on September 1, 2023.",
       "retrieved_ids": [
         "epi_01M2R057HTCXZGF798KQ2FMM2P",
         "epi_01M2QZZSV9FF96NZ5HG5SS987Y",
@@ -1432,7 +1447,7 @@
       "category": "temporal",
       "question": "When did Calvin book flight tickets to Boston?",
       "answer": "last week of August 2023",
-      "prediction": "Around 2023-08-26.",
+      "prediction": "Calvin booked a flight ticket to Boston around August 26, 2023.",
       "retrieved_ids": [
         "epi_01M2R057HTCXZGF798KQ2FMM2R",
         "sem_01M2R06ENX4D3DNNB0ANBXXM4E",
@@ -1459,7 +1474,7 @@
       "category": "temporal",
       "question": "When was Calvin's album released?",
       "answer": "September 11, 2023",
-      "prediction": "2023-09-11",
+      "prediction": "Calvin's album was released on 2023-09-11 (September 11, 2023).",
       "retrieved_ids": [
         "epi_01M2R06ENX4D3DNNB0ANBXXM4A",
         "epi_01M2R0X2G0YF02FETM93TYAF86",
@@ -1486,7 +1501,7 @@
       "category": "open_domain",
       "question": "Does Calvin love music tours?",
       "answer": "yes",
-      "prediction": "是的。Calvin 正在与 Frank Ocean 一起巡演，并形容观众的热情和舞台上的连接非常棒（amazing）。",
+      "prediction": "Yes. Calvin is currently on tour with Frank Ocean and describes the crowd energy and stage connection as amazing, suggesting he loves touring.",
       "retrieved_ids": [
         "cor_01M2QZHTZX5QETMC80PZF0R9HB",
         "cor_01M2QZBEBVSGQ5SPWHZ1Q0SYMA",
@@ -1540,7 +1555,7 @@
       "category": "temporal",
       "question": "When did Dave have a great jam session with his band?",
       "answer": "September 14, 2023",
-      "prediction": "On the night of 2023-09-14.",
+      "prediction": "On the night of September 14, 2023 (2023-09-14), Dave's band had a jam session that went very well — though it wasn't recorded because they were too absorbed in playing.",
       "retrieved_ids": [
         "epi_01M2R0AJ2S65NMYDYQYPHTBS8S",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8R",
@@ -1569,7 +1584,7 @@
       "category": "open_domain",
       "question": "Would Dave prefer working on a Dodge Charger or a Subaru Forester?",
       "answer": "Dodge Charger",
-      "prediction": "Dodge Charger。根据记忆，Dave痴迷于经典车，热爱它们的设计和工程，而Dodge Charger是经典车，Subaru Forester则不是。",
+      "prediction": "Dave would prefer working on a Dodge Charger. He is obsessed with classic cars and loves their design and engineering, and he enjoys restoring vintage vehicles like his Mustang project. A Dodge Charger fits that classic car passion, while a Subaru Forester is a modern SUV that wouldn't appeal to him the same way.",
       "retrieved_ids": [
         "sem_01M2R0QACFJK8K7AV5V36YRCX9",
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
@@ -1590,7 +1605,7 @@
       "category": "multihop",
       "question": "What was the artists Calvin used to listen to when he was a kid?",
       "answer": "Tupac and Dr. Dre",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't contain any information about which artists Calvin listened to when he was a kid.",
       "retrieved_ids": [
         "sem_01M2QZSXDEB5DGN376ANPC8TQ1",
         "sem_01M2R0YK3B65AR98SN598TT0J7",
@@ -1618,7 +1633,7 @@
       "category": "multihop",
       "question": "Which of their family member do Calvin and Dave have nostalgic memories about?",
       "answer": "Dad",
-      "prediction": "不知道",
+      "prediction": "不知道。记忆中没有提到 Calvin 和 Dave 对某位家庭成员怀有怀旧回忆的信息。",
       "retrieved_ids": [
         "epi_01M2R0X2G0YF02FETM93TYAF86",
         "cor_01M2QZSXDEB5DGN376ANPC8TPZ",
@@ -1660,7 +1675,7 @@
       "category": "open_domain",
       "question": "Based on the conversation, did Calvin and Dave have a meeting in Boston between August and November 2023? Answer in yes or no.",
       "answer": "No",
-      "prediction": "No. 记忆中只提到 Calvin 巡演结束后将前往波士顿，他和 Dave *计划*在那里见面，但没有记录表明他们在2023年8月至11月期间实际会面（Calvin 在2023-10-24是和一位高中朋友一起访问波士顿的）。",
+      "prediction": null,
       "retrieved_ids": [
         "epi_01M2R0KGQYPAVVFASGQQJXPR3P",
         "epi_01M2R10A3V2WV93RQKPZ04DCBG",
@@ -1685,8 +1700,8 @@
         "epi_01M2QZ6PMQ1634J76SJHV9P2AQ",
         "epi_01M2R10A3V2WV93RQKPZ04DCBC",
         "sem_01M2R0D21KKJV9MDCR7AMR8R38",
-        "sem_01M2R02BSNJZWBS832DTBSWYSC",
         "epi_01M2R0KGQYPAVVFASGQQJXPR3R",
+        "sem_01M2R02BSNJZWBS832DTBSWYSC",
         "sem_01M2R0KGQYPAVVFASGQQJXPR3Q",
         "sem_01M2R0D21KKJV9MDCR7AMR8R39",
         "epi_01M2QZ862MDJ2X7R68X8SS23P6",
@@ -1757,7 +1772,7 @@
       "category": "temporal",
       "question": "Which city was Calvin at on October 3, 2023?",
       "answer": "Boston",
-      "prediction": "Boston.",
+      "prediction": "Boston. On 2023-10-03, Calvin met with a group of artists in Boston to discuss collaborating on new music.",
       "retrieved_ids": [
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4R",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE2",
@@ -1785,7 +1800,7 @@
       "category": "temporal",
       "question": "When did Calvin met with local artists in Boston?",
       "answer": "October 3, 2023",
-      "prediction": "2023-10-03",
+      "prediction": "Calvin met with local artists in Boston on 2023-10-03 (October 3, 2023), where he discussed collaborating with them on new music.",
       "retrieved_ids": [
         "epi_01M2R0D21KKJV9MDCR7AMR8R37",
         "sem_01M2R0D21KKJV9MDCR7AMR8R39",
@@ -1813,7 +1828,7 @@
       "category": "multihop",
       "question": "What shared activities do Dave and Calvin have?",
       "answer": "Working on cars",
-      "prediction": "根据记忆，Dave 和 Calvin 的共同活动包括：\n- 在波士顿见面叙旧\n- Dave 带 Calvin 参观波士顿的音乐场所，一起品尝当地美食\n- Calvin 参观 Dave 的汽车修理厂\n- Calvin 给 Dave 发送他即将完成的专辑预览\n- Dave 计划参加 Calvin 与 Frank Ocean 巡演中的一场演出",
+      "prediction": "Based on the memories, Dave and Calvin's shared activities include:\n\n1. **Catching up and meeting in person in Boston** — they repeatedly plan to meet when Calvin arrives, with Calvin contacting Dave once he's there.\n2. **Exploring Boston's music spots and trying local food together** — Dave plans to show Calvin the city's music scene.\n3. **Visiting Dave's car garage** — Calvin intends to visit it when he's in Boston.\n4. **Music-related sharing** — Dave plans to attend one of Calvin's shows on his tour with Frank Ocean, and Calvin plans to send Dave previews of his nearly finished album.",
       "retrieved_ids": [
         "sem_01M2R02BSNJZWBS832DTBSWYSC",
         "epi_01M2R057HTCXZGF798KQ2FMM2S",
@@ -1841,15 +1856,15 @@
       "category": "multihop",
       "question": "What is Dave's favorite activity?",
       "answer": "Restoring cars",
-      "prediction": "Dave 最喜欢的活动是修车/改装车。对他来说这不仅是爱好，更是他的热情所在，也是一种帮助他摆脱日常压力的疗愈方式。",
+      "prediction": "Dave's favorite activity is working on cars — restoring and modifying them. It's more than a hobby to him; it's his passion, a form of therapy that helps him escape everyday stress, and an outlet for self-expression where he feels a sense of achievement and calm.",
       "retrieved_ids": [
         "sem_01M2QZ862MDJ2X7R68X8SS23P5",
         "sem_01M2QZRHT5KH4V7BSRM6A4PAM1",
         "cor_01M2R0AJ2S65NMYDYQYPHTBS8Y",
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVM",
-        "cor_01M2R0ECR75WWXD6SA88D4CRRC",
         "sem_01M2QZHTZX5QETMC80PZF0R9HF",
+        "cor_01M2R0ECR75WWXD6SA88D4CRRC",
         "epi_01M2QZ6PMQ1634J76SJHV9P2AS",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8R",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8X",
@@ -1858,9 +1873,9 @@
         "sem_01M2R0QACFJK8K7AV5V36YRCX7",
         "sem_01M2QZVQ9XS9W7TG2ST02E67A0",
         "sem_01M2R0X2G0YF02FETM93TYAF8D",
+        "sem_01M2R057HTCXZGF798KQ2FMM2N",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8V",
-        "sem_01M2QZDTQKHWBJ0WAYXPVKM4XG",
-        "sem_01M2R057HTCXZGF798KQ2FMM2N"
+        "sem_01M2QZDTQKHWBJ0WAYXPVKM4XG"
       ],
       "gold_ids": [
         "cor_01M2R0AJ2S65NMYDYQYPHTBS8Y",
@@ -1889,7 +1904,7 @@
       "category": "multihop",
       "question": "How many car shows has Dave attended?",
       "answer": "two",
-      "prediction": "根据记忆，Dave 参加过 **3 次**车展：\n1. 2023-03-23 前不久的经典车展\n2. 2023-04-15 周末的车展\n3. 2023-10-06 的车展",
+      "prediction": "Based on the memories, Dave has attended **3 car shows**:\n\n1. A classic car show shortly before 2023-03-23\n2. A car show on the weekend of 2023-04-15\n3. A car show on 2023-10-06",
       "retrieved_ids": [
         "epi_01M2QZ6PMQ1634J76SJHV9P2AG",
         "epi_01M2QZ9PTJMEKPACC0EZKYAJE5",
@@ -1933,7 +1948,7 @@
       "category": "temporal",
       "question": "What was Dave doing in the first weekend of October 2023?",
       "answer": "attending a car show",
-      "prediction": "Dave attended a car show on 2023-10-06, where he saw many impressive cars and explored car mods, and he found it a lot of fun.",
+      "prediction": "On the first weekend of October 2023, Dave attended a car show on 2023-10-06 (Friday), where he saw many impressive cars and explored car mods, and he found it a lot of fun.",
       "retrieved_ids": [
         "epi_01M2QZ9PTJMEKPACC0EZKYAJE5",
         "epi_01M2R0AJ2S65NMYDYQYPHTBS8T",
@@ -1960,7 +1975,7 @@
       "category": "multihop",
       "question": "When Dave was a child, what did he and his father do in the garage?",
       "answer": "tinkering with car engines, restoration and refurbishing cars",
-      "prediction": "小时候，Dave 在他爸爸的车库里花很多时间摆弄发动机，和爸爸一起修车，还曾用一个夏天和爸爸一起修复一辆旧车。",
+      "prediction": "As a child, Dave worked on cars with his dad in the garage — including spending one summer restoring an old car together (hard work but deeply satisfying), and he spent hours tinkering with engines in his dad's garage.",
       "retrieved_ids": [
         "sem_01M2R0ECR75WWXD6SA88D4CRRD",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVH",
@@ -2000,7 +2015,7 @@
       "category": "temporal",
       "question": "When did Calvin buy his second Ferrari?",
       "answer": "first week of October 2023",
-      "prediction": "在 2023-10-15 之前的那一周，Calvin 买了一辆新 Ferrari（他形容为“轮子上的杰作”）。",
+      "prediction": "Calvin bought his second Ferrari during the week before 2023-10-15 (i.e., in early-to-mid October 2023). He described it as a \"masterpiece on wheels\" and said he would share photos soon.",
       "retrieved_ids": [
         "sem_01M2QZVQ9XS9W7TG2ST02E679Y",
         "epi_01M2R0HEAECV0DY3A2RRT8CH0E",
@@ -2028,7 +2043,7 @@
       "category": "temporal",
       "question": "When did Calvin and Frank Ocean start collaborating?",
       "answer": "August 2022",
-      "prediction": "2022年8月，Calvin在音乐节上遇到Frank Ocean，Frank表示想与他合作，两人由此开始合作。",
+      "prediction": "They started collaborating after meeting at a festival in August 2022, where Frank Ocean said he wanted to work with Calvin. They clicked and began sharing ideas, and later recorded a song together in the studio at Calvin's mansion.",
       "retrieved_ids": [
         "sem_01M2R02BSNJZWBS832DTBSWYSE",
         "sem_01M2QZP5R1YWGBG02PNY1HDGJX",
@@ -2078,7 +2093,7 @@
       "category": "temporal",
       "question": "When did Calvin plan on travelling to Tokyo the second time?",
       "answer": "November 2023",
-      "prediction": "November 2023 (after his tour with Frank Ocean ends).",
+      "prediction": "November 2023 — after his first trip in April 2023, Calvin planned (as of 19 October 2023) to go to Tokyo in November 2023, once his tour with Frank Ocean ended.",
       "retrieved_ids": [
         "sem_01M2R0KGQYPAVVFASGQQJXPR3Q",
         "epi_01M2QZ6PMQ1634J76SJHV9P2AK",
@@ -2109,7 +2124,7 @@
       "category": "multihop",
       "question": "Who supports Calvin in tough times?",
       "answer": "friends and team",
-      "prediction": "Calvin relies on a strong support system of friends and his team, including an old friend from high school who has always supported and encouraged him.",
+      "prediction": "Calvin relies on a strong support system of **friends and his team** to keep him on track during tough times. In particular, he has an **old friend from high school** (who knew him from freestyling as teenagers) who has always supported and encouraged him, and whose positivity has made a big difference in his music journey.",
       "retrieved_ids": [
         "cor_01M2R0YK3B65AR98SN598TT0J4",
         "sem_01M2R02BSNJZWBS832DTBSWYSC",
@@ -2157,7 +2172,7 @@
       "category": "multihop",
       "question": "What does help Calvin stay connected to the creative process?",
       "answer": "Calvin stays connected to the creative process by always staying up-to-date on world events and watching documentaries about artists.",
-      "prediction": "Watching music videos, concerts, and documentaries about artists' creative processes helps Calvin stay connected to the creative process (he uses these to unwind and get inspired).",
+      "prediction": "Watching music videos, concerts, and documentaries about artists' creative processes helps Calvin unwind and get inspired, keeping him connected to the creative process.",
       "retrieved_ids": [
         "cor_01M2R0YK3B65AR98SN598TT0J4",
         "cor_01M2R0YK3B65AR98SN598TT0J9",
@@ -2207,7 +2222,7 @@
       "category": "temporal",
       "question": "When did Calvin visit some of the sights in Boston with a former high school friend?",
       "answer": "October 24, 2023",
-      "prediction": "2023-10-24",
+      "prediction": "On 24 October 2023, Calvin visited Boston with a high school friend, enjoying the architecture and history there.",
       "retrieved_ids": [
         "epi_01M2R0YK3B65AR98SN598TT0J2",
         "epi_01M2R0QACFJK8K7AV5V36YRCX5",
@@ -2237,7 +2252,7 @@
       "category": "multihop",
       "question": "Which cities did Dave travel to in 2023?",
       "answer": "San Francsico, Detroit",
-      "prediction": "根据记忆，Dave 在 2023 年去过的城市有：\n- **San Francisco**（2023-09-01 返回）\n- **Boston**（约 2023-03-18/19 参加音乐节）\n\n（Tokyo 只是他想去但尚未成行的目的地。）",
+      "prediction": "根据记忆，Dave 在 2023 年去过的城市有：\n\n- **Boston（波士顿）**：2023 年 3 月中旬（约 3 月 18/19 日）在波士顿参加了音乐节，第一次现场看了 Aerosmith 的演出。\n- **San Francisco（旧金山）**：2023 年 9 月 1 日从旧金山返回，带回了汽车改装方面的见解和知识。\n\n（注：东京只是 Dave 想去但尚未成行的目的地；7 月的公路旅行和山区之旅记忆中未提及具体城市。）",
       "retrieved_ids": [
         "sem_01M2QZF72X8B2Q7KSGND3ZTS4S",
         "epi_01M2QZSXDEB5DGN376ANPC8TPV",
@@ -2275,7 +2290,7 @@
       "category": "temporal",
       "question": "Which hobby did Dave pick up in October 2023?",
       "answer": "photography",
-      "prediction": "不知道。记忆中提到 Dave 在 2023 年 11 月购买了复古相机并开始摄影，但没有提到他在 2023 年 10 月开始任何爱好。",
+      "prediction": "Photography. In October 2023, Dave took up photography as a creative outlet, enjoying capturing the beauty of nature and the scenery around his area.",
       "retrieved_ids": [
         "sem_01M2R10A3V2WV93RQKPZ04DCBF",
         "sem_01M2R0RDQ4V2S2F1GE2WC8T9CQ",
@@ -2303,7 +2318,7 @@
       "category": "multihop",
       "question": "Which events in Dave's life inspired him to take up auto engineering?",
       "answer": "attending a car show with Dad, working on an old car in a neighbor's garage when he was young, spent a summer restoring an old car with Dad",
-      "prediction": "根据记忆，有两件事激发了 Dave 对汽车工程的兴趣：\n\n1. **10岁时父亲带他去看第一场车展**——这激发了他对汽车和工程的终身热情。\n2. **10岁时在邻居车库里修好了一辆旧车**——那种成就感让他迷上了汽车工程。",
+      "prediction": "Two events from when Dave was 10 years old inspired him:\n1. His dad took him to his first car show, which sparked his lifelong passion for cars and engineering.\n2. He fixed an old car in a neighbor's garage — the sense of accomplishment got him hooked on car engineering.",
       "retrieved_ids": [
         "sem_01M2QZDTQKHWBJ0WAYXPVKM4XH",
         "sem_01M2QZX2ANZPW1B2TE1BFWA2VY",
@@ -2367,7 +2382,7 @@
       "category": "multihop",
       "question": "How many Ferraris does Calvin own?",
       "answer": "two",
-      "prediction": "根据记忆，Calvin 拥有 **两辆** 法拉利：一辆曾送去保养，另一辆是他在 2023 年 10 月中旬前新买的。",
+      "prediction": "Based on the memories, Calvin owns **2 Ferraris**: he already owned one Ferrari (which he took in for service, as of August 2023), and then bought a new Ferrari during the week before 2023-10-15, which he described as \"a masterpiece on wheels.\"",
       "retrieved_ids": [
         "epi_01M2QZ862MDJ2X7R68X8SS23P0",
         "sem_01M2QZF72X8B2Q7KSGND3ZTS4M",
@@ -2405,7 +2420,7 @@
       "category": "multihop",
       "question": "What gifts has Calvin received from his artist friends?",
       "answer": "gold chain, custom-made guitar with an octopus on it",
-      "prediction": "根据记忆，Calvin 有一把由他的日本艺术家朋友制作的定制吉他——亮紫色外观、章鱼图案设计，这是他最喜欢的乐器之一。（记忆中未明确说明这是否为礼物。）",
+      "prediction": "Calvin received a custom-made guitar with a shiny purple finish and an octopus design, created by his Japanese artist friend. It is one of his favorite instruments.",
       "retrieved_ids": [
         "cor_01M2R0YK3B65AR98SN598TT0J4",
         "epi_01M2R10A3V2WV93RQKPZ04DCBH",
@@ -2443,7 +2458,7 @@
       "category": "temporal",
       "question": "How long did Dave's work on the Ford Mustang take?",
       "answer": "nearly two months",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't state how long Dave's work on the Ford Mustang took — they only show he was working on it around 22 September 2023 and still restoring it as of 4 October 2023, with no start or end date given.",
       "retrieved_ids": [
         "sem_01M2R0D21KKJV9MDCR7AMR8R3A",
         "sem_01M2R0C0MGQ5AZHF7BF48A9XHW",
@@ -2458,8 +2473,8 @@
         "epi_01M2QZX2ANZPW1B2TE1BFWA2VX",
         "sem_01M2R0QACFJK8K7AV5V36YRCX7",
         "sem_01M2QZ862MDJ2X7R68X8SS23P3",
-        "sem_01M2R0QACFJK8K7AV5V36YRCX9",
         "epi_01M2R0N1T5HNJK2WE5PMV8HQVK",
+        "sem_01M2R0QACFJK8K7AV5V36YRCX9",
         "sem_01M2QZZSV9FF96NZ5HG5SS9882",
         "epi_01M2QZBEBVSGQ5SPWHZ1Q0SYM8"
       ],
@@ -2489,7 +2504,7 @@
       "category": "temporal",
       "question": "How long was the car modification workshop in San Francisco?",
       "answer": "two weeks",
-      "prediction": "不知道",
+      "prediction": "Based on the memories, Dave was selected for the workshop around 2023-08-11, attended it in San Francisco shortly before 2023-08-14, and returned on 2023-09-01. So the workshop lasted roughly three weeks (from mid-August to September 1, 2023).",
       "retrieved_ids": [
         "epi_01M2QZZSV9FF96NZ5HG5SS987Y",
         "epi_01M2R057HTCXZGF798KQ2FMM2P",
@@ -2521,7 +2536,7 @@
       "category": "multihop",
       "question": "What style of guitars does Calvin own?",
       "answer": "custom-made yellow guitar with an octopus on it, shiny purple guitar",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories mention that Calvin owns a music studio, but there is no information about any guitars or guitar styles he owns.",
       "retrieved_ids": [
         "cor_01M2QZVQ9XS9W7TG2ST02E67A3",
         "cor_01M2QZBEBVSGQ5SPWHZ1Q0SYMA",
@@ -2551,7 +2566,7 @@
       "category": "multihop",
       "question": "What activities has Dave participated in with his friends?",
       "answer": "weekly visits to local parks, countryside roadtrip, celebration of the opening of his car maintenance shop, card-playing nights",
-      "prediction": "根据记忆，Dave 和朋友们一起参加过的活动包括：\n- 在公园定期散步（约2023-07-07开始）\n- 公路旅行（约2023-07-21返回）\n- 卡牌之夜（2023-08-18）\n- 庆祝他开设自己的汽车店（2023-05-08那一周）\n- 与乐队成员一起排练和即兴演奏\n- 与 Calvin 保持联系并计划见面",
+      "prediction": "Based on the memories, Dave has participated in these activities with his friends:\n\n- **Regular walks in the park** (arranged starting around July 7, 2023)\n- **A road trip** driving winding roads through stunning countryside (returned around July 21, 2023)\n- **A card-night** where they laughed and had a great time (August 18, 2023)\n- **Celebrating the opening of his car shop** (week of May 8, 2023)\n- **Catching up and planning to meet in person** with his friend Calvin\n- **Practicing guitar and jamming** with his rock band members",
       "retrieved_ids": [
         "epi_01M2QZRHT5KH4V7BSRM6A4PAM0",
         "sem_01M2R02BSNJZWBS832DTBSWYSC",
@@ -2631,7 +2646,7 @@
       "category": "temporal",
       "question": "When did Dave take a photo of a Boston clock tower?",
       "answer": "September 2023",
-      "prediction": "在2023年9月的日落时分。",
+      "prediction": "Dave took the photo of the Boston clock tower at sunset in September 2023.",
       "retrieved_ids": [
         "epi_01M2R0RDQ4V2S2F1GE2WC8T9CR",
         "sem_01M2R06ENX4D3DNNB0ANBXXM4E",
@@ -2659,7 +2674,7 @@
       "category": "multihop",
       "question": "Do all of Dave's car restoration projects go smoothly?",
       "answer": "No",
-      "prediction": "不知道。记忆中只提到 Dave 目前的一个项目被他形容为「颇具挑战」，但没有说明他的所有修复项目是否都顺利。",
+      "prediction": "No. One project he described as \"quite a challenge\" (23 October 2023), and another took longer than planned—he hoped to finish by the end of September 2023 but only completed it around late October.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRC",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8V",
@@ -2723,7 +2738,7 @@
       "category": "temporal",
       "question": "Where was Calvin located in the last week of October 2023?",
       "answer": "Tokyo",
-      "prediction": "Boston.",
+      "prediction": "Boston. According to the memory dated 24 October 2023, Calvin visited Boston with a high school friend on 2023-10-24, following Dave's advice, and enjoyed the architecture and history there.",
       "retrieved_ids": [
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4H",
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4R",
@@ -2755,7 +2770,7 @@
       "category": "temporal",
       "question": "When did Dave find the car he repaired and started sharing in his blog?",
       "answer": "last week of October 2023",
-      "prediction": "不知道。记忆中没有提到Dave是什么时候找到他修复并在博客中分享的那辆车的。",
+      "prediction": null,
       "retrieved_ids": [
         "epi_01M2R0X2G0YF02FETM93TYAF8A",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8V",
@@ -2787,7 +2802,7 @@
       "category": "temporal",
       "question": "When did Dave buy a vintage camera?",
       "answer": "November 2023",
-      "prediction": "2023年11月。",
+      "prediction": "Dave bought a vintage camera in November 2023.",
       "retrieved_ids": [
         "sem_01M2R10A3V2WV93RQKPZ04DCBF",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8V",
@@ -2816,7 +2831,7 @@
       "category": "temporal",
       "question": "When did Calvin attend a gala in Boston?",
       "answer": "November 16, 2023",
-      "prediction": "2023-11-16",
+      "prediction": "Calvin attended a gala in Boston on 2023-11-16 (November 16, 2023).",
       "retrieved_ids": [
         "epi_01M2R10A3V2WV93RQKPZ04DCBG",
         "epi_01M2QZHTZX5QETMC80PZF0R9HH",
@@ -2845,7 +2860,7 @@
       "category": "single_hop",
       "question": "How long did Calvin plan to stay in Japan?",
       "answer": "A few months",
-      "prediction": "A few months — starting April 2023, then heading to Boston around July 2023.",
+      "prediction": "A few months — starting April 2023, with plans to head to Boston around July 2023.",
       "retrieved_ids": [
         "sem_01M2QZ6PMQ1634J76SJHV9P2AM",
         "epi_01M2QZ6PMQ1634J76SJHV9P2AK",
@@ -2877,7 +2892,7 @@
       "category": "single_hop",
       "question": "Which band was Dave's favorite at the music festival in April 2023?",
       "answer": "Aerosmith",
-      "prediction": "不知道。记忆中没有提到 Dave 在 2023 年 4 月参加过音乐节（4 月他参加的是车展）。",
+      "prediction": "There is no record of Dave attending a music festival in April 2023 — the memory for that time ([15 April 2023]) says he attended a **car show**, not a music festival. So I don't know which band was his favorite at an April 2023 music festival. (For reference, the music festival he attended was in March 2023 in Boston, where he saw his favorite band, Aerosmith.)",
       "retrieved_ids": [
         "sem_01M2QZ862MDJ2X7R68X8SS23P5",
         "epi_01M2R0AJ2S65NMYDYQYPHTBS8S",
@@ -2913,12 +2928,12 @@
         "epi_01M2QZ6PMQ1634J76SJHV9P2AK",
         "epi_01M2QZ6PMQ1634J76SJHV9P2AQ",
         "epi_01M2R10A3V2WV93RQKPZ04DCBG",
-        "epi_01M2QZHTZX5QETMC80PZF0R9HH",
         "epi_01M2QZZSV9FF96NZ5HG5SS9880",
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4Q",
         "cor_01M2R02BSNJZWBS832DTBSWYSB",
         "epi_01M2R10A3V2WV93RQKPZ04DCBC",
-        "epi_01M2R0KGQYPAVVFASGQQJXPR3M"
+        "epi_01M2R0KGQYPAVVFASGQQJXPR3M",
+        "sem_01M2QZ6PMQ1634J76SJHV9P2AM"
       ],
       "gold_ids": [
         "cor_01M2QZ9PTJMEKPACC0EZKYAJDY",
@@ -2974,7 +2989,7 @@
       "category": "single_hop",
       "question": "What is Dave's new business venture as of 1 May, 2023?",
       "answer": "Car maintenance shop",
-      "prediction": "他开了自己的汽车店（根据记忆，是在2023-05-08那一周开的）。",
+      "prediction": "As of early May 2023, Dave's new business venture was opening his own car shop, which he did during the week of 2023-05-08 and celebrated with friends.",
       "retrieved_ids": [
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4P",
         "cor_01M2R0AJ2S65NMYDYQYPHTBS8Y",
@@ -3055,7 +3070,7 @@
       "category": "single_hop",
       "question": "What was the necklace Calvin received meant to remind him of?",
       "answer": "why he keeps hustling as a musician",
-      "prediction": "不知道",
+      "prediction": "I don't know. None of the memories mention Calvin receiving a necklace.",
       "retrieved_ids": [
         "epi_01M2QZ862MDJ2X7R68X8SS23P0",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVG",
@@ -3082,7 +3097,7 @@
       "category": "single_hop",
       "question": "What does Dave do when he feels his creativity is frozen?",
       "answer": "immerse himself in something he loves",
-      "prediction": "不知道",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVM",
         "cor_01M2R0AJ2S65NMYDYQYPHTBS8Y",
@@ -3110,7 +3125,7 @@
       "category": "single_hop",
       "question": "How does Calvin plan to jumpstart his inspiration?",
       "answer": "explore other things and have some fun",
-      "prediction": "Calvin 计划通过与他人合作、向他们学习，并让自己周围充满积极的能量和热情来激发灵感。他还通过尝试新的声音和音乐风格来保持创作活力。",
+      "prediction": "Calvin plans to jumpstart his inspiration by collaborating with others and learning from them, surrounding himself with positive energy and passion, and experimenting with different music genres (like adding electronic elements) to keep his sound fresh.",
       "retrieved_ids": [
         "cor_01M2QZVQ9XS9W7TG2ST02E67A4",
         "sem_01M2QZ862MDJ2X7R68X8SS23P3",
@@ -3138,7 +3153,7 @@
       "category": "single_hop",
       "question": "What did Calvin manage to save during the flood incident?",
       "answer": "music gear and favorite microphone",
-      "prediction": "Calvin managed to save his music gear and favorite microphone from the flood.",
+      "prediction": "Calvin managed to save his music gear and his favorite microphone from the flood.",
       "retrieved_ids": [
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4J",
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4K",
@@ -3168,7 +3183,7 @@
       "category": "single_hop",
       "question": "What did Dave open in May 2023?",
       "answer": "a car shop",
-      "prediction": "Dave opened his own car shop (during the week of 2023-05-08).",
+      "prediction": "Dave opened his own car shop (during the week of 2023-05-08, and he celebrated with friends).",
       "retrieved_ids": [
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4P",
         "sem_01M2R10A3V2WV93RQKPZ04DCBF",
@@ -3198,7 +3213,7 @@
       "category": "single_hop",
       "question": "What gives Dave a sense of achievement and purpose?",
       "answer": "Fixing up things",
-      "prediction": "Fixing up broken things (especially cars) — transforming them into something that runs smoothly gives Dave a sense of achievement, purpose, and motivation.",
+      "prediction": "Fixing up broken things — transforming them into something that runs smoothly — gives Dave a sense of achievement, purpose, and motivation. (Relatedly, fixing people's cars also gives him a sense of purpose and pride.)",
       "retrieved_ids": [
         "cor_01M2R057HTCXZGF798KQ2FMM2Q",
         "sem_01M2QZHTZX5QETMC80PZF0R9HF",
@@ -3228,7 +3243,7 @@
       "category": "single_hop",
       "question": "What fuels Calvin's soul?",
       "answer": "Performing live",
-      "prediction": "Performing live — the rush and connection with the crowd fuels his soul and gives him an indescribable high.",
+      "prediction": "Performing live — the rush and connection with the crowd fuels Calvin's soul and gives him an indescribable high.",
       "retrieved_ids": [
         "sem_01M2R0RDQ4V2S2F1GE2WC8T9CN",
         "cor_01M2QZVQ9XS9W7TG2ST02E67A4",
@@ -3285,7 +3300,7 @@
       "category": "single_hop",
       "question": "What sports activity is Calvin planning to try after the tour with Frank Ocean?",
       "answer": "Skiing",
-      "prediction": "Hiking — Calvin has never been to the mountains but is keen to go on a hike to escape and de-stress.",
+      "prediction": "Calvin is planning to go on a hike — he has never been to the mountains but is keen to hike there to escape and de-stress.",
       "retrieved_ids": [
         "epi_01M2R0KGQYPAVVFASGQQJXPR3K",
         "sem_01M2QZP5R1YWGBG02PNY1HDGJX",
@@ -3314,7 +3329,7 @@
       "category": "single_hop",
       "question": "What was Calvin excited to do after getting his car fixed on 7 July, 2023?",
       "answer": "get back on the road",
-      "prediction": "He was excited to drive it again.",
+      "prediction": "Calvin was excited to drive his car again.",
       "retrieved_ids": [
         "epi_01M2QZRHT4KQ742ABN1HG3J4D9",
         "epi_01M2QZ6PMQ1634J76SJHV9P2AQ",
@@ -3344,7 +3359,7 @@
       "category": "single_hop",
       "question": "What did Calvin and his friends arrange for in the park?",
       "answer": "regular walks together",
-      "prediction": "They arranged to take regular walks together in the park (starting around 2023-07-07).",
+      "prediction": null,
       "retrieved_ids": [
         "epi_01M2QZ6PMQ1634J76SJHV9P2AS",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVG",
@@ -3374,7 +3389,7 @@
       "category": "single_hop",
       "question": "What kind of music has Calvin been creating lately?",
       "answer": "experimenting with different genres",
-      "prediction": "As of July 2023, Calvin has been experimenting with different music genres, adding electronic elements to his songs to give them a fresh vibe.",
+      "prediction": "Lately, Calvin has been experimenting with different music genres, adding electronic elements to his songs to give them a fresh vibe. He also makes beats and tries out new sounds in his studio, and as of November 2023, he was making a beat for a young artist he sees as having great potential.",
       "retrieved_ids": [
         "sem_01M2QZSXDEB5DGN376ANPC8TQ1",
         "cor_01M2QZSXDEB5DGN376ANPC8TPZ",
@@ -3404,7 +3419,7 @@
       "category": "single_hop",
       "question": "How does Calvin describe his process of adding electronic elements to his songs?",
       "answer": "gives them a fresh vibe",
-      "prediction": "Calvin adds electronic elements to his songs to give them a fresh vibe, as part of experimenting with different music genres (as of July 2023).",
+      "prediction": "Calvin describes it as experimenting with different music genres — he adds electronic elements to his songs to give them a fresh vibe.",
       "retrieved_ids": [
         "sem_01M2QZSXDEB5DGN376ANPC8TQ1",
         "epi_01M2QZ862MDJ2X7R68X8SS23P2",
@@ -3434,7 +3449,7 @@
       "category": "single_hop",
       "question": "What car brand does Calvin own that he is proud of?",
       "answer": "Ferrari",
-      "prediction": "Calvin owns a Ferrari.",
+      "prediction": "Calvin owns a **Ferrari**.",
       "retrieved_ids": [
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE7",
         "cor_01M2QZVQ9XS9W7TG2ST02E67A3",
@@ -3465,7 +3480,7 @@
       "category": "single_hop",
       "question": "What is Calvin's biggest current goal?",
       "answer": "expand his brand worldwide and grow his fanbase",
-      "prediction": "Calvin 目前最大的目标是：在全球范围内扩展他的品牌，扩大他的粉丝群，并让他的音乐触达更多人、产生影响。",
+      "prediction": "Based on the memories, Calvin's biggest current goal is to go on a music tour next (as of 13 September 2023), with the broader aim of expanding his brand worldwide, growing his fanbase, and making his music reach more people and make an impact.",
       "retrieved_ids": [
         "cor_01M2QZVQ9XS9W7TG2ST02E67A4",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVF",
@@ -3496,7 +3511,7 @@
       "category": "single_hop",
       "question": "What is Dave's advice to Calvin regarding his dreams?",
       "answer": "to never forget his dreams",
-      "prediction": "Follow your dreams no matter what others say（这是Dave从《料理鼠王》中领悟并认同的道理）。",
+      "prediction": null,
       "retrieved_ids": [
         "epi_01M2QZ6PMQ1634J76SJHV9P2AS",
         "sem_01M2R06ENX4D3DNNB0ANBXXM4E",
@@ -3527,7 +3542,7 @@
       "category": "single_hop",
       "question": "What workshop did Dave get picked for on 11 August, 2023?",
       "answer": "Car mod workshop",
-      "prediction": "A car mod workshop.",
+      "prediction": "On 11 August 2023, Dave was selected to attend a **car mod workshop**, which he described as a dream come true opportunity to learn auto engineering.",
       "retrieved_ids": [
         "epi_01M2QZX2ANZPW1B2TE1BFWA2VX",
         "epi_01M2QZZSV9FF96NZ5HG5SS987Y",
@@ -3554,7 +3569,7 @@
       "category": "single_hop",
       "question": "What kind of modifications has Dave been working on in the car mod workshop?",
       "answer": "engine swaps, suspension modifications, and body modifications",
-      "prediction": "Dave has been modifying a classic muscle car: he has done engine swaps and suspension modifications, and is learning about body modifications.",
+      "prediction": "According to the memory, Dave has been modifying a classic muscle car: he has done engine swaps and suspension modifications, and is learning about body modifications.",
       "retrieved_ids": [
         "epi_01M2QZX2ANZPW1B2TE1BFWA2VX",
         "sem_01M2QZX2ANZPW1B2TE1BFWA2VZ",
@@ -3581,7 +3596,7 @@
       "category": "single_hop",
       "question": "What type of car did Dave work on during the workshop?",
       "answer": "classic muscle car",
-      "prediction": "不知道。记忆中只提到Dave在研讨会上学习了汽车修复技术和改装知识，但没有说明他具体操作的是什么类型的车。",
+      "prediction": "I don't know. The memories mention that Dave attended a car mod workshop (around 2023-08-11) and a car workshop in San Francisco (shortly before 2023-08-14), but they do not specify what type of car he worked on during the workshop.",
       "retrieved_ids": [
         "epi_01M2QZX2ANZPW1B2TE1BFWA2VX",
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
@@ -3608,7 +3623,7 @@
       "category": "single_hop",
       "question": "What does Dave say is important for making his custom cars unique?",
       "answer": "attention to small details",
-      "prediction": "Small details that make a car unique and personalized.",
+      "prediction": "Dave values small details that make a car unique and personalized.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRC",
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
@@ -3726,15 +3741,15 @@
       "category": "single_hop",
       "question": "What did Calvin and his friends record in August 2023?",
       "answer": "a podcast discussing the rap industry",
-      "prediction": "A podcast discussing the rapidly evolving rap industry (on 2023-08-21).",
+      "prediction": "A podcast discussing the rapidly evolving rap industry (recorded on 2023-08-21).",
       "retrieved_ids": [
         "epi_01M2R02BSNJZWBS832DTBSWYSK",
         "epi_01M2QZVQ9XS9W7TG2ST02E67A6",
         "epi_01M2QZF72X8B2Q7KSGND3ZTS4Q",
         "epi_01M2QZK4HW0RK87AJFKEEF63PJ",
         "epi_01M2QZ6PMQ1634J76SJHV9P2AK",
-        "sem_01M2R02BSNJZWBS832DTBSWYSC",
         "epi_01M2QZDTQKHWBJ0WAYXPVKM4XM",
+        "sem_01M2R02BSNJZWBS832DTBSWYSC",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVG",
         "epi_01M2R0KGQYPAVVFASGQQJXPR3P",
         "epi_01M2R0KGQYPAVVFASGQQJXPR3M"
@@ -3788,7 +3803,7 @@
       "category": "single_hop",
       "question": "What design is featured on Calvin's guitar?",
       "answer": "octopus",
-      "prediction": "An octopus design (on a shiny purple finish).",
+      "prediction": "Calvin's guitar features an octopus design (with a shiny purple finish).",
       "retrieved_ids": [
         "sem_01M2R03SN34QFV8A0GFV5GW4H7",
         "sem_01M2R0RDQ4V2S2F1GE2WC8T9CN",
@@ -3818,7 +3833,7 @@
       "category": "single_hop",
       "question": "Why did Calvin get his guitar customized with a shiny finish?",
       "answer": "unique look",
-      "prediction": "不知道。记忆中只提到Calvin拥有一把由日本艺术家朋友定制的亮紫色章鱼图案吉他，但没有说明为什么选择亮面设计。",
+      "prediction": "The memories don't say why. They only mention that Calvin owns a custom-made guitar with a shiny purple finish and an octopus design, made by his Japanese artist friend, but no reason for the shiny finish is given.",
       "retrieved_ids": [
         "sem_01M2R03SN34QFV8A0GFV5GW4H7",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJDZ",
@@ -3848,7 +3863,7 @@
       "category": "single_hop",
       "question": "What color glow did Calvin customize his guitar with?",
       "answer": "purple",
-      "prediction": "不知道。记忆中只提到Calvin的定制吉他有闪亮的紫色漆面和章鱼图案，没有提到任何发光（glow）颜色。",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2R03SN34QFV8A0GFV5GW4H7",
         "sem_01M2QZSXDEB5DGN376ANPC8TQ1",
@@ -3884,8 +3899,8 @@
         "cor_01M2R0ECR75WWXD6SA88D4CRRC",
         "epi_01M2QZ6PMQ1634J76SJHV9P2AG",
         "sem_01M2R057HTCXZGF798KQ2FMM2N",
-        "sem_01M2QZZSV9FF96NZ5HG5SS9882",
         "epi_01M2QZ9PTJMEKPACC0EZKYAJE5",
+        "sem_01M2QZZSV9FF96NZ5HG5SS9882",
         "epi_01M2QZX2ANZPW1B2TE1BFWA2VX",
         "epi_01M2QZBEBVSGQ5SPWHZ1Q0SYM8",
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
@@ -3905,7 +3920,7 @@
       "category": "single_hop",
       "question": "What emotion does Dave mention feeling when he sees the relief of someone whose car he fixed?",
       "answer": "Proud",
-      "prediction": "Pride — he feels a sense of purpose and pride when he makes a difference for car owners.",
+      "prediction": "Pride — Dave says fixing people's cars gives him a sense of purpose and pride when he makes a difference for car owners, and he finds it deeply rewarding.",
       "retrieved_ids": [
         "cor_01M2R057HTCXZGF798KQ2FMM2Q",
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
@@ -3932,7 +3947,7 @@
       "category": "single_hop",
       "question": "What did Calvin book a flight ticket for on 1st September 2023?",
       "answer": "Boston",
-      "prediction": "不知道。记忆中只提到 Calvin 在 2023-08-26 左右订了去波士顿的机票，没有提到 2023 年 9 月 1 日订机票的事。",
+      "prediction": "The memory doesn't record any flight booking on 1 September 2023. It only shows that Calvin booked a flight ticket to Boston around 26 August 2023.",
       "retrieved_ids": [
         "epi_01M2R057HTCXZGF798KQ2FMM2R",
         "epi_01M2QZK4HW0RK87AJFKEEF63PJ",
@@ -3959,7 +3974,7 @@
       "category": "single_hop",
       "question": "What is Calvin excited about after the tour?",
       "answer": "exploring and growing his brand",
-      "prediction": "Calvin is excited to travel to Boston to explore the city's music scene, and also to visit Japan — exploring Shibuya Crossing and Shinjuku in Tokyo in November 2023, and a small town with stunning snowy mountain views.",
+      "prediction": "Calvin is excited to explore Shibuya Crossing and Shinjuku when he visits Tokyo in November 2023.",
       "retrieved_ids": [
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE2",
         "sem_01M2QZP5R1YWGBG02PNY1HDGJY",
@@ -3986,7 +4001,7 @@
       "category": "single_hop",
       "question": "What plans do Calvin and Dave have for when Calvin visits Boston?",
       "answer": "Check out Dave's garage and maybe get some ideas for future projects",
-      "prediction": "根据记忆，Calvin 和 Dave 的计划包括：\n- Calvin 到波士顿后会联系 Dave，两人计划见面叙旧（catch up）。\n- Calvin 打算参观 Dave 的汽车车库。\n- Dave 计划去观看 Calvin 在波士顿的演出，为他加油。\n- Calvin 还打算去看看 Dave 推荐的公园。",
+      "prediction": "When Calvin visits Boston, he and Dave plan to catch up in person—Calvin will contact Dave once he arrives, and Calvin also intends to visit Dave's car garage while he's there.",
       "retrieved_ids": [
         "sem_01M2R06ENX4D3DNNB0ANBXXM4E",
         "epi_01M2R057HTCXZGF798KQ2FMM2S",
@@ -4042,7 +4057,7 @@
       "category": "single_hop",
       "question": "How does Dave feel about the reactions of people when they see the finished restoration project?",
       "answer": "satisfying and worth the hard work",
-      "prediction": "不知道。",
+      "prediction": "Dave feels deeply rewarded by people's reactions — seeing them happy gives him a sense of purpose and pride, and making people happy through his restoration work is what he wants to keep doing.",
       "retrieved_ids": [
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8V",
         "cor_01M2R057HTCXZGF798KQ2FMM2Q",
@@ -4071,7 +4086,7 @@
       "category": "single_hop",
       "question": "What activity did Calvin enjoy during his summer drives?",
       "answer": "feeling the wind blowing through his hair",
-      "prediction": "Calvin 喜欢开着车兜风（cruising around），享受长途驾驶时风吹过和开阔道路的感觉，这能让他放松、清醒头脑。",
+      "prediction": "Calvin enjoyed cruising around in his car during the summer (July 2023), which he considers the best thing.",
       "retrieved_ids": [
         "sem_01M2QZDTQKHWBJ0WAYXPVKM4XJ",
         "sem_01M2QZVQ9XS9W7TG2ST02E679Z",
@@ -4105,12 +4120,12 @@
         "sem_01M2QZDTQKHWBJ0WAYXPVKM4XJ",
         "epi_01M2QZSXDEB5DGN376ANPC8TPV",
         "epi_01M2R0KGQYPAVVFASGQQJXPR3K",
-        "cor_01M2QZVQ9XS9W7TG2ST02E67A3",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJDZ",
         "sem_01M2R0C0MGQ5AZHF7BF48A9XHZ",
-        "cor_01M2QZ9PTJMEKPACC0EZKYAJDY",
+        "cor_01M2QZVQ9XS9W7TG2ST02E67A3",
         "sem_01M2QZP5R1YWGBG02PNY1HDGJX",
-        "epi_01M2R03SN34QFV8A0GFV5GW4H4"
+        "epi_01M2R03SN34QFV8A0GFV5GW4H4",
+        "cor_01M2QZ9PTJMEKPACC0EZKYAJDY"
       ],
       "gold_ids": [
         "epi_01M2R0C0MGQ5AZHF7BF48A9XHX",
@@ -4136,9 +4151,9 @@
         "sem_01M2QZ862MDJ2X7R68X8SS23P3",
         "sem_01M2QZSXDEB5DGN376ANPC8TQ2",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVF",
+        "sem_01M2QZF72X8B2Q7KSGND3ZTS4M",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8W",
-        "epi_01M2QZ862MDJ2X7R68X8SS23P2",
-        "sem_01M2QZF72X8B2Q7KSGND3ZTS4M"
+        "epi_01M2QZ862MDJ2X7R68X8SS23P2"
       ],
       "gold_ids": [
         "epi_01M2R0D21KKJV9MDCR7AMR8R37",
@@ -4183,7 +4198,7 @@
       "category": "single_hop",
       "question": "What does Dave find satisfying about restoring old cars?",
       "answer": "Transforming something old and beat-up into something beautiful",
-      "prediction": "Dave finds restoring old cars relaxing and therapeutic, and enjoys transforming old beat-up cars into something beautiful. He remembers the experience as hard work but deeply satisfying.",
+      "prediction": "Dave finds restoring old cars relaxing and therapeutic, and he enjoys transforming old beat-up cars into something beautiful and giving them a new life. His childhood experience restoring a car with his dad was hard work but deeply satisfying.",
       "retrieved_ids": [
         "sem_01M2R0D21KKJV9MDCR7AMR8R3B",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE4",
@@ -4211,16 +4226,16 @@
       "category": "single_hop",
       "question": "What do Calvin and Dave use to reach their goals?",
       "answer": "Hard work and determination",
-      "prediction": "Calvin 用他的音乐（通过巡演和表演让音乐传遍全球），Dave 用他的汽车修复工作（让人们开心）。",
+      "prediction": "Calvin uses his music and his brand (expanding it worldwide, growing his fanbase) to reach his goals of reaching a global audience and making an impact. Dave uses his car restoration work to reach his goal of making people happy.",
       "retrieved_ids": [
         "cor_01M2QZVQ9XS9W7TG2ST02E67A4",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE1",
         "sem_01M2R02BSNJZWBS832DTBSWYSC",
-        "epi_01M2QZHTZX5QETMC80PZF0R9HH",
         "epi_01M2R02BSNJZWBS832DTBSWYSJ",
+        "epi_01M2QZHTZX5QETMC80PZF0R9HH",
+        "epi_01M2R0RDQ4V2S2F1GE2WC8T9CP",
         "epi_01M2R057HTCXZGF798KQ2FMM2S",
         "epi_01M2R10A3WR6J81J4FPA05XS5Y",
-        "epi_01M2R0RDQ4V2S2F1GE2WC8T9CP",
         "epi_01M2R10A3V2WV93RQKPZ04DCBJ",
         "cor_01M2R0AJ2S65NMYDYQYPHTBS8Y"
       ],
@@ -4239,7 +4254,7 @@
       "category": "single_hop",
       "question": "What does working on cars represent for Dave?",
       "answer": "Therapy and a way to get away from everyday stress",
-      "prediction": "For Dave, working on cars is more than a hobby—it's his passion and a form of therapy that helps him escape everyday stress. It's also an outlet for self-expression and a little oasis of calm where he feels connected back with himself.",
+      "prediction": "For Dave, working on cars is more than a hobby—it's his passion and a form of therapy that helps him escape everyday stress. It's also an outlet for self-expression and a little oasis of calm where he reconnects with himself, and fixing people's cars gives him a sense of purpose and pride.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVM",
@@ -4266,7 +4281,7 @@
       "category": "single_hop",
       "question": "What does Dave aim to do with his passion for cars?",
       "answer": "Take something broken and make it into something awesome",
-      "prediction": "Dave aims to keep making people happy through his car restoration work.",
+      "prediction": "Dave aims to keep making people happy through his car restoration work. He also shares his passion by running a blog about car mods, which has inspired readers to start their own DIY projects.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "cor_01M2R057HTCXZGF798KQ2FMM2Q",
@@ -4349,7 +4364,7 @@
       "category": "single_hop",
       "question": "How does Calvin stay motivated when faced with setbacks?",
       "answer": "Reminds himself of his passion for goals, gets help from others, and takes a break to recharge",
-      "prediction": "Calvin stays motivated by collaborating with others, learning from them, and surrounding himself with positive energy and passion. He also relies on supportive people around him, which motivates him to get better and stay true to himself.",
+      "prediction": "Calvin stays motivated through setbacks by collaborating with others and learning from them, surrounding himself with positive energy and passion, and relying on a strong support system of friends and his team — taking things one day at a time. He also finds making music cathartic, using it as his own form of therapy to work through emotions, and staying up-to-date on world events keeps him inspired.",
       "retrieved_ids": [
         "sem_01M2QZSXDEB5DGN376ANPC8TQ2",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVF",
@@ -4377,12 +4392,12 @@
       "category": "single_hop",
       "question": "What activity does Dave find fulfilling, similar to Calvin's passion for music festivals?",
       "answer": "fixing things",
-      "prediction": "Working on cars (car restoration) — Dave finds it fulfilling as his passion, a form of therapy, and an outlet for self-expression.",
+      "prediction": "Working on cars (car restoration). For Dave, it's more than a hobby—it's his passion, a form of therapy, and an outlet for self-expression, much like music is for Calvin.",
       "retrieved_ids": [
         "sem_01M2QZ862MDJ2X7R68X8SS23P4",
         "cor_01M2R0QACFJK8K7AV5V36YRCXA",
-        "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "cor_01M2R02BSNJZWBS832DTBSWYSB",
+        "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "cor_01M2R0AJ2S65NMYDYQYPHTBS8Y",
         "epi_01M2R0C0MGQ5AZHF7BF48A9XJ1",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8W",
@@ -4405,7 +4420,7 @@
       "category": "single_hop",
       "question": "Where did Calvin and Dave meet Frank Ocean to start collaborating?",
       "answer": "at a festival",
-      "prediction": "在东京的一个音乐节上。不过记忆中只提到 Calvin 在那里认识了 Frank Ocean，没有提到 Dave 在场。",
+      "prediction": "At a music festival in Tokyo — that's where Calvin met Frank Ocean and they began sharing ideas. (The memories only mention Calvin meeting Frank Ocean there; Dave isn't mentioned as being part of that meeting.)",
       "retrieved_ids": [
         "sem_01M2R02BSNJZWBS832DTBSWYSE",
         "epi_01M2R02BSNJZWBS832DTBSWYSF",
@@ -4436,7 +4451,7 @@
       "category": "single_hop",
       "question": "Which part of Tokyo is described as Tokyo's Times Square by Calvin?",
       "answer": "Shibuya Crossing",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories mention that Calvin is excited to explore Shibuya Crossing and Shinjuku on his November 2023 Tokyo trip, but none of them say he described any part of Tokyo as \"Tokyo's Times Square.\"",
       "retrieved_ids": [
         "epi_01M2QZZSV9FF96NZ5HG5SS9880",
         "sem_01M2R0KGQYPAVVFASGQQJXPR3Q",
@@ -4467,7 +4482,7 @@
       "category": "single_hop",
       "question": "What specific location in Tokyo does Calvin mention being excited to explore?",
       "answer": "Shinjuku",
-      "prediction": "Shibuya Crossing and Shinjuku.",
+      "prediction": "Calvin mentions being excited to explore **Shibuya Crossing and Shinjuku** when he visits Tokyo in November 2023.",
       "retrieved_ids": [
         "sem_01M2R0KGQYPAVVFASGQQJXPR3Q",
         "epi_01M2QZ6PMQ1634J76SJHV9P2AN",
@@ -4498,7 +4513,7 @@
       "category": "single_hop",
       "question": "What dish does Dave recommend Calvin to try in Tokyo?",
       "answer": "ramen",
-      "prediction": "不知道。记忆中没有提到 Dave 向 Calvin 推荐东京的任何菜肴。",
+      "prediction": "I don't know. The memories don't mention Dave recommending any dish to Calvin for Tokyo. (Calvin himself plans to try ramen during his Tokyo trip, but that's his own plan, not a recommendation from Dave.)",
       "retrieved_ids": [
         "epi_01M2R0KGQYPAVVFASGQQJXPR3R",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE6",
@@ -4529,7 +4544,7 @@
       "category": "single_hop",
       "question": "What does Calvin find energizing during the tour?",
       "answer": "Performing and connecting with the crowd",
-      "prediction": "Performing and connecting with the crowd.",
+      "prediction": "Calvin finds performing and connecting with the crowd energizing during the tour.",
       "retrieved_ids": [
         "sem_01M2QZP5R1YWGBG02PNY1HDGJX",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJDZ",
@@ -4539,8 +4554,8 @@
         "epi_01M2R0KGQYPAVVFASGQQJXPR3K",
         "sem_01M2QZP5R1YWGBG02PNY1HDGJY",
         "epi_01M2R0KGQYPAVVFASGQQJXPR3N",
-        "sem_01M2R06ENX4D3DNNB0ANBXXM4C",
-        "epi_01M2QZZSV9FF96NZ5HG5SS9880"
+        "epi_01M2QZZSV9FF96NZ5HG5SS9880",
+        "sem_01M2R0AJ2S65NMYDYQYPHTBS8W"
       ],
       "gold_ids": [
         "cor_01M2R0N1T4MEYSNVP03ZVX597D",
@@ -4560,7 +4575,7 @@
       "category": "single_hop",
       "question": "How does Calvin balance his job and personal life?",
       "answer": "Takes it one day at a time",
-      "prediction": "不知道",
+      "prediction": "Based on the memories, Calvin's work and personal life blend together since music is both his career and his passion — he finds making music cathartic, like his own form of therapy for working through emotions. To balance things out, he unwinds with a hobby: working on a car project to chill out and relax. He also stays motivated by collaborating with others and surrounding himself with positive energy and passion.",
       "retrieved_ids": [
         "sem_01M2QZF72X8B2Q7KSGND3ZTS4M",
         "cor_01M2QZVQ9XS9W7TG2ST02E67A4",
@@ -4591,7 +4606,7 @@
       "category": "single_hop",
       "question": "What inspired Calvin's recent music?",
       "answer": "Struggles that people go through",
-      "prediction": "Calvin's recent music was inspired by several things: his collaborations with other artists, the unique perspectives he gains from staying up-to-date on world events, and inspiration from watching music videos, concerts, and documentaries about artists' creative processes. He also uses music to express himself and work through his emotions.",
+      "prediction": "Calvin's recent music was inspired by several things: staying up-to-date on world events, which gives him unique perspectives that keep him motivated and inspired; his own emotions, since making music is cathartic for him — a form of self-expression and therapy; and watching music videos, concerts, and documentaries about artists' creative processes. He also draws inspiration from experimenting with new sounds and pushing creative boundaries.",
       "retrieved_ids": [
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVF",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVE",
@@ -4653,7 +4668,7 @@
       "category": "single_hop",
       "question": "Why did Dave start working on cars?",
       "answer": "Fascinated with how machines work",
-      "prediction": "不知道",
+      "prediction": "Based on the memories, Dave started working on cars because he is obsessed with classic cars and loves their design and engineering — it's his passion. It also serves as a form of therapy, helping him get away from everyday stress and acting as an outlet for self-expression and calm.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "sem_01M2R0N1T5HNJK2WE5PMV8HQVM",
@@ -4684,7 +4699,7 @@
       "category": "single_hop",
       "question": "What is the toughest part of car restoration according to Dave?",
       "answer": "Paying extra attention to detail",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories mention that Dave describes his current restoration project as \"quite a challenge,\" but they don't say what he considers the toughest part of car restoration.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRC",
         "sem_01M2R0AJ2S65NMYDYQYPHTBS8V",
@@ -4715,7 +4730,7 @@
       "category": "single_hop",
       "question": "What does Calvin believe makes an artist create something extraordinary?",
       "answer": "Paying attention to small details",
-      "prediction": "Calvin believes challenging himself—such as by working with artists from around the globe—helps him create special (extraordinary) music.",
+      "prediction": "Calvin believes that having supportive people around him is key — it motivates him to get better and stay true to himself in the tough music industry. He also values challenging himself (e.g., working with artists from around the globe) to create special music, while staying true to himself and being unique.",
       "retrieved_ids": [
         "cor_01M2R0YK3B65AR98SN598TT0J4",
         "epi_01M2R10A3V2WV93RQKPZ04DCBH",
@@ -4746,7 +4761,7 @@
       "category": "single_hop",
       "question": "When did Dave sell the car he restored last year?",
       "answer": "Last year",
-      "prediction": "2022年（他修复了一辆车并卖给了一位收藏家）。",
+      "prediction": "In 2022, Dave restored a car and sold it to a collector.",
       "retrieved_ids": [
         "epi_01M2R0RDQ4V2S2F1GE2WC8T9CS",
         "epi_01M2R0N1T5HNJK2WE5PMV8HQVJ",
@@ -4777,7 +4792,7 @@
       "category": "single_hop",
       "question": "When did Calvin first get interested in cars?",
       "answer": "at an early age",
-      "prediction": "不知道。记忆中只提到 Dave 十岁时开始对汽车感兴趣，没有提到 Calvin 何时开始对汽车感兴趣。",
+      "prediction": "I don't know. The memories don't say when Calvin first got interested in cars — the childhood stories about being fascinated with cars at age 10 are about Dave, not Calvin.",
       "retrieved_ids": [
         "sem_01M2R0ECR75WWXD6SA88D4CRRF",
         "sem_01M2R0QACFJK8K7AV5V36YRCX8",
@@ -4814,8 +4829,8 @@
         "sem_01M2QZHTZX5QETMC80PZF0R9HC",
         "cor_01M2R0QACFJK8K7AV5V36YRCXA",
         "epi_01M2R03SN34QFV8A0GFV5GW4H4",
-        "sem_01M2QZP5R1YWGBG02PNY1HDGJX",
         "cor_01M2R0YK3B65AR98SN598TT0J1",
+        "sem_01M2QZP5R1YWGBG02PNY1HDGJX",
         "cor_01M2QZVQ9XS9W7TG2ST02E67A3",
         "cor_01M2QZ9PTJMEKPACC0EZKYAJDY",
         "epi_01M2QZHTZX5QETMC80PZF0R9HA"
@@ -4837,7 +4852,7 @@
       "category": "single_hop",
       "question": "What realization did the nightclub experience bring to Calvin?",
       "answer": "how much music means to him, it's like his passion and purpose",
-      "prediction": "不知道",
+      "prediction": "I don't know. None of the memories mention a nightclub experience or any realization related to one.",
       "retrieved_ids": [
         "sem_01M2QZ9PTJMEKPACC0EZKYAJDZ",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE2",
@@ -4867,7 +4882,7 @@
       "category": "single_hop",
       "question": "What do Dave and Calvin agree on regarding their pursuits?",
       "answer": "It's fulfilling and motivating",
-      "prediction": "他们都认同要追随自己的梦想、追求自己热爱的事业——两人都喜欢电影《料理鼠王》（Ratatouille），正是因为它传达了“无论别人怎么说，都要追随梦想/追求所爱”的道理。Dave 专注于汽车修复，Calvin 投身音乐事业。",
+      "prediction": "They agree on following your dreams and pursuing what you love — both cite *Ratatouille* as a favorite for that lesson: Dave loves its message about following your dreams no matter what others say, and Calvin likes it for going after what you love.",
       "retrieved_ids": [
         "epi_01M2QZHTZX5QETMC80PZF0R9HH",
         "sem_01M2QZBEBVSGQ5SPWHZ1Q0SYM7",
@@ -4897,7 +4912,7 @@
       "category": "single_hop",
       "question": "Which city is featured in the photograph Dave showed Calvin?",
       "answer": "Boston",
-      "prediction": "波士顿。",
+      "prediction": "**Boston**。根据记忆，Dave 分享了波士顿日落的美景照片以及波士顿钟楼的照片（拍摄于2023年9月日落时分）。",
       "retrieved_ids": [
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE2",
         "sem_01M2QZ9PTJMEKPACC0EZKYAJE6",
@@ -4925,7 +4940,7 @@
       "category": "single_hop",
       "question": "What did Calvin do recently at his Japanese house?",
       "answer": "Threw a small party for his new album",
-      "prediction": "Calvin threw a party at his Japanese house around 2023-10-26 to celebrate his new album release, joined by family and friends.",
+      "prediction": "Recently, Calvin threw a party at his Japanese house around October 26, 2023, to celebrate his new album release, joined by family and friends.",
       "retrieved_ids": [
         "sem_01M2R0X2G0YF02FETM93TYAF87",
         "sem_01M2QZRHT5KH4V7BSRM6A4PAKZ",
@@ -4989,7 +5004,7 @@
       "category": "single_hop",
       "question": "What is Dave's way to share his passion with others?",
       "answer": "Through a blog on car mods",
-      "prediction": "Dave started a blog about car mods to share his passion — a post about his car build even inspired readers to start their own DIY projects.",
+      "prediction": "Dave shares his passion by writing a blog about car mods — a post about his car build even inspired readers to start their own DIY projects. He also shares it through his car restoration work, which makes people happy.",
       "retrieved_ids": [
         "cor_01M2R0ECR75WWXD6SA88D4CRRE",
         "cor_01M2R0AJ2S65NMYDYQYPHTBS8Y",
@@ -5021,7 +5036,7 @@
       "category": "single_hop",
       "question": "What type of videos does Calvin usually watch on his television?",
       "answer": "Music videos, concerts, documentaries about artists and their creative process",
-      "prediction": "Music videos, concerts, and documentaries about artists' creative processes.",
+      "prediction": "Calvin usually watches music videos, concerts, and documentaries about artists' creative processes to unwind and get inspired.",
       "retrieved_ids": [
         "sem_01M2R0X2G0YF02FETM93TYAF88",
         "sem_01M2QZF72X8B2Q7KSGND3ZTS4M",
@@ -5053,7 +5068,7 @@
       "category": "single_hop",
       "question": "What type of music has Dave been getting into lately?",
       "answer": "Classic rock",
-      "prediction": "Classic rock（他也迷上了日本音乐）。",
+      "prediction": "Dave has recently been getting into **classic rock** — he finds the music from that era timeless.",
       "retrieved_ids": [
         "sem_01M2R0X2G0YF02FETM93TYAF8D",
         "sem_01M2R0RDQ4V2S2F1GE2WC8T9CQ",
@@ -5085,7 +5100,7 @@
       "category": "single_hop",
       "question": "What tools does Calvin use to boost his motivation for music?",
       "answer": "Writing lyrics and notes",
-      "prediction": "不知道",
+      "prediction": null,
       "retrieved_ids": [
         "cor_01M2R0QACFJK8K7AV5V36YRCXA",
         "sem_01M2R0YK3B65AR98SN598TT0J7",
@@ -5117,7 +5132,7 @@
       "category": "single_hop",
       "question": "What type of content does Dave post on his blog that inspired others to start their own DIY projects?",
       "answer": "How he made his car look like a beast",
-      "prediction": "A post about his car build (on his blog about car mods).",
+      "prediction": "A post about his car build — Dave's blog is about car mods, and that post inspired readers to start their own DIY projects.",
       "retrieved_ids": [
         "epi_01M2R0X2G0YF02FETM93TYAF8A",
         "cor_01M2R0AJ2S65NMYDYQYPHTBS8Y",
@@ -5149,7 +5164,7 @@
       "category": "single_hop",
       "question": "What kind of impact does Dave's blog on car mods have on people?",
       "answer": "It inspires others to start their DIY projects",
-      "prediction": "His blog post about his car build inspired readers to start their own DIY projects.",
+      "prediction": "Dave's blog inspired readers to start their own DIY projects — a post about his car build motivated them to begin their own projects.",
       "retrieved_ids": [
         "epi_01M2R0X2G0YF02FETM93TYAF8A",
         "sem_01M2QZX2ANZPW1B2TE1BFWA2VZ",
@@ -5212,7 +5227,7 @@
       "category": "single_hop",
       "question": "What hobby did Calvin take up recently?",
       "answer": "Photography",
-      "prediction": "Calvin took up working on a car project as a hobby to chill out and relax.",
+      "prediction": "Calvin recently took up working on a car project as a hobby, which he uses to chill out and relax (as of 4 October 2023).",
       "retrieved_ids": [
         "sem_01M2R0D21KKJV9MDCR7AMR8R3C",
         "cor_01M2R0YK3B65AR98SN598TT0J9",
@@ -5241,7 +5256,7 @@
       "category": "single_hop",
       "question": "What new item did Dave buy recently?",
       "answer": "A vintage camera",
-      "prediction": "A new vintage camera (bought in November 2023).",
+      "prediction": "Dave recently bought a new vintage camera (in November 2023), which he uses to take high-quality photos.",
       "retrieved_ids": [
         "sem_01M2R0RDQ4V2S2F1GE2WC8T9CQ",
         "sem_01M2R10A3V2WV93RQKPZ04DCBF",
@@ -5328,7 +5343,7 @@
       "category": "single_hop",
       "question": "What did Calvin discuss with the cool artist he met at the gala?",
       "answer": "Music and art",
-      "prediction": "He connected with the artist over music and art.",
+      "prediction": "He had an inspiring conversation with the artist, connecting over music and art.",
       "retrieved_ids": [
         "epi_01M2R10A3V2WV93RQKPZ04DCBH",
         "epi_01M2R0D21KKJV9MDCR7AMR8R37",
@@ -5357,7 +5372,7 @@
       "category": "single_hop",
       "question": "Where did Dave take a stunning photo of a waterfall?",
       "answer": "Nearby park",
-      "prediction": "不知道",
+      "prediction": "I don't know. None of the memories mention Dave taking a photo of a waterfall.",
       "retrieved_ids": [
         "epi_01M2R0RDQ4V2S2F1GE2WC8T9CR",
         "epi_01M2QZK4HW0RK87AJFKEEF63PN",
@@ -5386,7 +5401,7 @@
       "category": "single_hop",
       "question": "What positive impact does Calvin mention nature has on tough times?",
       "answer": "Nature helps us appreciate life",
-      "prediction": null,
+      "prediction": "Based on the memories, Calvin believes that going on a hike in nature (like the mountains, which he has never been to) would help him escape and de-stress during tough times.",
       "retrieved_ids": [
         "cor_01M2R0YK3B65AR98SN598TT0J4",
         "sem_01M2QZSXDEB5DGN376ANPC8TQ2",

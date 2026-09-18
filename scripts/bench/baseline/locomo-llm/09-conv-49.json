@@ -8,53 +8,65 @@
   },
   "report": {
     "total": 156,
-    "answered": 155,
-    "answer_rate": 0.9936,
-    "accuracy": 0.2244,
-    "f1": 0.2205,
-    "em": 0.0705,
-    "contains": 0.2244,
-    "recall@k": 0.2078,
-    "recall@gold": 0.2133,
-    "mrr": 0.6442,
-    "ndcg@k": 0.3039,
+    "answered": 150,
+    "answer_rate": 0.9615,
+    "accuracy": 0.3397,
+    "f1": 0.1836,
+    "em": 0.0064,
+    "contains": 0.3013,
+    "time_match": 0.0705,
+    "hit@1": 0.5192,
+    "hit@k": 0.8974,
+    "recall@k": 0.2087,
+    "recall@gold": 0.2139,
+    "mrr": 0.6458,
+    "ndcg@k": 0.3054,
     "by_category": {
       "multihop": {
         "total": 37,
         "answered": 37,
         "answer_rate": 1.0,
-        "accuracy": 0.1081,
-        "f1": 0.1989,
-        "em": 0.0541,
-        "contains": 0.1081,
-        "recall@k": 0.1678,
+        "accuracy": 0.1622,
+        "f1": 0.1803,
+        "em": 0.0,
+        "contains": 0.1622,
+        "time_match": 0.0,
+        "hit@1": 0.5946,
+        "hit@k": 0.973,
+        "recall@k": 0.1688,
         "recall@gold": 0.2372,
-        "mrr": 0.7205,
-        "ndcg@k": 0.387,
+        "mrr": 0.7273,
+        "ndcg@k": 0.3903,
         "by_category": {}
       },
       "temporal": {
         "total": 33,
-        "answered": 32,
-        "answer_rate": 0.9697,
-        "accuracy": 0.1515,
-        "f1": 0.2576,
-        "em": 0.0606,
-        "contains": 0.1515,
-        "recall@k": 0.2617,
-        "recall@gold": 0.2363,
+        "answered": 33,
+        "answer_rate": 1.0,
+        "accuracy": 0.4848,
+        "f1": 0.1878,
+        "em": 0.0,
+        "contains": 0.303,
+        "time_match": 0.3333,
+        "hit@1": 0.6667,
+        "hit@k": 0.9091,
+        "recall@k": 0.2648,
+        "recall@gold": 0.2394,
         "mrr": 0.7478,
-        "ndcg@k": 0.3373,
+        "ndcg@k": 0.3402,
         "by_category": {}
       },
       "open_domain": {
         "total": 13,
-        "answered": 13,
-        "answer_rate": 1.0,
-        "accuracy": 0.1538,
-        "f1": 0.1283,
-        "em": 0.0769,
-        "contains": 0.1538,
+        "answered": 12,
+        "answer_rate": 0.9231,
+        "accuracy": 0.3077,
+        "f1": 0.1263,
+        "em": 0.0,
+        "contains": 0.3077,
+        "time_match": 0.0,
+        "hit@1": 0.3077,
+        "hit@k": 0.8462,
         "recall@k": 0.1004,
         "recall@gold": 0.1683,
         "mrr": 0.4283,
@@ -63,16 +75,19 @@
       },
       "single_hop": {
         "total": 73,
-        "answered": 73,
-        "answer_rate": 1.0,
-        "accuracy": 0.3288,
-        "f1": 0.231,
-        "em": 0.0822,
-        "contains": 0.3288,
+        "answered": 68,
+        "answer_rate": 0.9315,
+        "accuracy": 0.3699,
+        "f1": 0.1936,
+        "em": 0.0137,
+        "contains": 0.3699,
+        "time_match": 0.0,
+        "hit@1": 0.4521,
+        "hit@k": 0.863,
         "recall@k": 0.2229,
         "recall@gold": 0.1988,
         "mrr": 0.5971,
-        "ndcg@k": 0.268,
+        "ndcg@k": 0.2682,
         "by_category": {}
       }
     }
@@ -83,7 +98,7 @@
       "category": "multihop",
       "question": "What kind of car does Evan drive?",
       "answer": "Prius",
-      "prediction": "Evan drives a Prius（他于2023年5月新购入的丰田普锐斯）。",
+      "prediction": "Evan drives a Prius, which he acquired in May 2023 and uses for car trips.",
       "retrieved_ids": [
         "sem_01M2QXY0WDF235BGP2GAGDWWY0",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QX",
@@ -135,7 +150,7 @@
       "category": "multihop",
       "question": "What kinds of things did Evan have broken?",
       "answer": "His old Prius and his new Prius.",
-      "prediction": "根据记忆，Evan 弄坏过的东西有：\n\n1. **他的旧普锐斯**——坏了之后他决定修好再卖掉。\n2. **伴侣的玫瑰丛**——2024年1月9日晚上喝醉后不小心损坏的，他第二天为此道了歉。",
+      "prediction": "Based on the memories, Evan had two things broken/damaged:\n\n1. **His old Prius** — it broke down in May 2023, and he decided to have it repaired and sell it.\n2. **His partner's rose bushes** — during a drunken night on 2024-01-09, he accidentally damaged them (he urinated near the roses), and later apologized to his partner.",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ11",
@@ -171,12 +186,12 @@
       "category": "multihop",
       "question": "Where has Evan been on roadtrips with his family?",
       "answer": "Rockies, Jasper",
-      "prediction": "Jasper — he took his family on a road trip there during the weekend of 2023-05-20 to 2023-05-21, driving through the Icefields Parkway.",
+      "prediction": "Evan took his family on a road trip to Jasper (during the weekend of 2023-05-20 to 2023-05-21), driving through the Icefields Parkway.",
       "retrieved_ids": [
         "epi_01M2QXQ7DQR3DN34FXQCWBYJ10",
-        "cor_01M2QYBVS0EPBPB5VJ04DJP60P",
-        "sem_01M2QYBVS0EPBPB5VJ04DJP60Q",
         "epi_01M2QXJ69635AMH0Z0K4C9B940",
+        "sem_01M2QYBVS0EPBPB5VJ04DJP60Q",
+        "cor_01M2QYBVS0EPBPB5VJ04DJP60P",
         "sem_01M2QXY0WDF235BGP2GAGDWWY0",
         "sem_01M2QXNZFYMXHS775NTZGSBJDB",
         "epi_01M2QYNCE31HQ2P68D9DXG8RNW",
@@ -211,7 +226,7 @@
       "category": "multihop",
       "question": "How many Prius has Evan owned?",
       "answer": "two",
-      "prediction": "两辆。记忆提到 Evan 有一辆旧 Prius（坏了后决定修理并卖掉），以及 2023 年新买的一辆 Prius。",
+      "prediction": "Evan has owned **two** Priuses: an old one that broke down (which he had repaired and sold), and a new one he acquired around May 2023.",
       "retrieved_ids": [
         "sem_01M2QYGQ4X6M25MP81PHMKTWQ7",
         "sem_01M2QXG5WVY2R41KPFSSTS42Q2",
@@ -241,7 +256,7 @@
       "category": "temporal",
       "question": "Which hobby did Sam take up in May 2023?",
       "answer": "painting",
-      "prediction": "Painting.",
+      "prediction": "Painting. In May 2023, Sam planned to try painting as a new hobby to relax, be creative, and de-stress.",
       "retrieved_ids": [
         "sem_01M2QXG5WVY2R41KPFSSTS42Q6",
         "sem_01M2QY16HWKVGM3BQQVZXA53AG",
@@ -271,7 +286,7 @@
       "category": "open_domain",
       "question": "Which country was Evan visiting in May 2023?",
       "answer": "Canada",
-      "prediction": "不知道",
+      "prediction": null,
       "retrieved_ids": [
         "epi_01M2QXKGTW37DE44HDRPZVD5SC",
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
@@ -299,7 +314,7 @@
       "category": "multihop",
       "question": "How many roadtrips did Evan take in May 2023?",
       "answer": "two",
-      "prediction": "根据记忆，2023年5月Evan明确提到的road trip有**1次**：5月20-21日周末开车带家人去Jasper的公路旅行。\n\n（另外，5月11日左右他还去过Rockies进行家庭旅行，但记忆中未明确称其为road trip。）",
+      "prediction": "**1** — Evan took a road trip to Jasper with his family during the weekend of 2023-05-20 to 2023-05-21. (He also went on a family trip to the Rockies around 2023-05-11, but that one is described as a family trip, not a road trip.)",
       "retrieved_ids": [
         "epi_01M2QXKGTW37DE44HDRPZVD5SC",
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QY",
@@ -339,7 +354,7 @@
       "category": "multihop",
       "question": "What new hobbies did Sam consider trying?",
       "answer": "Painting, kayaking, hiking, cooking, running",
-      "prediction": "Sam considered trying **kayaking** and **painting** as new hobbies.",
+      "prediction": "Sam considered trying **painting** (planned as a new hobby to relax and be creative, as of May 2023) and **kayaking** (interested in trying it for exercise and enjoying nature, as of October 2023). He was also learning to draw around October 2023.",
       "retrieved_ids": [
         "sem_01M2QY16HWKVGM3BQQVZXA53AG",
         "sem_01M2QXG5WVY2R41KPFSSTS42Q6",
@@ -356,17 +371,17 @@
         "sem_01M2QYNCE31HQ2P68D9DXG8RNN",
         "sem_01M2QYGQ4W2JZCQYY3139KVE87",
         "sem_01M2QY16HWKVGM3BQQVZXA53AD",
-        "sem_01M2QXMW4DENA907J8SZHDCW9D",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
+        "sem_01M2QXMW4DENA907J8SZHDCW9D",
         "epi_01M2QXX5WQHDY6BYQE76N3TPSN",
         "epi_01M2QY6BVTDR48ZF67EHWT6E4X",
         "sem_01M2QY6BVTDR48ZF67EHWT6E53",
         "sem_01M2QY9B8PF84M205163XH39M9",
         "cor_01M2QXVB2JDRKDGKWTAN7YQ4QM",
         "epi_01M2QXKGTW37DE44HDRPZVD5SH",
+        "sem_01M2QY74Q0EFGWHB8ERZKQ62CW",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ14",
         "epi_01M2QY6BVTDR48ZF67EHWT6E52",
-        "sem_01M2QY74Q0EFGWHB8ERZKQ62CW",
         "epi_01M2QXQ7DQR3DN34FXQCWBYJ15",
         "sem_01M2QY9B8PF84M205163XH39MA",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QQ",
@@ -437,7 +452,7 @@
       "category": "multihop",
       "question": "What hobby did Evan start practicing a few years ago that he enjoys?",
       "answer": "Watercolor painting",
-      "prediction": "Watercolor painting.",
+      "prediction": "Watercolor painting. Evan has been practicing it for a few years, is passionate about it, and finds it a great stress-buster.",
       "retrieved_ids": [
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QR",
         "sem_01M2QXG5WVY2R41KPFSSTS42Q7",
@@ -517,7 +532,7 @@
       "category": "open_domain",
       "question": "Which type of vacation would Evan prefer with his family, walking tours in metropolitan cities or camping trip in the outdoors?",
       "answer": "camping trip in the outdoors",
-      "prediction": "Camping trip in the outdoors. Evan's memories show he loves outdoor activities like hiking, camping, kayaking, and walking on the beach at sunset, and he finds nature calming and peaceful.",
+      "prediction": "**Camping trip in the outdoors.**\n\nThe memories consistently show Evan prefers nature-based vacations: he took his family on a road trip to Jasper (staying in a cabin surrounded by mountains and forests), went on a family trip to the Rockies to hike trails, went camping where he kayaked and watched an unforgettable sunset, and regularly enjoys hiking. He loves nature's beauty (even painting landscapes), is motivated by adventure and interesting hikes, and finds outdoor activities calming. Nothing in the memories suggests an interest in metropolitan cities.",
       "retrieved_ids": [
         "epi_01M2QXQ7DQR3DN34FXQCWBYJ10",
         "epi_01M2QYNCE31HQ2P68D9DXG8RNW",
@@ -553,7 +568,7 @@
       "category": "multihop",
       "question": "What health issue did Sam face that motivated him to change his lifestyle?",
       "answer": "Weight problem",
-      "prediction": "Sam 的体重问题。2023-07-21 朋友嘲笑他的体重，2023-10-02 医生告知他的体重是严重的健康风险，这促使他改变生活方式。",
+      "prediction": "Sam's weight problem — his doctor told him his weight was a serious health risk that could get worse if he didn't make changes, and his friends also mocked his weight, which motivated him to start making health changes.",
       "retrieved_ids": [
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
         "sem_01M2QYNCE31HQ2P68D9DXG8RNM",
@@ -706,7 +721,7 @@
       "category": "temporal",
       "question": "When did Sam first go to the doctor and find out he had a weight problem?",
       "answer": "A few days before May 24, 2023.",
-      "prediction": "大约在 2023-05-21，Sam 去看医生时得知自己的体重不好。",
+      "prediction": "Around 21 May 2023 — that's when Sam had a check-up with his doctor and first learned his weight was not good, which he found eye-opening.",
       "retrieved_ids": [
         "epi_01M2QY076KAZ2Q5FB0F04SHX3Z",
         "epi_01M2QXJ69635AMH0Z0K4C9B941",
@@ -734,7 +749,7 @@
       "category": "temporal",
       "question": "When did Evan have his sudden heart palpitation incident that really shocked him up?",
       "answer": "first week of June 2023",
-      "prediction": "Around 2023-05-30 (the week before 2023-06-06).",
+      "prediction": "Evan had his sudden heart palpitation incident around 2023-05-30 (late May 2023), which he described as a serious wake-up call about his lifestyle.",
       "retrieved_ids": [
         "epi_01M2QXKGTW37DE44HDRPZVD5SC",
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
@@ -764,7 +779,7 @@
       "category": "multihop",
       "question": "What is Evan's favorite food?",
       "answer": "Ginger snaps",
-      "prediction": "Ginger snaps.",
+      "prediction": "Evan's favorite food is ginger snaps — they're his favorite treat, and he calls them his weakness.",
       "retrieved_ids": [
         "sem_01M2QXKGTW37DE44HDRPZVD5SD",
         "sem_01M2QXKGTW37DE44HDRPZVD5SE",
@@ -774,10 +789,10 @@
         "sem_01M2QXZKG9YPPNVDATR0NDAEDA",
         "cor_01M2QYJ03T83NJQ1TEB2AVS5Y3",
         "sem_01M2QXR5SSRMW9C9YFF4AK6XX5",
+        "sem_01M2QYGQ4X6M25MP81PHMKTWQ9",
         "cor_01M2QYBVS0EPBPB5VJ04DJP60P",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC37",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC39",
-        "sem_01M2QYGQ4X6M25MP81PHMKTWQ9",
         "sem_01M2QY74Q0EFGWHB8ERZKQ62D0",
         "epi_01M2QYGQ4X6M25MP81PHMKTWQ8",
         "sem_01M2QYEWTJP15P782F4K5B7Z6X",
@@ -793,7 +808,7 @@
         "sem_01M2QY9B8NPEAGFYJHJ5FPCXT0",
         "epi_01M2QY74Q0EFGWHB8ERZKQ62D1",
         "epi_01M2QYAPJKYDH2WNTGND6J22X7",
-        "epi_01M2QY6BVTDR48ZF67EHWT6E4Z"
+        "sem_01M2QXVB2JDRKDGKWTAN7YQ4QQ"
       ],
       "gold_ids": [
         "cor_01M2QYJ03T83NJQ1TEB2AVS5Y3",
@@ -832,7 +847,7 @@
       "category": "multihop",
       "question": "What kind of unhealthy snacks does Sam enjoy eating?",
       "answer": "soda, candy",
-      "prediction": "Sam 喜欢喝汽水（soda）和吃糖果（candy），他承认这不是最好的习惯。",
+      "prediction": "Sam 喜欢喝汽水（soda）和吃糖果（candy）——他经常喝汽水、吃糖果，并承认这不是好习惯。此外，他还会偶尔渴望含糖饮料和零食。",
       "retrieved_ids": [
         "sem_01M2QY16HWKVGM3BQQVZXA53AE",
         "sem_01M2QXY0WDF235BGP2GAGDWWXZ",
@@ -862,7 +877,7 @@
       "category": "multihop",
       "question": "What recurring issue frustrates Sam at the grocery store?",
       "answer": "Malfunctioning self-checkout machines.",
-      "prediction": "Sam regularly has trouble with self-checkout machines at stores, which he finds a recurring annoyance.",
+      "prediction": "Sam is regularly frustrated by trouble with self-checkout machines at stores.",
       "retrieved_ids": [
         "sem_01M2QYGQ4X6M25MP81PHMKTWQ4",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC3C",
@@ -872,10 +887,10 @@
         "sem_01M2QYNCE31HQ2P68D9DXG8RNM",
         "epi_01M2QXKGTW37DE44HDRPZVD5SG",
         "sem_01M2QXJ69635AMH0Z0K4C9B942",
-        "sem_01M2QY16HWKVGM3BQQVZXA53AE",
         "epi_01M2QY6BVTDR48ZF67EHWT6E52",
         "epi_01M2QXR5SSRMW9C9YFF4AK6XX4",
         "sem_01M2QYCZT5P829E54F7DYBDQYE",
+        "sem_01M2QY16HWKVGM3BQQVZXA53AE",
         "sem_01M2QYNCE31HQ2P68D9DXG8RNN",
         "epi_01M2QY6BVTDR48ZF67EHWT6E4X",
         "epi_01M2QYAPJKYDH2WNTGND6J22XA",
@@ -906,7 +921,7 @@
       "category": "temporal",
       "question": "When did Sam's friends mock him for being overweight?",
       "answer": "Friday before 27 July 2023",
-      "prediction": "2023-07-21",
+      "prediction": "On 21 July 2023 (2023-07-21).",
       "retrieved_ids": [
         "epi_01M2QXMW4DENA907J8SZHDCW9C",
         "epi_01M2QXG5WVY2R41KPFSSTS42Q5",
@@ -935,7 +950,7 @@
       "category": "multihop",
       "question": "What kind of healthy food suggestions has Evan given to Sam?",
       "answer": "flavored seltzer water, dark chocolate with high cocoa content, air-popped popcorn and fruit, veggies, healthy sandwich snacks, energy balls, grilled chicken salad with avocado",
-      "prediction": "Evan建议Sam用调味气泡水代替苏打水，用高可可含量的黑巧克力代替糖果。",
+      "prediction": "Evan suggested that Sam swap soda for flavored seltzer water and candy for dark chocolate with high cocoa content (which Sam agreed to try on 2023-06-06). He also promised to send Sam recipes for his healthy snacks, including energy balls and cookies.",
       "retrieved_ids": [
         "sem_01M2QXKGTW37DE44HDRPZVD5SE",
         "epi_01M2QYGQ4X6M25MP81PHMKTWQ8",
@@ -948,8 +963,8 @@
         "sem_01M2QXY0WDF235BGP2GAGDWWY3",
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QS",
         "epi_01M2QXKGTW37DE44HDRPZVD5SG",
-        "sem_01M2QY16HWKVGM3BQQVZXA53AE",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC3A",
+        "sem_01M2QY16HWKVGM3BQQVZXA53AE",
         "sem_01M2QY9B8PF84M205163XH39MC",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
         "sem_01M2QY9B8PF84M205163XH39M7",
@@ -960,14 +975,14 @@
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QT",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC3C",
         "sem_01M2QYNCE31HQ2P68D9DXG8RNM",
-        "cor_01M2QXVB2JDRKDGKWTAN7YQ4QM",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ13",
-        "epi_01M2QY6BVTDR48ZF67EHWT6E4Z",
-        "sem_01M2QXKGTW37DE44HDRPZVD5SK",
         "cor_01M2QXX5WQHDY6BYQE76N3TPSR",
+        "epi_01M2QY6BVTDR48ZF67EHWT6E4Z",
+        "cor_01M2QXVB2JDRKDGKWTAN7YQ4QM",
+        "sem_01M2QXKGTW37DE44HDRPZVD5SK",
         "sem_01M2QYNCE31HQ2P68D9DXG8RNN",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QN",
-        "sem_01M2QXY0WDF235BGP2GAGDWWY1"
+        "sem_01M2QXG5WVY2R41KPFSSTS42Q6"
       ],
       "gold_ids": [
         "epi_01M2QXKGTW37DE44HDRPZVD5SC",
@@ -1009,7 +1024,7 @@
       "category": "open_domain",
       "question": "Considering their conversations and personal growth, what advice might Evan and Sam give to someone facing a major life transition or challenge?",
       "answer": "Evan and Sam would likely advise embracing small, consistent changes​​, finding stress-relieving activities like hiking​​, painting, and road trips​​, and the importance of friendship and support in navigating challenges​​.",
-      "prediction": "Based on their experiences, Evan and Sam might advise someone facing a major life transition or challenge to:\n\n1. **Lean on your support system** – They rely on and support each other through tough times, so having someone who encourages you matters a lot.\n2. **Appreciate something each day** – They agreed to make this a habit to enjoy life more.\n3. **Value family and togetherness** – Evan describes his family as his rock and considers togetherness central to life.\n4. **Keep commitments to your goals** – Like their ongoing health journeys, persistence and mutual accountability help.\n5. **Stay open to unexpected positives** – Evan's experience helping a lost tourist turned into an enjoyable city tour, showing challenges can lead to pleasant surprises.",
+      "prediction": "Based on their experiences, Evan and Sam would likely advise someone facing a major life transition or challenge to:\n\n1. **Lean on supportive friends and family** – Their own friendship shows how much relying on each other through tough times matters; Sam has said Evan's support means a lot to him, and Evan sees family as his rock.\n2. **Practice daily gratitude** – They agreed to appreciate something each day to enjoy life more, a habit that helps during hard times.\n3. **Stay committed even when motivation fades** – Sam's struggle with weight and confidence shows challenges take persistence, and having someone encourage you (like Evan does) makes a difference.\n4. **Stay open to the unexpected** – Evan's experience helping a lost tourist turned into an enjoyable city tour, suggesting that unplanned moments can bring joy during change.\n5. **Prioritize togetherness** – Evan values togetherness as central to life, and they plan shared activities like hiking to stay connected.",
       "retrieved_ids": [
         "cor_01M2QYBVS0EPBPB5VJ04DJP60P",
         "sem_01M2QY9B8PF84M205163XH39MB",
@@ -1041,11 +1056,11 @@
         "sem_01M2QYNCE31HQ2P68D9DXG8RNR",
         "sem_01M2QY2PEJCZXHEQWR32WX8B71",
         "epi_01M2QXX5WQHDY6BYQE76N3TPSX",
-        "sem_01M2QY6BVTDR48ZF67EHWT6E51",
         "sem_01M2QXMW4DENA907J8SZHDCW9J",
-        "sem_01M2QYEWTJP15P782F4K5B7Z70",
+        "sem_01M2QY6BVTDR48ZF67EHWT6E51",
         "sem_01M2QY2PEJCZXHEQWR32WX8B70",
         "sem_01M2QXZKG9YPPNVDATR0NDAEDD",
+        "sem_01M2QYEWTJP15P782F4K5B7Z70",
         "epi_01M2QXMW4DENA907J8SZHDCW9H",
         "epi_01M2QYJ03T83NJQ1TEB2AVS5Y4",
         "epi_01M2QY16HWKVGM3BQQVZXA53AJ",
@@ -1111,7 +1126,7 @@
       "category": "open_domain",
       "question": "In light of the health and dietary changes discussed, what would be an appropriate gift for both Evan and Sam to encourage their healthy lifestyles?",
       "answer": "a cookbook with healthy recipes or a subscription to a healthy meal delivery service.",
-      "prediction": "一份健康零食礼盒会很合适——比如能量球（Evan 很喜欢，觉得既提神又能健康地满足对甜食的渴望），也可以附上制作能量球和健康饼干的食谱或食材，这样 Sam 也能跟着做，支持他正在进行的饮食调整。",
+      "prediction": "A healthy snack-making kit — e.g., ingredients and supplies for making energy balls (nuts, oats, dates, etc.) — would suit both. Evan already enjoys energy balls as an energizing, healthy treat, and he promised to share his energy ball and cookie recipes with Sam, who is trying dietary changes to cope with his physical discomfort. Such a gift supports both of their healthy eating habits.",
       "retrieved_ids": [
         "sem_01M2QXJ69635AMH0Z0K4C9B945",
         "sem_01M2QXMW4DENA907J8SZHDCW9J",
@@ -1225,7 +1240,7 @@
       "category": "multihop",
       "question": "How does Evan describe the woman and his feelings for her that he met in Canada?",
       "answer": "He says she's cool, incredible, like something out of a movie, and that he feels alive around her. Every moment with her is fun and energetic, also Evan feels really lucky to have someone who gets him.",
-      "prediction": "Evan describes the Canadian woman he met in Canada as incredible, and says she makes him feel alive.",
+      "prediction": "Evan describes the Canadian woman he met as \"incredible\" and says she makes him feel alive. He says he fell in love with her at first sight, and he later married her.",
       "retrieved_ids": [
         "epi_01M2QXNZFYMXHS775NTZGSBJD5",
         "epi_01M2QYEWTJP15P782F4K5B7Z6W",
@@ -1261,7 +1276,7 @@
       "category": "temporal",
       "question": "When Evan did meet his future wife?",
       "answer": "week before August 7, 2023.",
-      "prediction": "不知道。记忆中只提到 Evan 在 2023 年 8 月有了新的伴侣，并于 2023-12-19 左右结婚，但没有说明他具体是何时认识（遇见）他未来的妻子的。",
+      "prediction": "The memories don't state exactly when Evan met his future wife. However, since he had a new significant other as of August 2023 and married her around 19 December 2023, he likely met her by around August 2023 at the latest.",
       "retrieved_ids": [
         "cor_01M2QYJ03T83NJQ1TEB2AVS5Y3",
         "sem_01M2QYEWTJP15P782F4K5B7Z6X",
@@ -1290,7 +1305,7 @@
       "category": "temporal",
       "question": "When did Sam start working out at the gym?",
       "answer": "July 28, 2023",
-      "prediction": "2023-07-28",
+      "prediction": "According to the memory, Sam planned to start going to the gym and exercising regularly beginning on **2023-07-28**.",
       "retrieved_ids": [
         "sem_01M2QXMW4DENA907J8SZHDCW9F",
         "epi_01M2QY076KAZ2Q5FB0F04SHX40",
@@ -1319,7 +1334,7 @@
       "category": "temporal",
       "question": "What significant event happened in Sam's life towards the end of summer 2023?",
       "answer": "He fell in love with a Canadian woman",
-      "prediction": "Shortly before 2023-08-15, Sam had a doctor's appointment (after a tough week) that he described as a wake-up call to take better care of his health.",
+      "prediction": "Towards the end of summer 2023 (around mid-August), Sam had a tough week and a doctor's appointment, which he described as a wake-up call to take better care of his health. He was also going through challenging health issues that were hard on him at that time.",
       "retrieved_ids": [
         "epi_01M2QXR5SSRMW9C9YFF4AK6XX4",
         "epi_01M2QXMW4DENA907J8SZHDCW9C",
@@ -1348,7 +1363,7 @@
       "category": "temporal",
       "question": "Which year did Evan start taking care of his health seriously?",
       "answer": "2021",
-      "prediction": "2021 (around August 2021).",
+      "prediction": "Around **2021** — Evan has been working on his health for two years as of August 2023, and he changed his diet and started walking regularly around 2021.",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJD7",
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
@@ -1377,7 +1392,7 @@
       "category": "multihop",
       "question": "What motivates Evan to take care of his health?",
       "answer": "family, fitness tracker, thirst for adventure on interesting hikes",
-      "prediction": "Evan's family motivates him to stay healthy.",
+      "prediction": "Evan's family motivates him to stay healthy. He also finds a tracking tool for his health goals very motivating, as it tracks his progress and serves as a constant visual reminder to keep going.",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJDB",
         "epi_01M2QXMW4DENA907J8SZHDCW9H",
@@ -1406,7 +1421,7 @@
       "category": "open_domain",
       "question": "What electronic device could Evan gift Sam to help him keep up with his fitness goals?",
       "answer": "fitness tracker",
-      "prediction": "不知道。记忆中只提到Evan使用一个追踪工具来记录健康目标进度，但没有说明它是什么电子设备。",
+      "prediction": "A fitness tracker (a tracking device for health goals) — like the one Evan uses, which tracks progress and serves as a constant visual reminder to keep going, and which he finds very motivating.",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJDA",
         "sem_01M2QXKGTW37DE44HDRPZVD5SK",
@@ -1435,13 +1450,14 @@
       "category": "multihop",
       "question": "What kind of writing does Sam do to relax and cope with his health issues?",
       "answer": "journalling, creative writing",
-      "prediction": "Sam does journaling and creative writing to express his innermost thoughts and feelings, which he finds therapeutic.",
+      "prediction": "Sam does **journaling and creative writing** — he uses them to express his innermost thoughts and feelings, and finds them therapeutic for coping with his health issues.",
       "retrieved_ids": [
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
         "sem_01M2QYNCE31HQ2P68D9DXG8RNM",
         "sem_01M2QXZKG9YPPNVDATR0NDAEDD",
         "sem_01M2QY9B8PF84M205163XH39M8",
         "epi_01M2QXR5SSRMW9C9YFF4AK6XX4",
+        "sem_01M2QXG5WVY2R41KPFSSTS42Q6",
         "sem_01M2QY16HWKVGM3BQQVZXA53AE",
         "sem_01M2QXJ69635AMH0Z0K4C9B943",
         "sem_01M2QXMW4DENA907J8SZHDCW9D",
@@ -1451,8 +1467,7 @@
         "sem_01M2QXG5WVY2R41KPFSSTS42Q4",
         "epi_01M2QY2PEJCZXHEQWR32WX8B6Y",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ13",
-        "sem_01M2QY6BVTDR48ZF67EHWT6E53",
-        "sem_01M2QXG5WVY2R41KPFSSTS42Q6"
+        "sem_01M2QY6BVTDR48ZF67EHWT6E53"
       ],
       "gold_ids": [
         "epi_01M2QXQ7DQR3DN34FXQCWBYJ10",
@@ -1479,7 +1494,7 @@
       "category": "multihop",
       "question": "Who did Evan meet on his trip to Canada, and who did he come back from Canada with?",
       "answer": "Evan met the woman he fell in love with and returned with her.",
-      "prediction": "Evan met a Canadian woman on his trip to Canada (whom he described as incredible and who makes him feel alive). He returned from Canada with his new significant other — that same woman, whom he later married.",
+      "prediction": "On his trip to Canada (week of 2023-07-31), Evan met a Canadian woman whom he describes as incredible and who makes him feel alive. He returned from Canada around 2023-08-13 with his new significant other — presumably that same Canadian woman, since they enjoyed hiking and biking together on the vacation.",
       "retrieved_ids": [
         "epi_01M2QXNZFYMXHS775NTZGSBJD5",
         "epi_01M2QYEWTJP15P782F4K5B7Z6W",
@@ -1519,7 +1534,7 @@
       "category": "temporal",
       "question": "When Evan get back from a vacation with his SO?",
       "answer": "August 13, 2023",
-      "prediction": "Around 2023-08-13.",
+      "prediction": "Evan returned around **August 13, 2023** from a vacation in Canada with his significant other.",
       "retrieved_ids": [
         "epi_01M2QXQ7DQR3DN34FXQCWBYJ10",
         "sem_01M2QYBVS0EPBPB5VJ04DJP60K",
@@ -1548,7 +1563,7 @@
       "category": "open_domain",
       "question": "How might Evan and Sam's experiences with health and lifestyle changes influence their approach to stress and challenges?",
       "answer": "Their experiences likely lead them to view challenges as opportunities for growth and change. They both have embraced healthier lifestyles, indicating a proactive approach to managing stress and challenges.",
-      "prediction": "根据记忆，他们的经历可能以以下方式影响他们应对压力和挑战：\n\n- **Evan**：他通过坚持饮食和生活方式的改变成功改善了自己的健康，这让他学会了用积极的生活方式变化来应对挑战。他还练习瑜伽来缓解压力和保持柔韧性，把瑜伽作为管理压力的工具。\n- **Sam**：在得知体重问题后，他决心打破旧习惯、做出积极改变，这表明他倾向于通过主动改善生活方式来应对健康挑战。\n- **共同点**：两人约定在健康之旅中互相支持，Evan 的支持对 Sam 意义重大。这种相互支持的关系可能帮助他们更有韧性地面对压力和困难。",
+      "prediction": "Based on the memories, Evan's own past health struggle — which he overcame through diet and lifestyle changes — likely taught him to face stress and challenges proactively and with healthy coping strategies. He now uses yoga specifically for stress relief and flexibility, alongside his gym routine, showing he turns to constructive habits when dealing with pressure.\n\nSam, having faced serious health warnings and challenging health issues, appears motivated to break old habits and make positive changes rather than avoid problems. Since he and Evan agreed to keep supporting each other — and Sam values Evan's support deeply — they likely approach stress and challenges as a team, encouraging one another and drawing on their shared commitment to healthier lifestyles.",
       "retrieved_ids": [
         "epi_01M2QXMW4DENA907J8SZHDCW9H",
         "sem_01M2QYAPJKYDH2WNTGND6J22X9",
@@ -1592,7 +1607,7 @@
       "category": "multihop",
       "question": "What recurring frustration does Evan experience?",
       "answer": "Evan consistently misplaces his keys every week.",
-      "prediction": "Evan loses his keys about once a week, which he calls a weekly ritual.",
+      "prediction": "Evan regularly loses his keys — about once a week, which he calls his \"weekly ritual.\"",
       "retrieved_ids": [
         "cor_01M2QXX5WQHDY6BYQE76N3TPSR",
         "cor_01M2QYJ03T83NJQ1TEB2AVS5Y3",
@@ -1676,7 +1691,7 @@
       "category": "multihop",
       "question": "What accidents has Evan's son faced lately?",
       "answer": "injured at a soccer game, fell off his bike",
-      "prediction": "根据记忆，Evan的儿子最近经历了两起事故：\n\n1. **2023-12-12**：骑自行车时摔倒（截至2023-12-17，他已好转）。\n2. **2023-08-12**：踢足球时扭伤脚踝（伤势不严重，截至2023-08-15仍在恢复中）。",
+      "prediction": "Lately, Evan's son fell off his bike in an accident on 2023-12-12; as of 2023-12-17 he was doing better. Earlier, on Saturday 2023-08-12, he hurt his ankle in a soccer accident — the injury was not serious, and as of 2023-08-15 the ankle was still sore but recovering.",
       "retrieved_ids": [
         "epi_01M2QYCZT3CWCZ25J95C7J5SB8",
         "sem_01M2QXNZFYMXHS775NTZGSBJDB",
@@ -1708,7 +1723,7 @@
       "category": "temporal",
       "question": "When was Evan's son injured at soccer?",
       "answer": "Saturday before August 15, 2023.",
-      "prediction": "2023年8月12日（星期六），Evan的儿子在踢足球时扭伤了脚踝。",
+      "prediction": "Evan's son was injured at soccer on Saturday, August 12, 2023 (2023-08-12), when he hurt his ankle in a soccer accident.",
       "retrieved_ids": [
         "epi_01M2QXZKG83ZC31VJ9S84QFQGC",
         "epi_01M2QXR5SSRMW9C9YFF4AK6XX2",
@@ -1734,7 +1749,7 @@
       "category": "multihop",
       "question": "What kind of foods or recipes has Sam recommended to Evan?",
       "answer": "grilled vegetables, grilled chicken and veggie stir-fry, poutine",
-      "prediction": "不知道。记忆中只提到Evan答应把健康零食（能量球和饼干）的食谱发给Sam，没有提到Sam向Evan推荐过任何食物或食谱。",
+      "prediction": "The memories don't mention Sam recommending any foods or recipes to Evan. It's actually the reverse: Evan promised to send Sam recipes for his healthy snacks, including energy balls and cookies.",
       "retrieved_ids": [
         "epi_01M2QYGQ4X6M25MP81PHMKTWQ8",
         "epi_01M2QXX5WQHDY6BYQE76N3TPSW",
@@ -1752,9 +1767,9 @@
         "sem_01M2QYNCE31HQ2P68D9DXG8RNR",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC3C",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QP",
-        "epi_01M2QXKGTW37DE44HDRPZVD5SG",
         "sem_01M2QYNCE31HQ2P68D9DXG8RNM",
         "sem_01M2QXY0WDF235BGP2GAGDWWY1",
+        "epi_01M2QXKGTW37DE44HDRPZVD5SG",
         "sem_01M2QXKGTW37DE44HDRPZVD5SE",
         "sem_01M2QYNCE31HQ2P68D9DXG8RNN"
       ],
@@ -1788,12 +1803,12 @@
       "category": "multihop",
       "question": "What kind of healthy meals did Sam start eating after getting a health scare?",
       "answer": "salad, grilled salmon and vegetables, grilled chicken and veggie stir-fry, Beef Merlot, fruit bowl, smoothie bowl",
-      "prediction": "不知道。记忆中只提到 Sam 在胃炎惊吓后计划采用更有营养的饮食，但没有具体说明他开始吃什么样的健康餐。",
+      "prediction": "The memories don't specify what kind of healthy meals Sam started eating. They only mention that after his gastritis scare (17 October 2023), Sam planned to prioritize his health by adopting a more nutritious diet and getting regular exercise — no details about the specific meals are given.",
       "retrieved_ids": [
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QN",
         "sem_01M2QY16HWKVGM3BQQVZXA53AE",
-        "sem_01M2QYGQ4W2JZCQYY3139KVE87",
         "sem_01M2QXR5SSRMW9C9YFF4AK6XX3",
+        "sem_01M2QYGQ4W2JZCQYY3139KVE87",
         "sem_01M2QXZKG9YPPNVDATR0NDAEDF",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
         "sem_01M2QXMW4DENA907J8SZHDCW9D",
@@ -1883,7 +1898,7 @@
       "category": "open_domain",
       "question": "What role does nature and the outdoors play in Evan and Sam's mental well-being?",
       "answer": "Nature and outdoor activities seem to be significant stress relievers and sources of joy for both Evan and Sam. These activities likely contribute positively to their mental well-being.",
-      "prediction": "Nature plays a calming, stress-relieving role for both:\n\n- **Sam**: Finds nature calming and rejuvenating—it helps him relax and get fresh air away from the city. He wants to spend more time outdoors to de-stress from work.\n- **Evan**: Nature brings him peace and captivates him; he paints landscapes to capture its tranquil vibe, using painting as his way to relax and express himself. He also finds hiking calming and fun.",
+      "prediction": "Nature plays a calming, stress-relieving role for both of them:\n\n- **Sam**: Being in nature is calming and rejuvenating—it helps him relax and get fresh air away from the city. He loves being surrounded by nature and wants to spend more time outdoors to de-stress from work.\n- **Evan**: Nature brings him peace and captivates him as a landscape painter; painting outdoors scenes is his way to relax and express himself. He also regularly goes hiking, which he finds calming and fun.\n\nIn short, for both, nature serves as a source of relaxation, peace, and escape from daily stress.",
       "retrieved_ids": [
         "sem_01M2QYNCE31HQ2P68D9DXG8RNQ",
         "sem_01M2QY6BVTDR48ZF67EHWT6E53",
@@ -1929,18 +1944,18 @@
       "category": "temporal",
       "question": "How many months lapsed between Sam's first and second doctor's appointment?",
       "answer": "three months",
-      "prediction": "大约3个月（2023-05-21 至 2023-08-15前不久）。",
+      "prediction": "About 3 months. Sam's first appointment was the check-up around 2023-05-21, and his second was shortly before 2023-08-15.",
       "retrieved_ids": [
         "epi_01M2QXR5SSRMW9C9YFF4AK6XX4",
         "epi_01M2QXJ69635AMH0Z0K4C9B941",
         "sem_01M2QY6BVTDR48ZF67EHWT6E53",
-        "sem_01M2QXMW4DENA907J8SZHDCW9D",
+        "sem_01M2QXJ69635AMH0Z0K4C9B942",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ14",
+        "sem_01M2QXMW4DENA907J8SZHDCW9D",
         "epi_01M2QXG5WVY2R41KPFSSTS42Q5",
         "epi_01M2QXMW4DENA907J8SZHDCW9C",
         "sem_01M2QY2PEJCZXHEQWR32WX8B74",
-        "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
-        "sem_01M2QYNCE31HQ2P68D9DXG8RNM"
+        "sem_01M2QXQ7DQR3DN34FXQCWBYJ12"
       ],
       "gold_ids": [
         "epi_01M2QXJ69635AMH0Z0K4C9B940",
@@ -1961,7 +1976,7 @@
       "category": "temporal",
       "question": "When did Evan start taking painting classes?",
       "answer": "Few days before 19 August, 2023.",
-      "prediction": "大约在2023-08-16（2023-08-19前几天）。",
+      "prediction": "Evan started taking painting classes around August 16, 2023 (a few days before 2023-08-19).",
       "retrieved_ids": [
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QR",
         "sem_01M2QXY0WDF235BGP2GAGDWWY1",
@@ -1997,7 +2012,7 @@
       "category": "temporal",
       "question": "Which classes did Evan join in mid-August 2023?",
       "answer": "painting classes",
-      "prediction": "Painting classes.",
+      "prediction": "Evan joined **painting classes** in mid-August 2023 (around 2023-08-16), where the group is learning watercolors.",
       "retrieved_ids": [
         "epi_01M2QXKGTW37DE44HDRPZVD5SC",
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QR",
@@ -2033,7 +2048,7 @@
       "category": "multihop",
       "question": "How did Evan get into painting?",
       "answer": "His friend got him into it by gifting him a painting and giving him some advice. The painting inspired Evan.",
-      "prediction": "A friend got him into it — the friend gave him advice and a painting that inspired him a lot, and Evan was hooked right away.",
+      "prediction": "Evan got into painting years ago after a friend gave him a painting that inspired him a lot. A friend also got him into watercolor painting specifically, giving him some advice, and he was hooked right away.",
       "retrieved_ids": [
         "sem_01M2QXG5WVY2R41KPFSSTS42Q8",
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QS",
@@ -2085,7 +2100,7 @@
       "category": "open_domain",
       "question": "How often does Sam get health checkups?",
       "answer": "every three months",
-      "prediction": "不知道。记忆中只提到 Sam 在 2023-10-02 做过一次体检，但没有说明他多久做一次体检。",
+      "prediction": "The memories don't say how often Sam gets health checkups. They only mention that he had one check-up on October 2, 2023, where the doctor told him his weight was a serious health risk. There's no information about a regular checkup schedule or frequency.",
       "retrieved_ids": [
         "sem_01M2QXMW4DENA907J8SZHDCW9D",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
@@ -2123,7 +2138,7 @@
       "category": "multihop",
       "question": "What kind of subjects does Evan enjoy painting?",
       "answer": "nature landscapes, portraits, abstract minimalism",
-      "prediction": "Evan enjoys painting landscapes — nature's beauty captivates him and brings him peace, and he aims to capture the tranquil vibe of being outdoors.",
+      "prediction": "Evan enjoys painting **landscapes** — nature's beauty captivates him and brings him peace, and he aims to capture the tranquil vibe of being outdoors in his work. He has also painted other subjects, such as a sunset painting and a contemporary figurative painting, but landscapes are what he loves most.",
       "retrieved_ids": [
         "cor_01M2QXVB2JDRKDGKWTAN7YQ4QV",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QT",
@@ -2187,7 +2202,7 @@
       "category": "temporal",
       "question": "Which places in Canada was Evan visiting in July 2023?",
       "answer": "Banff, Rocky Mountains",
-      "prediction": "Banff and the Rocky Mountains.",
+      "prediction": "In July 2023, Evan visited Banff and the Rocky Mountains in Canada on a road trip.",
       "retrieved_ids": [
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QY",
         "epi_01M2QXQ7DQR3DN34FXQCWBYJ10",
@@ -2241,7 +2256,7 @@
       "category": "open_domain",
       "question": "How do Evan and Sam use creative outlets to cope with life's challenges?",
       "answer": "Evan and Sam use creative activities, like painting and writing, as therapeutic tools to express themselves and cope with stress.",
-      "prediction": "Sam 通过写日记和创意写作来表达内心深处的想法和感受，他觉得这很有疗愈作用；他还计划尝试绘画来放松、缓解压力和应对渴望。Evan 则通过绘画来识别和处理自己的情绪，用画面表达情感，并通过绘画或开车来缓解压力。",
+      "prediction": "Sam copes through journaling and creative writing to express his innermost thoughts and feelings, which he finds therapeutic, and he took up painting as a relaxing hobby to de-stress, stay motivated, and cope with cravings. Evan relieves stress by painting (or going for a drive), and uses painting to recognize and handle his own feelings, portraying emotions without words. They even arranged a joint painting session (Saturday, 2023-09-16), with Evan helping Sam get supplies.",
       "retrieved_ids": [
         "sem_01M2QXZKG9YPPNVDATR0NDAEDD",
         "sem_01M2QXY0WDF235BGP2GAGDWWY1",
@@ -2287,7 +2302,7 @@
       "category": "temporal",
       "question": "When did Evan go skiing in Banff?",
       "answer": "July 2023",
-      "prediction": "2023年7月，Evan开车去Banff公路旅行时滑雪。",
+      "prediction": "Evan went skiing in Banff in July 2023, during a road trip there where he enjoyed the amazing views and had fun skiing in great snow.",
       "retrieved_ids": [
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QY",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QZ",
@@ -2323,7 +2338,7 @@
       "category": "multihop",
       "question": "What new diet and lifestyle change did Sam adopt over time?",
       "answer": "Healthy eating, exercise routine, running, hiking",
-      "prediction": "Sam adopted a healthier diet and exercise routine (started 2023-08-21) after learning about his weight problem at a doctor's check-up, aiming to break old habits and live a healthier lifestyle.",
+      "prediction": "Sam adopted a healthier diet and lifestyle, including a new diet and exercise routine that he started on 2023-08-21. After learning about his weight problem at a doctor's check-up in May 2023, he began breaking old habits, eating healthier, and taking small steps toward a healthier life.",
       "retrieved_ids": [
         "cor_01M2QXVB2JDRKDGKWTAN7YQ4QM",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QN",
@@ -2409,7 +2424,7 @@
       "category": "multihop",
       "question": "Who was injured in Evan's family?",
       "answer": "Evan's son and Evan himself",
-      "prediction": "Evan 本人（打篮球时膝盖受伤）和他的儿子（骑自行车摔伤、踢足球时脚踝受伤）。",
+      "prediction": "Evan's son was injured twice: he hurt his ankle in a soccer accident on 2023-08-12, and fell off his bike in an accident on 2023-12-12. (Evan himself also injured his knee playing basketball around 2023-09-29.)",
       "retrieved_ids": [
         "epi_01M2QXZKG83ZC31VJ9S84QFQGC",
         "sem_01M2QXNZFYMXHS775NTZGSBJDB",
@@ -2465,7 +2480,7 @@
       "category": "multihop",
       "question": "What kind of hobbies does Evan pursue?",
       "answer": "painting, hiking, reading books, biking, skiing, snowboarding, ice skating, swimming, camping, kayaking",
-      "prediction": "Evan pursues active and creative hobbies: winter sports (skiing, snowboarding, ice skating, snowshoeing), hiking, and painting (watercolors).",
+      "prediction": "Evan pursues active and creative hobbies: winter sports like skiing, snowboarding, and ice skating; hiking, which he finds calming and fun; snowshoeing, which he recently tried with his partner; and painting—he takes painting classes (learning watercolors) and paints to express himself.",
       "retrieved_ids": [
         "cor_01M2QXX5WQHDY6BYQE76N3TPSR",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QW",
@@ -2576,7 +2591,7 @@
       "category": "open_domain",
       "question": "What challenges does Sam face in his quest for a healthier lifestyle, and how does he address them?",
       "answer": "Sam faces challenges like maintaining motivation and making dietary changes. He addresses them by enrolling in cooking classes and seeking support from friends like Evan.",
-      "prediction": "**挑战：**\n- 觉得节食很难，健身目标难以实现（2023-11-21）\n- 在2023-10-14前一周忍不住买了不健康的零食\n- 持续的健康问题让他觉得无法充分地生活（2024-01-11）\n\n**应对方式：**\n- 决心坚定，坚持节食\n- 承认自己必须做得更好\n- 努力保持积极心态\n- 参加烹饪课学习做更健康的饭菜\n- 通过小步骤逐步养成健康习惯\n- 从饭后精力更充沛、不再昏昏沉沉中获得鼓励",
+      "prediction": "Sam faces several challenges: a weight problem discovered at his doctor's check-up (May 2023), ongoing/challenging health issues that make him feel he can't fully live (Aug 2023, Jan 2024), finding the diet tough and his fitness goals hard to reach (Aug & Nov 2023), and slipping up by buying unhealthy snacks (Oct 2023).\n\nHe addresses them by staying determined and sticking with his diet, taking a cooking class to learn healthier meals, building habits through small steps, telling himself he has to do better after setbacks, and trying to stay positive despite his health issues. His efforts show results—he's noticed more energy and less sluggishness after eating.",
       "retrieved_ids": [
         "cor_01M2QXVB2JDRKDGKWTAN7YQ4QM",
         "sem_01M2QXJ69635AMH0Z0K4C9B942",
@@ -2616,7 +2631,7 @@
       "category": "temporal",
       "question": "Which activity do Evan and Sam plan on doing together during September 2023?",
       "answer": "painting",
-      "prediction": "A joint painting session (scheduled for Saturday, 2023-09-16).",
+      "prediction": "A joint painting session, arranged for Saturday 2023-09-16 (with Evan helping Sam get the supplies ready).",
       "retrieved_ids": [
         "epi_01M2QYCZT5P829E54F7DYBDQYK",
         "epi_01M2QY74Q0EFGWHB8ERZKQ62D1",
@@ -2644,7 +2659,7 @@
       "category": "temporal",
       "question": "When did Evan and Sam decide to paint together?",
       "answer": "Saturday after 11 September, 2023.",
-      "prediction": "他们安排在2023年9月16日（星期六）一起画画。",
+      "prediction": "On 11 September 2023, Evan and Sam arranged a joint painting session, scheduled for Saturday, 16 September 2023.",
       "retrieved_ids": [
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QS",
         "sem_01M2QY2PEJCZXHEQWR32WX8B71",
@@ -2672,7 +2687,7 @@
       "category": "multihop",
       "question": "What personal health incidents does Evan face in 2023?",
       "answer": "heart palpitations, twisted ankle, twisted ankle",
-      "prediction": "2023年，Evan经历了以下健康事件：\n- 2023年5月底（约2023-05-30）：突发心悸，他称之为对生活方式的严重警醒。\n- 截至2023年8月：一直在应对健康问题，虽然艰难但让他更珍惜美好时刻。\n- 2023年11月中旬（约2023-11-14）：健康恐慌，去医院检查发现可疑情况，但最终证实是误会，医生确认一切正常。",
+      "prediction": "In 2023, Evan faced three health incidents:\n\n1. **Heart palpitation** — a sudden episode around late May 2023, which he called a serious wake-up call about his lifestyle.\n2. **Knee injury** — as of October 2023, he was recovering through physical therapy and easy strengthening exercises, unable to do intense workouts.\n3. **Health scare** — around mid-November 2023, he went to the hospital where a check-up found something suspicious, but it turned out to be a misunderstanding and doctors confirmed everything was fine.",
       "retrieved_ids": [
         "epi_01M2QY9B8NPEAGFYJHJ5FPCXSZ",
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
@@ -2736,7 +2751,7 @@
       "category": "multihop",
       "question": "What recurring adventure does Evan have with strangers?",
       "answer": "Helping lost tourists and experiencing unexpected adventures in the city.",
-      "prediction": "Helping lost tourists find their way — this has become a recurring theme in his life, and it once led to an unexpected tour around the city that he enjoyed.",
+      "prediction": "Evan has a recurring experience of helping lost tourists find their way — this has become a recurring theme in his life, and it sometimes leads to unexpected adventures like taking an unplanned tour around the city, which he enjoys.",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJDC",
         "epi_01M2QY2PEJCZXHEQWR32WX8B73",
@@ -2780,7 +2795,7 @@
       "category": "multihop",
       "question": "What is Sam's persistent problem with his phone?",
       "answer": "His new phone malfunctioning, particularly with the navigation app.",
-      "prediction": "Sam's new phone's navigation app keeps malfunctioning, making it hard for him to get around.",
+      "prediction": "Sam's new phone's navigation app keeps malfunctioning, making it hard for him to get around, and the phone has been giving him ongoing trouble that adds to his stress.",
       "retrieved_ids": [
         "sem_01M2QY2PEJCZXHEQWR32WX8B74",
         "epi_01M2QXZKG9YPPNVDATR0NDAEDG",
@@ -2824,7 +2839,7 @@
       "category": "open_domain",
       "question": "Which US state was Sam travelling in during October 2023?",
       "answer": "California",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention Sam travelling in October 2023 or any US state — they only note a medical check-up on 2023-10-02 and a new health routine around 2023-10-25.",
       "retrieved_ids": [
         "epi_01M2QXR5SSRMW9C9YFF4AK6XX4",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC3C",
@@ -2853,7 +2868,7 @@
       "category": "temporal",
       "question": "When did Evan start lifting weights?",
       "answer": "October 2022",
-      "prediction": "Around October 2022.",
+      "prediction": "Evan started lifting weights around October 2022 (one year before October 2023).",
       "retrieved_ids": [
         "sem_01M2QY076KAZ2Q5FB0F04SHX41",
         "sem_01M2QY6BVTDR48ZF67EHWT6E50",
@@ -2878,7 +2893,7 @@
       "category": "temporal",
       "question": "When did Sam and his friend decide to try kayaking?",
       "answer": "October 14, 2023",
-      "prediction": "不知道。记忆中只提到 Sam 对尝试皮划艇感兴趣，以及 2023-10-14 他和朋友去 Lake Tahoe 划了皮划艇，但没有说明他们决定尝试皮划艇的具体时间。",
+      "prediction": "On 14 October 2023 (2023-10-14) — that's when Sam's interest in trying kayaking was noted, and he and a friend went kayaking on Lake Tahoe that same day. Also on that date, Sam and Evan agreed to plan a future kayaking trip together.",
       "retrieved_ids": [
         "sem_01M2QY16HWKVGM3BQQVZXA53AG",
         "epi_01M2QY16HWKVGM3BQQVZXA53AH",
@@ -2907,7 +2922,7 @@
       "category": "temporal",
       "question": "Which new activity does Sam take up in October 2023?",
       "answer": "kayaking",
-      "prediction": "A new health routine (started around 2023-10-25, pushed strongly by his family).",
+      "prediction": "In October 2023, Sam started a new health routine (around 2023-10-25), which he felt pressured into because his family was strongly pushing for it.",
       "retrieved_ids": [
         "epi_01M2QY6BVTDR48ZF67EHWT6E4X",
         "epi_01M2QXX5WQHDY6BYQE76N3TPSN",
@@ -2936,7 +2951,7 @@
       "category": "temporal",
       "question": "What kind of stress was Sam dealing with in October 2023?",
       "answer": "work-related stress",
-      "prediction": "In October 2023, Sam was dealing with **work stress** (as of 2023-10-14), and his phone giving him trouble added to his stress (as of 2023-10-17).",
+      "prediction": "In October 2023, Sam was dealing with **work stress** (as of 2023-10-14, he was trying to stay motivated). Additional stressors that month included his phone giving him trouble (2023-10-17) and feeling pressured by his family strongly pushing him to start a new health routine (around 2023-10-25).",
       "retrieved_ids": [
         "sem_01M2QY16HWKVGM3BQQVZXA53AD",
         "sem_01M2QY9B8PF84M205163XH39M8",
@@ -2965,7 +2980,7 @@
       "category": "multihop",
       "question": "What health scares did Sam and Evan experience?",
       "answer": "Sam faced a health scare with stomach pains that turned out to be gastritis, prompting him to rethink his health habits. Evan, on the other hand, experienced two separate incidents: a sudden heart palpitation incident and a different event involving a misunderstanding during a medical check-up. These experiences have significantly influenced their perspectives on health and well-being.",
-      "prediction": "- **Sam**: Had a tough week and a doctor's appointment shortly before 2023-08-15, which he described as a wake-up call to take better care of his health. He has ongoing health issues that he feels keep him from fully living.\n- **Evan**: Around 2023-11-14, he had a health scare and went to the hospital; a check-up found something suspicious, but it turned out to be a misunderstanding and doctors confirmed everything is fine.",
+      "prediction": "- **Sam**: He went through challenging health issues through 2023 and into 2024. Around mid-August 2023, after a tough week, he had a doctor's appointment that he described as a wake-up call to take better care of his health. As of January 2024, he still felt his ongoing health issues were keeping him from fully living, though he was trying to stay positive.\n\n- **Evan**: Around November 2023, he had a health scare and went to the hospital, where a check-up found something suspicious—but it turned out to be a misunderstanding, and doctors confirmed everything was fine. He had also dealt with tough health issues as of August 2023 and went through a health struggle a few years earlier, which he overcame through diet and lifestyle changes.",
       "retrieved_ids": [
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
         "sem_01M2QY6BVTDR48ZF67EHWT6E53",
@@ -3023,7 +3038,7 @@
       "category": "temporal",
       "question": "When was Sam in the ER?",
       "answer": "weekend before 17 October, 2023.",
-      "prediction": "Sam went to the ER on the weekend of 2023-10-14 with a severe stomachache and was diagnosed with gastritis.",
+      "prediction": "Sam went to the ER on the weekend of 2023-10-14 (October 14, 2023) with a severe stomachache and was diagnosed with gastritis.",
       "retrieved_ids": [
         "epi_01M2QXJ69635AMH0Z0K4C9B941",
         "epi_01M2QXG5WVY2R41KPFSSTS42Q5",
@@ -3052,7 +3067,7 @@
       "category": "multihop",
       "question": "Which ailment does Sam have to face due to his weight?",
       "answer": "gastritis",
-      "prediction": "不知道",
+      "prediction": "Based on the memories, no specific ailment is named. The only related fact is that on 2023-10-02, Sam's doctor told him his weight is a serious health risk that could get worse if he doesn't make changes soon.",
       "retrieved_ids": [
         "sem_01M2QYCZT5P829E54F7DYBDQYE",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
@@ -3104,7 +3119,7 @@
       "category": "open_domain",
       "question": "Does Evan live close to a beach or mountains?",
       "answer": "beach",
-      "prediction": "是的，Evan家附近有一个海滩——那是他最喜欢的放松地点。",
+      "prediction": "Yes. According to memory, Evan's favorite spot to relax is a peaceful beach near his home, so he lives close to a beach. (He also took a trip to the mountains in December 2023, but the memory doesn't say he lives near mountains.)",
       "retrieved_ids": [
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC39",
         "sem_01M2QY74Q0EFGWHB8ERZKQ62D0",
@@ -3160,7 +3175,7 @@
       "category": "temporal",
       "question": "When did Evan and Sam planned a trip to the beach together?",
       "answer": "December, 2023",
-      "prediction": "他们在 2023-11-09 商定一起去 Evan 最喜欢的海滩日落地点，计划在 2023 年 12 月出行。",
+      "prediction": "On 2023-11-09, Sam and Evan agreed to visit Evan's favorite beach sunset spot together, planning the trip for December 2023.",
       "retrieved_ids": [
         "epi_01M2QY74Q0EFGWHB8ERZKQ62D1",
         "epi_01M2QY16HWKVGM3BQQVZXA53AJ",
@@ -3188,7 +3203,7 @@
       "category": "temporal",
       "question": "What was Sam doing on December 4, 2023?",
       "answer": "Attending a Weight Watchers meeting",
-      "prediction": "不知道。记忆中只提到 Sam 和 Evan 计划在 2023 年 12 月一起去海滩看日落，但没有具体说明是 12 月 4 日。",
+      "prediction": "不知道。记忆中只提到 Sam 和 Evan 计划在 2023 年 12 月一起去 Evan 最喜欢的海滩看日落，但没有记录具体日期，因此无法确定 12 月 4 日当天 Sam 在做什么。",
       "retrieved_ids": [
         "epi_01M2QY74Q0EFGWHB8ERZKQ62D1",
         "epi_01M2QYGQ4X6M25MP81PHMKTWQ3",
@@ -3214,7 +3229,7 @@
       "category": "multihop",
       "question": "Which two significant life events occur in Evan's life in December 2023 with his partner?",
       "answer": "his partner gets pregnant and they get married",
-      "prediction": "In December 2023, Evan experienced two significant life events with his partner:\n1. **Pregnancy announcement** – On 2023-12-09, Evan shared that his partner is pregnant, and the family was excited.\n2. **Marriage** – Around 2023-12-19 (the week before 2023-12-26), Evan married a woman from Canada, whom he says he fell in love with at first sight.",
+      "prediction": "In December 2023, two significant life events occurred for Evan with his partner:\n\n1. **Pregnancy announcement** – On 2023-12-09, Evan shared that his partner is pregnant, and the family was excited.\n2. **Marriage** – Around 2023-12-19, Evan got married to a woman from Canada, whom he says he fell in love with at first sight.",
       "retrieved_ids": [
         "epi_01M2QYEWTJP15P782F4K5B7Z6W",
         "epi_01M2QY74Q0EFGWHB8ERZKQ62D1",
@@ -3254,7 +3269,7 @@
       "category": "temporal",
       "question": "How long did Evan and his partner date before getting married?",
       "answer": "four months",
-      "prediction": null,
+      "prediction": "About 4 months — Evan got a new significant other in August 2023 and married her around December 19, 2023.",
       "retrieved_ids": [
         "epi_01M2QYEWTJP15P782F4K5B7Z6W",
         "cor_01M2QYJ03T83NJQ1TEB2AVS5Y3",
@@ -3296,7 +3311,7 @@
       "category": "open_domain",
       "question": "Which major holiday season conincides with Evan's wedding?",
       "answer": "Christmas",
-      "prediction": "Christmas.",
+      "prediction": "Christmas — Evan got married around 2023-12-19, the week before Christmas.",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
         "epi_01M2QYKPZZ1ZYX6B6KSDBWNC35",
@@ -3326,7 +3341,7 @@
       "category": "multihop",
       "question": "Which activity did Sam resume in December 2023 after a long time?",
       "answer": "hiking",
-      "prediction": "Hiking — Sam took friends on an epic hiking trip on 2023-12-29, after not having gone hiking for a very long time.",
+      "prediction": "Hiking. Sam took friends on an epic hiking trip on 2023-12-29, resuming hiking after not having gone for a very long time.",
       "retrieved_ids": [
         "epi_01M2QY74Q0EFGWHB8ERZKQ62D1",
         "sem_01M2QXJ69635AMH0Z0K4C9B942",
@@ -3366,7 +3381,7 @@
       "category": "temporal",
       "question": "When is Evan planning a big family reunion?",
       "answer": "Summer 2024",
-      "prediction": "In the summer of 2024.",
+      "prediction": "Evan's family is planning a big family reunion in the summer of 2024.",
       "retrieved_ids": [
         "sem_01M2QYBVS0EPBPB5VJ04DJP60K",
         "cor_01M2QYBVS0EPBPB5VJ04DJP60P",
@@ -3394,7 +3409,7 @@
       "category": "temporal",
       "question": "When did Evan's son fall off his bike?",
       "answer": "Thursday before December 17, 2023.",
-      "prediction": "2023-12-12。",
+      "prediction": "Evan's son fell off his bike on December 12, 2023 (2023-12-12).",
       "retrieved_ids": [
         "epi_01M2QYCZT3CWCZ25J95C7J5SB8",
         "sem_01M2QYBVS0EPBPB5VJ04DJP60K",
@@ -3422,7 +3437,7 @@
       "category": "temporal",
       "question": "When did Evan announce his marriage to his extended family?",
       "answer": "January 5, 2024",
-      "prediction": "2024-01-05。",
+      "prediction": "Evan announced his marriage to his extended family on **January 5, 2024** (2024-01-05), and the families reacted with love, happiness and support.",
       "retrieved_ids": [
         "epi_01M2QYJ03T83NJQ1TEB2AVS5Y4",
         "sem_01M2QYBVS0EPBPB5VJ04DJP60K",
@@ -3449,7 +3464,7 @@
       "category": "temporal",
       "question": "When did Evan finish the painting that's hanging in the exhibit?",
       "answer": "few days before 17 December, 2023.",
-      "prediction": "大约在 2023-12-14（2023-12-17 前几天），Evan 完成了那幅挂在展览中的当代具象画。",
+      "prediction": "Around December 14, 2023 — a few days before it was placed in the exhibition on December 17, 2023.",
       "retrieved_ids": [
         "epi_01M2QYCZT5P829E54F7DYBDQYH",
         "sem_01M2QYCZT5P829E54F7DYBDQYJ",
@@ -3477,7 +3492,7 @@
       "category": "multihop",
       "question": "How does Evan spend his time with his bride after the wedding?",
       "answer": "family get-together, honeymoon in Canada to see snowy landscapes, ski, taste local cuisine and do some snowshoeing",
-      "prediction": "不知道。记忆中没有提到 Evan 婚后与新娘如何共度时光的具体信息。",
+      "prediction": "Based on the memories, Evan spends time with his bride doing shared activities such as **snowshoeing** (as of 10 January 2024, he shares activities like snowshoeing with his romantic partner, whom he refers to as \"she\").",
       "retrieved_ids": [
         "epi_01M2QYEWTJP15P782F4K5B7Z6W",
         "epi_01M2QYJ03T83NJQ1TEB2AVS5Y4",
@@ -3515,7 +3530,7 @@
       "category": "multihop",
       "question": "Who did Evan tell about his marriage?",
       "answer": "To Sam, to his friends from work, and to his and his wife's families.",
-      "prediction": "Evan 告诉了他的工作朋友，以及（在 2024-01-05）他和伴侣告诉了他们的大家庭。",
+      "prediction": "Evan told his work friends about his marriage, and on 2024-01-05, he and his partner told their extended family, who reacted with love, happiness and support.",
       "retrieved_ids": [
         "sem_01M2QYGQ4X6M25MP81PHMKTWQ5",
         "epi_01M2QYJ03T83NJQ1TEB2AVS5Y4",
@@ -3569,7 +3584,7 @@
       "category": "temporal",
       "question": "When will Evan and his partner have their honeymoon in Canada?",
       "answer": "February 2024",
-      "prediction": "2024年2月。",
+      "prediction": "According to the memory, Evan and his partner plan to travel to Canada in **February 2024** for their honeymoon, where they intend to ski, enjoy the snowy landscapes, and try local cuisine including poutine.",
       "retrieved_ids": [
         "epi_01M2QYEWTJP15P782F4K5B7Z6W",
         "epi_01M2QXQ7DQR3DN34FXQCWBYJ10",
@@ -3596,7 +3611,7 @@
       "category": "temporal",
       "question": "When did Evan have a drunken night with his friends?",
       "answer": "January 9, 2023",
-      "prediction": "On the night of 2024-01-09.",
+      "prediction": "On the night of January 9, 2024 (2024-01-09), Evan went out with friends and drank too much.",
       "retrieved_ids": [
         "epi_01M2QYKPZZ1ZYX6B6KSDBWNC35",
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
@@ -3626,7 +3641,7 @@
       "category": "multihop",
       "question": "What is a stress reliever for Evan?",
       "answer": "Drawing, traveling, places with a beautiful view, yoga, sunsets or something comfortable for Evan",
-      "prediction": "Evan 通过水彩画、瑜伽、开车兜风和徒步来缓解压力。",
+      "prediction": "Watercolor painting is Evan's stress reliever — it's his favorite hobby, which he uses to relax and unwind. (Yoga and going for a drive also help him relieve stress.)",
       "retrieved_ids": [
         "sem_01M2QYAPJKYDH2WNTGND6J22X9",
         "sem_01M2QXZKG9YPPNVDATR0NDAEDA",
@@ -3644,16 +3659,16 @@
         "sem_01M2QXJ69635AMH0Z0K4C9B943",
         "epi_01M2QYGQ4X6M25MP81PHMKTWQ8",
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
+        "sem_01M2QXQ7DQR3DN34FXQCWBYJ11",
         "sem_01M2QXNZFYMXHS775NTZGSBJDB",
+        "sem_01M2QYKPZZ1ZYX6B6KSDBWNC37",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QT",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QX",
-        "sem_01M2QXQ7DQR3DN34FXQCWBYJ11",
-        "sem_01M2QYKPZZ1ZYX6B6KSDBWNC37",
         "sem_01M2QXNZFYMXHS775NTZGSBJDC",
-        "sem_01M2QY16HWKVGM3BQQVZXA53AK",
         "sem_01M2QY6BVTDR48ZF67EHWT6E53",
         "epi_01M2QXX5WQHDY6BYQE76N3TPSP",
         "sem_01M2QXZKG9YPPNVDATR0NDAEDB",
+        "sem_01M2QY16HWKVGM3BQQVZXA53AK",
         "sem_01M2QXZKG83ZC31VJ9S84QFQGD",
         "sem_01M2QXNZFYMXHS775NTZGSBJD7",
         "sem_01M2QXNZFYMXHS775NTZGSBJD8",
@@ -3738,7 +3753,7 @@
       "category": "multihop",
       "question": "What is a stress reliever for Sam?",
       "answer": "Unhealthy snacks, sweets, yoga, places with beautiful views",
-      "prediction": "根据记忆，Sam 的减压方式包括：尝试绘画作为爱好，以及尝试一些不同的户外活动来缓解工作压力。",
+      "prediction": "Painting — Sam planned to take up painting as a hobby to de-stress (and also wanted to try something different outdoors to relieve work stress).",
       "retrieved_ids": [
         "sem_01M2QXJ69635AMH0Z0K4C9B943",
         "sem_01M2QXY0WDF235BGP2GAGDWWXZ",
@@ -3796,7 +3811,7 @@
       "category": "single_hop",
       "question": "What type of car did Evan get after his old Prius broke down?",
       "answer": "new Prius",
-      "prediction": "一辆新的普锐斯。",
+      "prediction": "Evan got a new Prius after his old Prius broke down.",
       "retrieved_ids": [
         "epi_01M2QYAPJKYDH2WNTGND6J22X7",
         "sem_01M2QXG5WVY2R41KPFSSTS42Q3",
@@ -3826,7 +3841,7 @@
       "category": "single_hop",
       "question": "How did Evan get into watercolor painting?",
       "answer": "friend's advice",
-      "prediction": "A friend got him into it and gave him some advice, and he was hooked right away.",
+      "prediction": "Evan got into watercolor painting after a friend got him into it and gave him some advice — he was hooked right away. (He had also started painting years ago after a friend gave him a painting that inspired him a lot.)",
       "retrieved_ids": [
         "sem_01M2QXG5WVY2R41KPFSSTS42Q8",
         "sem_01M2QXZKG9YPPNVDATR0NDAEDA",
@@ -3856,7 +3871,7 @@
       "category": "single_hop",
       "question": "What did Evan start doing a few years back as a stress-buster?",
       "answer": "watercolor painting",
-      "prediction": "水彩画（watercolor painting）。",
+      "prediction": "Evan started **watercolor painting** a few years back, which he finds to be a great stress-buster that helps him relieve stress and find peace.",
       "retrieved_ids": [
         "epi_01M2QXMW4DENA907J8SZHDCW9H",
         "sem_01M2QXNZFYMXHS775NTZGSBJD7",
@@ -3886,7 +3901,7 @@
       "category": "single_hop",
       "question": "What advice did Evan give Sam about finding a passion?",
       "answer": "keep trying new things until something sparks excitement",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention Evan giving Sam any advice about finding a passion.",
       "retrieved_ids": [
         "epi_01M2QXKGTW37DE44HDRPZVD5SJ",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ14",
@@ -3916,7 +3931,7 @@
       "category": "single_hop",
       "question": "Where did Evan take his family for a road trip on 24 May, 2023?",
       "answer": "Jasper",
-      "prediction": "不知道。记忆中Evan带家人自驾游是在2023-05-20至05-21去Jasper，没有5月24日的记录。",
+      "prediction": "Jasper——根据记忆，Evan",
       "retrieved_ids": [
         "epi_01M2QXJ69635AMH0Z0K4C9B940",
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QY",
@@ -3944,7 +3959,7 @@
       "category": "single_hop",
       "question": "What did Evan find relaxing about his road trip to Jasper?",
       "answer": "fresh air, peacefulness, cozy cabin surrounded by mountains and forests",
-      "prediction": "不知道。记忆中只提到Evan在Jareth公路旅行中开车经过Icefields Parkway、看冰川和湖泊、住在山林的舒适小屋，但没有说明他觉得这次旅行中什么让他感到放松。",
+      "prediction": "Based on the memory, Evan's Jasper trip involved driving through the Icefields Parkway, seeing glaciers and lakes, and staying in a cozy cabin surrounded by mountains and forests. While the memory doesn't explicitly label what was relaxing, it's reasonable to infer he found these elements relaxing—the scenic drive, the glaciers and lakes, and especially the cozy cabin nestled in the mountains and forests—consistent with how nature's beauty generally brings him peace and relaxation.",
       "retrieved_ids": [
         "epi_01M2QXJ69635AMH0Z0K4C9B940",
         "epi_01M2QXX5WQHDY6BYQE76N3TPSS",
@@ -3972,7 +3987,7 @@
       "category": "single_hop",
       "question": "What habit is Sam trying to change in terms of diet?",
       "answer": "consuming soda and candy",
-      "prediction": "Sam is trying to stop eating unhealthy snacks and eat healthier overall.",
+      "prediction": "Sam is trying to eat healthier — moving away from unhealthy eating habits (like buying unhealthy snacks) toward a healthier diet and lifestyle.",
       "retrieved_ids": [
         "sem_01M2QY9B8PF84M205163XH39M8",
         "epi_01M2QXKGTW37DE44HDRPZVD5SG",
@@ -4002,7 +4017,7 @@
       "category": "single_hop",
       "question": "What new suggestion did Evan give to Sam regarding his soda and candy consumption?",
       "answer": "try flavored seltzer water and dark chocolate with high cocoa content",
-      "prediction": "Evan建议Sam用调味气泡水代替苏打水，用高可可含量的黑巧克力代替糖果。",
+      "prediction": "Evan suggested that Sam swap soda for flavored seltzer water and candy for dark chocolate with high cocoa content.",
       "retrieved_ids": [
         "sem_01M2QXMW4DENA907J8SZHDCW9E",
         "sem_01M2QXKGTW37DE44HDRPZVD5SF",
@@ -4092,7 +4107,7 @@
       "category": "single_hop",
       "question": "What novel is Evan reading that he finds gripping?",
       "answer": "The Great Gatsby",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories contain no information about Evan reading any novel.",
       "retrieved_ids": [
         "sem_01M2QY2PEJCZXHEQWR32WX8B72",
         "sem_01M2QXX5WQHDY6BYQE76N3TPST",
@@ -4150,7 +4165,7 @@
       "category": "single_hop",
       "question": "What does the smartwatch help Evan with?",
       "answer": "tracks progress and serves as a constant reminder to keep going",
-      "prediction": "不知道。记忆中没有提到智能手表（smartwatch）。",
+      "prediction": "Based on the memory, Evan uses a tracking tool (the memory doesn't explicitly call it a smartwatch) for his health goals. It tracks his progress and serves as a constant visual reminder to keep going, which he finds very motivating.",
       "retrieved_ids": [
         "epi_01M2QXKGTW37DE44HDRPZVD5SJ",
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
@@ -4179,7 +4194,7 @@
       "category": "single_hop",
       "question": "What does the bonsai tree symbolize for Evan?",
       "answer": "strength and resilience",
-      "prediction": "不知道",
+      "prediction": "I don't know. None of the memories mention a bonsai tree or what it might symbolize for Evan.",
       "retrieved_ids": [
         "epi_01M2QYNCE31HQ2P68D9DXG8RNV",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QT",
@@ -4208,7 +4223,7 @@
       "category": "single_hop",
       "question": "Why did Evan decide to get the bonsai tree?",
       "answer": "motivates him to keep going through tough times",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories contain no information about Evan getting a bonsai tree or any reason for it.",
       "retrieved_ids": [
         "epi_01M2QXX5WQHDY6BYQE76N3TPSQ",
         "epi_01M2QYNCE31HQ2P68D9DXG8RNV",
@@ -4237,7 +4252,7 @@
       "category": "single_hop",
       "question": "According to Sam, what is more important than perfection?",
       "answer": "progress",
-      "prediction": "Progress.",
+      "prediction": "Progress. Sam values progress over perfection, which helps him take small steps toward healthier habits.",
       "retrieved_ids": [
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ14",
         "sem_01M2QXMW4DENA907J8SZHDCW9D",
@@ -4266,7 +4281,7 @@
       "category": "single_hop",
       "question": "What did Evan suggest Sam to check out for insights into his dream?",
       "answer": "dream interpretation book",
-      "prediction": "不知道。记忆中只提到 Sam 自己说会去看一本解梦书（dream interpretation book），并没有说是 Evan 建议的。",
+      "prediction": "A dream interpretation book.",
       "retrieved_ids": [
         "epi_01M2QXQ7DQR3DN34FXQCWBYJ15",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC3C",
@@ -4295,7 +4310,7 @@
       "category": "single_hop",
       "question": "What did Evan mention he had been searching for fruitlessly for half an hour?",
       "answer": "his keys",
-      "prediction": "他的钥匙（his keys）。",
+      "prediction": "His keys. Based on the memory that Evan loses his keys regularly (about once a week, which he calls a weekly ritual), the thing he had been searching for fruitlessly would be his keys.",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJD7",
         "sem_01M2QXJ69635AMH0Z0K4C9B944",
@@ -4324,7 +4339,7 @@
       "category": "single_hop",
       "question": "What class is Sam taking to learn how to make healthier meals?",
       "answer": "cooking class",
-      "prediction": "A cooking class.",
+      "prediction": "Sam is taking a **cooking class** to learn how to make healthier meals.",
       "retrieved_ids": [
         "sem_01M2QXR5SSRMW9C9YFF4AK6XX3",
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ13",
@@ -4350,11 +4365,11 @@
       "category": "single_hop",
       "question": "What dish did Sam make on 18 August, 2023 that turned out flavorful?",
       "answer": "grilled dish with salmon and vegetables",
-      "prediction": "不知道。记忆中只提到 Sam 在 2023-08-19 与 Evan 分享了他最爱的美味烤鸡肉蔬菜炒（配自制酱汁），但没有提到他在 2023 年 8 月 18 日做了什么菜。",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QP",
-        "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
         "sem_01M2QY9B8PF84M205163XH39M8",
+        "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
         "epi_01M2QY076KAZ2Q5FB0F04SHX3Z",
         "sem_01M2QXR5SSRMW9C9YFF4AK6XX3",
         "epi_01M2QXX5WQHDY6BYQE76N3TPSN",
@@ -4376,7 +4391,7 @@
       "category": "single_hop",
       "question": "What kind of recipe did Evan request from Sam on 19 August, 2023?",
       "answer": "recipes with more vegetables",
-      "prediction": "On 2023-08-19, Evan requested Sam's favorite healthy recipe — a grilled chicken and veggie stir-fry made with Sam's homemade sauce.",
+      "prediction": "Based on the memory, Sam shared his favorite healthy recipe with Evan on 2023-08-19 — a flavorful grilled chicken and veggie stir-fry made with his own homemade sauce. (The memory doesn't explicitly say Evan requested it, but that is the recipe involved between them on that date.)",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QP",
@@ -4402,7 +4417,7 @@
       "category": "single_hop",
       "question": "What food did Sam share a photo of on 19 August, 2023?",
       "answer": "bowl of spinach, avocado, and strawberries",
-      "prediction": "On 2023-08-19, Sam shared his favorite healthy recipe: a flavorful grilled chicken and veggie stir-fry made with his own homemade sauce.",
+      "prediction": "On 19 August 2023, Sam shared his favorite healthy recipe: a flavorful grilled chicken and veggie stir-fry made with his own homemade sauce.",
       "retrieved_ids": [
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QP",
@@ -4438,7 +4453,7 @@
       "category": "single_hop",
       "question": "What type of painting classes did Evan start taking in 2023?",
       "answer": "watercolor painting classes",
-      "prediction": "Watercolor painting classes — in his classes, the group is learning watercolors.",
+      "prediction": "Evan started taking watercolor painting classes — in his classes, the group is learning watercolors, with the instructor stressing observing nature and painting what one sees.",
       "retrieved_ids": [
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QR",
         "epi_01M2QYCZT5P829E54F7DYBDQYH",
@@ -4474,13 +4489,13 @@
       "category": "single_hop",
       "question": "What did Evan start painting years ago due to being inspired by a friend's gift?",
       "answer": "forest scene",
-      "prediction": "Evan started painting years ago after a friend gave him a painting that inspired him a lot.",
+      "prediction": "Evan started painting (watercolor painting) years ago after a friend gave him a painting that inspired him a lot.",
       "retrieved_ids": [
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QS",
         "sem_01M2QXG5WVY2R41KPFSSTS42Q7",
         "sem_01M2QXJ69635AMH0Z0K4C9B944",
-        "sem_01M2QXY0WDF235BGP2GAGDWWY1",
         "cor_01M2QXVB2JDRKDGKWTAN7YQ4QV",
+        "sem_01M2QXY0WDF235BGP2GAGDWWY1",
         "sem_01M2QXY0WDF235BGP2GAGDWWY0",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QT",
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QR",
@@ -4510,7 +4525,7 @@
       "category": "single_hop",
       "question": "What nature concept do watercolor painting classes emphasize according to Evan?",
       "answer": "observing nature and painting what is seen",
-      "prediction": "观察自然并描绘你所看到的。",
+      "prediction": "According to Evan, his watercolor painting classes emphasize **observing nature and painting what one sees**.",
       "retrieved_ids": [
         "sem_01M2QXZKG9YPPNVDATR0NDAEDA",
         "sem_01M2QXG5WVY2R41KPFSSTS42Q7",
@@ -4546,7 +4561,7 @@
       "category": "single_hop",
       "question": "What type of landscapes does Evan love painting the most?",
       "answer": "sunsets over the ocean",
-      "prediction": "不知道。记忆中只提到Evan喜欢画风景画，但没有说明他最喜欢哪种类型的风景。",
+      "prediction": "Based on the memories, Evan loves painting landscapes in general because nature's beauty captivates him and brings him peace—he aims to capture the tranquil, peaceful vibe of being outdoors. However, no specific type of landscape (e.g., mountains, seascapes) is mentioned, so it's not known which particular type he loves most.",
       "retrieved_ids": [
         "cor_01M2QXVB2JDRKDGKWTAN7YQ4QV",
         "sem_01M2QXVB2JDRKDGKWTAN7YQ4QT",
@@ -4582,14 +4597,14 @@
       "category": "single_hop",
       "question": "What fun activity did Evan mention doing in July 2023?",
       "answer": "skiing",
-      "prediction": "Skiing in great snow (during his road trip to Banff).",
+      "prediction": "Skiing — during his July 2023 road trip to Banff, Evan had a lot of fun skiing in great snow.",
       "retrieved_ids": [
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QY",
         "epi_01M2QXX5WQHDY6BYQE76N3TPSS",
         "epi_01M2QYNCE31HQ2P68D9DXG8RNW",
         "epi_01M2QXKGTW37DE44HDRPZVD5SC",
+        "epi_01M2QYEWTJP15P782F4K5B7Z6W",
         "epi_01M2QY74Q0EFGWHB8ERZKQ62D1",
-        "epi_01M2QXJ69635AMH0Z0K4C9B940",
         "cor_01M2QXX5WQHDY6BYQE76N3TPSR",
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
         "sem_01M2QXG5WVY2R41KPFSSTS42Q7",
@@ -4618,7 +4633,7 @@
       "category": "single_hop",
       "question": "What injury did Evan suffer from in August 2023?",
       "answer": "Twisted knee",
-      "prediction": "Evan twisted his knee on 2023-08-25.",
+      "prediction": "Evan twisted his knee on 2023-08-25. (His son also hurt his ankle in a soccer accident on 2023-08-12, but that was the son's injury, not Evan's.)",
       "retrieved_ids": [
         "epi_01M2QXX5WQHDY6BYQE76N3TPSP",
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
@@ -4649,7 +4664,7 @@
       "category": "single_hop",
       "question": "What sports activity has Evan been doing to stay active while dealing with the knee injury?",
       "answer": "Swimming",
-      "prediction": "Evan 一直在做他最喜欢的低冲击活动：在日落时分的海滩上散步，这既是一种很好的锻炼，也能让他平静下来。",
+      "prediction": "Evan has been walking on the beach at sunset — his favorite low-impact activity, which he finds both good exercise and calming.",
       "retrieved_ids": [
         "epi_01M2QXZKG83ZC31VJ9S84QFQGC",
         "sem_01M2QXZKG83ZC31VJ9S84QFQGD",
@@ -4680,7 +4695,7 @@
       "category": "single_hop",
       "question": "What suggestion did Sam give to Evan to help with his knee issue?",
       "answer": "Consider low-impact exercises or physical therapy",
-      "prediction": "Sam建议Evan尝试瑜伽（yoga）——一种温和但有效的方式来缓解压力并提高柔韧性。Evan在2023-12-05接受了这个建议。",
+      "prediction": "Sam suggested that Evan try yoga — a gentle but effective way to relieve stress and improve flexibility. Evan decided to take up yoga on 2023-12-05 based on this suggestion.",
       "retrieved_ids": [
         "sem_01M2QXZKG83ZC31VJ9S84QFQGD",
         "epi_01M2QXZKG83ZC31VJ9S84QFQGC",
@@ -4711,7 +4726,7 @@
       "category": "single_hop",
       "question": "What did Evan suggest Sam try as a calming hobby?",
       "answer": "Painting",
-      "prediction": "Painting（Evan 喜欢用水彩画放松，Sam 在他的帮助下开始尝试绘画",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QXY0WDF235BGP2GAGDWWY1",
         "sem_01M2QXJ69635AMH0Z0K4C9B943",
@@ -4739,7 +4754,7 @@
       "category": "single_hop",
       "question": "What did Evan recommend Sam acquire to get started with painting?",
       "answer": "Acrylic paints, brushes, canvas/paper, palette",
-      "prediction": "基本用品：丙烯颜料、画笔、画布/画纸和调色板。",
+      "prediction": "Evan 帮 Sam 挑选了绘画的基本用品：丙烯颜料、画笔、画布/画纸和调色盘。",
       "retrieved_ids": [
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QS",
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QR",
@@ -4767,7 +4782,7 @@
       "category": "single_hop",
       "question": "What activity does Evan do to keep himself busy while healing his knee?",
       "answer": "Watercolor painting",
-      "prediction": "Evan uses painting to keep himself busy while healing — it helps him recognize and handle his feelings without words.",
+      "prediction": "Evan uses **painting** to keep himself busy while healing — he paints to recognize and handle his own feelings, portraying emotions without words. This is a suitable activity for him since he currently cannot do intense workouts while recovering from his knee injury.",
       "retrieved_ids": [
         "sem_01M2QXZKG83ZC31VJ9S84QFQGD",
         "epi_01M2QXZKG83ZC31VJ9S84QFQGC",
@@ -4798,7 +4813,7 @@
       "category": "single_hop",
       "question": "What painting did Evan share with Sam in October?",
       "answer": "a cactus in the desert",
-      "prediction": "不知道",
+      "prediction": "A sunset painting — in October 2023, Evan had recently finished a sunset painting, which he shared with Sam.",
       "retrieved_ids": [
         "sem_01M2QXY0WDF235BGP2GAGDWWY1",
         "epi_01M2QXY0WDF235BGP2GAGDWWY2",
@@ -4809,7 +4824,7 @@
         "cor_01M2QXVB2JDRKDGKWTAN7YQ4QV",
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QR",
         "sem_01M2QY16HWKVGM3BQQVZXA53AK",
-        "sem_01M2QXG5WVY2R41KPFSSTS42Q7"
+        "sem_01M2QXG5WVY2R41KPFSSTS42Q8"
       ],
       "gold_ids": [
         "epi_01M2QXZKG83ZC31VJ9S84QFQGC",
@@ -4860,7 +4875,7 @@
       "category": "single_hop",
       "question": "What electronics issue has been frustrating Sam lately?",
       "answer": "malfunctioning navigation app on the new phone",
-      "prediction": "Sam's phone has been giving him trouble (as of 2023-10-17), which added to his stress.",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
         "sem_01M2QY9B8PF84M205163XH39M8",
@@ -4916,7 +4931,7 @@
       "category": "single_hop",
       "question": "What advice did Evan give to Sam to avoid injuries while starting weightlifting?",
       "answer": "Find a trainer",
-      "prediction": "不知道。记忆中只提到Sam打算找一位教练帮助他掌握动作要领并避免受伤，但没有提到Evan就此给出过什么建议。",
+      "prediction": "The memories don't record any specific injury-avoidance advice from Evan about weightlifting. What they do show: Evan agreed to help Sam get started with working out by showing him some basic exercises (6 June 2023), and it was Sam himself who planned to find a trainer to help with form and avoid injuries (8 October 2023).",
       "retrieved_ids": [
         "epi_01M2QY076KAZ2Q5FB0F04SHX40",
         "epi_01M2QXKGTW37DE44HDRPZVD5SJ",
@@ -4941,7 +4956,7 @@
       "category": "single_hop",
       "question": "Where did Sam and his mate plan to try kayaking?",
       "answer": "Lake Tahoe",
-      "prediction": "Lake Tahoe.",
+      "prediction": "Lake Tahoe. On 2023-10-14, Sam and a friend went kayaking there, as Sam had heard it's great for kayaking.",
       "retrieved_ids": [
         "sem_01M2QY16HWKVGM3BQQVZXA53AG",
         "epi_01M2QY16HWKVGM3BQQVZXA53AJ",
@@ -4970,7 +4985,7 @@
       "category": "single_hop",
       "question": "What digestive issue did Sam experience lately?",
       "answer": "Gastritis",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories mention Sam's health issues, physical discomfort, and dietary changes, but no specific digestive issue is mentioned.",
       "retrieved_ids": [
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ12",
         "epi_01M2QXKGTW37DE44HDRPZVD5SG",
@@ -4999,7 +5014,7 @@
       "category": "single_hop",
       "question": "What adventurous theme is emerging in Evan's life as mentioned by Sam?",
       "answer": "helping lost tourists",
-      "prediction": "不知道。记忆中没有提到 Sam 说过 Evan 生活中出现了什么冒险主题。",
+      "prediction": "Helping lost tourists in need has become a recurring theme in Evan's life (noted on 17 October 2023 after he helped another lost tourist).",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJDC",
         "sem_01M2QY9B8PF84M205163XH39MB",
@@ -5028,7 +5043,7 @@
       "category": "single_hop",
       "question": "What does Evan mention about his progress at the gym to Sam?",
       "answer": "gaining strength",
-      "prediction": "Evan mentions that he's been gaining strength at the gym.",
+      "prediction": "Evan mentions that he has been gaining strength at the gym (as of 2023-10-16), and that focusing on fitness has been beneficial for his overall well-being.",
       "retrieved_ids": [
         "sem_01M2QY2PEJCZXHEQWR32WX8B72",
         "sem_01M2QXNZFYMXHS775NTZGSBJDA",
@@ -5057,7 +5072,7 @@
       "category": "single_hop",
       "question": "How did Evan start his transformation journey two years ago?",
       "answer": "Changed his diet and started walking regularly",
-      "prediction": "He changed his diet and started walking regularly.",
+      "prediction": "Two years ago (around 2021), Evan started his transformation by changing his diet and beginning to walk regularly, which transformed his health and appearance.",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJD7",
         "epi_01M2QXMW4DENA907J8SZHDCW9H",
@@ -5086,7 +5101,7 @@
       "category": "single_hop",
       "question": "What gift did Evan receive from a close friend?",
       "answer": "1968 Kustom K-200A vintage guitar",
-      "prediction": "Evan received a 1968 Kustom K-200A vintage guitar as a gift from a close friend.",
+      "prediction": "Evan received a 1968 Kustom K-200A vintage guitar as a gift from a close friend (shared on 2023-11-09).",
       "retrieved_ids": [
         "sem_01M2QXY0WDF235BGP2GAGDWWY3",
         "epi_01M2QXVB2JDRKDGKWTAN7YQ4QS",
@@ -5114,7 +5129,7 @@
       "category": "single_hop",
       "question": "Why had Evan been going through a tough time lately?",
       "answer": "Lost their job due to downsizing",
-      "prediction": "因为健康问题——他一直在应对健康方面的困扰（包括2023年5月底一次突发心悸），这让他度过了艰难的时期。",
+      "prediction": "Evan had been going through a tough time because of health issues. He had a sudden heart palpitation incident around May 30, 2023, which he described as a serious wake-up call about his lifestyle, and as of August 2023 he was still dealing with these health problems—tough, he said, but they made him appreciate the good moments more.",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJD6",
         "sem_01M2QXY0WDF235BGP2GAGDWWY0",
@@ -5142,7 +5157,7 @@
       "category": "single_hop",
       "question": "How does Evan describe the island he grew up on?",
       "answer": "A happy place",
-      "prediction": "He calls it his happy place, and it shaped who he is.",
+      "prediction": "Evan calls the small island he grew up on his \"happy place,\" and says it shaped who he is.",
       "retrieved_ids": [
         "sem_01M2QY9B8NPEAGFYJHJ5FPCXT0",
         "epi_01M2QXZKG9YPPNVDATR0NDAEDC",
@@ -5172,7 +5187,7 @@
       "category": "single_hop",
       "question": "What was the main reason for Evan's frustration with his new Prius breaking down?",
       "answer": "He relied on it for his active lifestyle and road trips",
-      "prediction": "因为Evan依赖他的Prius作为主要交通工具，用于他活跃的生活方式和公路旅行。",
+      "prediction": "Evan was frustrated because he relies on his Prius as his main mode of transport for his active lifestyle and road trips, so its breakdown left him without his primary means of getting around.",
       "retrieved_ids": [
         "epi_01M2QYAPJKYDH2WNTGND6J22X7",
         "sem_01M2QYAPJKYDH2WNTGND6J22X8",
@@ -5198,7 +5213,7 @@
       "category": "single_hop",
       "question": "How did Sam suggest Evan view the setback with his broken Prius?",
       "answer": "As a chance to explore other ways of staying active and traveling",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't contain any information about Sam suggesting how Evan should view the setback with his broken Prius.",
       "retrieved_ids": [
         "sem_01M2QXG5WVY2R41KPFSSTS42Q3",
         "epi_01M2QYAPJKYDH2WNTGND6J22X7",
@@ -5224,7 +5239,7 @@
       "category": "single_hop",
       "question": "What did Sam suggest Evan try for stress relief and flexibility?",
       "answer": "Yoga",
-      "prediction": "瑜伽。",
+      "prediction": "Yoga. On 2023-12-05, Evan decided to try yoga on Sam's suggestion, seeking a gentle but effective way to relieve stress and improve flexibility.",
       "retrieved_ids": [
         "sem_01M2QYAPJKYDH2WNTGND6J22X9",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC38",
@@ -5250,7 +5265,7 @@
       "category": "single_hop",
       "question": "What did Sam offer Evan regarding yoga?",
       "answer": "Support and tips",
-      "prediction": "根据记忆，Sam 向 Evan 建议了瑜伽（Sam suggested yoga to Evan），Evan 因此在 2023-12-05 决定尝试瑜伽，作为一种温和有效的方式来缓解压力和提高柔韧性。",
+      "prediction": "Sam suggested yoga to Evan — it was on Sam's suggestion that Evan decided to try yoga as a gentle but effective way to relieve stress and improve flexibility.",
       "retrieved_ids": [
         "sem_01M2QYAPJKYDH2WNTGND6J22X9",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC38",
@@ -5258,8 +5273,8 @@
         "sem_01M2QXY0WDF235BGP2GAGDWWY3",
         "sem_01M2QY9B8PF84M205163XH39MC",
         "sem_01M2QXKGTW37DE44HDRPZVD5SK",
-        "epi_01M2QXX5WQHDY6BYQE76N3TPSX",
         "epi_01M2QXY0WDF235BGP2GAGDWWY2",
+        "epi_01M2QXX5WQHDY6BYQE76N3TPSX",
         "sem_01M2QY6BVTDR48ZF67EHWT6E53",
         "sem_01M2QYGQ4W2JZCQYY3139KVE87"
       ],
@@ -5276,7 +5291,7 @@
       "category": "single_hop",
       "question": "What news did Evan share with Sam on 9th December 2023?",
       "answer": "partner is pregnant",
-      "prediction": "Evan shared that his partner is pregnant, and the family is excited.",
+      "prediction": "On 9 December 2023, Evan shared that his partner is pregnant, and the family is excited about the news.",
       "retrieved_ids": [
         "epi_01M2QYBVS0EPBPB5VJ04DJP60J",
         "epi_01M2QY74Q0EFGWHB8ERZKQ62D1",
@@ -5304,7 +5319,7 @@
       "category": "single_hop",
       "question": "What family event is Evan planning for next summer?",
       "answer": "big family reunion",
-      "prediction": "A big family reunion in the summer of 2024.",
+      "prediction": "Evan's family is planning a big family reunion in the summer of 2024.",
       "retrieved_ids": [
         "cor_01M2QYBVS0EPBPB5VJ04DJP60P",
         "epi_01M2QYNCE31HQ2P68D9DXG8RNW",
@@ -5332,7 +5347,7 @@
       "category": "single_hop",
       "question": "What is the motto of Evan's family?",
       "answer": "'Bring it on Home'",
-      "prediction": "'Bring it on Home'",
+      "prediction": "Evan's family motto is **'Bring it on Home'** — it comes from a sign framed after their trip to Banff, symbolizing the importance of togetherness.",
       "retrieved_ids": [
         "sem_01M2QXNZFYMXHS775NTZGSBJDB",
         "sem_01M2QYBVS0EPBPB5VJ04DJP60M",
@@ -5360,7 +5375,7 @@
       "category": "single_hop",
       "question": "According to Evan, what is important for Sam to believe in concerning his weight?",
       "answer": "Your worth is not defined by your weight",
-      "prediction": "不知道",
+      "prediction": null,
       "retrieved_ids": [
         "cor_01M2QXX5WQHDY6BYQE76N3TPSR",
         "sem_01M2QYCZT5P829E54F7DYBDQYE",
@@ -5388,7 +5403,7 @@
       "category": "single_hop",
       "question": "Who helped Evan get the painting published in the exhibition?",
       "answer": "a close friend",
-      "prediction": "Evan 的一位亲密女性朋友（就是站在画作旁边的那个女孩）帮他办到的。记忆中没有给出她的名字。",
+      "prediction": "A close friend of Evan — the girl standing next to the painting — helped get his contemporary figurative painting published in the exhibition.",
       "retrieved_ids": [
         "sem_01M2QYCZT5P829E54F7DYBDQYJ",
         "epi_01M2QYCZT5P829E54F7DYBDQYH",
@@ -5446,7 +5461,7 @@
       "category": "single_hop",
       "question": "What did Sam suggest Evan should do with his keys?",
       "answer": "put a GPS sensor on them",
-      "prediction": "不知道。记忆中只提到Evan计划在找到钥匙后装GPS传感器，但没有说明这是Sam的建议。",
+      "prediction": "Sam suggested that Evan put a GPS sensor on his keys to stop losing them.",
       "retrieved_ids": [
         "sem_01M2QXQ7DQR3DN34FXQCWBYJ16",
         "sem_01M2QYEWTJP15P782F4K5B7Z74",
@@ -5476,7 +5491,7 @@
       "category": "single_hop",
       "question": "How did Evan feel when he painted the piece with the bird flying over it?",
       "answer": "a sense of joy and freedom",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention any painting by Evan featuring a bird flying over it, so there's no basis to say how he felt when painting it.",
       "retrieved_ids": [
         "sem_01M2QXJ69635AMH0Z0K4C9B944",
         "sem_01M2QYBVS0EPBPB5VJ04DJP60K",
@@ -5506,7 +5521,7 @@
       "category": "single_hop",
       "question": "What did Evan suggest Sam should keep doing to find his own version of love?",
       "answer": "Keep trying new things",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't contain any information about Evan suggesting what Sam should keep doing to find his own version of love.",
       "retrieved_ids": [
         "cor_01M2QYEWTJP15P782F4K5B7Z6Y",
         "epi_01M2QYCZT5P829E54F7DYBDQYK",
@@ -5536,7 +5551,7 @@
       "category": "single_hop",
       "question": "How did Evan describe the process of creating the painting with the bird flying over it?",
       "answer": "embracing the creative process without restraint",
-      "prediction": "不知道",
+      "prediction": "I don't know. The memories don't mention any painting with a bird flying over it or how Evan described creating it.",
       "retrieved_ids": [
         "sem_01M2QYEWTJP15P782F4K5B7Z70",
         "cor_01M2QXVB2JDRKDGKWTAN7YQ4QV",
@@ -5566,7 +5581,7 @@
       "category": "single_hop",
       "question": "What did Evan want to share with his work friends?",
       "answer": "getting married",
-      "prediction": "Evan想和同事分享他最近结婚了的消息。",
+      "prediction": "Evan wanted to share that he recently got married.",
       "retrieved_ids": [
         "sem_01M2QYGQ4X6M25MP81PHMKTWQ5",
         "sem_01M2QY9B8PF84M205163XH39MC",
@@ -5596,7 +5611,7 @@
       "category": "single_hop",
       "question": "What did Evan share with Sam after their hiking trip?",
       "answer": "a photo of a man standing on a rock looking out over a valley",
-      "prediction": "不知道。记忆中没有提到Evan在徒步旅行后与Sam分享了什么内容。",
+      "prediction": "Evan shared that the views on his hike were amazing — he had gone on a family trip to the Rockies around 2023-05-11 and hiked the trails there, describing the views as amazing.",
       "retrieved_ids": [
         "epi_01M2QYCZT5P829E54F7DYBDQYK",
         "epi_01M2QXG5WVY2R41KPFSSTS42Q1",
@@ -5683,7 +5698,7 @@
       "category": "single_hop",
       "question": "What was Evan limiting himself to on his new diet?",
       "answer": "just two ginger snaps a day",
-      "prediction": "Two ginger snaps per day.",
+      "prediction": "On his new diet, Evan limited himself to two ginger snaps per day.",
       "retrieved_ids": [
         "sem_01M2QYJ03T83NJQ1TEB2AVS5Y6",
         "epi_01M2QY6BVTDR48ZF67EHWT6E4Z",
@@ -5710,7 +5725,7 @@
       "category": "single_hop",
       "question": "What sports activity did Evan and his partner try in a recent weekend?",
       "answer": "Snowshoeing",
-      "prediction": "Snowshoeing.",
+      "prediction": "Snowshoeing. Over the weekend of 2024-01-06/07, Evan and his partner tried snowshoeing as part of a new adventure and found it surprisingly fun.",
       "retrieved_ids": [
         "epi_01M2QYKPZZ1ZYX6B6KSDBWNC36",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC37",
@@ -5740,7 +5755,7 @@
       "category": "single_hop",
       "question": "What advice did Evan suggest Sam seek from a doctor?",
       "answer": "diet plan and low-impact exercises",
-      "prediction": "根据记忆，Sam 计划去看医生时询问适合他当前情况的均衡饮食计划和低冲击运动（balanced diet plan and low-impact exercises）。",
+      "prediction": "A balanced diet plan and low-impact exercises suited to his current situation (Sam planned to ask a doctor about these, per the 10 January 2024 memory).",
       "retrieved_ids": [
         "epi_01M2QXR5SSRMW9C9YFF4AK6XX4",
         "sem_01M2QYNCE31HQ2P68D9DXG8RNM",
@@ -5770,7 +5785,7 @@
       "category": "single_hop",
       "question": "What suggestions did Evan give for low-impact exercises?",
       "answer": "swimming, yoga, walking",
-      "prediction": "Evan suggested walking on the beach at sunset — his favorite low-impact activity, which he finds both good exercise and calming.",
+      "prediction": null,
       "retrieved_ids": [
         "sem_01M2QXZKG83ZC31VJ9S84QFQGD",
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC39",
@@ -5800,7 +5815,7 @@
       "category": "single_hop",
       "question": "What movie did Sam watch that motivated him to keep up with his routine?",
       "answer": "The Godfather",
-      "prediction": "不知道。记忆中只提到 Sam 在 2023-11-20 得到一部新电影，成为他的治愈系电影，但没有说明电影的名字。",
+      "prediction": "The memories don't record the movie's title. They only note that Sam got a new movie on 2023-11-20, which became his go-to feel-good film.",
       "retrieved_ids": [
         "sem_01M2QY6BVTDR48ZF67EHWT6E53",
         "sem_01M2QY9B8PF84M205163XH39MA",
@@ -5830,7 +5845,7 @@
       "category": "single_hop",
       "question": "What activity helped Evan with stress and flexibility?",
       "answer": "Yoga",
-      "prediction": "Yoga.",
+      "prediction": "Yoga. Evan practices yoga, which he says helps him with stress relief and staying flexible.",
       "retrieved_ids": [
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC38",
         "sem_01M2QYAPJKYDH2WNTGND6J22X9",
@@ -5860,7 +5875,7 @@
       "category": "single_hop",
       "question": "What did Evan share a photo of that was taken on a camping trip?",
       "answer": "a kayak",
-      "prediction": "The unforgettable sunset he watched on the lake during his summer 2023 camping trip.",
+      "prediction": "The unforgettable sunset he watched on the camping trip (where he also kayaked on a lake).",
       "retrieved_ids": [
         "epi_01M2QYNCE31HQ2P68D9DXG8RNW",
         "sem_01M2QYBVS0EPBPB5VJ04DJP60Q",
@@ -5890,7 +5905,7 @@
       "category": "single_hop",
       "question": "Why did Evan apologize to his partner?",
       "answer": "for a drunken night",
-      "prediction": "Evan apologized for an embarrassing drunken night during which he accidentally damaged his partner's rose bushes.",
+      "prediction": "Evan apologized to his partner for an embarrassing drunken night during which he accidentally damaged her rose bushes.",
       "retrieved_ids": [
         "cor_01M2QYJ03T83NJQ1TEB2AVS5Y3",
         "epi_01M2QYNCE31HQ2P68D9DXG8RNV",
@@ -5920,7 +5935,7 @@
       "category": "single_hop",
       "question": "How does Evan describe being out on the water while kayaking and watching the sunset?",
       "answer": "peaceful",
-      "prediction": "记忆中没有具体描述。只知道2023年夏天露营时，Evan在湖上划皮划艇并看了一场他觉得“真正难忘”的日落，但没有他对在水上的感受的具体描述。",
+      "prediction": "Evan found it truly unforgettable — during his summer 2023 camping trip, he kayaked on a lake and watched a sunset he described as truly unforgettable.",
       "retrieved_ids": [
         "sem_01M2QYKPZZ1ZYX6B6KSDBWNC39",
         "sem_01M2QY74Q0EFGWHB8ERZKQ62D0",
